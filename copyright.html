@@ -27,17 +27,20 @@
         box-sizing: border-box;
         /* border: 1px solid gray; */
       }
-      .footer-copyright_container {
+      #footer-copyright_container {
         width: 390px;
-        height: 251px;
-        background: rgba(191, 137, 119, 0.5);
+        background-color: rgba(191, 137, 119, 0.5);
         color: #20404f;
+        padding: 0 22px;
       }
 
       .footer-coppyright-title {
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 700;
         line-height: 19px;
+      }
+      .footer-copyright-subscribe {
+        padding: 11px 0;
       }
 
       #footer-copyright-collapse-wrap {
@@ -45,91 +48,175 @@
         align-items: flex-end;
         justify-content: space-between;
         border-bottom: 1px solid #d9d9d9;
-        padding: 7px 0;
+        padding: 4px 0;
         height: 38px;
+      }
+      .footer_copyright-content-warp-items {
+        padding-top: 12px;
+      }
+      .footer_copyright-content-items {
+        padding: 5px 0;
+      }
+      .footer_copyright-content-items-thin {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 19px;
+        padding: 5px 0;
+      }
+      .footer-coppyright-content-detail1 {
+        padding: 8px 0 6px;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .footer-coppyright-content-detail2 {
+        font-size: 14px;
+        font-weight: 600;
+        padding-bottom: 12px;
+      }
+      .footer-coppyright-subcribe-wap {
+        display: flex;
+        justify-content: space-between;
+      }
+      #footer-coppyright-subcribe-input {
+        border-radius: 4px;
+        border: 1px solid #20404f;
+        background: rgba(191, 137, 119, 0.01);
+        width: 244px;
+        height: 32px;
+        font-size: 12px;
+        padding-left: 11px;
+      }
+      #footer-coppyright-subcribe-button {
+        width: 89px;
+        border-radius: 4px;
+        height: 32px;
+        background-color: rgba(32, 64, 79, 1);
+        color: rgba(191, 137, 119, 1);
+      }
+      .footer-coppyright-author {
+        font-size: 14px;
+        padding: 26px 0 12px 0;
       }
     </style>
   </head>
   <body>
-    <div class="footer-copyright_container">
-      <div class="footer-copyright-collapse">
-        <div
-          data-bs-toggle="collapse"
-          href="#quick_link"
-          aria-expanded="false"
-          aria-controls="quick_link"
-          id="footer-copyright-collapse-wrap"
-        >
-          <div class="footer-coppyright-title">Quick Links</div>
-          <div class="footer-copyright-icon">
-            <i class="fa-solid fa-caret-down"></i>
-          </div>
-        </div>
-        <div class="collapse" id="quick_link">
-          <div>
-            Some placeholder content for the collapse component. This panel is
-            hidden by default but revealed when the user activates the relevant
-            trigger.
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright-collapse">
+    <div id="footer-copyright_container">
+      <div id="footer-copyright_wrap">
         <div class="footer-copyright-collapse">
           <div
             data-bs-toggle="collapse"
-            href="#Policies"
+            href="#quick_link"
             aria-expanded="false"
-            aria-controls="Policies"
+            aria-controls="quick_link"
             id="footer-copyright-collapse-wrap"
           >
-            <div class="footer-coppyright-title">Policies</div>
+            <div class="footer-coppyright-title">Quick Links</div>
             <div class="footer-copyright-icon">
               <i class="fa-solid fa-caret-down"></i>
             </div>
           </div>
-          <div class="collapse" id="Policies">
-            <div>
-              Some placeholder content for the collapse component. This panel is
-              hidden by default but revealed when the user activates the
-              relevant trigger.
+          <div class="collapse" id="quick_link">
+            <div class="footer_copyright-content-warp-items">
+              <div class="footer_copyright-content-items">Home</div>
+              <div class="footer_copyright-content-items">About Us</div>
+              <div class="footer_copyright-content-items">Contact Us</div>
+              <div class="footer_copyright-content-items">FAQ</div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="footer-copyright-collapse">
         <div class="footer-copyright-collapse">
-          <div
-            data-bs-toggle="collapse"
-            href="#getInTouch"
-            aria-expanded="false"
-            aria-controls="getInTouch"
-            id="footer-copyright-collapse-wrap"
-          >
-            <div class="footer-coppyright-title">Get In Touch</div>
-            <div class="footer-copyright-icon">
-              <i class="fa-solid fa-caret-down"></i>
+          <div class="footer-copyright-collapse">
+            <div
+              data-bs-toggle="collapse"
+              href="#Policies"
+              aria-expanded="false"
+              aria-controls="Policies"
+              id="footer-copyright-collapse-wrap"
+            >
+              <div class="footer-coppyright-title">Policies</div>
+              <div class="footer-copyright-icon">
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse" id="Policies">
+              <div class="footer_copyright-content-warp-items">
+                <div class="footer_copyright-content-items">Privacy Policy</div>
+                <div class="footer_copyright-content-items">
+                  Shipping Policy
+                </div>
+                <div class="footer_copyright-content-items">
+                  Refund & Return Policy
+                </div>
+                <div class="footer_copyright-content-items">
+                  Terms and Conditions
+                </div>
+                <div class="footer_copyright-content-items">Payment Method</div>
+              </div>
             </div>
           </div>
-          <div class="collapse" id="getInTouch">
-            <div>
-              Some placeholder content for the collapse component. This panel is
-              hidden by default but revealed when the user activates the
-              relevant trigger.
+        </div>
+        <div class="footer-copyright-collapse">
+          <div class="footer-copyright-collapse">
+            <div
+              data-bs-toggle="collapse"
+              href="#getInTouch"
+              aria-expanded="false"
+              aria-controls="getInTouch"
+              id="footer-copyright-collapse-wrap"
+            >
+              <div class="footer-coppyright-title">Get In Touch</div>
+              <div class="footer-copyright-icon">
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse" id="getInTouch">
+              <div class="footer_copyright-content-warp-items">
+                <div class="footer_copyright-content-items-thin">
+                  If you have any questions, please contact us by this email
+                  below
+                </div>
+                <div class="footer_copyright-content-items-thin">
+                  <i class="fa-regular fa-envelope"></i>
+                  Email: suppost.fmzee@gmail.com UK Address: 24-26 Arcadia
+                </div>
+                <div class="footer_copyright-content-items-thin">
+                  Avenue, Dephna House #105, London, Greater London, United
+                  Kingdom, N3 2JU
+                </div>
+
+                <div class="footer_copyright-content-items-thin">
+                  Delivery Delays Due To Covid-19
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="footer-copyright-subscribe">
-        <div class="footer-coppyright-title">Newsletter</div>
-        <div class="footer-coppyright-content">
-          <div class="footer-coppyright-content-detail1"></div>
-          <div class="footer-coppyright-content-detail2"></div>
+        <div class="footer-copyright-subscribe">
+          <div class="footer-coppyright-title">Newsletter</div>
+          <div class="footer-coppyright-content">
+            <div class="footer-coppyright-content-detail1">
+              Subscribe to be notified about product launches,
+              <br />special offers and news.
+            </div>
+            <div class="footer-coppyright-content-detail2">
+              Enter your email and get your first treat,
+              <br />
+              an instant 25% discount off your first order!
+            </div>
+          </div>
+          <div class="footer-coppyright-subcribe-wap">
+            <input
+              id="footer-coppyright-subcribe-input"
+              type="text"
+              placeholder="your email:"
+            />
+            <button id="footer-coppyright-subcribe-button">Subcribe</button>
+          </div>
+          <div class="footer-coppyright-author">
+            © 2022 FMzee - Personalized Door Sign, Ornament, Tumbler & Home
+            Decor
+          </div>
         </div>
-        <div class="footer-coppyright-subcribe-wap">
-          <input type="text" />
-          <button>Subcribe</button>
-        </div>
-        <div class="footer-coppyright-author"></div>
       </div>
     </div>
     <script
