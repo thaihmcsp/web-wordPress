@@ -283,9 +283,13 @@
         font-weight: 600;
         padding-bottom: 12px;
       }
+      button {
+        padding: 0;
+      }
       .footer-coppyright-subcribe-wap {
         display: flex;
         justify-content: space-between;
+        align-items: center;
       }
       #footer-coppyright-subcribe-input {
         border-radius: 4px;
@@ -369,10 +373,10 @@
             <!-- dropdown -->
 
             <div class="header-dropdown-wrap-item" onclick="">
-              <div class="header-dropdown-item"><div>Home</div></div>
+              <div class="header-dropdown-item"><a href="#">Home</a></div>
 
               <div class="header-dropdown-item">
-                <div>Best Sallers</div>
+                <a href="#">Best Sallers</a>
               </div>
 
               <div
@@ -409,14 +413,14 @@
               <!-- dropdown Product -->
 
               <div class="header-dropdown-item">
-                <div>Wishdivst</div>
+                <a href="#">Wishdivst</a>
               </div>
 
               <div class="header-dropdown-item">
-                <div>Gift Card</div>
+                <a href="#">Gift Card</a>
               </div>
 
-              <div class="header-dropdown-item"><div>Login</div></div>
+              <div class="header-dropdown-item"><a href="#">Login</a></div>
 
               <!-- test -->
             </div>
@@ -650,12 +654,29 @@
   ></script>
   <script>
     function onMenuDropdown() {
-      console.log($("#header_bar"));
-      $(".header-dropdown-wrap-item").toggle("visibleClass");
+      $(".header-dropdown-wrap-item").toggleClass("visibleClass");
     }
     function onProductMenuDropdown() {
-      console.log($(".header-dropdown-item-dropdown"));
-      $(".header-dropdown-wrap-product-item").toggle("visibleClass");
+      $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
     }
+
+    $(document).click(function (e) {
+      if (
+        $(e.target?.parentElement?.parentElement).is(
+          $(".header-dropdown-wrap-item")[0]
+        ) ||
+        $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
+        $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
+        $(e.target.parentElement).is($("#header_bar")[0]) ||
+        $(e.target).is($("#header_bar")[0])
+      ) {
+      } else {
+        if (
+          $(".header-dropdown-wrap-item")[0].classList.contains("visibleClass")
+        ) {
+          $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+        }
+      }
+    });
   </script>
 </html>

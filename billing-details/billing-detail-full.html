@@ -158,75 +158,96 @@
       }
     </style>
     <style>
-      /*--------------- sign-in --------------------*/
-      .sign_in_container {
-        text-align: center;
-        max-width: 500px;
-        margin: auto;
+      /*-------------------------------- billing detail -------------------------------- */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
       }
-      .sign_in_header {
-        padding-top: 50px;
-        padding-bottom: 20px;
+      p {
+        margin: 0;
       }
-      .sign_in_header > p {
+      hr {
+        height: 0.63px;
+
+        background: #20404f;
+        transform: rotate(-0.08deg);
+      }
+      .billing_detail_container {
+        width: 95%;
+        margin: auto 21px;
+      }
+      .billing_detail_breadcrumb {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 19px;
+        color: rgba(32, 64, 79, 0.8);
+      }
+      .billing_detail_title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 16px;
         color: #20404f;
         text-transform: uppercase;
-        font-size: 18px;
-        font-weight: 700;
-        position: relative;
-        margin-bottom: 0;
       }
-
-      .sign_in_header > span {
-        font-size: 12px;
-        line-height: 19px;
-        font-weight: 400;
-        color: #20404f;
-      }
-      .sign_in_body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .sign_in_body > input {
-        margin-top: 10px;
-        justify-content: center;
-        border-radius: 5px;
+      .billing_detail_border_short {
         border: 1px solid rgba(32, 64, 79, 0.7);
-        width: 246px;
-        height: 35px;
-        background: #e9dfd3;
-        padding-left: 5px;
-        font-size: 12px;
-      }
-      .sign_in_body > button {
-        margin-top: 10px;
-
-        width: 246px;
-        height: 35px;
-        background: #20404f;
         border-radius: 5px;
-        color: #e9dfd3;
+        width: 246px;
+        height: 26px;
       }
-      .sign_in_footer {
-        margin-top: 10px;
+      .billing_detail_border_long {
+        border: 1px solid rgba(32, 64, 79, 0.7);
+        border-radius: 5px;
+        width: 349px;
+        height: 26px;
+      }
+      .form-group {
+        margin-bottom: 5px !important;
+      }
+      .form-group > label {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 16px;
+        text-transform: capitalize;
+        color: #20404f;
       }
 
-      .sign_in_footer .policy {
-        color: #20404f;
-        font-size: 12px;
-        line-height: 19px;
-        font-weight: 600;
+      .order {
+        background: rgba(191, 137, 119, 0.5);
       }
-      .sign_in_footer .policy_link {
-        color: #20404f;
-        font-size: 12px;
-        line-height: 19px;
+      .order_container {
+        padding: 0 21px;
+        margin-top: 30px;
+      }
+      .order_title {
+        padding: 20px 0;
+        text-transform: uppercase;
         font-weight: 700;
+        font-size: 18px;
+        line-height: 19px;
+        color: #20404f;
       }
-      .sign_in_footer .policy_link > p > span > a {
-        color: #bf8977;
-        text-decoration: none;
+      .upcase {
+        text-transform: uppercase;
+      }
+      .capti {
+        text-transform: capitalize;
+      }
+      .sub_title {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 19px;
+        color: #20404f;
+        justify-content: space-between;
+      }
+      .sub_total {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color: rgba(32, 64, 79, 0.8);
+        width: 282px;
+        height: 57px;
       }
     </style>
     <style>
@@ -443,37 +464,131 @@
         </div>
       </div>
     </div>
-    <div class="sign_in_container">
-      <div class="sign_in_header">
-        <p>login to my account</p>
-        <span>Enter your e-mail and password</span>
-      </div>
-      <div class="sign_in_body">
-        <input type="text" name="" id="" placeholder="Email:" />
-        <input type="password" name="" id="" placeholder="Password" />
-        <button>Login</button>
-      </div>
-      <div class="sign_in_footer">
-        <div class="policy">
-          <p>
-            This site is protected by reCAPTCHA and the Google
-
-            <br />
-            Privacy Prolicy and Terms of Service apply
-          </p>
+    <div>
+      <div class="billing_detail_container">
+        <div class="billing_detail_breadcrumb">
+          <p>Home / Product / Gift / Checkout / Billing Details</p>
         </div>
-        <div class="policy_link">
-          <p>
-            New customer?
-            <span> <a href="#"> Create your account </a> </span><br />
-            Lost password?
-            <span>
-              <a href="#"> Recover password </a>
-            </span>
-          </p>
+        <p class="billing_detail_title">billing details</p>
+      </div>
+      <hr />
+      <div class="billing_detail_container">
+        <div class="form-group">
+          <label for="">First Name*</label>
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_short"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Last Name*</label>
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_short"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Company Name (Optional)</label>
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_long"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Country / Region*</label>
+          <select
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_long"
+          ></select>
+        </div>
+        <div class="form-group">
+          <label for="">Street Address*</label>
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_short"
+          />
+          <p></p>
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_short"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Town / City*</label>
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_long"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Postcode / ZIP*</label>
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_long"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Phone*</label>
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_long"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Email Address*</label>
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_long"
+          />
         </div>
       </div>
     </div>
+    <div class="order">
+      <div class="order_container">
+        <div class="order_title">your order</div>
+        <div class="sub_title d-flex upcase">
+          <div>Product</div>
+          <div>Subtotal</div>
+        </div>
+      </div>
+      <hr />
+      <div class="order_container">
+        <p class="sub_total">
+          Personalized teacher door sign, classroom
+          <br />
+          door sign, custom teacher sign, boho
+          <br />
+          classroom decor
+        </p>
+        <div class="sub_title d-flex capti">
+          <div>8 Inches x1</div>
+          <div>$21.69</div>
+        </div>
+      </div>
+      <hr />
+      <div class="order_container"></div>
+    </div>
+
     <div id="footer-copyright_container">
       <div id="footer-copyright_wrap">
         <div class="footer-copyright-collapse">
@@ -644,6 +759,7 @@
     crossorigin="anonymous"
   ></script>
   <script>
+    //----------------------- footer -----------------------
     function onMenuDropdown() {
       $(".header-dropdown-wrap-item").toggleClass("visibleClass");
     }
