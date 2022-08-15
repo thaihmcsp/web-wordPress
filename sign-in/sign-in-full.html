@@ -19,7 +19,7 @@
       referrerpolicy="no-referrer"
     />
     <style>
-      /*---------------- header -------------------*/
+      /*------------------- header -------------------*/
       @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
       * {
         font-family: "Nunito", sans-serif;
@@ -54,6 +54,7 @@
         justify-content: space-between;
         align-items: flex-end;
         padding: 0 21px 5px 21px;
+        position: relative;
       }
       #header-wrap-left {
         height: 100%;
@@ -638,4 +639,14 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"
   ></script>
+  <script>
+    function onMenuDropdown() {
+      console.log($("#header_bar"));
+      $(".header-dropdown-wrap-item").toggle("visibleClass");
+    }
+    function onProductMenuDropdown() {
+      console.log($(".header-dropdown-item-dropdown"));
+      $(".header-dropdown-wrap-product-item").toggle("visibleClass");
+    }
+  </script>
 </html>
