@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
     <link
@@ -41,7 +41,7 @@
         padding: 0;
       }
       #header_container {
-        max-width: 390px;
+        max-width: 500px; /*figma: 390px */
         height: 69px;
         background-color: #20404f;
         color: #e9dfd3;
@@ -55,13 +55,13 @@
       }
       #header-wrap-left {
         height: 100%;
-
         display: flex;
         align-items: flex-end;
       }
       #header_bar {
+        position: relative;
         font-size: 25px;
-        margin-right: 21px;
+        padding-right: 21px;
       }
 
       #header_brand-icon {
@@ -96,13 +96,62 @@
         line-height: 15px;
         font-size: 13px;
       }
-      #main {
+      .header-dropdown-wrap-item {
+        border-radius: 5px;
+        position: absolute;
+        top: 0px;
+        transform: translate3d(1px, 70px, 0px) !important;
+        border: none;
+        left: 0;
+        width: 189px;
+        padding: 4px 0 32px 0;
+        background: #20404f;
+        z-index: 100000;
         display: none;
       }
-      @media (max-width: 500px) {
-        #main {
-          display: block;
-        }
+      .header-dropdown-item {
+        padding: 5px 0 2px 22px;
+        margin-top: 4px;
+        font-size: 14px;
+        color: #e9dfd3;
+        font-weight: 400;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+      }
+      .header-dropdown-item-dropdown {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .header-dropdown-item-dropdown-icon {
+        margin-right: 16px;
+      }
+      .header-dropdown-item a {
+        font-size: 14px;
+        color: #e9dfd3;
+        font-weight: 400;
+        text-decoration: none;
+      }
+      .dropdown-divider {
+        margin: 0;
+      }
+
+      .header-dropdown-wrap-product-item {
+        border-radius: 5px;
+        position: absolute;
+        top: -73px;
+        transform: translate3d(1px, 70px, 0px) !important;
+        border: none;
+        width: 165px;
+        padding: 4px 0 32px 0;
+        background: #20404f;
+        left: 100%;
+        z-index: 10000;
+        display: none;
+      }
+      .visibleClass {
+        display: block;
       }
     </style>
   </head>
@@ -110,8 +159,63 @@
     <div id="header_container">
       <div id="header_wrap">
         <div id="header-wrap-left">
-          <div id="header_bar">
+          <div id="header_bar" onclick="onMenuDropdown()">
             <i class="fa-solid fa-bars"></i>
+          </div>
+
+          <!-- dropdown -->
+
+          <div class="header-dropdown-wrap-item" onclick="">
+            <div class="header-dropdown-item"><div>Home</div></div>
+
+            <div class="header-dropdown-item">
+              <div>Best Sallers</div>
+            </div>
+
+            <div
+              class="header-dropdown-item header-dropdown-item-dropdown"
+              onclick="onProductMenuDropdown()"
+            >
+              <div>Product</div>
+              <i
+                class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
+              ></i>
+              <div class="header-dropdown-wrap-product-item">
+                <div class="header-dropdown-item"><div>Ornament</div></div>
+                <div class="header-dropdown-item">
+                  <div>Tumbler</div>
+                </div>
+
+                <div class="header-dropdown-item">
+                  <div>Door mat</div>
+                </div>
+
+                <div class="header-dropdown-item">
+                  <div>Door sign</div>
+                </div>
+
+                <div class="header-dropdown-item">
+                  <div>Gift Card</div>
+                </div>
+
+                <div class="header-dropdown-item">
+                  <div>2 Layered Door Sign</div>
+                </div>
+              </div>
+            </div>
+            <!-- dropdown Product -->
+
+            <div class="header-dropdown-item">
+              <div>Wishdivst</div>
+            </div>
+
+            <div class="header-dropdown-item">
+              <div>Gift Card</div>
+            </div>
+
+            <div class="header-dropdown-item"><div>Login</div></div>
+
+            <!-- test -->
           </div>
           <div id="header_brand-icon">
             <img src="https://fmzee.com/header-logo/" alt="logo_brand" />
@@ -130,7 +234,17 @@
         </div>
       </div>
     </div>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -146,6 +260,15 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script></script>
+    <script>
+      function onMenuDropdown() {
+        console.log($("#header_bar"));
+        $(".header-dropdown-wrap-item").toggle("visibleClass");
+      }
+      function onProductMenuDropdown() {
+        console.log($(".header-dropdown-item-dropdown"));
+        $(".header-dropdown-wrap-product-item").toggle("visibleClass");
+      }
+    </script>
   </body>
 </html>
