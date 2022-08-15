@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        font-family: "Nunito", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* border: 1px solid gray; */
+        max-width: 390px;
+      }
+      .contained_main_my_wishlist {
+        background: #ffffff;
+        margin-bottom: 28px;
+      }
+      .title_url_wishlist {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 19px;
+        width: 70px;
+        height: 19px;
+        color: rgba(32, 64, 79, 0.8);
+        margin-left: 21px;
+        margin-top: 24px;
+        margin-left: 8px;
+      }
+      .border1_home_wishlist {
+        width: 390.01px;
+        height: 0.63px;
+        background: #20404f;
+        transform: rotate(-0.08deg);
+        margin: 4px 0;
+      }
+      .name_title_wishlist {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 16px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-transform: uppercase;
+        color: #20404f;
+        text-align: center;
+      }
+      .count_product_list {
+        text-align: center;
+        font-family: "ABeeZee";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 16px;
+        /* or 160% */
+
+        text-transform: lowercase;
+
+        color: rgba(32, 64, 79, 0.8);
+      }
+      .icon_list_wishlist {
+        display: flex;
+        justify-content: flex-end;
+      }
+      #padding_icon1 {
+        margin-right: 22px;
+      }
+      #padding_icon {
+        margin-right: 8px;
+        margin-right: 8px;
+      }
+
+      .icon_close_product_wishlist {
+        border: 1px solid #20404f;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(32, 64, 79, 0.5);
+      }
+      .flex_center_icon {
+        display: flex;
+        align-items: center;
+        margin-right: 4px;
+      }
+      .img_product_card {
+        width: 122px;
+        height: 122px;
+        border-radius: 5px;
+        background-size: cover;
+        overflow: hidden;
+      }
+      .title_product_cart_wishlist {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 16px;
+        color: #20404f;
+      }
+      .product_wishlist {
+        display: flex;
+        margin-left: 21px;
+        align-items: center;
+        margin: 24px 0;
+      }
+      .info_product_card_wishlist {
+        max-width: 195px;
+        margin-left: 21px;
+      }
+      .rate_product_wishlist {
+        letter-spacing: -0.02em;
+
+        color: rgba(0, 0, 0, 0.6);
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 16px;
+        margin: 8px 0;
+      }
+      .stock_product_cart {
+        /* font-family: "ABenZee";git */
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 16px;
+        /* or 160% */
+
+        text-transform: lowercase;
+
+        color: rgba(32, 64, 79, 0.8);
+      }
+      .product_cart_price_btn {
+        height: 26px;
+      }
+      #text_price_wishlist {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.02em;
+        color: rgba(0, 0, 0, 0.55);
+        text-decoration: line-through;
+        margin-right: 8px;
+      }
+      #text_discount_wishlist {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.02em;
+        color: #bf8977;
+      }
+      .btn_add_to_cart_wishlist {
+        background: rgba(32, 64, 79, 0.8);
+        border-radius: 5px;
+        width: 93px;
+        height: 26px;
+        color: #e9dfd3;
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .product_cart_price_btn {
+        display: flex;
+        justify-content: space-between;
+      }
+      .all_product_cart {
+        margin-left: 21px;
+      }
+      .btn_next_wishlist {
+        background: #20404f;
+        border-radius: 5px;
+        width: 66px;
+        height: 21px;
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        /* or 100% */
+
+        text-transform: capitalize;
+
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .pagetion_wishlist {
+        display: flex;
+        position: relative;
+        height: 44px;
+        align-items: center;
+      }
+      .pagation_wishlist_next {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        /* identical to box height, or 136% */
+        letter-spacing: 0.1em;
+        text-transform: lowercase;
+        color: #20404f;
+      }
+      .btn_next_wishlist {
+        margin: auto;
+      }
+      .pagation_wishlist_next {
+        position: absolute;
+        right: 14px;
+      }
+      #footer-copyright_container {
+        max-width: 390px;
+        background-color: rgba(191, 137, 119, 0.5);
+        color: #20404f;
+        padding: 0 22px;
+        margin: auto;
+      }
+
+      .footer-coppyright-title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+      }
+      .footer-copyright-subscribe {
+        padding: 11px 0;
+      }
+
+      #footer-copyright-collapse-wrap {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        border-bottom: 1px solid #d9d9d9;
+        padding: 4px 0;
+        height: 38px;
+      }
+      .footer_copyright-content-warp-items {
+        padding-top: 12px;
+      }
+      .footer_copyright-content-items {
+        padding: 5px 0;
+      }
+      .footer_copyright-content-items-thin {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 19px;
+        padding: 5px 0;
+      }
+      .footer-coppyright-content-detail1 {
+        padding: 8px 0 6px;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .footer-coppyright-content-detail2 {
+        font-size: 14px;
+        font-weight: 600;
+        padding-bottom: 12px;
+      }
+      .footer-coppyright-subcribe-wap {
+        display: flex;
+        justify-content: space-between;
+      }
+      #footer-coppyright-subcribe-input {
+        border-radius: 4px;
+        border: 1px solid #20404f;
+        background: rgba(191, 137, 119, 0.01);
+        width: 244px;
+        height: 32px;
+        font-size: 12px;
+        padding-left: 11px;
+      }
+      #footer-coppyright-subcribe-button {
+        width: 89px;
+        border-radius: 4px;
+        height: 32px;
+        background-color: rgba(32, 64, 79, 1);
+        color: rgba(191, 137, 119, 1);
+        border: none;
+      }
+      .footer-coppyright-author {
+        font-size: 14px;
+        padding: 26px 0 12px 0;
+      }
+    </style>
+    <style>
+      #footer_container {
+        max-width: 390px;
+        margin: auto;
+      }
+      #footer_wrap {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        background-color: #20404f;
+        color: #bf8977;
+        padding: 15px 24px;
+      }
+      #footer_wrap-left {
+        margin-top: 3px;
+        display: flex;
+      }
+      .footer_icon-social {
+        display: flex;
+        font-size: 18px;
+        overflow: hidden;
+      }
+      .footer_icon-social-center {
+        margin: 0 12px;
+      }
+
+      #footer_wrap-right {
+        display: flex;
+      }
+      .footer_icon-paycard {
+        width: 42px;
+        border-radius: 2px;
+      }
+      .footer_icon-paycard img {
+        width: 42px;
+      }
+      .footer_icon-paycard-center {
+        margin: 0 39px;
+      }
+      #footer-coppyright-subcribe-wap {
+        align-items: center;
+      }
+      #footer-coppyright-subcribe-wap button {
+        padding: 0;
+      }
+      #header {
+        display: none;
+      }
+      .page-wrapper {
+        padding-top: 0;
+      }
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .col {
+        padding: 0;
+      }
+      #header_container {
+        max-width: 500px; /*figma: 390px */
+        height: 69px;
+        background-color: #20404f;
+        color: #e9dfd3;
+      }
+      #header_wrap {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0 21px 5px 21px;
+      }
+      #header-wrap-left {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+      }
+      #header_bar {
+        position: relative;
+        font-size: 25px;
+        padding-right: 21px;
+      }
+
+      #header_brand-icon {
+        width: 133px;
+        height: 46px;
+      }
+
+      #header-wrap-right {
+        display: flex;
+        margin-bottom: 6px;
+      }
+      #header_search {
+        font-size: 20px;
+      }
+      #header_user-info {
+        font-size: 20px;
+        margin: 0 11px;
+      }
+      #header_card {
+        font-size: 20px;
+        position: relative;
+      }
+      #header_card-index {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #bf8977;
+        text-align: center;
+        line-height: 15px;
+        font-size: 13px;
+      }
+      .header-dropdown-wrap-item {
+        border-radius: 5px;
+        position: absolute;
+        top: 0px;
+        transform: translate3d(1px, 70px, 0px) !important;
+        border: none;
+        left: 0;
+        width: 189px;
+        padding: 4px 0 32px 0;
+        background: #20404f;
+        z-index: 100000;
+        display: none;
+      }
+      .header-dropdown-item {
+        padding: 5px 0 2px 22px;
+        margin-top: 4px;
+        font-size: 14px;
+        color: #e9dfd3;
+        font-weight: 400;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+      }
+      .header-dropdown-item-dropdown {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .header-dropdown-item-dropdown-icon {
+        margin-right: 16px;
+      }
+      .header-dropdown-item a {
+        font-size: 14px;
+        color: #e9dfd3;
+        font-weight: 400;
+        text-decoration: none;
+      }
+      .dropdown-divider {
+        margin: 0;
+      }
+
+      .header-dropdown-wrap-product-item {
+        border-radius: 5px;
+        position: absolute;
+        top: -73px;
+        transform: translate3d(1px, 70px, 0px) !important;
+        border: none;
+        width: 165px;
+        padding: 4px 0 32px 0;
+        background: #20404f;
+        left: 100%;
+        z-index: 10000;
+        display: none;
+      }
+      .visibleClass {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header_container">
+      <div id="header_wrap">
+        <div id="header-wrap-left">
+          <div id="header_bar" onclick="onMenuDropdown()">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+
+          <!-- dropdown -->
+
+          <div class="header-dropdown-wrap-item" onclick="">
+            <div class="header-dropdown-item"><div>Home</div></div>
+
+            <div class="header-dropdown-item">
+              <div>Best Sallers</div>
+            </div>
+
+            <div
+              class="header-dropdown-item header-dropdown-item-dropdown"
+              onclick="onProductMenuDropdown()"
+            >
+              <div>Product</div>
+              <i
+                class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
+              ></i>
+              <div class="header-dropdown-wrap-product-item">
+                <div class="header-dropdown-item"><div>Ornament</div></div>
+                <div class="header-dropdown-item">
+                  <div>Tumbler</div>
+                </div>
+
+                <div class="header-dropdown-item">
+                  <div>Door mat</div>
+                </div>
+
+                <div class="header-dropdown-item">
+                  <div>Door sign</div>
+                </div>
+
+                <div class="header-dropdown-item">
+                  <div>Gift Card</div>
+                </div>
+
+                <div class="header-dropdown-item">
+                  <div>2 Layered Door Sign</div>
+                </div>
+              </div>
+            </div>
+            <!-- dropdown Product -->
+
+            <div class="header-dropdown-item">
+              <div>Wishdivst</div>
+            </div>
+
+            <div class="header-dropdown-item">
+              <div>Gift Card</div>
+            </div>
+
+            <div class="header-dropdown-item"><div>Login</div></div>
+
+            <!-- test -->
+          </div>
+          <div id="header_brand-icon">
+            <img src="https://fmzee.com/header-logo/" alt="logo_brand" />
+          </div>
+        </div>
+
+        <div id="header-wrap-right">
+          <div id="header_search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div id="header_user-info"><i class="fa-regular fa-user"></i></div>
+          <div id="header_card">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div id="header_card-index">1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contained_main_my_wishlist">
+      <div class="title_url_wishlist">Home/wishlist</div>
+      <div class="border1_home_wishlist"></div>
+      <div class="title_wishlist">
+        <div class="name_title_wishlist">MY WISHLIST</div>
+        <div class="count_product_list">9 product</div>
+        <div class="icon_list_wishlist">
+          <img src="./IMG/Vector.jpg" alt="" id="padding_icon" />
+          <img src="./IMG/Vector1.png" alt="" id="padding_icon1" />
+        </div>
+      </div>
+      <div class="border1_home_wishlist"></div>
+      <div class="all_product_cart">
+        <div class="product_wishlist">
+          <div class="flex_center_icon">
+            <div class="icon_close_product_wishlist">
+              <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
+            </div>
+          </div>
+
+          <div class="img_product_card">
+            <img
+              src="https://fmzee.com/wp-content/uploads/2022/08/ListAllProduct-product1.png"
+              alt=""
+            />
+          </div>
+          <div class="info_product_card_wishlist">
+            <div class="title_product_cart_wishlist">
+              Personalized Teacher Door Sign, Classroom Door Sign, Custom
+              Teacher Sign, Boho Classroom Decor,
+            </div>
+            <div class="rate_product_wishlist">
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <span>(15)</span>
+            </div>
+            <div class="stock_product_cart">in stock</div>
+            <div class="product_cart_price_btn">
+              <div class="price_product_cart_wishlist">
+                <span id="text_price_wishlist">$28.92</span
+                ><span id="text_discount_wishlist">$21.69</span>
+              </div>
+              <div class="btn_add_to_cart_wishlist" style="background: #20404f">
+                Add To Cart
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_wishlist">
+          <div class="flex_center_icon">
+            <div class="icon_close_product_wishlist">
+              <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
+            </div>
+          </div>
+
+          <div class="img_product_card">
+            <img
+              src="https://fmzee.com/wp-content/uploads/2022/08/WishList-product2.png"
+              alt=""
+            />
+          </div>
+          <div class="info_product_card_wishlist">
+            <div class="title_product_cart_wishlist">
+              Personalized Teacher Door Sign, Classroom Door Sign, Custom
+              Teacher Sign, Boho Classroom Decor,
+            </div>
+            <div class="rate_product_wishlist">
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <span>(15)</span>
+            </div>
+            <div class="stock_product_cart">in stock</div>
+            <div class="product_cart_price_btn">
+              <div class="price_product_cart_wishlist">
+                <span id="text_price_wishlist">$28.92</span
+                ><span id="text_discount_wishlist">$21.69</span>
+              </div>
+              <div class="btn_add_to_cart_wishlist">Add To Cart</div>
+            </div>
+          </div>
+        </div>
+        <div class="product_wishlist">
+          <div class="flex_center_icon">
+            <div class="icon_close_product_wishlist">
+              <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
+            </div>
+          </div>
+
+          <div class="img_product_card">
+            <img
+              src="https://fmzee.com/wp-content/uploads/2022/08/ListProductByCategory-product9.png"
+              alt=""
+            />
+          </div>
+          <div class="info_product_card_wishlist">
+            <div class="title_product_cart_wishlist">
+              Personalized Teacher Door Sign, Classroom Door Sign, Custom
+              Teacher Sign, Boho Classroom Decor,
+            </div>
+            <div class="rate_product_wishlist">
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <span>(15)</span>
+            </div>
+            <div class="stock_product_cart">in stock</div>
+            <div class="product_cart_price_btn">
+              <div class="price_product_cart_wishlist">
+                <span id="text_price_wishlist">$28.92</span
+                ><span id="text_discount_wishlist">$21.69</span>
+              </div>
+              <div class="btn_add_to_cart_wishlist">Add To Cart</div>
+            </div>
+          </div>
+        </div>
+        <div class="product_wishlist">
+          <div class="flex_center_icon">
+            <div class="icon_close_product_wishlist">
+              <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
+            </div>
+          </div>
+
+          <div class="img_product_card">
+            <img
+              src="https://fmzee.com/wp-content/uploads/2022/08/ListProductByCategory-product3.png"
+              alt=""
+            />
+          </div>
+          <div class="info_product_card_wishlist">
+            <div class="title_product_cart_wishlist">
+              Personalized Teacher Door Sign, Classroom Door Sign, Custom
+              Teacher Sign, Boho Classroom Decor,
+            </div>
+            <div class="rate_product_wishlist">
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <span>(15)</span>
+            </div>
+            <div class="stock_product_cart">in stock</div>
+            <div class="product_cart_price_btn">
+              <div class="price_product_cart_wishlist">
+                <span id="text_price_wishlist">$28.92</span
+                ><span id="text_discount_wishlist">$21.69</span>
+              </div>
+              <div class="btn_add_to_cart_wishlist">Add To Cart</div>
+            </div>
+          </div>
+        </div>
+        <div class="product_wishlist">
+          <div class="flex_center_icon">
+            <div class="icon_close_product_wishlist">
+              <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
+            </div>
+          </div>
+
+          <div class="img_product_card">
+            <img
+              src="https://fmzee.com/wp-content/uploads/2022/08/WishList-product5.png"
+              alt=""
+            />
+          </div>
+          <div class="info_product_card_wishlist">
+            <div class="title_product_cart_wishlist">
+              Personalized Teacher Door Sign, Classroom Door Sign, Custom
+              Teacher Sign, Boho Classroom Decor,
+            </div>
+            <div class="rate_product_wishlist">
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <span>(15)</span>
+            </div>
+            <div class="stock_product_cart">in stock</div>
+            <div class="product_cart_price_btn">
+              <div class="price_product_cart_wishlist">
+                <span id="text_price_wishlist">$28.92</span
+                ><span id="text_discount_wishlist">$21.69</span>
+              </div>
+              <div class="btn_add_to_cart_wishlist">Add To Cart</div>
+            </div>
+          </div>
+        </div>
+        <div class="product_wishlist">
+          <div class="flex_center_icon">
+            <div class="icon_close_product_wishlist">
+              <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
+            </div>
+          </div>
+
+          <div class="img_product_card">
+            <img
+              src="https://fmzee.com/wp-content/uploads/2022/08/ListProductByCategory-product5.png"
+              alt=""
+            />
+          </div>
+          <div class="info_product_card_wishlist">
+            <div class="title_product_cart_wishlist">
+              Personalized Teacher Door Sign, Classroom Door Sign, Custom
+              Teacher Sign, Boho Classroom Decor,
+            </div>
+            <div class="rate_product_wishlist">
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <span>(15)</span>
+            </div>
+            <div class="stock_product_cart">in stock</div>
+            <div class="product_cart_price_btn">
+              <div class="price_product_cart_wishlist">
+                <span id="text_price_wishlist">$28.92</span
+                ><span id="text_discount_wishlist">$21.69</span>
+              </div>
+              <div class="btn_add_to_cart_wishlist">Add To Cart</div>
+            </div>
+          </div>
+        </div>
+        <div class="product_wishlist">
+          <div class="flex_center_icon">
+            <div class="icon_close_product_wishlist">
+              <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
+            </div>
+          </div>
+
+          <div class="img_product_card">
+            <img
+              src="https://fmzee.com/wp-content/uploads/2022/08/ornament1.png"
+              alt=""
+            />
+          </div>
+          <div class="info_product_card_wishlist">
+            <div class="title_product_cart_wishlist">
+              Personalized Teacher Door Sign, Classroom Door Sign, Custom
+              Teacher Sign, Boho Classroom Decor,
+            </div>
+            <div class="rate_product_wishlist">
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <span>(15)</span>
+            </div>
+            <div class="stock_product_cart">in stock</div>
+            <div class="product_cart_price_btn">
+              <div class="price_product_cart_wishlist">
+                <span id="text_price_wishlist">$28.92</span
+                ><span id="text_discount_wishlist">$21.69</span>
+              </div>
+              <div class="btn_add_to_cart_wishlist">Add To Cart</div>
+            </div>
+          </div>
+        </div>
+        <div class="product_wishlist">
+          <div class="flex_center_icon">
+            <div class="icon_close_product_wishlist">
+              <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
+            </div>
+          </div>
+
+          <div class="img_product_card">
+            <img
+              src="https://fmzee.com/wp-content/uploads/2022/08/WishList-product8.png"
+              alt=""
+            />
+          </div>
+          <div class="info_product_card_wishlist">
+            <div class="title_product_cart_wishlist">
+              Personalized Teacher Door Sign, Classroom Door Sign, Custom
+              Teacher Sign, Boho Classroom Decor,
+            </div>
+            <div class="rate_product_wishlist">
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <span>(15)</span>
+            </div>
+            <div class="stock_product_cart">in stock</div>
+            <div class="product_cart_price_btn">
+              <div class="price_product_cart_wishlist">
+                <span id="text_price_wishlist">$28.92</span
+                ><span id="text_discount_wishlist">$21.69</span>
+              </div>
+              <div class="btn_add_to_cart_wishlist">Add To Cart</div>
+            </div>
+          </div>
+        </div>
+        <div class="product_wishlist">
+          <div class="flex_center_icon">
+            <div class="icon_close_product_wishlist">
+              <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
+            </div>
+          </div>
+
+          <div class="img_product_card">
+            <img
+              src="https://fmzee.com/wp-content/uploads/2022/08/WishList-product9.png"
+              alt=""
+            />
+          </div>
+          <div class="info_product_card_wishlist">
+            <div class="title_product_cart_wishlist">
+              Personalized Teacher Door Sign, Classroom Door Sign, Custom
+              Teacher Sign, Boho Classroom Decor,
+            </div>
+            <div class="rate_product_wishlist">
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <i
+                class="fa-solid fa-star"
+                style="color: #bf8977; font-size: 12px"
+              ></i>
+              <span>(15)</span>
+            </div>
+            <div class="stock_product_cart">in stock</div>
+            <div class="product_cart_price_btn">
+              <div class="price_product_cart_wishlist">
+                <span id="text_price_wishlist">$28.92</span
+                ><span id="text_discount_wishlist">$21.69</span>
+              </div>
+              <div class="btn_add_to_cart_wishlist">Add To Cart</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border1_home_wishlist"></div>
+      <div class="pagetion_wishlist">
+        <div class="btn_next_wishlist">Next</div>
+        <div class="pagation_wishlist_next">
+          <span>1 2 3 ... 9</span><i class="fa-solid fa-angles-right"></i>
+        </div>
+      </div>
+      <div class="border1_home_wishlist"></div>
+    </div>
+    <div id="footer-copyright_container">
+      <div id="footer-copyright_wrap">
+        <div class="footer-copyright-collapse">
+          <div
+            data-bs-toggle="collapse"
+            href="#quick_link"
+            aria-expanded="false"
+            aria-controls="quick_link"
+            id="footer-copyright-collapse-wrap"
+          >
+            <div class="footer-coppyright-title">Quick Links</div>
+            <div class="footer-copyright-icon">
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+          <div class="collapse" id="quick_link">
+            <div class="footer_copyright-content-warp-items">
+              <div class="footer_copyright-content-items">Home</div>
+              <div class="footer_copyright-content-items">About Us</div>
+              <div class="footer_copyright-content-items">Contact Us</div>
+              <div class="footer_copyright-content-items">FAQ</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright-collapse">
+          <div class="footer-copyright-collapse">
+            <div
+              data-bs-toggle="collapse"
+              href="#Policies"
+              aria-expanded="false"
+              aria-controls="Policies"
+              id="footer-copyright-collapse-wrap"
+            >
+              <div class="footer-coppyright-title">Policies</div>
+              <div class="footer-copyright-icon">
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse" id="Policies">
+              <div class="footer_copyright-content-warp-items">
+                <div class="footer_copyright-content-items">Privacy Policy</div>
+                <div class="footer_copyright-content-items">
+                  Shipping Policy
+                </div>
+                <div class="footer_copyright-content-items">
+                  Refund & Return Policy
+                </div>
+                <div class="footer_copyright-content-items">
+                  Terms and Conditions
+                </div>
+                <div class="footer_copyright-content-items">Payment Method</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright-collapse">
+          <div class="footer-copyright-collapse">
+            <div
+              data-bs-toggle="collapse"
+              href="#getInTouch"
+              aria-expanded="false"
+              aria-controls="getInTouch"
+              id="footer-copyright-collapse-wrap"
+            >
+              <div class="footer-coppyright-title">Get In Touch</div>
+              <div class="footer-copyright-icon">
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse" id="getInTouch">
+              <div class="footer_copyright-content-warp-items">
+                <div class="footer_copyright-content-items-thin">
+                  If you have any questions, please contact us by this email
+                  below
+                </div>
+                <div class="footer_copyright-content-items-thin">
+                  <i class="fa-regular fa-envelope"></i>
+                  Email: suppost.fmzee@gmail.com UK Address: 24-26 Arcadia
+                </div>
+                <div class="footer_copyright-content-items-thin">
+                  Avenue, Dephna House #105, London, Greater London, United
+                  Kingdom, N3 2JU
+                </div>
+
+                <div class="footer_copyright-content-items-thin">
+                  Delivery Delays Due To Covid-19
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright-subscribe">
+          <div class="footer-coppyright-title">Newsletter</div>
+          <div class="footer-coppyright-content">
+            <div class="footer-coppyright-content-detail1">
+              Subscribe to be notified about product launches,
+              <br />special offers and news.
+            </div>
+            <div class="footer-coppyright-content-detail2">
+              Enter your email and get your first treat,
+              <br />
+              an instant 25% discount off your first order!
+            </div>
+          </div>
+          <div class="footer-coppyright-subcribe-wap">
+            <input
+              id="footer-coppyright-subcribe-input"
+              type="text"
+              placeholder="your email:"
+            />
+            <button id="footer-coppyright-subcribe-button">Subcribe</button>
+          </div>
+          <div class="footer-coppyright-author">
+            © 2022 FMzee - Personalized Door Sign, Ornament, Tumbler & Home
+            Decor
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer_container">
+      <div id="footer_wrap">
+        <div id="footer_wrap-left">
+          <div class="footer_icon-social">
+            <i class="fa-brands fa-facebook"></i>
+          </div>
+          <div class="footer_icon-social footer_icon-social-center">
+            <i class="fa-brands fa-square-twitter"></i>
+          </div>
+          <div class="footer_icon-social">
+            <i class="fa-brands fa-square-instagram"></i>
+          </div>
+        </div>
+        <div id="footer_wrap-right">
+          <div class="footer_icon-paycard">
+            <img src=" https://fmzee.com/productdetail-pay-visa/" alt="" />
+          </div>
+          <div class="footer_icon-paycard footer_icon-paycard-center">
+            <img src="https://fmzee.com/productdetail-pay-paypal/" alt="" />
+          </div>
+          <div class="footer_icon-paycard">
+            <img
+              src=" https://fmzee.com/productdetail-pay-mastercard/"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script></script>
+  </body>
+</html>
