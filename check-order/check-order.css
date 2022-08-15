@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.sign_in_container {
+  text-align: center;
+}
+.sign_in_header {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.sign_in_header > p {
+  color: #20404f;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.sign_in_header > span {
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 400;
+  color: #20404f;
+}
+.sign_in_body > input {
+  margin-top: 10px;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid rgba(32, 64, 79, 0.7);
+  width: 246px;
+  height: 35px;
+  background: #e9dfd3;
+  padding-left: 5px;
+  font-size: 12px;
+}
+.sign_in_body > button {
+  margin-top: 10px;
+
+  width: 246px;
+  height: 35px;
+  background: #20404f;
+  border-radius: 5px;
+  color: #e9dfd3;
+}
+.sign_in_footer {
+  margin-top: 10px;
+}
+
+.sign_in_footer .policy {
+  color: #20404f;
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 600;
+}
+.sign_in_footer .policy_link {
+  color: #20404f;
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 700;
+}
+.sign_in_footer .policy_link > p > span > a {
+  color: #bf8977;
+  text-decoration: none;
+}
+#warning_ordNum,
+#warning_email {
+  color: #bf8977;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: start;
+  margin-left: 73px;
+}
+#warning_ordNum > p,
+#warning_email > p {
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
