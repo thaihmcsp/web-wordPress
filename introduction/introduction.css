@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+#introduction-container {
+  max-width: 390px;
+  margin: auto;
+  color: #20404f;
+}
+.introduction-container-toast {
+  border-bottom: 1px solid #20404f;
+  padding-top: 15px;
+  padding-left: 21px;
+  padding-bottom: 4px;
+}
+
+.introduction-container-toast p {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 19px;
+}
+.introduction-container-about {
+  padding: 0 21px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #20404f;
+}
+.introduction-container-about h2 {
+  padding-top: 22px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+}
+.introduction-container-about p {
+  margin-top: 10px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+.introduction-container-share {
+  padding: 0 21px;
+}
+.introduction-container-share h2 {
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+}
+.introduction-container-share p {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.introduction-container-share button {
+  background: #20404f;
+  border-radius: 5px;
+  border: none;
+  padding: 8px 51px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #e9dfd3;
+  margin-top: 18px;
+  margin-bottom: 33px;
+}
