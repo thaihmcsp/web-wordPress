@@ -7,6 +7,13 @@
     <title>Document</title>
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
@@ -22,8 +29,8 @@
       }
 
       #div_main_checkout_gift {
-        max-width: 390px;
-        height: 2320px;
+        max-width: 500px;
+
         background: #ffffff;
       }
       .text_Product_Gift {
@@ -32,6 +39,7 @@
         left: 21px;
         top: 83px;
         margin-left: 21px;
+        margin-bottom: 8px;
       }
       .text_Product_Gift span {
         font-family: "Nunito";
@@ -47,23 +55,24 @@
         margin-left: 8px;
       }
       .border_contained {
-        width: 390.01px;
+        width: 100%;
         height: 0.63px;
         background: #20404f;
         transform: rotate(-0.08deg);
+        margin-bottom: 25px;
       }
       /****/
       .img_gift_card1 {
-        width: 348px;
+        width: 90%;
         height: 326px;
-        margin-top: 24px;
+        margin: auto;
         background: #d9d9d9;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
         position: relative;
-        margin-left: 21px;
+        padding: 0px 21px 0px 21px;
       }
       #img1_card1-gift {
         width: 306px;
@@ -234,17 +243,7 @@
         font-size: 18px;
         line-height: 16px;
         /* or 89% */
-
         letter-spacing: -0.02em;
-      }
-      .border2_Cart_checkout {
-        width: 390.01px;
-        height: 0.63px;
-
-        background: #20404f;
-        transform: rotate(-0.08deg);
-        margin-top: 16px;
-        margin-bottom: 16px;
       }
       .quantity_add_toCart {
         border: 1px solid #20404f;
@@ -258,7 +257,7 @@
         width: 24px;
         height: 35px;
         background: rgba(32, 64, 79, 0.5);
-        border-radius: 5px 0px 0px 5px;
+        border-radius: 3px 0px 0px 3px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -269,7 +268,7 @@
         width: 24px;
         height: 35px;
         background: #20404f;
-        border-radius: 0px 5px 5px 0px;
+        border-radius: 0px 3px 3px 0px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -305,10 +304,8 @@
         font-size: 18px;
         line-height: 16px;
         /* identical to box height, or 89% */
-
         letter-spacing: 0.05em;
         text-transform: capitalize;
-
         color: #e9dfd3;
       }
       .Add_to_cart_main {
@@ -349,6 +346,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        border: none;
       }
       .PayPal_btn img {
         width: 82px;
@@ -367,27 +365,799 @@
 
         color: #20404f;
       }
-      .description_main{
+      .description_main {
         background: rgba(191, 137, 119, 0.5);
-        height: 262px;
-        font-family: 'Nunito';
+        height: 290px;
+        font-family: "Nunito";
         font-style: normal;
         font-weight: 700;
         font-size: 15px;
         line-height: 16px;
         /* or 107% */
         text-transform: capitalize;
-        color: #20404F;
+        color: #20404f;
       }
-      .description_main{
+      .description_main {
         padding-left: 21px;
         padding-right: 21px;
         padding-top: 24px;
         padding-bottom: 24px;
       }
+      .customer_review {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #e9dfd3;
+        padding: 25px 0;
+        margin-top: 25px;
+      }
+      .name_title_review {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 16px;
+        /* identical to box height, or 73% */
+
+        color: #20404f;
+      }
+      .rate_review {
+        color: #bf8977;
+        padding-bottom: 8px;
+      }
+      .text_review {
+        font-family: "ABeeZee";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        /* identical to box height, or 114% */
+        padding-bottom: 8px;
+
+        color: #20404f;
+      }
+      .btn_review {
+        background: #ffffff;
+        border: 1px solid rgba(32, 64, 79, 0.8);
+        border-radius: 5px;
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        /* identical to box height, or 114% */
+
+        color: #20404f;
+        width: 194px;
+        height: 35px;
+      }
+      .content_rating {
+        display: flex;
+        align-items: center;
+      }
+      .box_rating {
+        background: #bf8977;
+        border: 0.7px solid rgba(32, 64, 79, 0.5);
+        border-radius: 50px;
+        width: 102px;
+        height: 12px;
+        margin-left: 12px;
+        margin-right: 12px;
+      }
+      .rating_relust {
+        color: #bf8977;
+      }
+      .text_results span {
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+      .box_rating1 {
+        border: 0.7px solid rgba(32, 64, 79, 0.5);
+        border-radius: 50px;
+        width: 102px;
+        height: 12px;
+        margin-left: 12px;
+        margin-right: 12px;
+      }
+      .ratimg_customer {
+        margin-left: 21px;
+        margin-bottom: 25px;
+        margin-top: 25px;
+      }
+      .user_icon {
+        width: 39.77px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #d9d9d9;
+        margin-right: 4px;
+      }
+      .cus_rate {
+        color: #bf8977;
+        border-radius: 0.4px;
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+      .date_rate {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 133% */
+
+        text-transform: lowercase;
+
+        color: rgba(32, 64, 79, 0.8);
+      }
+      .user_cus_rate {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 8px;
+      }
+      .flex_center {
+        display: flex;
+        align-items: center;
+      }
+      #rate_review {
+        width: 100%;
+        height: 90px;
+        border: 1px solid rgba(32, 64, 79, 0.8);
+        border-radius: 5px;
+        resize: none;
+        padding: 8px;
+      }
+      .picture_Add {
+        width: 129.26px;
+        height: 130px;
+
+        background: #d9d9d9;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .user_customer_main {
+        margin-right: 8px;
+        display: flex;
+        flex-direction: column;
+      }
+      .customer {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 21px;
+        margin-right: 21px;
+        height: 138px;
+        align-items: flex-end;
+      }
+      .btn_next_wishlist {
+        background: #20404f;
+        border-radius: 5px;
+        width: 66px;
+        height: 21px;
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        /* or 100% */
+
+        text-transform: capitalize;
+
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .pagetion_wishlist {
+        display: flex;
+        position: relative;
+        height: 44px;
+        align-items: center;
+      }
+      .pagation_wishlist_next {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        /* identical to box height, or 136% */
+        letter-spacing: 0.1em;
+        text-transform: lowercase;
+        color: #20404f;
+      }
+      .btn_next_wishlist {
+        margin: auto;
+      }
+      .pagation_wishlist_next {
+        position: absolute;
+        right: 14px;
+      }
+      #footer-copyright_container {
+        max-width: 500px;
+        background-color: rgba(191, 137, 119, 0.5);
+        color: #20404f;
+        padding: 0 22px;
+        margin: auto;
+      }
+
+      .footer-coppyright-title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+      }
+      .footer-copyright-subscribe {
+        padding: 11px 0;
+      }
+
+      #footer-copyright-collapse-wrap {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        border-bottom: 1px solid #d9d9d9;
+        padding: 4px 0;
+        height: 38px;
+      }
+      .footer_copyright-content-warp-items {
+        padding-top: 12px;
+      }
+      .footer_copyright-content-items {
+        padding: 5px 0;
+      }
+      .footer_copyright-content-items-thin {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 19px;
+        padding: 5px 0;
+      }
+      .footer-coppyright-content-detail1 {
+        padding: 8px 0 6px;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .footer-coppyright-content-detail2 {
+        font-size: 14px;
+        font-weight: 600;
+        padding-bottom: 12px;
+      }
+      .footer-coppyright-subcribe-wap {
+        display: flex;
+        justify-content: space-between;
+      }
+      #footer-coppyright-subcribe-input {
+        border-radius: 4px;
+        border: 1px solid #20404f;
+        background: rgba(191, 137, 119, 0.01);
+        width: 244px;
+        height: 32px;
+        font-size: 12px;
+        padding-left: 11px;
+      }
+      #footer-coppyright-subcribe-button {
+        width: 89px;
+        border-radius: 4px;
+        height: 32px;
+        background-color: rgba(32, 64, 79, 1);
+        color: rgba(191, 137, 119, 1);
+        border: none;
+      }
+      .footer-coppyright-author {
+        font-size: 14px;
+        padding: 26px 0 12px 0;
+      }
+      button {
+        border: none;
+      }
+    </style>
+    <style>
+      #footer_container {
+        max-width: 500px;
+        margin: auto;
+      }
+      #footer_wrap {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        background-color: #20404f;
+        color: #bf8977;
+        padding: 15px 24px;
+      }
+      #footer_wrap-left {
+        margin-top: 3px;
+        display: flex;
+      }
+      .footer_icon-social {
+        display: flex;
+        font-size: 18px;
+        overflow: hidden;
+      }
+      .footer_icon-social-center {
+        margin: 0 12px;
+      }
+
+      #footer_wrap-right {
+        display: flex;
+      }
+      .footer_icon-paycard {
+        width: 42px;
+        border-radius: 2px;
+      }
+      .footer_icon-paycard img {
+        width: 42px;
+      }
+      .footer_icon-paycard-center {
+        margin: 0 39px;
+      }
+      #footer-coppyright-subcribe-wap {
+        align-items: center;
+      }
+      #footer-coppyright-subcribe-wap button {
+        padding: 0;
+      }
+      #header {
+        display: none;
+      }
+      .page-wrapper {
+        padding-top: 0;
+      }
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .col {
+        padding: 0;
+      }
+      #header_container {
+        max-width: 500px; /*figma: 390px */
+        height: 69px;
+        background-color: #20404f;
+        color: #e9dfd3;
+      }
+      #header_wrap {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0 21px 5px 21px;
+      }
+      #header-wrap-left {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+      }
+      #header_bar {
+        position: relative;
+        font-size: 25px;
+        padding-right: 21px;
+      }
+
+      #header_brand-icon {
+        width: 133px;
+        height: 46px;
+      }
+
+      #header-wrap-right {
+        display: flex;
+        margin-bottom: 6px;
+      }
+      #header_search {
+        font-size: 20px;
+      }
+      #header_user-info {
+        font-size: 20px;
+        margin: 0 11px;
+      }
+      #header_card {
+        font-size: 20px;
+        position: relative;
+      }
+      #header_card-index {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #bf8977;
+        text-align: center;
+        line-height: 15px;
+        font-size: 13px;
+      }
+      .header-dropdown-wrap-item {
+        border-radius: 5px;
+        position: absolute;
+        top: 0px;
+        transform: translate3d(1px, 70px, 0px) !important;
+        border: none;
+        left: 0;
+        width: 189px;
+        padding: 4px 0 32px 0;
+        background: #20404f;
+        z-index: 100000;
+        display: none;
+      }
+      .header-dropdown-item {
+        padding: 5px 0 2px 22px;
+        margin-top: 4px;
+        font-size: 14px;
+        color: #e9dfd3;
+        font-weight: 400;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+      }
+      .header-dropdown-item-dropdown {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .header-dropdown-item-dropdown-icon {
+        margin-right: 16px;
+      }
+      .header-dropdown-item a {
+        font-size: 14px;
+        color: #e9dfd3;
+        font-weight: 400;
+        text-decoration: none;
+      }
+      .dropdown-divider {
+        margin: 0;
+      }
+
+      .header-dropdown-wrap-product-item {
+        border-radius: 5px;
+        position: absolute;
+        top: -73px;
+        transform: translate3d(1px, 70px, 0px) !important;
+        border: none;
+        width: 165px;
+        padding: 4px 0 32px 0;
+        background: #20404f;
+        left: 100%;
+        z-index: 10000;
+        display: none;
+      }
+      .visibleClass {
+        display: block;
+      }
+      #header {
+        display: none;
+      }
+      .page-wrapper {
+        padding-top: 0;
+      }
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .col {
+        padding: 0;
+      }
+      #header_container {
+        max-width: 500px; /*figma: 390px */
+        height: 69px;
+        background-color: #20404f;
+        color: #e9dfd3;
+      }
+      #header_wrap {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0 21px 5px 21px;
+      }
+      #header-wrap-left {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+      }
+      #header_bar {
+        position: relative;
+        font-size: 25px;
+        padding-right: 21px;
+      }
+
+      #header_brand-icon {
+        width: 133px;
+        height: 46px;
+      }
+
+      #header-wrap-right {
+        display: flex;
+        margin-bottom: 6px;
+      }
+      #header_search {
+        font-size: 20px;
+      }
+      #header_user-info {
+        font-size: 20px;
+        margin: 0 11px;
+      }
+      #header_card {
+        font-size: 20px;
+        position: relative;
+      }
+      #header_card-index {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #bf8977;
+        text-align: center;
+        line-height: 15px;
+        font-size: 13px;
+      }
+      .header-dropdown-wrap-item {
+        border-radius: 5px;
+        position: absolute;
+        top: 0px;
+        transform: translate3d(1px, 70px, 0px) !important;
+        border: none;
+        left: 0;
+        width: 189px;
+        padding: 4px 0 32px 0;
+        background: #20404f;
+        z-index: 100000;
+        display: none;
+      }
+      .header-dropdown-item {
+        padding: 5px 0 2px 22px;
+        margin-top: 4px;
+        font-size: 14px;
+        color: #e9dfd3;
+        font-weight: 400;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+      }
+      .header-dropdown-item-dropdown {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .header-dropdown-item-dropdown-icon {
+        margin-right: 16px;
+      }
+      .header-dropdown-item a {
+        font-size: 14px;
+        color: #e9dfd3;
+        font-weight: 400;
+        text-decoration: none;
+      }
+      .dropdown-divider {
+        margin: 0;
+      }
+
+      .header-dropdown-wrap-product-item {
+        border-radius: 5px;
+        position: absolute;
+        top: -73px;
+        transform: translate3d(1px, 70px, 0px) !important;
+        border: none;
+        width: 165px;
+        padding: 4px 0 32px 0;
+        background: #20404f;
+        left: 100%;
+        z-index: 10000;
+        display: none;
+      }
+      .visibleClass {
+        display: block;
+      }
+      .invisibleClass {
+        display: none;
+      }
+    </style>
+    <style>
+      .customer_rating_contained {
+        background: #e9dfd3;
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+      .display_name,
+      .email_customer,
+      .text_rate,
+      .title_review,
+      .title_review_cs {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 16px;
+        /* or 73% */
+        margin-bottom: 8px;
+
+        color: #20404f;
+        width: 214px;
+      }
+      .display_name span {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+      }
+      #namecustommer,
+      #emailcustomer,
+      #GiveReview {
+        background: #ffffff;
+        border: 1px solid rgba(32, 64, 79, 0.8);
+        border-radius: 5px;
+        width: 348px;
+        height: 35px;
+        margin-top: 8px;
+        padding: 8px;
+      }
+      .text_box_name_tate,
+      .text_box_email,
+      .Rating_container,
+      .review_main,
+      .Review_cs {
+        margin-bottom: 16px;
+        padding: 0 21px;
+      }
+      .Review_cs textarea {
+        background: #ffffff;
+        border: 1px solid rgba(32, 64, 79, 0.8);
+        border-radius: 5px;
+        width: 348px;
+        height: 135px;
+        resize: none;
+        padding: 8px;
+        margin-right: 21px;
+      }
+      .rating_5sao {
+        color: #bf8977;
+      }
+      .title_picture_video {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 16px;
+        /* identical to box height, or 73% */
+
+        color: #20404f;
+      }
+
+      .title_picture_video span {
+        font-weight: 500;
+      }
+      .picture_video_add {
+        background: #ffffff;
+        border: 1px solid rgba(32, 64, 79, 0.8);
+        border-radius: 5px;
+        width: 70px;
+        height: 69px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 8px;
+      }
+      .picture_video_add img {
+        width: 60%;
+        height: 48%;
+      }
+      .picture_video_container_rate {
+        margin-left: 21px;
+      }
+      .btn_submit_review {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 16px;
+        /* or 80% */
+
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+        background: #20404f;
+        width: 252px;
+        height: 39px;
+        border-radius: 5px;
+
+        color: #e9dfd3;
+      }
+      .margin_btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+      }
+      .border_contained1 {
+        width: 100%;
+        border: 1px solid #20404f;
+        transform: rotate(-0.08deg);
+      }
+      .review_display_onclick {
+        display: none;
+        transition: all 1s ease-in-out;
+      }
+      .review_onclick_block_rate {
+        transition: all 1s ease-in-out;
+      }
     </style>
   </head>
   <body>
+    <div id="header_container">
+      <div id="header_wrap">
+        <div id="header-wrap-left">
+          <div id="header_bar" onclick="onMenuDropdown()">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+
+          <!-- dropdown -->
+
+          <div class="header-dropdown-wrap-item" onclick="">
+            <div class="header-dropdown-item"><a href="#">Home</a></div>
+
+            <div class="header-dropdown-item">
+              <a href="#">Best Sallers</a>
+            </div>
+
+            <div
+              class="header-dropdown-item header-dropdown-item-dropdown"
+              onclick="onProductMenuDropdown()"
+            >
+              <div>Product</div>
+              <i
+                class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
+              ></i>
+              <div class="header-dropdown-wrap-product-item">
+                <div class="header-dropdown-item"><div>Ornament</div></div>
+                <div class="header-dropdown-item">
+                  <div>Tumbler</div>
+                </div>
+
+                <div class="header-dropdown-item">
+                  <div>Door mat</div>
+                </div>
+
+                <div class="header-dropdown-item">
+                  <div>Door sign</div>
+                </div>
+
+                <div class="header-dropdown-item">
+                  <div>Gift Card</div>
+                </div>
+
+                <div class="header-dropdown-item">
+                  <div>2 Layered Door Sign</div>
+                </div>
+              </div>
+            </div>
+            <!-- dropdown Product -->
+
+            <div class="header-dropdown-item">
+              <a href="#">Wishdivst</a>
+            </div>
+
+            <div class="header-dropdown-item">
+              <a href="#">Gift Card</a>
+            </div>
+
+            <div class="header-dropdown-item"><a href="#">Login</a></div>
+
+            <!-- test -->
+          </div>
+          <div id="header_brand-icon">
+            <img src="https://fmzee.com/header-logo/" alt="logo_brand" />
+          </div>
+        </div>
+
+        <div id="header-wrap-right">
+          <div id="header_search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div id="header_user-info"><i class="fa-regular fa-user"></i></div>
+          <div id="header_card">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div id="header_card-index">1</div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="div_main_checkout_gift">
       <div class="text_Product_Gift">
         <span>Home/Product/Gift</span>
@@ -463,7 +1233,7 @@
           <span id="end2_text">$ 22.8</span>
         </div>
       </div>
-      <div class="border2_Cart_checkout"></div>
+      <div class="border_contained"></div>
       <div class="Add_to_cart_main">
         <div class="nav_btn_add">
           <div class="quantity_add_toCart">
@@ -499,22 +1269,355 @@
       </div>
       <div class="more_payment"><span>More payment options</span></div>
       <div class="description_main">
-        <div class="title_description"><b>Description:</b></p>
-        <p>
-          + Sse it for ONLINE purchases Fmzee.com only.
-        </p>
-        <p>
-          + The perfect gift to say Merry Xmas, Happy New Year, Happy
-          Valentine’s Day, Happy Birthday, Thank You, congratulations, and more.
-        </p>
-        <p>+ Available in $25-$200</p>
-        <p>
-          + Card delivered via email and enter your gift card number at
-          checkout.
+        <div class="title_description">
+          <b>Description:</b>
+          <p>+ Sse it for ONLINE purchases Fmzee.com only.</p>
+          <p>
+            + The perfect gift to say Merry Xmas, Happy New Year, Happy
+            Valentine’s Day, Happy Birthday, Thank You, congratulations, and
+            more.
+          </p>
+          <p>+ Available in $25-$200</p>
+          <p>
+            + Card delivered via email and enter your gift card number at
+            checkout.
+          </p>
         </div>
-        <p>
-          + No returns or refunds on Fmzee Gift Cards.
-        </p>
+
+        <p>+ No returns or refunds on Fmzee Gift Cards.</p>
+      </div>
+      <div class="review_onclick_block_rate">
+        <div class="customer_review">
+          <div class="name_title_review">Customer Reviews</div>
+          <div class="rate_review">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="text_review">Be the first to write a review</div>
+          <button class="btn_review" onclick="handleClickWrite()">
+            Write a review
+          </button>
+        </div>
+        <div class="ratimg_customer">
+          <div class="content_rating">
+            <div class="rating_relust">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="box_rating"></div>
+            <div class="text_results"><span>100%</span><span>(9)</span></div>
+          </div>
+          <div class="content_rating">
+            <div class="rating_relust">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="box_rating1"></div>
+            <div class="text_results"><span>%</span><span></span></div>
+          </div>
+          <div class="content_rating">
+            <div class="rating_relust">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="box_rating1"></div>
+            <div class="text_results"><span>%</span><span></span></div>
+          </div>
+          <div class="content_rating">
+            <div class="rating_relust">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="box_rating1"></div>
+            <div class="text_results"><span>%</span><span></span></div>
+          </div>
+          <div class="content_rating">
+            <div class="rating_relust">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="box_rating1"></div>
+            <div class="text_results"><span>%</span><span></span></div>
+          </div>
+        </div>
+        <div class="border_contained"></div>
+        <div class="customer">
+          <div class="user_customer_main">
+            <div class="user_cus_rate">
+              <div class="user_icon">C</div>
+              <div class="flex_center">
+                <div class="cus_rate">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="date_rate">08/04/2022</div>
+              </div>
+            </div>
+            <textarea
+              id="rate_review"
+              rows="4"
+              cols="25"
+              placeholder="Phần đánh giá của khách hàng"
+            ></textarea>
+          </div>
+          <div class="picture_Add">
+            <img
+              style="width: 55.76px; height: 57px"
+              src="https://fmzee.com/wp-content/uploads/2022/08/noun-camera-5079150.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="pagetion_wishlist">
+          <div class="btn_next_wishlist">Next</div>
+          <div class="pagation_wishlist_next">
+            <span>1 2 3 ... 9</span><i class="fa-solid fa-angles-right"></i>
+          </div>
+        </div>
+      </div>
+      <!-- \\\\\\\\\\\RATE\\\\\\\\\\\\\ -->
+      <div class="review_display_onclick">
+        <div class="rate_customer_product_content">
+          <div class="customer_review">
+            <div class="name_title_review">Customer Reviews</div>
+            <div class="rate_review">
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="text_review">Be the first to write a review</div>
+            <button class="btn_review" onclick="handleOnclickCancel()">
+              Cancel review
+            </button>
+          </div>
+        </div>
+        <div class="border_contained1"></div>
+        <div class="customer_rating_contained">
+          <div class="text_box_name_tate">
+            <div class="display_name">
+              Name (Display name <span>John Smith )</span>
+            </div>
+            <input type="text" name="" id="namecustommer" />
+          </div>
+          <div class="text_box_email">
+            <div class="email_customer">Email</div>
+            <input type="text" name="" id="emailcustomer" />
+          </div>
+          <div class="Rating_container">
+            <div class="text_rate">Rating</div>
+            <div class="rating_5sao">
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+          </div>
+          <div class="review_main">
+            <div class="title_review">Review title</div>
+            <input
+              type="text"
+              name=""
+              id="GiveReview"
+              placeholder="Give your review a title"
+            />
+          </div>
+          <div class="Review_cs">
+            <div class="title_review_cs">Review</div>
+            <textarea
+              name=""
+              id=""
+              placeholder="Write your comments here"
+            ></textarea>
+          </div>
+          <div class="picture_video_container_rate">
+            <div class="title_picture_video">
+              Picture/ Video <span>( Optional )</span>
+            </div>
+            <div class="picture_video_add">
+              <img
+                src="https://fmzee.com/wp-content/uploads/2022/08/mayAnh.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="margin_btn">
+            <button class="btn_submit_review">Submit Review</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- //////////////////////////////////////// -->
+    </div>
+    <div id="footer-copyright_container">
+      <div id="footer-copyright_wrap">
+        <div class="footer-copyright-collapse">
+          <div
+            data-bs-toggle="collapse"
+            href="#quick_link"
+            aria-expanded="false"
+            aria-controls="quick_link"
+            id="footer-copyright-collapse-wrap"
+          >
+            <div class="footer-coppyright-title">Quick Links</div>
+            <div class="footer-copyright-icon">
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+          <div class="collapse" id="quick_link">
+            <div class="footer_copyright-content-warp-items">
+              <div class="footer_copyright-content-items">Home</div>
+              <div class="footer_copyright-content-items">About Us</div>
+              <div class="footer_copyright-content-items">Contact Us</div>
+              <div class="footer_copyright-content-items">FAQ</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright-collapse">
+          <div class="footer-copyright-collapse">
+            <div
+              data-bs-toggle="collapse"
+              href="#Policies"
+              aria-expanded="false"
+              aria-controls="Policies"
+              id="footer-copyright-collapse-wrap"
+            >
+              <div class="footer-coppyright-title">Policies</div>
+              <div class="footer-copyright-icon">
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse" id="Policies">
+              <div class="footer_copyright-content-warp-items">
+                <div class="footer_copyright-content-items">Privacy Policy</div>
+                <div class="footer_copyright-content-items">
+                  Shipping Policy
+                </div>
+                <div class="footer_copyright-content-items">
+                  Refund & Return Policy
+                </div>
+                <div class="footer_copyright-content-items">
+                  Terms and Conditions
+                </div>
+                <div class="footer_copyright-content-items">Payment Method</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright-collapse">
+          <div class="footer-copyright-collapse">
+            <div
+              data-bs-toggle="collapse"
+              href="#getInTouch"
+              aria-expanded="false"
+              aria-controls="getInTouch"
+              id="footer-copyright-collapse-wrap"
+            >
+              <div class="footer-coppyright-title">Get In Touch</div>
+              <div class="footer-copyright-icon">
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse" id="getInTouch">
+              <div class="footer_copyright-content-warp-items">
+                <div class="footer_copyright-content-items-thin">
+                  If you have any questions, please contact us by this email
+                  below
+                </div>
+                <div class="footer_copyright-content-items-thin">
+                  <i class="fa-regular fa-envelope"></i>
+                  Email: suppost.fmzee@gmail.com UK Address: 24-26 Arcadia
+                </div>
+                <div class="footer_copyright-content-items-thin">
+                  Avenue, Dephna House #105, London, Greater London, United
+                  Kingdom, N3 2JU
+                </div>
+
+                <div class="footer_copyright-content-items-thin">
+                  Delivery Delays Due To Covid-19
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright-subscribe">
+          <div class="footer-coppyright-title">Newsletter</div>
+          <div class="footer-coppyright-content">
+            <div class="footer-coppyright-content-detail1">
+              Subscribe to be notified about product launches,
+              <br />special offers and news.
+            </div>
+            <div class="footer-coppyright-content-detail2">
+              Enter your email and get your first treat,
+              <br />
+              an instant 25% discount off your first order!
+            </div>
+          </div>
+          <div class="footer-coppyright-subcribe-wap">
+            <input
+              id="footer-coppyright-subcribe-input"
+              type="text"
+              placeholder="your email:"
+            />
+            <button id="footer-coppyright-subcribe-button">Subcribe</button>
+          </div>
+          <div class="footer-coppyright-author">
+            © 2022 FMzee - Personalized Door Sign, Ornament, Tumbler & Home
+            Decor
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer_container">
+      <div id="footer_wrap">
+        <div id="footer_wrap-left">
+          <div class="footer_icon-social">
+            <i class="fa-brands fa-facebook"></i>
+          </div>
+          <div class="footer_icon-social footer_icon-social-center">
+            <i class="fa-brands fa-square-twitter"></i>
+          </div>
+          <div class="footer_icon-social">
+            <i class="fa-brands fa-square-instagram"></i>
+          </div>
+        </div>
+        <div id="footer_wrap-right">
+          <div class="footer_icon-paycard">
+            <img src=" https://fmzee.com/productdetail-pay-visa/" alt="" />
+          </div>
+          <div class="footer_icon-paycard footer_icon-paycard-center">
+            <img src="https://fmzee.com/productdetail-pay-paypal/" alt="" />
+          </div>
+          <div class="footer_icon-paycard">
+            <img
+              src=" https://fmzee.com/productdetail-pay-mastercard/"
+              alt=""
+            />
+          </div>
+        </div>
       </div>
     </div>
 
@@ -533,6 +1636,19 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script></script>
+    <script>
+      function handleClickWrite() {
+        document.querySelector(".review_onclick_block_rate").style.display =
+          "none";
+        document.querySelector(".review_display_onclick").style.display =
+          "block";
+      }
+      function handleOnclickCancel() {
+        document.querySelector(".review_onclick_block_rate").style.display =
+          "block";
+        document.querySelector(".review_display_onclick").style.display =
+          "none";
+      }
+    </script>
   </body>
 </html>
