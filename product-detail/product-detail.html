@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        font-family: "Nunito", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* border: 1px solid gray; */
+      }
+      /* -----------------CSS HEADER----------------------- */
+      #header {
+        display: none;
+      }
+      .page-wrapper {
+        padding-top: 0;
+      }
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .col {
+        padding: 0;
+      }
+      #header_container {
+        background-color: #20404f;
+        /* max-width: 500px; figma: 390px */
+      }
+      #header_wrap {
+        max-width: 348px;
+        height: 69px;
+        margin: auto;
+        color: #e9dfd3;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0 8px 5px 0;
+      }
+      #header-wrap-left {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+      }
+      #header_bar {
+        position: relative;
+        font-size: 25px;
+        padding-right: 21px;
+      }
+      .header_bar-img {
+        height: 20px;
+        margin-bottom: 6px;
+      }
+
+      #header_brand-icon {
+        width: 133px;
+        height: 46px;
+      }
+
+      #header-wrap-right {
+        display: flex;
+        margin-bottom: 6px;
+      }
+      #header_search {
+        font-size: 20px;
+      }
+      .header_search-img {
+        height: 20px;
+      }
+      .header_card-img {
+        height: 20px;
+      }
+      .header_user-info-img {
+        height: 20px;
+      }
+      #header_user-info {
+        font-size: 20px;
+        margin: 0 11px;
+      }
+      #header_card {
+        font-size: 20px;
+        position: relative;
+      }
+      #header_card-index {
+        position: absolute;
+        top: -1px;
+        right: -7px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #bf8977;
+        text-align: center;
+        line-height: 15px;
+        font-size: 13px;
+      }
+      .header-dropdown-wrap-item {
+        border-radius: 5px;
+        position: absolute;
+        top: 0px;
+        transform: translate3d(1px, 70px, 0px) !important;
+        border: none;
+        left: 0;
+        width: 189px;
+        padding: 4px 0 32px 0;
+        background: #20404f;
+        z-index: 100000;
+        display: none;
+      }
+      .header-dropdown-item {
+        padding: 5px 0 2px 22px;
+        margin-top: 4px;
+        font-size: 14px;
+        color: #e9dfd3;
+        font-weight: 400;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+      }
+      .header-dropdown-item-dropdown {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .header-dropdown-item-dropdown-icon {
+        margin-right: 16px;
+      }
+      .header-dropdown-item a {
+        font-size: 14px;
+        color: #e9dfd3;
+        font-weight: 400;
+        text-decoration: none;
+      }
+      .dropdown-divider {
+        margin: 0;
+      }
+
+      .header-dropdown-wrap-product-item {
+        border-radius: 5px;
+        position: absolute;
+        top: -73px;
+        transform: translate3d(1px, 70px, 0px) !important;
+        border: none;
+        width: 165px;
+        padding: 4px 0 32px 0;
+        background: #20404f;
+        left: 100%;
+        z-index: 10000;
+        display: none;
+      }
+      .visibleClass {
+        display: block;
+      }
+      .invisibleClass {
+        display: none;
+      }
+      /*------------------- HẾT CSS HEADER---------------- */
+      /* PRODUCT DETAIL CSS */
+      #product-detail-breadcrumb-container {
+        height: 35px;
+        max-width: 348px;
+        margin: auto;
+        /* border-bottom: 1px solid #20404f; */
+        display: flex;
+        align-items: flex-end;
+        padding: 0 0 5px 0px;
+      }
+
+      .product-detail-breadcrumb-item {
+        color: rgba(32, 64, 79, 0.8);
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 19px;
+      }
+      .product-detail-production-main-img {
+        max-width: 348px;
+        margin: 0px auto 14px;
+      }
+      .product-detail-production-main-img img {
+        max-width: 348px;
+        border-radius: 5px;
+      }
+      .product-detail-production-warp-img-small {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* padding: 0 21px 0 21px; */
+        max-width: 348px;
+        margin: auto;
+      }
+      .product-detail-production-warp-img-small img {
+        max-width: 80px;
+        max-height: 80px;
+      }
+      .product-detail-description-product {
+        margin: auto;
+        max-width: 348px;
+        margin-top: 10px;
+      }
+      .product-detail-production-description-content {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 19px;
+        color: #20404f;
+      }
+      .product-detail-production-wrap-price {
+        display: flex;
+        max-width: 348px;
+        margin: auto;
+        padding: 10px 0 8px 0;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 16px;
+        letter-spacing: -0.02em;
+        color: rgba(0, 0, 0, 0.55);
+      }
+      .product-detail-production-price-old {
+        text-decoration: line-through;
+      }
+      .product-detail-production-price-new {
+        color: #bf8977;
+        margin-left: 16px;
+      }
+      .product-detail-production-rate {
+        display: flex;
+        align-items: center;
+        max-width: 348px;
+        margin: auto;
+        color: #bf8977;
+      }
+      .product-detail-production-rate-star i {
+        padding-right: 2px;
+        font-size: 14px;
+      }
+      .product-detail-production-price-quatity {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        padding-left: 2px;
+        letter-spacing: -0.02em;
+        color: rgba(0, 0, 0, 0.6);
+      }
+      /* divide */
+
+      .product-detail-divide {
+        margin-top: 17px;
+        margin-bottom: 20px;
+
+        border-top: 0.65px solid #20404f;
+      }
+      .product-detail-divide-crumb {
+        border-top: 0.65px solid #20404f;
+        height: 25.58px;
+      }
+
+      /* <!-- Choose size --> */
+      .product-detail-production-choose-size {
+        margin: auto;
+        max-width: 348px;
+      }
+
+      .product-detail-production-choose-size-title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        /* identical to box height, or 100% */
+        letter-spacing: 0.05em;
+        color: #20404f;
+        margin-bottom: 6px;
+      }
+
+      .product-detail-production-choose-size-button-wrap {
+        width: 262px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .product-detail-production-choose-size-button {
+        width: 75px;
+        height: 32px;
+        background: #20404f;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+        border: none;
+      }
+
+      /* Note */
+      .product-detail-production-note-container {
+        /* max-width: 390px; */
+        height: 161px;
+        background: rgba(191, 137, 119, 0.5);
+        padding-top: 13px;
+      }
+      .product-detail-production-note-description {
+        width: 348px;
+        /* height: 89px; */
+        margin: auto;
+        padding: 8px 18px 5px 17px;
+        border: 1px solid rgba(32, 64, 79, 0.8);
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 19px;
+        /* or 146% */
+
+        color: rgba(32, 64, 79, 0.6);
+      }
+      .product-detail-production-note-input-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        max-width: 348px;
+        margin-top: 11px;
+      }
+      .product-detail-production-note-lable {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        /* or 114% */
+
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+
+        color: #20404f;
+      }
+      .product-detail-production-note-input {
+        width: 293px;
+        height: 35px;
+        background: #ffffff;
+        border: 1px solid rgba(32, 64, 79, 0.8);
+        border-radius: 5px;
+      }
+      /* Add to card */
+      .product-detail-add-cart-wrap {
+        max-width: 348px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        margin-bottom: 30px;
+      }
+      .product-detail-add-cart-add-quatity {
+      }
+      .product-detail-add-cart-add-quatity-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 88px;
+        height: 35px;
+
+        border: 1px solid #20404f;
+        border-radius: 5px;
+      }
+      .product-detail-add-cart-sub {
+        border: none;
+        width: 24px;
+        height: 35px;
+
+        background: rgba(32, 64, 79, 0.5);
+        border-radius: 5px 0px 0px 5px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        /* identical to box height, or 100% */
+
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .product-detail-add-cart-numb {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        /* or 100% */
+
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+
+        color: #20404f;
+      }
+      .product-detail-add-cart-plus {
+        border: none;
+        width: 24px;
+        height: 35px;
+
+        background: #20404f;
+        border-radius: 0px 5px 5px 0px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        /* identical to box height, or 100% */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+
+        color: #ffffff;
+        cursor: pointer;
+      }
+      .product-detail-add-cart-add-quatity-remove {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        /* or 114% */
+
+        letter-spacing: -0.04em;
+        text-transform: capitalize;
+
+        color: #20404f;
+      }
+      .product-detail-add-cart-btn {
+        width: 234px;
+        height: 35px;
+        left: 136px;
+        top: 1003px;
+
+        background: #20404f;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 16px;
+        /* identical to box height, or 89% */
+
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+
+        color: #e9dfd3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      /* Stickit ------------------------------------------------*/
+      .product-detail-stickit-wrap {
+        height: 168px;
+
+        background: #e9dfd3;
+        padding-top: 12px;
+        padding-bottom: 2px;
+      }
+      .product-detail-stickit-title {
+        max-width: 348px;
+        margin: auto;
+        font-weight: 650;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        color: #20404f;
+        padding-bottom: 12px;
+      }
+      .product-detail-stickit-item {
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        max-width: 348px;
+        margin-bottom: 14px;
+      }
+      .product-detail-stickit-item-child-buy {
+        width: 154px;
+        height: 28px;
+        left: 21px;
+        top: 1108px;
+
+        background: #20404f;
+        border-radius: 5px;
+        font-weight: 650;
+        font-size: 16px;
+        line-height: 16px;
+        /* identical to box height, or 100% */
+
+        color: #e9dfd3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .product-detail-stickit-item-child-discount {
+        width: 154px;
+        height: 28px;
+
+        border: 1px solid rgba(32, 64, 79, 0.8);
+        border-radius: 5px;
+        font-weight: 650;
+        font-size: 16px;
+        line-height: 16px;
+        /* identical to box height, or 100% */
+
+        color: #20404f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      /* Payment ---------------------------------------------- */
+      .product-detail-payment-warp {
+        height: 300px;
+        max-width: 348px;
+        margin: auto;
+      }
+      .product-detail-payment-description {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        /* or 114% */
+        margin-top: 18px;
+
+        color: #20404f;
+      }
+      .product-detail-payment-description-bold {
+        font-weight: 650;
+      }
+      .product-detail-payment-progression-wrap {
+      }
+      .product-detail-payment-progress-icon-wrap {
+      }
+      .product-detail-payment-range {
+        margin-top: 33px;
+        position: relative;
+      }
+      .product-detail-payment-range-rule {
+        width: 308px;
+        height: 2px;
+        background: #20404f;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+      }
+      .product-detail-payment-icon-wrap {
+        width: 348px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: -20px;
+      }
+      .product-detail-payment-addcart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        background: #20404f;
+        border-radius: 100px;
+      }
+      .product-detail-payment-addcart img {
+        width: 25px;
+      }
+
+      .product-detail-payment-deliver {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        background: #20404f;
+        border-radius: 100px;
+      }
+      .product-detail-payment-deliver img {
+      }
+      .product-detail-payment-done {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        background: #20404f;
+        border-radius: 100px;
+      }
+      .product-detail-payment-done img {
+        width: 24px;
+      }
+      .product-detail-payment-progress-description {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 26px;
+      }
+      .product-detail-payment-progress-description-detail {
+        display: flex;
+        flex-direction: column;
+      }
+      .product-detail-payment-progress-description-detail-center {
+        margin-left: 60px;
+        justify-content: center;
+        align-items: center;
+      }
+      .product-detail-payment-progress-description-detail-end {
+        justify-content: end;
+        align-items: flex-end;
+      }
+      .product-detail-payment-progress-description-detail-date {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        /* identical to box height, or 114% */
+
+        color: #20404f;
+      }
+      .product-detail-payment-progress-description-detail-status {
+        font-weight: 500;
+        margin-top: 14px;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 133% */
+
+        color: rgba(32, 64, 79, 0.8);
+      }
+      /* Phương thức thanh toán--------------------------------------- */
+      .product-detail-payment-method-wrap {
+        margin-top: 22px;
+      }
+      .product-detail-payment-method-icon {
+        display: flex;
+        justify-content: space-between;
+      }
+      .product-detail-payment-method-icon-child {
+      }
+
+      .product-detail-payment-method-default {
+        margin-top: 19px;
+        width: 348px;
+        height: 38px;
+        border: none;
+        background: #f9c645;
+        border-radius: 5px;
+      }
+      .product-detail-payment-method-more-payment-option {
+        font-weight: 550;
+        font-size: 12px;
+        line-height: 19px;
+        /* identical to box height, or 158% */
+
+        color: #20404f;
+        margin-top: 4px;
+        cursor: pointer;
+      }
+      /* Desciption payment------------------------------ */
+      .product-detail-payment-description-container {
+        padding-top: 25px;
+        padding-bottom: 12px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 16px;
+        /* or 107% */
+        color: #20404f;
+        background: rgba(191, 137, 119, 0.5);
+      }
+      .product-detail-payment-description-wrap {
+        max-width: 348px;
+        margin: auto;
+      }
+      .product-detail-payment-description-header-main {
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .product-detail-payment-description-phase {
+        margin-bottom: 20px;
+      }
+      .product-detail-payment-description-header {
+        font-weight: 700;
+      }
+      .opacity08 {
+        opacity: 0.8;
+      }
+      /* HẾT PRODUCT DETAIL CSS */
+    </style>
+  </head>
+  <body>
+    <div class="product-detail-container">
+      <!-------------------------- HEADER------------------------------------ -->
+
+      <div id="header_container">
+        <div id="header_wrap">
+          <div id="header-wrap-left">
+            <div id="header_bar" onclick="onMenuDropdown()">
+              <img
+                class="header_bar-img"
+                src="https://fmzee.com/threebar/"
+                alt=""
+              />
+              <!-- <i class="fa-solid fa-bars"></i> -->
+            </div>
+
+            <!-- dropdown -->
+
+            <div class="header-dropdown-wrap-item" onclick="">
+              <div class="header-dropdown-item"><a href="#">Home</a></div>
+
+              <div class="header-dropdown-item">
+                <a href="#">Best Sallers</a>
+              </div>
+
+              <div
+                class="header-dropdown-item header-dropdown-item-dropdown"
+                onclick="onProductMenuDropdown()"
+              >
+                <div>Product</div>
+                <i
+                  class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
+                ></i>
+                <div class="header-dropdown-wrap-product-item">
+                  <div class="header-dropdown-item"><div>Ornament</div></div>
+                  <div class="header-dropdown-item">
+                    <div>Tumbler</div>
+                  </div>
+
+                  <div class="header-dropdown-item">
+                    <div>Door mat</div>
+                  </div>
+
+                  <div class="header-dropdown-item">
+                    <div>Door sign</div>
+                  </div>
+
+                  <div class="header-dropdown-item">
+                    <div>Gift Card</div>
+                  </div>
+
+                  <div class="header-dropdown-item">
+                    <div>2 Layered Door Sign</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- dropdown Product -->
+
+              <div class="header-dropdown-item">
+                <a href="#">Wishdivst</a>
+              </div>
+
+              <div class="header-dropdown-item">
+                <a href="#">Gift Card</a>
+              </div>
+
+              <div class="header-dropdown-item"><a href="#">Login</a></div>
+
+              <!-- test -->
+            </div>
+            <div id="header_brand-icon">
+              <img src="https://fmzee.com/header-logo/" alt="logo_brand" />
+            </div>
+          </div>
+
+          <div id="header-wrap-right">
+            <div id="header_search">
+              <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+              <img
+                class="header_search-img"
+                src="https://fmzee.com/kinhlop/"
+                alt=""
+              />
+            </div>
+            <div id="header_user-info">
+              <img
+                class="header_user-info-img"
+                src="https://fmzee.com/user/"
+                alt=""
+              />
+
+              <!-- <i class="fa-regular fa-user"></i>-->
+            </div>
+            <div id="header_card">
+              <!-- <i class="fa-solid fa-cart-shopping"></i> -->
+              <img
+                class="header_card-img"
+                src="https://fmzee.com/cartheader/"
+                alt=""
+              />
+              <div id="header_card-index">1</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- --------------------------HẾT HEADER-------------------------------- -->
+      <!-- BreadCrumb -->
+      <div id="product-detail-breadcrumb-container">
+        <div class="product-detail-breadcrumb-item">
+          Home / Product / teacher
+        </div>
+      </div>
+      <div class="product-detail-divide-crumb"></div>
+      <!-- Product detail content -->
+      <div id="product-detail-content-container">
+        <!-- detail productiono-->
+        <div id="product-detail-production">
+          <div class="product-detail-production-main-img">
+            <img
+              src="https://fmzee.com/productdetail-thumbnail/"
+              alt="img-main product"
+            />
+          </div>
+          <div class="product-detail-production-warp-img-small">
+            <div class="product-detail-production-img-item">
+              <img src="https://fmzee.com/productdetail-option1/" alt="ảnh1" />
+            </div>
+            <div class="product-detail-production-img-item">
+              <img src="https://fmzee.com/productdetail-option2/" alt="ảnh2" />
+            </div>
+            <div class="product-detail-production-img-item">
+              <img src="https://fmzee.com/productdetail-option3/" alt="ảnh3" />
+            </div>
+            <div class="product-detail-production-img-item">
+              <img src="https://fmzee.com/productdetail-option4/" alt="ảnh4" />
+            </div>
+          </div>
+          <div class="product-detail-description-product">
+            <div class="product-detail-production-description-content">
+              Personalized Teacher Door Sign,<br />
+              Classroom Door Sign, Custom <br />
+              Teacher Sign, Boho Classroom Decor
+            </div>
+          </div>
+          <div class="product-detail-production-wrap-price">
+            <div class="product-detail-production-price-old">$28.92</div>
+            <div class="product-detail-production-price-new">$21.69</div>
+          </div>
+          <div class="product-detail-production-rate">
+            <div class="product-detail-production-rate-star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="product-detail-production-price-quatity">(15)</div>
+          </div>
+          <div class="product-detail-divide"></div>
+          <!-- Choose size -->
+          <div class="product-detail-production-choose-size">
+            <div class="product-detail-production-choose-size-title">Size</div>
+            <div class="product-detail-production-choose-size-button-wrap">
+              <button class="product-detail-production-choose-size-button">
+                12 inches
+              </button>
+              <button
+                class="product-detail-production-choose-size-button opacity08"
+              >
+                14 inches
+              </button>
+              <button
+                class="product-detail-production-choose-size-button opacity08"
+              >
+                18 inches
+              </button>
+            </div>
+          </div>
+
+          <!-- Note -->
+          <div class="product-detail-production-note-container">
+            <div class="product-detail-production-note-description">
+              Add your personalization: <br />
+              Enter the text you want to add on this sign. <br />
+              Ex: Mrs. Laura’s <br />
+              <span style="color: red">❤</span>
+              please ask about special requests via message
+              <span style="color: red">❤</span>
+            </div>
+            <div class="product-detail-production-note-input-wrap">
+              <div class="product-detail-production-note-lable">Note:</div>
+              <input type="text" class="product-detail-production-note-input" />
+            </div>
+          </div>
+
+          <!-- Add to card -->
+
+          <div class="product-detail-add-cart-wrap">
+            <div class="product-detail-add-cart-add-quatity">
+              <div class="product-detail-add-cart-add-quatity-wrap">
+                <button class="product-detail-add-cart-sub">-</button>
+                <div class="product-detail-add-cart-numb">1</div>
+                <button class="product-detail-add-cart-plus">+</button>
+              </div>
+            </div>
+            <div class="product-detail-add-cart-btn">Add To Card</div>
+          </div>
+
+          <!-- Stickit -->
+          <div class="product-detail-stickit-wrap">
+            <div class="product-detail-stickit-title">BUY MORE, SAVE MORE!</div>
+            <div class="product-detail-stickit-item">
+              <div class="product-detail-stickit-item-child-buy">
+                Buy 2 items
+              </div>
+              <div class="product-detail-stickit-item-child-discount">
+                Get 5% OFF
+              </div>
+            </div>
+            <div class="product-detail-stickit-item">
+              <div class="product-detail-stickit-item-child-buy">
+                Buy 3 items
+              </div>
+              <div class="product-detail-stickit-item-child-discount">
+                Get 10% OFF
+              </div>
+            </div>
+            <div class="product-detail-stickit-item">
+              <div class="product-detail-stickit-item-child-buy">
+                Buy 5+ items
+              </div>
+              <div class="product-detail-stickit-item-child-discount">
+                Get 15% OFF
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment ----------------------------------------->
+          <div class="product-detail-payment-warp">
+            <div class="product-detail-payment-description">
+              Order today, and you'll receive your package between <br />
+              <div class="product-detail-payment-description-bold">
+                Aug 26 and Sep 02
+              </div>
+            </div>
+            <div class="product-detail-payment-progression-wrap">
+              <div class="product-detail-payment-progress-icon-wrap">
+                <div class="product-detail-payment-range">
+                  <div class="product-detail-payment-range-rule"></div>
+                  <div class="product-detail-payment-icon-wrap">
+                    <div class="product-detail-payment-addcart">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/cartok.png"
+                        alt="buy"
+                      />
+                    </div>
+                    <div class="product-detail-payment-deliver">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/xehang.png"
+                        alt="diliver"
+                      />
+                    </div>
+                    <div class="product-detail-payment-done">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/xe.png"
+                        alt="done"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-detail-payment-progress-description">
+                <div class="product-detail-payment-progress-description-detail">
+                  <div
+                    class="product-detail-payment-progress-description-detail-date"
+                  >
+                    Aug 09
+                  </div>
+                  <div
+                    class="product-detail-payment-progress-description-detail-status"
+                  >
+                    Ordered
+                  </div>
+                </div>
+                <div
+                  class="product-detail-payment-progress-description-detail product-detail-payment-progress-description-detail-center"
+                >
+                  <div
+                    class="product-detail-payment-progress-description-detail-date"
+                  >
+                    Aug 13 - Aug 15
+                  </div>
+                  <div
+                    class="product-detail-payment-progress-description-detail-status"
+                  >
+                    Order Ready
+                  </div>
+                </div>
+                <div
+                  class="product-detail-payment-progress-description-detail product-detail-payment-progress-description-detail-end"
+                >
+                  <div
+                    class="product-detail-payment-progress-description-detail-date"
+                  >
+                    Aug 26 - Sep 02
+                  </div>
+                  <div
+                    class="product-detail-payment-progress-description-detail-status"
+                  >
+                    Delivered
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phương thức thanh toán -->
+
+            <div class="product-detail-payment-method-wrap">
+              <div class="product-detail-payment-method-icon">
+                <div class="product-detail-payment-method-icon-child">
+                  <img src="https://fmzee.com/productdetail-pay-visa/" alt="" />
+                </div>
+                <div class="product-detail-payment-method-icon-child">
+                  <img
+                    src="https://fmzee.com/productdetail-pay-paypal/"
+                    alt=""
+                  />
+                </div>
+                <div class="product-detail-payment-method-icon-child">
+                  <img
+                    src="https://fmzee.com/productdetail-pay-mastercard/"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <button class="product-detail-payment-method-default">
+                <img src="https://fmzee.com/productdetail-pay-button/" alt="" />
+              </button>
+              <div class="product-detail-payment-method-more-payment-option">
+                More payment options
+              </div>
+            </div>
+          </div>
+          <!-- Description payment -->
+          <div class="product-detail-payment-description-container">
+            <div class="product-detail-payment-description-wrap">
+              <div class="product-detail-payment-description-header-main">
+                Description
+              </div>
+
+              <div class="product-detail-payment-description-phase">
+                <div class="product-detail-payment-description-header">
+                  Product Details
+                </div>
+                <div class="product-detail-payment-description-content">
+                  High-quality plywood, wood thickness measures 0.5cm. It is
+                  bright and vivid colors, lifelike graphics with high precision
+                  UV printing.
+                </div>
+              </div>
+              <div class="product-detail-payment-description-phase">
+                <div class="product-detail-payment-description-header">
+                  Shapes: Round Sign: /12″/14″/18″.
+                </div>
+                <div class="product-detail-payment-description-content"></div>
+              </div>
+              <div class="product-detail-payment-description-phase">
+                <div class="product-detail-payment-description-header">
+                  Unique Features:
+                </div>
+                <div class="product-detail-payment-description-content">
+                  One side printing. The front side is printed and the backside
+                  is blank. Each hanging sign comes with a thick Beige Cotton
+                  rope and the rope is fixed by stapler on the back. Ready for
+                  hanging and ensuring durability and lasting hold.
+                </div>
+              </div>
+              <div class="product-detail-payment-description-phase">
+                <div class="product-detail-payment-description-header">
+                  Uses:
+                </div>
+                <div class="product-detail-payment-description-content">
+                  This wooden door sign is ideal to display at your room, front
+                  doors, garage, kitchen, garden, office, shop, cafe, or
+                  restaurant etc. A unique rustic wooden hanging sign decor will
+                  fit into any occasion. And matches other modern farmhouse and
+                  country-themed decorations.
+                </div>
+              </div>
+              <div class="product-detail-payment-description-phase">
+                <div class="product-detail-payment-description-header">
+                  Personalization:
+                </div>
+                <div class="product-detail-payment-description-content">
+                  Please fill in the required fields and carefully double-check
+                  the spelling.
+                </div>
+              </div>
+              <div class="product-detail-payment-description-phase">
+                <div class="product-detail-payment-description-header">
+                  Specification:
+                </div>
+                <div class="product-detail-payment-description-content">
+                  Processing Time: 3 – 5 working days average after payment.
+                  Shipping Time: 7 – 15 working days average (US)
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Best Salers -->
+        <div class="product-detail-best-salers-wrap">
+          <div class="product-detail-best-salers-title"></div>
+          <div class="product-detail-best-salers-items-wrap">
+            <div class="product-detail-best-salers-items-child-wrap">
+              <div class="product-detail-best-salers-items-child-img"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cusomer Reviews -->
+        <div class="product-detail-customer-reviews-container"></div>
+      </div>
+    </div>
+    <!-- HẾT HTML PRODUCT DETAIL -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS HEADER -------------------------------------------------------------------- -->
+    <script>
+      function onMenuDropdown() {
+        $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+      }
+      function onProductMenuDropdown() {
+        $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
+      }
+
+      $(document).click(function (e) {
+        if (
+          $(e.target?.parentElement?.parentElement).is(
+            $(".header-dropdown-wrap-item")[0]
+          ) ||
+          $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
+          $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
+          $(e.target.parentElement).is($("#header_bar")[0]) ||
+          $(e.target).is($("#header_bar")[0])
+        ) {
+        } else {
+          if (
+            $(".header-dropdown-wrap-item")[0].classList.contains(
+              "visibleClass"
+            )
+          ) {
+            $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+          }
+        }
+      });
+    </script>
+    <!--HẾT JS HEADER ------------------------------------------------------------------------------- -->
+  </body>
+</html>
