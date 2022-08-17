@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
     <link
@@ -19,6 +19,7 @@
       referrerpolicy="no-referrer"
     />
     <style>
+      /*------------------- header -------------------*/
       @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
       * {
         font-family: "Nunito", sans-serif;
@@ -26,12 +27,144 @@
         margin: 0;
         box-sizing: border-box;
         /* border: 1px solid gray; */
-        /* max-width: 390px; */
       }
+      #header {
+        display: none;
+      }
+      .page-wrapper {
+        padding-top: 0;
+      }
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .col {
+        padding: 0;
+      }
+      #header_container {
+        max-width: 500px; /*figma: 390px */
+        height: 69px;
+        background-color: #20404f;
+        color: #e9dfd3;
+        margin: auto;
+      }
+      #header_wrap {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0 21px 5px 21px;
+        position: relative;
+      }
+      #header-wrap-left {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+      }
+      #header_bar {
+        position: relative;
+        font-size: 25px;
+        padding-right: 21px;
+      }
+
+      #header_brand-icon {
+        width: 133px;
+        height: 46px;
+      }
+
+      #header-wrap-right {
+        display: flex;
+        margin-bottom: 6px;
+      }
+      #header_search {
+        font-size: 20px;
+      }
+      #header_user-info {
+        font-size: 20px;
+        margin: 0 11px;
+      }
+      #header_card {
+        font-size: 20px;
+        position: relative;
+      }
+      #header_card-index {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #bf8977;
+        text-align: center;
+        line-height: 15px;
+        font-size: 13px;
+      }
+      .header-dropdown-wrap-item {
+        border-radius: 5px;
+        position: absolute;
+        top: 0px;
+        transform: translate3d(1px, 70px, 0px) !important;
+        border: none;
+        left: 0;
+        width: 189px;
+        padding: 4px 0 32px 0;
+        background: #20404f;
+        z-index: 100000;
+        display: none;
+      }
+      .header-dropdown-item {
+        padding: 5px 0 2px 22px;
+        margin-top: 4px;
+        font-size: 14px;
+        color: #e9dfd3;
+        font-weight: 400;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+      }
+      .header-dropdown-item-dropdown {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .header-dropdown-item-dropdown-icon {
+        margin-right: 16px;
+      }
+      .header-dropdown-item a {
+        font-size: 14px;
+        color: #e9dfd3;
+        font-weight: 400;
+        text-decoration: none;
+      }
+      .dropdown-divider {
+        margin: 0;
+      }
+
+      .header-dropdown-wrap-product-item {
+        border-radius: 5px;
+        position: absolute;
+        top: -73px;
+        transform: translate3d(1px, 70px, 0px) !important;
+        border: none;
+        width: 165px;
+        padding: 4px 0 32px 0;
+        background: #20404f;
+        left: 100%;
+        z-index: 10000;
+        display: none;
+      }
+      .visibleClass {
+        display: block;
+      }
+    </style>
+    <style>
+      /*------------------------ wish-list ------------------------ */
       .contained_main_my_wishlist {
         background: #ffffff;
         margin-bottom: 28px;
         max-width: 500px;
+        margin: auto;
+        padding-top: 16px;
       }
       .title_url_wishlist {
         font-family: "Nunito";
@@ -43,7 +176,7 @@
         height: 19px;
         color: rgba(32, 64, 79, 0.8);
         /* margin-left: 21px; */
-        margin-top: 24px;
+        /* margin-top: 24px; */
         margin-left: 8px;
         padding-left: 21px;
       }
@@ -252,254 +385,9 @@
         position: absolute;
         right: 14px;
       }
-
-      /* ============================================== */
-      #footer-copyright_container {
-        max-width: 500px;
-        background-color: rgba(191, 137, 119, 0.5);
-        color: #20404f;
-        padding: 0 22px;
-        margin: auto;
-      }
-
-      .footer-coppyright-title {
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 19px;
-      }
-      .footer-copyright-subscribe {
-        padding: 11px 0;
-      }
-
-      #footer-copyright-collapse-wrap {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        border-bottom: 1px solid #d9d9d9;
-        padding: 4px 0;
-        height: 38px;
-      }
-      .footer_copyright-content-warp-items {
-        padding-top: 12px;
-      }
-      .footer_copyright-content-items {
-        padding: 5px 0;
-      }
-      .footer_copyright-content-items-thin {
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 19px;
-        padding: 5px 0;
-      }
-      .footer-coppyright-content-detail1 {
-        padding: 8px 0 6px;
-        font-size: 14px;
-        font-weight: 400;
-      }
-      .footer-coppyright-content-detail2 {
-        font-size: 14px;
-        font-weight: 600;
-        padding-bottom: 12px;
-      }
-      .footer-coppyright-subcribe-wap {
-        display: flex;
-        justify-content: space-between;
-      }
-      #footer-coppyright-subcribe-input {
-        border-radius: 4px;
-        border: 1px solid #20404f;
-        background: rgba(191, 137, 119, 0.01);
-        width: 244px;
-        height: 32px;
-        font-size: 12px;
-        padding-left: 11px;
-      }
-      #footer-coppyright-subcribe-button {
-        width: 89px;
-        border-radius: 4px;
-        height: 32px;
-        background-color: rgba(32, 64, 79, 1);
-        color: rgba(191, 137, 119, 1);
-        border: none;
-      }
-      .footer-coppyright-author {
-        font-size: 14px;
-        padding: 26px 0 12px 0;
-      }
     </style>
     <style>
-      #footer_container {
-        max-width: 500px;
-        margin: auto;
-      }
-      #footer_wrap {
-        display: flex;
-        justify-content: space-between;
-        height: 80px;
-        background-color: #20404f;
-        color: #bf8977;
-        padding: 15px 24px;
-      }
-      #footer_wrap-left {
-        margin-top: 3px;
-        display: flex;
-      }
-      .footer_icon-social {
-        display: flex;
-        font-size: 18px;
-        overflow: hidden;
-      }
-      .footer_icon-social-center {
-        margin: 0 12px;
-      }
-
-      #footer_wrap-right {
-        display: flex;
-      }
-      .footer_icon-paycard {
-        width: 42px;
-        border-radius: 2px;
-      }
-      .footer_icon-paycard img {
-        width: 42px;
-      }
-      .footer_icon-paycard-center {
-        margin: 0 39px;
-      }
-      #footer-coppyright-subcribe-wap {
-        align-items: center;
-      }
-      #footer-coppyright-subcribe-wap button {
-        padding: 0;
-      }
-      #header {
-        display: none;
-      }
-      .page-wrapper {
-        padding-top: 0;
-      }
-      .row {
-        margin-left: 0;
-        margin-right: 0;
-      }
-      .col {
-        padding: 0;
-      }
-      #header_container {
-        max-width: 500px; /*figma: 390px */
-        height: 69px;
-        background-color: #20404f;
-        color: #e9dfd3;
-      }
-      #header_wrap {
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        padding: 0 21px 5px 21px;
-      }
-      #header-wrap-left {
-        height: 100%;
-        display: flex;
-        align-items: flex-end;
-      }
-      #header_bar {
-        position: relative;
-        font-size: 25px;
-        padding-right: 21px;
-      }
-
-      #header_brand-icon {
-        width: 133px;
-        height: 46px;
-      }
-
-      #header-wrap-right {
-        display: flex;
-        margin-bottom: 6px;
-      }
-      #header_search {
-        font-size: 20px;
-      }
-      #header_user-info {
-        font-size: 20px;
-        margin: 0 11px;
-      }
-      #header_card {
-        font-size: 20px;
-        position: relative;
-      }
-      #header_card-index {
-        position: absolute;
-        top: -5px;
-        right: -5px;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: #bf8977;
-        text-align: center;
-        line-height: 15px;
-        font-size: 13px;
-      }
-      .header-dropdown-wrap-item {
-        border-radius: 5px;
-        position: absolute;
-        top: 0px;
-        transform: translate3d(1px, 70px, 0px) !important;
-        border: none;
-        left: 0;
-        width: 189px;
-        padding: 4px 0 32px 0;
-        background: #20404f;
-        z-index: 100000;
-        display: none;
-      }
-      .header-dropdown-item {
-        padding: 5px 0 2px 22px;
-        margin-top: 4px;
-        font-size: 14px;
-        color: #e9dfd3;
-        font-weight: 400;
-        text-decoration: none;
-        border-bottom: 1px solid rgba(217, 217, 217, 0.5);
-      }
-      .header-dropdown-item-dropdown {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .header-dropdown-item-dropdown-icon {
-        margin-right: 16px;
-      }
-      .header-dropdown-item a {
-        font-size: 14px;
-        color: #e9dfd3;
-        font-weight: 400;
-        text-decoration: none;
-      }
-      .dropdown-divider {
-        margin: 0;
-      }
-
-      .header-dropdown-wrap-product-item {
-        border-radius: 5px;
-        position: absolute;
-        top: -73px;
-        transform: translate3d(1px, 70px, 0px) !important;
-        border: none;
-        width: 165px;
-        padding: 4px 0 32px 0;
-        background: #20404f;
-        left: 100%;
-        z-index: 10000;
-        display: none;
-      }
-      .visibleClass {
-        display: block;
-      }
-    </style>
-    <style>
+      /* -------------wish-list  paginate -------------------- */
       .pagination ul {
         width: 100%;
         display: flex;
@@ -558,6 +446,185 @@
         text-transform: lowercase;
         height: 25px;
         color: #20404f;
+      }
+    </style>
+    <style>
+      /*------------------ list-all-product pagination ------------------ */
+      hr {
+        margin: 0;
+      }
+      .listALLProduct-pagination {
+        display: flex;
+        padding: 10px 0;
+        position: relative;
+        /* height: 50px; */
+        border-bottom: solid 1.5px rgba(32, 64, 79, 0.4);
+        justify-content: center;
+      }
+      .listALLProduct-pagination button {
+        width: 66px;
+        height: 24px;
+        background: #20404f;
+        border-radius: 5px;
+        color: #fff;
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 15px;
+        /* position: absolute;
+        left: 40%;
+        top: 25%; */
+        border: none;
+      }
+      .listALLProduct-pagination ul {
+        position: absolute;
+        top: 32%;
+        right: 11%;
+      }
+      .listALLProduct-pagination ul li {
+        margin: 0 1px;
+        color: rgba(32, 64, 79, 0.5);
+      }
+      .listALLProduct-pagination-i {
+        position: absolute;
+        top: 30%;
+        right: 7%;
+        color: rgba(32, 64, 79, 0.5);
+      }
+    </style>
+    <style>
+      /*------------------------------- footer copyright ------------------------*/
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        font-family: "Nunito", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* border: 1px solid gray; */
+      }
+      #footer-copyright_container {
+        max-width: 500px;
+        background-color: rgba(191, 137, 119, 0.5);
+        color: #20404f;
+        padding: 0 22px;
+        margin: auto;
+      }
+
+      .footer-coppyright-title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+      }
+      .footer-copyright-subscribe {
+        padding: 11px 0;
+      }
+
+      #footer-copyright-collapse-wrap {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        border-bottom: 1px solid #d9d9d9;
+        padding: 4px 0;
+        height: 38px;
+      }
+      .footer_copyright-content-warp-items {
+        padding-top: 12px;
+      }
+      .footer_copyright-content-items {
+        padding: 5px 0;
+      }
+      .footer_copyright-content-items-thin {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 19px;
+        padding: 5px 0;
+      }
+      .footer-coppyright-content-detail1 {
+        padding: 8px 0 6px;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .footer-coppyright-content-detail2 {
+        font-size: 14px;
+        font-weight: 600;
+        padding-bottom: 12px;
+      }
+      button {
+        padding: 0;
+      }
+      .footer-coppyright-subcribe-wap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #footer-coppyright-subcribe-input {
+        border-radius: 4px;
+        border: 1px solid #20404f;
+        background: rgba(191, 137, 119, 0.01);
+        width: 244px;
+        height: 32px;
+        font-size: 12px;
+        padding-left: 11px;
+      }
+      #footer-coppyright-subcribe-button {
+        width: 89px;
+        border-radius: 4px;
+        height: 32px;
+        background-color: rgba(32, 64, 79, 1);
+        color: rgba(191, 137, 119, 1);
+        border: none;
+      }
+      .footer-coppyright-author {
+        font-size: 14px;
+        padding: 26px 0 12px 0;
+      }
+    </style>
+    <style>
+      /*-------------------- footer -----------------*/
+      #footer_container {
+        max-width: 500px;
+        margin: auto;
+      }
+      #footer_wrap {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        background-color: #20404f;
+        color: #bf8977;
+        padding: 15px 24px;
+      }
+      #footer_wrap-left {
+        margin-top: 3px;
+        display: flex;
+      }
+      .footer_icon-social {
+        display: flex;
+        font-size: 18px;
+        overflow: hidden;
+      }
+      .footer_icon-social-center {
+        margin: 0 12px;
+      }
+
+      #footer_wrap-right {
+        display: flex;
+      }
+      .footer_icon-paycard {
+        width: 42px;
+        border-radius: 2px;
+      }
+      .footer_icon-paycard img {
+        width: 42px;
+      }
+      .footer_icon-paycard-center {
+        margin: 0 39px;
+      }
+      #footer-coppyright-subcribe-wap {
+        align-items: center;
+      }
+      #footer-coppyright-subcribe-wap button {
+        padding: 0;
       }
     </style>
   </head>
@@ -979,7 +1046,7 @@
               </div>
             </div>
             <img
-              src="https://fmzee.com/wp-content/uploads/2022/08/ornament1.png"
+              src="https://fmzee.com/wp-content/uploads/2022/08/ListProductByCategory-product5.png"
               alt=""
             />
           </div>
@@ -1122,19 +1189,33 @@
           </div>
         </div>
       </div>
-      <div class="border1_home_wishlist"></div>
-      <div class="pagetion_wishlist">
+      <!-- <div class="border1_home_wishlist"></div> -->
+      <!-- <div class="pagetion_wishlist">
         <div class="btn_next_wishlist">Next</div>
-      </div>
-      <div class="pagination">
-        <ul>
-          <!--pages or li are comes from javascript -->
+      </div> -->
+      <hr />
+      <div class="listALLProduct-pagination">
+        <button class="listALLProduct-pagination-button">Next</button>
+        <ul style="list-style-type: none; display: flex">
+          <li style="color: #20404f">1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>...</li>
+          <li>50</li>
         </ul>
+        <div class="listALLProduct-pagination-i">
+          <i class="fa-solid fa-angles-left" style="display: none"></i>
+          <i class="fa-solid fa-angles-right"></i>
+        </div>
       </div>
+      <!-- <div class="pagination">
+        <ul>
+          pages or li are comes from javascript
+        </ul>
+      </div> -->
       <!-- /////// -->
-      <div class="border1_home_wishlist"></div>
+      <!-- <div class="border1_home_wishlist"></div> -->
     </div>
-
     <div id="footer-copyright_container">
       <div id="footer-copyright_wrap">
         <div class="footer-copyright-collapse">
@@ -1283,101 +1364,133 @@
         </div>
       </div>
     </div>
-
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      // selecting required element
-      const element = document.querySelector(".pagination ul");
-      let totalPages = 50;
-      let page = 1;
-
-      //calling function with passing parameters and adding inside element which is ul tag
-      element.innerHTML = createPagination(totalPages, page);
-      function createPagination(totalPages, page) {
-        let liTag = "";
-        let active;
-        let beforePage = page - 1;
-        let afterPage = page + 1;
-        if (page > 1) {
-          //show the next button if the page value is greater than 1
-          liTag += `<li class="btn prev" onclick="createPagination(totalPages, ${
-            page - 1
-          })"><span><i class="fa-solid fa-angles-left"></i></span></li>`;
-        }
-
-        if (page > 2) {
-          //if page value is less than 2 then add 1 after the previous button
-          liTag += `<li class="first numb" onclick="createPagination(totalPages, 1)"><span>1</span></li>`;
-          if (page > 3) {
-            //if page value is greater than 3 then add this (...) after the first li or page
-            liTag += `<li class="dots"><span>...</span></li>`;
-          }
-        }
-
-        // how many pages or li show before the current li
-        if (page == totalPages) {
-          beforePage = beforePage - 2;
-        } else if (page == totalPages - 1) {
-          beforePage = beforePage - 1;
-        }
-        // how many pages or li show after the current li
-        if (page == 1) {
-          afterPage = afterPage + 2;
-        } else if (page == 2) {
-          afterPage = afterPage + 1;
-        }
-
-        for (var plength = beforePage; plength <= afterPage; plength++) {
-          if (plength > totalPages) {
-            //if plength is greater than totalPage length then continue
-            continue;
-          }
-          if (plength == 0) {
-            //if plength is 0 than add +1 in plength value
-            plength = plength + 1;
-          }
-          if (page == plength) {
-            //if page is equal to plength than assign active string in the active variable
-            active = "active";
-          } else {
-            //else leave empty to the active variable
-            active = "";
-          }
-          liTag += `<li class="numb ${active}" onclick="createPagination(totalPages, ${plength})"><span>${plength}</span></li>`;
-        }
-
-        if (page < totalPages - 1) {
-          //if page value is less than totalPage value by -1 then show the last li or page
-          if (page < totalPages - 2) {
-            //if page value is less than totalPage value by -2 then add this (...) before the last li or page
-            liTag += `<li class="dots"><span>...</span></li>`;
-          }
-          liTag += `<li class="last numb" onclick="createPagination(totalPages, ${totalPages})"><span>${totalPages}</span></li>`;
-        }
-
-        if (page < totalPages) {
-          //show the next button if the page value is less than totalPage(20)
-          liTag += `<li class="btn next" onclick="createPagination(totalPages, ${
-            page + 1
-          })"><span><i class="fa-solid fa-angles-right"></i></span></li>`;
-        }
-        element.innerHTML = liTag; //add li tag inside ul tag
-        return liTag; //reurn the li tag
-      }
-    </script>
   </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    // selecting required element
+    const element = document.querySelector(".pagination ul");
+    let totalPages = 50;
+    let page = 1;
+
+    //calling function with passing parameters and adding inside element which is ul tag
+    element.innerHTML = createPagination(totalPages, page);
+    function createPagination(totalPages, page) {
+      let liTag = "";
+      let active;
+      let beforePage = page - 1;
+      let afterPage = page + 1;
+      if (page > 1) {
+        //show the next button if the page value is greater than 1
+        liTag += `<li class="btn prev" onclick="createPagination(totalPages, ${
+          page - 1
+        })"><span><i class="fa-solid fa-angles-left"></i></span></li>`;
+      }
+
+      if (page > 2) {
+        //if page value is less than 2 then add 1 after the previous button
+        liTag += `<li class="first numb" onclick="createPagination(totalPages, 1)"><span>1</span></li>`;
+        if (page > 3) {
+          //if page value is greater than 3 then add this (...) after the first li or page
+          liTag += `<li class="dots"><span>...</span></li>`;
+        }
+      }
+
+      // how many pages or li show before the current li
+      if (page == totalPages) {
+        beforePage = beforePage - 2;
+      } else if (page == totalPages - 1) {
+        beforePage = beforePage - 1;
+      }
+      // how many pages or li show after the current li
+      if (page == 1) {
+        afterPage = afterPage + 2;
+      } else if (page == 2) {
+        afterPage = afterPage + 1;
+      }
+
+      for (var plength = beforePage; plength <= afterPage; plength++) {
+        if (plength > totalPages) {
+          //if plength is greater than totalPage length then continue
+          continue;
+        }
+        if (plength == 0) {
+          //if plength is 0 than add +1 in plength value
+          plength = plength + 1;
+        }
+        if (page == plength) {
+          //if page is equal to plength than assign active string in the active variable
+          active = "active";
+        } else {
+          //else leave empty to the active variable
+          active = "";
+        }
+        liTag += `<li class="numb ${active}" onclick="createPagination(totalPages, ${plength})"><span>${plength}</span></li>`;
+      }
+
+      if (page < totalPages - 1) {
+        //if page value is less than totalPage value by -1 then show the last li or page
+        if (page < totalPages - 2) {
+          //if page value is less than totalPage value by -2 then add this (...) before the last li or page
+          liTag += `<li class="dots"><span>...</span></li>`;
+        }
+        liTag += `<li class="last numb" onclick="createPagination(totalPages, ${totalPages})"><span>${totalPages}</span></li>`;
+      }
+
+      if (page < totalPages) {
+        //show the next button if the page value is less than totalPage(20)
+        liTag += `<li class="btn next" onclick="createPagination(totalPages, ${
+          page + 1
+        })"><span><i class="fa-solid fa-angles-right"></i></span></li>`;
+      }
+      element.innerHTML = liTag; //add li tag inside ul tag
+      return liTag; //reurn the li tag
+    }
+  </script>
+  <script>
+    //----------------------- footer -----------------------
+    function onMenuDropdown() {
+      $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+    }
+    function onProductMenuDropdown() {
+      $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
+    }
+
+    $(document).click(function (e) {
+      if (
+        $(e.target?.parentElement?.parentElement).is(
+          $(".header-dropdown-wrap-item")[0]
+        ) ||
+        $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
+        $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
+        $(e.target.parentElement).is($("#header_bar")[0]) ||
+        $(e.target).is($("#header_bar")[0])
+      ) {
+      } else {
+        if (
+          $(".header-dropdown-wrap-item")[0].classList.contains("visibleClass")
+        ) {
+          $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+        }
+      }
+    });
+  </script>
 </html>
