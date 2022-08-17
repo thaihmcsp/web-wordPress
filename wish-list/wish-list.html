@@ -26,11 +26,12 @@
         margin: 0;
         box-sizing: border-box;
         /* border: 1px solid gray; */
-        max-width: 390px;
+        /* max-width: 390px; */
       }
       .contained_main_my_wishlist {
         background: #ffffff;
         margin-bottom: 28px;
+        max-width: 500px;
       }
       .title_url_wishlist {
         font-family: "Nunito";
@@ -41,12 +42,13 @@
         width: 70px;
         height: 19px;
         color: rgba(32, 64, 79, 0.8);
-        margin-left: 21px;
+        /* margin-left: 21px; */
         margin-top: 24px;
         margin-left: 8px;
+        padding-left: 21px;
       }
       .border1_home_wishlist {
-        width: 390.01px;
+        width: 100%;
         height: 0.63px;
         background: #20404f;
         transform: rotate(-0.08deg);
@@ -104,12 +106,16 @@
         align-items: center;
         margin-right: 4px;
       }
-      .img_product_card {
+      .flex_center_icon img {
         width: 122px;
+      }
+      .img_product_card {
+        width: 40%;
         height: 122px;
         border-radius: 5px;
         background-size: cover;
-        overflow: hidden;
+        display: flex;
+        align-items: center;
       }
       .title_product_cart_wishlist {
         font-family: "Nunito";
@@ -121,12 +127,15 @@
       }
       .product_wishlist {
         display: flex;
-        margin-left: 21px;
+        margin-left: 22px;
         align-items: center;
-        margin: 24px 0;
+        margin: 25px 0;
+        width: 100%;
+        height: 122px;
+        justify-content: space-between;
       }
       .info_product_card_wishlist {
-        max-width: 195px;
+        width: 60%;
         margin-left: 21px;
       }
       .rate_product_wishlist {
@@ -197,7 +206,8 @@
         justify-content: space-between;
       }
       .all_product_cart {
-        margin-left: 21px;
+        padding: 31px 22px 0 21px;
+        width: 100%;
       }
       .btn_next_wishlist {
         background: #20404f;
@@ -243,7 +253,7 @@
         right: 14px;
       }
       #footer-copyright_container {
-        max-width: 390px;
+        max-width: 500px;
         background-color: rgba(191, 137, 119, 0.5);
         color: #20404f;
         padding: 0 22px;
@@ -317,7 +327,7 @@
     </style>
     <style>
       #footer_container {
-        max-width: 390px;
+        max-width: 500px;
         margin: auto;
       }
       #footer_wrap {
@@ -487,6 +497,67 @@
         display: block;
       }
     </style>
+    <style>
+      .pagination ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .pagination ul li {
+        color: rgba(32, 64, 79, 0.5);
+        list-style: none;
+        /* line-height: 45px; */
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        user-select: none;
+        transition: all 0.3s ease;
+      }
+      .pagination ul li.numb {
+        list-style: none;
+
+        margin: 0 3px;
+        /* line-height: 45px; */
+        border-radius: 50%;
+      }
+      .pagination ul li.numb.first {
+        margin: 0px 3px 0 -5px;
+      }
+      .pagination ul li.numb.last {
+        margin: 0px -5px 0 3px;
+      }
+      .pagination ul li.dots {
+        font-size: 22px;
+        cursor: default;
+      }
+      .pagination ul li.btn {
+        padding: 0 px;
+        border-radius: 50px;
+      }
+      .pagination li.active,
+      .pagination ul li.numb:hover,
+      .pagination ul li:first-child:hover,
+      .pagination ul li:last-child:hover {
+        color: #20404f;
+      }
+      .pagination {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        /* identical to box height, or 136% */
+        height: 25px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: lowercase;
+        height: 25px;
+        color: #20404f;
+      }
+    </style>
   </head>
   <body>
     <div id="header_container">
@@ -582,20 +653,27 @@
         <div class="name_title_wishlist">MY WISHLIST</div>
         <div class="count_product_list">9 product</div>
         <div class="icon_list_wishlist">
-          <img src="./IMG/Vector.jpg" alt="" id="padding_icon" />
-          <img src="./IMG/Vector1.png" alt="" id="padding_icon1" />
+          <img
+            src="https://fmzee.com/wp-content/uploads/2022/08/listAllproduct-icon1.png"
+            alt=""
+            id="padding_icon"
+          />
+          <img
+            src="https://fmzee.com/wp-content/uploads/2022/08/listAllProduct-icon2.png"
+            alt=""
+            id="padding_icon1"
+          />
         </div>
       </div>
       <div class="border1_home_wishlist"></div>
       <div class="all_product_cart">
         <div class="product_wishlist">
-          <div class="flex_center_icon">
-            <div class="icon_close_product_wishlist">
-              <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
-            </div>
-          </div>
-
           <div class="img_product_card">
+            <div class="flex_center_icon">
+              <div class="icon_close_product_wishlist">
+                <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
+              </div>
+            </div>
             <img
               src="https://fmzee.com/wp-content/uploads/2022/08/ListAllProduct-product1.png"
               alt=""
@@ -642,13 +720,12 @@
           </div>
         </div>
         <div class="product_wishlist">
-          <div class="flex_center_icon">
-            <div class="icon_close_product_wishlist">
-              <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
-            </div>
-          </div>
-
           <div class="img_product_card">
+            <div class="flex_center_icon">
+              <div class="icon_close_product_wishlist">
+                <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
+              </div>
+            </div>
             <img
               src="https://fmzee.com/wp-content/uploads/2022/08/WishList-product2.png"
               alt=""
@@ -693,13 +770,12 @@
           </div>
         </div>
         <div class="product_wishlist">
-          <div class="flex_center_icon">
-            <div class="icon_close_product_wishlist">
-              <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
-            </div>
-          </div>
-
           <div class="img_product_card">
+            <div class="flex_center_icon">
+              <div class="icon_close_product_wishlist">
+                <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
+              </div>
+            </div>
             <img
               src="https://fmzee.com/wp-content/uploads/2022/08/ListProductByCategory-product9.png"
               alt=""
@@ -744,13 +820,12 @@
           </div>
         </div>
         <div class="product_wishlist">
-          <div class="flex_center_icon">
-            <div class="icon_close_product_wishlist">
-              <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
-            </div>
-          </div>
-
           <div class="img_product_card">
+            <div class="flex_center_icon">
+              <div class="icon_close_product_wishlist">
+                <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
+              </div>
+            </div>
             <img
               src="https://fmzee.com/wp-content/uploads/2022/08/ListProductByCategory-product3.png"
               alt=""
@@ -795,13 +870,12 @@
           </div>
         </div>
         <div class="product_wishlist">
-          <div class="flex_center_icon">
-            <div class="icon_close_product_wishlist">
-              <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
-            </div>
-          </div>
-
           <div class="img_product_card">
+            <div class="flex_center_icon">
+              <div class="icon_close_product_wishlist">
+                <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
+              </div>
+            </div>
             <img
               src="https://fmzee.com/wp-content/uploads/2022/08/WishList-product5.png"
               alt=""
@@ -846,13 +920,12 @@
           </div>
         </div>
         <div class="product_wishlist">
-          <div class="flex_center_icon">
-            <div class="icon_close_product_wishlist">
-              <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
-            </div>
-          </div>
-
           <div class="img_product_card">
+            <div class="flex_center_icon">
+              <div class="icon_close_product_wishlist">
+                <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
+              </div>
+            </div>
             <img
               src="https://fmzee.com/wp-content/uploads/2022/08/ListProductByCategory-product5.png"
               alt=""
@@ -897,13 +970,12 @@
           </div>
         </div>
         <div class="product_wishlist">
-          <div class="flex_center_icon">
-            <div class="icon_close_product_wishlist">
-              <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
-            </div>
-          </div>
-
           <div class="img_product_card">
+            <div class="flex_center_icon">
+              <div class="icon_close_product_wishlist">
+                <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
+              </div>
+            </div>
             <img
               src="https://fmzee.com/wp-content/uploads/2022/08/ornament1.png"
               alt=""
@@ -948,13 +1020,12 @@
           </div>
         </div>
         <div class="product_wishlist">
-          <div class="flex_center_icon">
-            <div class="icon_close_product_wishlist">
-              <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
-            </div>
-          </div>
-
           <div class="img_product_card">
+            <div class="flex_center_icon">
+              <div class="icon_close_product_wishlist">
+                <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
+              </div>
+            </div>
             <img
               src="https://fmzee.com/wp-content/uploads/2022/08/WishList-product8.png"
               alt=""
@@ -999,13 +1070,12 @@
           </div>
         </div>
         <div class="product_wishlist">
-          <div class="flex_center_icon">
-            <div class="icon_close_product_wishlist">
-              <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
-            </div>
-          </div>
-
           <div class="img_product_card">
+            <div class="flex_center_icon">
+              <div class="icon_close_product_wishlist">
+                <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
+              </div>
+            </div>
             <img
               src="https://fmzee.com/wp-content/uploads/2022/08/WishList-product9.png"
               alt=""
@@ -1053,12 +1123,16 @@
       <div class="border1_home_wishlist"></div>
       <div class="pagetion_wishlist">
         <div class="btn_next_wishlist">Next</div>
-        <div class="pagation_wishlist_next">
-          <span>1 2 3 ... 9</span><i class="fa-solid fa-angles-right"></i>
-        </div>
       </div>
+      <div class="pagination">
+        <ul>
+          <!--pages or li are comes from javascript -->
+        </ul>
+      </div>
+      <!-- /////// -->
       <div class="border1_home_wishlist"></div>
     </div>
+
     <div id="footer-copyright_container">
       <div id="footer-copyright_wrap">
         <div class="footer-copyright-collapse">
@@ -1223,6 +1297,85 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script></script>
+    <script>
+      // selecting required element
+      const element = document.querySelector(".pagination ul");
+      let totalPages = 50;
+      let page = 1;
+
+      //calling function with passing parameters and adding inside element which is ul tag
+      element.innerHTML = createPagination(totalPages, page);
+      function createPagination(totalPages, page) {
+        let liTag = "";
+        let active;
+        let beforePage = page - 1;
+        let afterPage = page + 1;
+        if (page > 1) {
+          //show the next button if the page value is greater than 1
+          liTag += `<li class="btn prev" onclick="createPagination(totalPages, ${
+            page - 1
+          })"><span><i class="fa-solid fa-angles-left"></i></span></li>`;
+        }
+
+        if (page > 2) {
+          //if page value is less than 2 then add 1 after the previous button
+          liTag += `<li class="first numb" onclick="createPagination(totalPages, 1)"><span>1</span></li>`;
+          if (page > 3) {
+            //if page value is greater than 3 then add this (...) after the first li or page
+            liTag += `<li class="dots"><span>...</span></li>`;
+          }
+        }
+
+        // how many pages or li show before the current li
+        if (page == totalPages) {
+          beforePage = beforePage - 2;
+        } else if (page == totalPages - 1) {
+          beforePage = beforePage - 1;
+        }
+        // how many pages or li show after the current li
+        if (page == 1) {
+          afterPage = afterPage + 2;
+        } else if (page == 2) {
+          afterPage = afterPage + 1;
+        }
+
+        for (var plength = beforePage; plength <= afterPage; plength++) {
+          if (plength > totalPages) {
+            //if plength is greater than totalPage length then continue
+            continue;
+          }
+          if (plength == 0) {
+            //if plength is 0 than add +1 in plength value
+            plength = plength + 1;
+          }
+          if (page == plength) {
+            //if page is equal to plength than assign active string in the active variable
+            active = "active";
+          } else {
+            //else leave empty to the active variable
+            active = "";
+          }
+          liTag += `<li class="numb ${active}" onclick="createPagination(totalPages, ${plength})"><span>${plength}</span></li>`;
+        }
+
+        if (page < totalPages - 1) {
+          //if page value is less than totalPage value by -1 then show the last li or page
+          if (page < totalPages - 2) {
+            //if page value is less than totalPage value by -2 then add this (...) before the last li or page
+            liTag += `<li class="dots"><span>...</span></li>`;
+          }
+          liTag += `<li class="last numb" onclick="createPagination(totalPages, ${totalPages})"><span>${totalPages}</span></li>`;
+        }
+
+        if (page < totalPages) {
+          //show the next button if the page value is less than totalPage(20)
+          liTag += `<li class="btn next" onclick="createPagination(totalPages, ${
+            page + 1
+          })"><span><i class="fa-solid fa-angles-right"></i></span></li>`;
+        }
+        element.innerHTML = liTag; //add li tag inside ul tag
+        return liTag; //reurn the li tag
+      }
+    </script>
   </body>
 </html>
