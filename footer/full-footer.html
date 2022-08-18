@@ -27,9 +27,11 @@
         box-sizing: border-box;
         /* border: 1px solid gray; */
       }
+      #footer-copyright-app {
+        background-color: rgba(191, 137, 119, 0.5);
+      }
       #footer-copyright_container {
         max-width: 390px;
-        background-color: rgba(191, 137, 119, 0.5);
         color: #20404f;
         padding: 0 22px;
         margin: auto;
@@ -102,25 +104,56 @@
     </style>
     <style>
       #footer_container {
-        max-width: 390px;
-        margin: auto;
+        background-color: #20404f;
       }
       #footer_wrap {
+        max-width: 390px;
+        margin: auto;
         display: flex;
         justify-content: space-between;
         height: 80px;
-        background-color: #20404f;
+
         color: #bf8977;
         padding: 15px 24px;
       }
       #footer_wrap-left {
         margin-top: 3px;
         display: flex;
+        align-items: flex-start;
       }
       .footer_icon-social {
         display: flex;
         font-size: 18px;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(191, 137, 119, 0.6);
+      }
+      .footer_icon-social-stee {
+        width: 18px;
+        height: 18px;
+        background: rgba(191, 137, 119, 0.6);
+        border-radius: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .footer_icon-social-instagram {
+        width: 18px;
+        height: 18px;
+        background: rgba(191, 137, 119, 0.6);
+        border-radius: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .footer_icon-social-stee img {
+        width: 12px;
+      }
+      .footer_icon-social-instagram img {
+        width: 12px;
+        margin-right: 0.9px;
       }
       .footer_icon-social-center {
         margin: 0 12px;
@@ -136,6 +169,9 @@
       .footer_icon-paycard img {
         width: 42px;
       }
+      .footer_icon-paycard-increaseHeight img {
+        height: 25.5px;
+      }
       .footer_icon-paycard-center {
         margin: 0 39px;
       }
@@ -148,125 +184,132 @@
     </style>
   </head>
   <body>
-    <div id="footer-copyright_container">
-      <div id="footer-copyright_wrap">
-        <div class="footer-copyright-collapse">
-          <div
-            data-bs-toggle="collapse"
-            href="#quick_link"
-            aria-expanded="false"
-            aria-controls="quick_link"
-            id="footer-copyright-collapse-wrap"
-          >
-            <div class="footer-coppyright-title">Quick Links</div>
-            <div class="footer-copyright-icon">
-              <i class="fa-solid fa-caret-down"></i>
-            </div>
-          </div>
-          <div class="collapse" id="quick_link">
-            <div class="footer_copyright-content-warp-items">
-              <div class="footer_copyright-content-items">Home</div>
-              <div class="footer_copyright-content-items">About Us</div>
-              <div class="footer_copyright-content-items">Contact Us</div>
-              <div class="footer_copyright-content-items">FAQ</div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-copyright-collapse">
+    <div id="footer-copyright-app">
+      <div id="footer-copyright_container">
+        <div id="footer-copyright_wrap">
           <div class="footer-copyright-collapse">
             <div
               data-bs-toggle="collapse"
-              href="#Policies"
+              href="#quick_link"
               aria-expanded="false"
-              aria-controls="Policies"
+              aria-controls="quick_link"
               id="footer-copyright-collapse-wrap"
             >
-              <div class="footer-coppyright-title">Policies</div>
+              <div class="footer-coppyright-title">Quick Links</div>
               <div class="footer-copyright-icon">
                 <i class="fa-solid fa-caret-down"></i>
               </div>
             </div>
-            <div class="collapse" id="Policies">
+            <div class="collapse" id="quick_link">
               <div class="footer_copyright-content-warp-items">
-                <div class="footer_copyright-content-items">Privacy Policy</div>
-                <div class="footer_copyright-content-items">
-                  Shipping Policy
-                </div>
-                <div class="footer_copyright-content-items">
-                  Refund & Return Policy
-                </div>
-                <div class="footer_copyright-content-items">
-                  Terms and Conditions
-                </div>
-                <div class="footer_copyright-content-items">Payment Method</div>
+                <div class="footer_copyright-content-items">Home</div>
+                <div class="footer_copyright-content-items">About Us</div>
+                <div class="footer_copyright-content-items">Contact Us</div>
+                <div class="footer_copyright-content-items">FAQ</div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="footer-copyright-collapse">
           <div class="footer-copyright-collapse">
-            <div
-              data-bs-toggle="collapse"
-              href="#getInTouch"
-              aria-expanded="false"
-              aria-controls="getInTouch"
-              id="footer-copyright-collapse-wrap"
-            >
-              <div class="footer-coppyright-title">Get In Touch</div>
-              <div class="footer-copyright-icon">
-                <i class="fa-solid fa-caret-down"></i>
+            <div class="footer-copyright-collapse">
+              <div
+                data-bs-toggle="collapse"
+                href="#Policies"
+                aria-expanded="false"
+                aria-controls="Policies"
+                id="footer-copyright-collapse-wrap"
+              >
+                <div class="footer-coppyright-title">Policies</div>
+                <div class="footer-copyright-icon">
+                  <i class="fa-solid fa-caret-down"></i>
+                </div>
+              </div>
+              <div class="collapse" id="Policies">
+                <div class="footer_copyright-content-warp-items">
+                  <div class="footer_copyright-content-items">
+                    Privacy Policy
+                  </div>
+                  <div class="footer_copyright-content-items">
+                    Shipping Policy
+                  </div>
+                  <div class="footer_copyright-content-items">
+                    Refund & Return Policy
+                  </div>
+                  <div class="footer_copyright-content-items">
+                    Terms and Conditions
+                  </div>
+                  <div class="footer_copyright-content-items">
+                    Payment Method
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="collapse" id="getInTouch">
-              <div class="footer_copyright-content-warp-items">
-                <div class="footer_copyright-content-items-thin">
-                  If you have any questions, please contact us by this email
-                  below
+          </div>
+          <div class="footer-copyright-collapse">
+            <div class="footer-copyright-collapse">
+              <div
+                data-bs-toggle="collapse"
+                href="#getInTouch"
+                aria-expanded="false"
+                aria-controls="getInTouch"
+                id="footer-copyright-collapse-wrap"
+              >
+                <div class="footer-coppyright-title">Get In Touch</div>
+                <div class="footer-copyright-icon">
+                  <i class="fa-solid fa-caret-down"></i>
                 </div>
-                <div class="footer_copyright-content-items-thin">
-                  <i class="fa-regular fa-envelope"></i>
-                  Email: suppost.fmzee@gmail.com UK Address: 24-26 Arcadia
-                </div>
-                <div class="footer_copyright-content-items-thin">
-                  Avenue, Dephna House #105, London, Greater London, United
-                  Kingdom, N3 2JU
-                </div>
+              </div>
+              <div class="collapse" id="getInTouch">
+                <div class="footer_copyright-content-warp-items">
+                  <div class="footer_copyright-content-items-thin">
+                    If you have any questions, please contact us by this email
+                    below
+                  </div>
+                  <div class="footer_copyright-content-items-thin">
+                    <i class="fa-regular fa-envelope"></i>
+                    Email: suppost.fmzee@gmail.com UK Address: 24-26 Arcadia
+                  </div>
+                  <div class="footer_copyright-content-items-thin">
+                    Avenue, Dephna House #105, London, Greater London, United
+                    Kingdom, N3 2JU
+                  </div>
 
-                <div class="footer_copyright-content-items-thin">
-                  Delivery Delays Due To Covid-19
+                  <div class="footer_copyright-content-items-thin">
+                    Delivery Delays Due To Covid-19
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="footer-copyright-subscribe">
-          <div class="footer-coppyright-title">Newsletter</div>
-          <div class="footer-coppyright-content">
-            <div class="footer-coppyright-content-detail1">
-              Subscribe to be notified about product launches,
-              <br />special offers and news.
+          <div class="footer-copyright-subscribe">
+            <div class="footer-coppyright-title">Newsletter</div>
+            <div class="footer-coppyright-content">
+              <div class="footer-coppyright-content-detail1">
+                Subscribe to be notified about product launches,
+                <br />special offers and news.
+              </div>
+              <div class="footer-coppyright-content-detail2">
+                Enter your email and get your first treat,
+                <br />
+                an instant 25% discount off your first order!
+              </div>
             </div>
-            <div class="footer-coppyright-content-detail2">
-              Enter your email and get your first treat,
-              <br />
-              an instant 25% discount off your first order!
+            <div class="footer-coppyright-subcribe-wap">
+              <input
+                id="footer-coppyright-subcribe-input"
+                type="text"
+                placeholder="your email:"
+              />
+              <button id="footer-coppyright-subcribe-button">Subcribe</button>
             </div>
-          </div>
-          <div class="footer-coppyright-subcribe-wap">
-            <input
-              id="footer-coppyright-subcribe-input"
-              type="text"
-              placeholder="your email:"
-            />
-            <button id="footer-coppyright-subcribe-button">Subcribe</button>
-          </div>
-          <div class="footer-coppyright-author">
-            © 2022 FMzee - Personalized Door Sign, Ornament, Tumbler & Home
-            Decor
+            <div class="footer-coppyright-author">
+              © 2022 FMzee - Personalized Door Sign, Ornament, Tumbler & Home
+              Decor
+            </div>
           </div>
         </div>
       </div>
     </div>
+
     <div id="footer_container">
       <div id="footer_wrap">
         <div id="footer_wrap-left">
@@ -274,14 +317,22 @@
             <i class="fa-brands fa-facebook"></i>
           </div>
           <div class="footer_icon-social footer_icon-social-center">
-            <i class="fa-brands fa-square-twitter"></i>
+            <!-- <i class="fa-brands fa-square-twitter"></i> -->
+            <div class="footer_icon-social-stee">
+              <img src="https://fmzee.com/teet/" alt="social" />
+            </div>
           </div>
           <div class="footer_icon-social">
-            <i class="fa-brands fa-square-instagram"></i>
+            <!-- <i class="fa-brands fa-square-instagram"></i> -->
+            <div class="footer_icon-social-instagram-inst">
+              <div class="footer_icon-social-instagram">
+                <img src="https://fmzee.com/insta/" alt="" />
+              </div>
+            </div>
           </div>
         </div>
         <div id="footer_wrap-right">
-          <div class="footer_icon-paycard">
+          <div class="footer_icon-paycard footer_icon-paycard-increaseHeight">
             <img src=" https://fmzee.com/productdetail-pay-visa/" alt="" />
           </div>
           <div class="footer_icon-paycard footer_icon-paycard-center">
