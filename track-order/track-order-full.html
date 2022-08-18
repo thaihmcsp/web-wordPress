@@ -165,6 +165,8 @@
         box-sizing: border-box;
       }
       .sign_in_container {
+        max-width: 500px;
+        margin: auto;
         text-align: center;
       }
       .sign_in_header {
@@ -189,7 +191,7 @@
       .sign_in_body {
         margin-bottom: 41px;
       }
-      .sign_in_body > input {
+      .sign_in_body input {
         margin-top: 10px;
         justify-content: center;
         border-radius: 5px;
@@ -236,12 +238,16 @@
         font-weight: 600;
         line-height: 16px;
         text-align: start;
-        margin-left: 73px;
+        /* margin-left: 73px; */
       }
       #warning_ordNum > p,
       #warning_email > p {
         margin-bottom: 0px;
         margin-top: 5px;
+      }
+      .form-order {
+        max-width: 246px;
+        margin: auto;
       }
     </style>
     <style>
@@ -471,22 +477,26 @@
         <p>track your order</p>
       </div>
       <div class="sign_in_body">
-        <input
-          type="text"
-          name=""
-          id="body_ordNum"
-          placeholder="Order Number:"
-          onkeyup="clearWarning()"
-        />
-        <div id="warning_ordNum"></div>
-        <input
-          type="text"
-          name=""
-          id="body_email"
-          placeholder="Email:"
-          onkeyup="clearWarning()"
-        />
-        <div id="warning_email"></div>
+        <div class="form-order">
+          <input
+            type="text"
+            name=""
+            id="body_ordNum"
+            placeholder="Order Number:"
+            onkeyup="clearWarning()"
+          />
+          <div id="warning_ordNum"></div>
+        </div>
+        <div class="form-order">
+          <input
+            type="text"
+            name=""
+            id="body_email"
+            placeholder="Email:"
+            onkeyup="clearWarning()"
+          />
+          <div id="warning_email"></div>
+        </div>
         <button onclick="handleSubmit()">Track</button>
       </div>
     </div>
