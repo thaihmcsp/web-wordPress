@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
     <link
@@ -156,77 +156,98 @@
       .visibleClass {
         display: block;
       }
+      .col-inner {
+        background: white;
+      }
     </style>
     <style>
-      /*--------------- sign-in --------------------*/
-      .sign_in_container {
-        text-align: center;
-        max-width: 500px;
+      /*-------------------------- order-detail -------------------------- */
+      .orderDetail {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: white;
         margin: auto;
+        max-width: 500px;
       }
-      .sign_in_header {
-        padding-top: 50px;
-        padding-bottom: 20px;
+      .orderDetail-title,
+      .orderDetail-content {
+        width: 100%;
+        padding: 0 20px;
+        /* margin-top: 16px; */
+        margin-bottom: 2px;
       }
-      .sign_in_header > p {
-        color: #20404f;
-        text-transform: uppercase;
-        font-size: 18px;
-        font-weight: 700;
-        position: relative;
-        margin-bottom: 0;
+      .orderDetail-title {
+        border-bottom: 1.5px solid #20404f;
       }
-
-      .sign_in_header > span {
-        font-size: 12px;
-        line-height: 19px;
+      .orderDetail-title-text {
+        font-family: "Nunito";
+        font-style: normal;
         font-weight: 400;
-        color: #20404f;
+        font-size: 12px;
+        padding: 5px 0;
       }
-      .sign_in_body {
+      .orderDetail-title-title {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .sign_in_body > input {
-        margin-top: 10px;
-        justify-content: center;
-        border-radius: 5px;
-        border: 1px solid rgba(32, 64, 79, 0.7);
-        width: 246px;
-        height: 35px;
-        background: #e9dfd3;
-        padding-left: 5px;
-        font-size: 12px;
-      }
-      .sign_in_body > button {
-        margin-top: 10px;
-
-        width: 246px;
-        height: 35px;
-        background: #20404f;
-        border-radius: 5px;
-        color: #e9dfd3;
-      }
-      .sign_in_footer {
-        margin-top: 10px;
-      }
-
-      .sign_in_footer .policy {
-        color: #20404f;
-        font-size: 12px;
-        line-height: 19px;
-        font-weight: 600;
-      }
-      .sign_in_footer .policy_link {
-        color: #20404f;
-        font-size: 12px;
-        line-height: 19px;
+        justify-content: space-between;
+        font-family: "Nunito";
+        font-style: normal;
         font-weight: 700;
+        font-size: 18px;
+        color: #20404f;
       }
-      .sign_in_footer .policy_link > p > span > a {
-        color: #bf8977;
-        text-decoration: none;
+      .orderDetail-title-title p {
+        margin: 3px 0;
+      }
+      .orderDetail-content p {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        color: rgba(32, 64, 79, 0.8);
+        margin: 0;
+      }
+      .orderDetail-price {
+        width: 100%;
+        padding: 9px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1.5px solid #20404f;
+      }
+      .orderDetail-price-right {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 16px;
+        color: #20404f;
+      }
+      .orderDetail-price-left {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        color: #20404f;
+        text-align: left;
+      }
+      .orderDetail-modal {
+        width: 100%;
+        background: rgba(191, 137, 119, 0.5);
+        margin: 38px 0;
+        padding: 30px 20px;
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        color: #000000;
+      }
+      .orderDetail-modal ul {
+        margin: 5px 0 0 20px;
+      }
+      .orderDetail-modal ul li {
+        margin: 8px 0;
       }
     </style>
     <style>
@@ -451,35 +472,47 @@
         </div>
       </div>
     </div>
-    <div class="sign_in_container">
-      <div class="sign_in_header">
-        <p>login to my account</p>
-        <span>Enter your e-mail and password</span>
-      </div>
-      <div class="sign_in_body">
-        <input type="text" name="" id="" placeholder="Email:" />
-        <input type="password" name="" id="" placeholder="Password" />
-        <button>Login</button>
-      </div>
-      <div class="sign_in_footer">
-        <div class="policy">
-          <p>
-            This site is protected by reCAPTCHA and the Google
-
-            <br />
-            Privacy Prolicy and Terms of Service apply
+    <div class="orderDetail">
+      <div class="orderDetail-title">
+        <div class="orderDetail-title-text">
+          <p style="margin: 0">
+            Home / Product / Gift / Checkout / Order details
           </p>
         </div>
-        <div class="policy_link">
-          <p>
-            New customer?
-            <span> <a href="#"> Create your account </a> </span><br />
-            Lost password?
-            <span>
-              <a href="#"> Recover password </a>
-            </span>
-          </p>
+        <div class="orderDetail-title-title">
+          <p style="margin: 0">Product</p>
+          <p style="margin: 0">Total</p>
         </div>
+      </div>
+      <div class="orderDetail-content" style="margin: 13px 0">
+        <p>
+          Personalized Teacher Door Sign, Classroom Door Sign, Custom Teacher
+          Sign, Boho Classroom Decor
+        </p>
+      </div>
+      <div class="orderDetail-price">
+        <div class="orderDetail-price-right">x 1</div>
+        <div class="orderDetail-price-left">$21.69</div>
+      </div>
+      <div class="orderDetail-price">
+        <div class="orderDetail-price-right">Subtotal:</div>
+        <div class="orderDetail-price-left">$21.69</div>
+      </div>
+      <div class="orderDetail-price">
+        <div class="orderDetail-price-right">Coupon:</div>
+        <div class="orderDetail-price-left" style="margin-right: 7%">$ 0</div>
+      </div>
+      <div class="orderDetail-price">
+        <div class="orderDetail-price-right">Total:</div>
+        <div class="orderDetail-price-left">$21.69</div>
+      </div>
+      <div class="orderDetail-modal">
+        <p>Thank you. Your Order has been received</p>
+        <ul>
+          <li>Order ID: <span style="margin-left: 8px"> #2201 </span></li>
+          <li>Day: <span style="margin-left: 8px"> 08/13/2022 </span></li>
+          <li>Total: <span style="margin-left: 8px">$21.69</span></li>
+        </ul>
       </div>
     </div>
     <div id="footer-copyright_container">
@@ -652,6 +685,7 @@
     crossorigin="anonymous"
   ></script>
   <script>
+    //-------------------- header --------------------
     function onMenuDropdown() {
       $(".header-dropdown-wrap-item").toggleClass("visibleClass");
     }

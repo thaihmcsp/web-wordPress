@@ -41,17 +41,18 @@
         padding: 0;
       }
       #header_container {
-        max-width: 500px; /*figma: 390px */
-        height: 69px;
         background-color: #20404f;
-        color: #e9dfd3;
+        /* max-width: 500px; figma: 390px */
       }
       #header_wrap {
-        height: 100%;
+        max-width: 348px;
+        height: 69px;
+        margin: auto;
+        color: #e9dfd3;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        padding: 0 21px 5px 21px;
+        padding: 0 8px 5px 0;
       }
       #header-wrap-left {
         height: 100%;
@@ -62,6 +63,10 @@
         position: relative;
         font-size: 25px;
         padding-right: 21px;
+      }
+      .header_bar-img {
+        height: 20px;
+        margin-bottom: 6px;
       }
 
       #header_brand-icon {
@@ -76,6 +81,15 @@
       #header_search {
         font-size: 20px;
       }
+      .header_search-img {
+        height: 20px;
+      }
+      .header_card-img {
+        height: 20px;
+      }
+      .header_user-info-img {
+        height: 20px;
+      }
       #header_user-info {
         font-size: 20px;
         margin: 0 11px;
@@ -86,8 +100,8 @@
       }
       #header_card-index {
         position: absolute;
-        top: -5px;
-        right: -5px;
+        top: -1px;
+        right: -7px;
         width: 15px;
         height: 15px;
         border-radius: 50%;
@@ -156,87 +170,117 @@
       .invisibleClass {
         display: none;
       }
+      /*------------------- HẾT HEADER---------------- */
     </style>
   </head>
   <body>
-    <div id="header_container">
-      <div id="header_wrap">
-        <div id="header-wrap-left">
-          <div id="header_bar" onclick="onMenuDropdown()">
-            <i class="fa-solid fa-bars"></i>
-          </div>
+    <div class="product-detail-container">
+      <!-------------------------- HEADER------------------------------------ -->
 
-          <!-- dropdown -->
-
-          <div class="header-dropdown-wrap-item" onclick="">
-            <div class="header-dropdown-item"><a href="#">Home</a></div>
-
-            <div class="header-dropdown-item">
-              <a href="#">Best Sallers</a>
+      <div id="header_container">
+        <div id="header_wrap">
+          <div id="header-wrap-left">
+            <div id="header_bar" onclick="onMenuDropdown()">
+              <img
+                class="header_bar-img"
+                src="https://fmzee.com/threebar/"
+                alt=""
+              />
+              <!-- <i class="fa-solid fa-bars"></i> -->
             </div>
 
-            <div
-              class="header-dropdown-item header-dropdown-item-dropdown"
-              onclick="onProductMenuDropdown()"
-            >
-              <div>Product</div>
-              <i
-                class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
-              ></i>
-              <div class="header-dropdown-wrap-product-item">
-                <div class="header-dropdown-item"><div>Ornament</div></div>
-                <div class="header-dropdown-item">
-                  <div>Tumbler</div>
-                </div>
+            <!-- dropdown -->
 
-                <div class="header-dropdown-item">
-                  <div>Door mat</div>
-                </div>
+            <div class="header-dropdown-wrap-item" onclick="">
+              <div class="header-dropdown-item"><a href="#">Home</a></div>
 
-                <div class="header-dropdown-item">
-                  <div>Door sign</div>
-                </div>
+              <div class="header-dropdown-item">
+                <a href="#">Best Sallers</a>
+              </div>
 
-                <div class="header-dropdown-item">
-                  <div>Gift Card</div>
-                </div>
+              <div
+                class="header-dropdown-item header-dropdown-item-dropdown"
+                onclick="onProductMenuDropdown()"
+              >
+                <div>Product</div>
+                <i
+                  class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
+                ></i>
+                <div class="header-dropdown-wrap-product-item">
+                  <div class="header-dropdown-item"><div>Ornament</div></div>
+                  <div class="header-dropdown-item">
+                    <div>Tumbler</div>
+                  </div>
 
-                <div class="header-dropdown-item">
-                  <div>2 Layered Door Sign</div>
+                  <div class="header-dropdown-item">
+                    <div>Door mat</div>
+                  </div>
+
+                  <div class="header-dropdown-item">
+                    <div>Door sign</div>
+                  </div>
+
+                  <div class="header-dropdown-item">
+                    <div>Gift Card</div>
+                  </div>
+
+                  <div class="header-dropdown-item">
+                    <div>2 Layered Door Sign</div>
+                  </div>
                 </div>
               </div>
+
+              
+              <!-- dropdown Product -->
+
+              <div class="header-dropdown-item">
+                <a href="#">Wishdivst</a>
+              </div>
+
+              <div class="header-dropdown-item">
+                <a href="#">Gift Card</a>
+              </div>
+
+              <div class="header-dropdown-item"><a href="#">Login</a></div>
+
+              <!-- test -->
             </div>
-            <!-- dropdown Product -->
-
-            <div class="header-dropdown-item">
-              <a href="#">Wishdivst</a>
+            <div id="header_brand-icon">
+              <img src="https://fmzee.com/header-logo/" alt="logo_brand" />
             </div>
+          </div>
 
-            <div class="header-dropdown-item">
-              <a href="#">Gift Card</a>
+          <div id="header-wrap-right">
+            <div id="header_search">
+              <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+              <img
+                class="header_search-img"
+                src="https://fmzee.com/kinhlop/"
+                alt=""
+              />
             </div>
+            <div id="header_user-info">
+              <img
+                class="header_user-info-img"
+                src="https://fmzee.com/user/"
+                alt=""
+              />
 
-            <div class="header-dropdown-item"><a href="#">Login</a></div>
-
-            <!-- test -->
-          </div>
-          <div id="header_brand-icon">
-            <img src="https://fmzee.com/header-logo/" alt="logo_brand" />
-          </div>
-        </div>
-
-        <div id="header-wrap-right">
-          <div id="header_search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <div id="header_user-info"><i class="fa-regular fa-user"></i></div>
-          <div id="header_card">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <div id="header_card-index">1</div>
+              <!-- <i class="fa-regular fa-user"></i>-->
+            </div>
+            <div id="header_card">
+              <!-- <i class="fa-solid fa-cart-shopping"></i> -->
+              <img
+                class="header_card-img"
+                src="https://fmzee.com/cartheader/"
+                alt=""
+              />
+              <div id="header_card-index">1</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <!-- --------------------------HẾT HEADER-------------------------------- -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -263,6 +307,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <!-- JS HEADER -------------------------------------------------------------------- -->
     <script>
       function onMenuDropdown() {
         $(".header-dropdown-wrap-item").toggleClass("visibleClass");
@@ -292,5 +337,6 @@
         }
       });
     </script>
+    <!-- ------------------------------------------------------------------------------- -->
   </body>
 </html>

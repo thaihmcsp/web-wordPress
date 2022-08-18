@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>SingIn</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
@@ -106,6 +106,124 @@
         }
       }
     </style>
+    <style>
+      #footer-copyright_container {
+        max-width: 390px;
+        background-color: rgba(191, 137, 119, 0.5);
+        color: #20404f;
+        padding: 0 22px;
+      }
+
+      .footer-coppyright-title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+      }
+      .footer-copyright-subscribe {
+        padding: 11px 0;
+      }
+
+      #footer-copyright-collapse-wrap {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        border-bottom: 1px solid #d9d9d9;
+        padding: 4px 0;
+        height: 38px;
+      }
+      .footer_copyright-content-warp-items {
+        padding-top: 12px;
+      }
+      .footer_copyright-content-items {
+        padding: 5px 0;
+      }
+      .footer_copyright-content-items-thin {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 19px;
+        padding: 5px 0;
+      }
+      .footer-coppyright-content-detail1 {
+        padding: 8px 0 6px;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .footer-coppyright-content-detail2 {
+        font-size: 14px;
+        font-weight: 600;
+        padding-bottom: 12px;
+      }
+      .footer-coppyright-subcribe-wap {
+        display: flex;
+        justify-content: space-between;
+      }
+      #footer-coppyright-subcribe-input {
+        border-radius: 4px;
+        border: 1px solid #20404f;
+        background: rgba(191, 137, 119, 0.01);
+        width: 244px;
+        height: 32px;
+        font-size: 12px;
+        padding-left: 11px;
+      }
+      #footer-coppyright-subcribe-button {
+        width: 89px;
+        border-radius: 4px;
+        height: 32px;
+        background-color: rgba(32, 64, 79, 1);
+        color: rgba(191, 137, 119, 1);
+        border: none;
+      }
+      .footer-coppyright-author {
+        font-size: 14px;
+        padding: 26px 0 12px 0;
+      }
+    </style>
+    <style>
+      #footer_container {
+        max-width: 390px;
+      }
+      #footer_wrap {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        background-color: #20404f;
+        color: #bf8977;
+        padding: 15px 24px;
+      }
+      #footer_wrap-left {
+        margin-top: 3px;
+        display: flex;
+      }
+      .footer_icon-social {
+        display: flex;
+        font-size: 18px;
+        overflow: hidden;
+      }
+      .footer_icon-social-center {
+        margin: 0 12px;
+      }
+
+      #footer_wrap-right {
+        display: flex;
+      }
+      .footer_icon-paycard {
+        width: 42px;
+        border-radius: 2px;
+      }
+      .footer_icon-paycard img {
+        width: 42px;
+      }
+      .footer_icon-paycard-center {
+        margin: 0 39px;
+      }
+      #footer-coppyright-subcribe-wap {
+        align-items: center;
+      }
+      #footer-coppyright-subcribe-wap button {
+        padding: 0;
+      }
+    </style>
   </head>
   <body>
     <div id="header_container">
@@ -134,7 +252,7 @@
     <div class="sign_in_container">
       <div class="sign_in_header">
         <p>login to my account</p>
-        <span>Enter your e-mail and password</span>
+        <span>Enter your e-mail and password:</span>
       </div>
       <div class="sign_in_body">
         <input type="text" name="" id="" placeholder="Email:" />
@@ -145,7 +263,6 @@
         <div class="policy">
           <p>
             This site is protected by reCAPTCHA and the Google
-
             <br />
             Privacy Prolicy and Terms of Service apply
           </p>
@@ -159,6 +276,154 @@
               <a href="#"> Recover password </a>
             </span>
           </p>
+        </div>
+      </div>
+    </div>
+    <div id="footer-copyright_container">
+      <div id="footer-copyright_wrap">
+        <div class="footer-copyright-collapse">
+          <div
+            data-bs-toggle="collapse"
+            href="#quick_link"
+            aria-expanded="false"
+            aria-controls="quick_link"
+            id="footer-copyright-collapse-wrap"
+          >
+            <div class="footer-coppyright-title">Quick Links</div>
+            <div class="footer-copyright-icon">
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+          <div class="collapse" id="quick_link">
+            <div class="footer_copyright-content-warp-items">
+              <div class="footer_copyright-content-items">Home</div>
+              <div class="footer_copyright-content-items">About Us</div>
+              <div class="footer_copyright-content-items">Contact Us</div>
+              <div class="footer_copyright-content-items">FAQ</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright-collapse">
+          <div class="footer-copyright-collapse">
+            <div
+              data-bs-toggle="collapse"
+              href="#Policies"
+              aria-expanded="false"
+              aria-controls="Policies"
+              id="footer-copyright-collapse-wrap"
+            >
+              <div class="footer-coppyright-title">Policies</div>
+              <div class="footer-copyright-icon">
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse" id="Policies">
+              <div class="footer_copyright-content-warp-items">
+                <div class="footer_copyright-content-items">Privacy Policy</div>
+                <div class="footer_copyright-content-items">
+                  Shipping Policy
+                </div>
+                <div class="footer_copyright-content-items">
+                  Refund & Return Policy
+                </div>
+                <div class="footer_copyright-content-items">
+                  Terms and Conditions
+                </div>
+                <div class="footer_copyright-content-items">Payment Method</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright-collapse">
+          <div class="footer-copyright-collapse">
+            <div
+              data-bs-toggle="collapse"
+              href="#getInTouch"
+              aria-expanded="false"
+              aria-controls="getInTouch"
+              id="footer-copyright-collapse-wrap"
+            >
+              <div class="footer-coppyright-title">Get In Touch</div>
+              <div class="footer-copyright-icon">
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse" id="getInTouch">
+              <div class="footer_copyright-content-warp-items">
+                <div class="footer_copyright-content-items-thin">
+                  If you have any questions, please contact us by this email
+                  below
+                </div>
+                <div class="footer_copyright-content-items-thin">
+                  <i class="fa-regular fa-envelope"></i>
+                  Email: suppost.fmzee@gmail.com UK Address: 24-26 Arcadia
+                </div>
+                <div class="footer_copyright-content-items-thin">
+                  Avenue, Dephna House #105, London, Greater London, United
+                  Kingdom, N3 2JU
+                </div>
+
+                <div class="footer_copyright-content-items-thin">
+                  Delivery Delays Due To Covid-19
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright-subscribe">
+          <div class="footer-coppyright-title">Newsletter</div>
+          <div class="footer-coppyright-content">
+            <div class="footer-coppyright-content-detail1">
+              Subscribe to be notified about product launches,
+              <br />special offers and news.
+            </div>
+            <div class="footer-coppyright-content-detail2">
+              Enter your email and get your first treat,
+              <br />
+              an instant 25% discount off your first order!
+            </div>
+          </div>
+          <div class="footer-coppyright-subcribe-wap">
+            <input
+              id="footer-coppyright-subcribe-input"
+              type="text"
+              placeholder="your email:"
+            />
+            <button id="footer-coppyright-subcribe-button">Subcribe</button>
+          </div>
+          <div class="footer-coppyright-author">
+            © 2022 FMzee - Personalized Door Sign, Ornament, Tumbler & Home
+            Decor
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer_container">
+      <div id="footer_wrap">
+        <div id="footer_wrap-left">
+          <div class="footer_icon-social">
+            <i class="fa-brands fa-facebook"></i>
+          </div>
+          <div class="footer_icon-social footer_icon-social-center">
+            <i class="fa-brands fa-square-twitter"></i>
+          </div>
+          <div class="footer_icon-social">
+            <i class="fa-brands fa-square-instagram"></i>
+          </div>
+        </div>
+        <div id="footer_wrap-right">
+          <div class="footer_icon-paycard">
+            <img src=" https://fmzee.com/productdetail-pay-visa/" alt="" />
+          </div>
+          <div class="footer_icon-paycard footer_icon-paycard-center">
+            <img src="https://fmzee.com/productdetail-pay-paypal/" alt="" />
+          </div>
+          <div class="footer_icon-paycard">
+            <img
+              src=" https://fmzee.com/productdetail-pay-mastercard/"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </div>

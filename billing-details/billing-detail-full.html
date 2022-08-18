@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /*------------------- header -------------------*/
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        font-family: "Nunito", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* border: 1px solid gray; */
+      }
+      #header {
+        display: none;
+      }
+      .page-wrapper {
+        padding-top: 0;
+      }
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .col {
+        padding: 0;
+      }
+      #header_container {
+        max-width: 500px; /*figma: 390px */
+        height: 69px;
+        background-color: #20404f;
+        color: #e9dfd3;
+        margin: auto;
+      }
+      #header_wrap {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0 21px 5px 21px;
+        position: relative;
+      }
+      #header-wrap-left {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+      }
+      #header_bar {
+        position: relative;
+        font-size: 25px;
+        padding-right: 21px;
+      }
+
+      #header_brand-icon {
+        width: 133px;
+        height: 46px;
+      }
+
+      #header-wrap-right {
+        display: flex;
+        margin-bottom: 6px;
+      }
+      #header_search {
+        font-size: 20px;
+      }
+      #header_user-info {
+        font-size: 20px;
+        margin: 0 11px;
+      }
+      #header_card {
+        font-size: 20px;
+        position: relative;
+      }
+      #header_card-index {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #bf8977;
+        text-align: center;
+        line-height: 15px;
+        font-size: 13px;
+      }
+      .header-dropdown-wrap-item {
+        border-radius: 5px;
+        position: absolute;
+        top: 0px;
+        transform: translate3d(1px, 70px, 0px) !important;
+        border: none;
+        left: 0;
+        width: 189px;
+        padding: 4px 0 32px 0;
+        background: #20404f;
+        z-index: 100000;
+        display: none;
+      }
+      .header-dropdown-item {
+        padding: 5px 0 2px 22px;
+        margin-top: 4px;
+        font-size: 14px;
+        color: #e9dfd3;
+        font-weight: 400;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+      }
+      .header-dropdown-item-dropdown {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .header-dropdown-item-dropdown-icon {
+        margin-right: 16px;
+      }
+      .header-dropdown-item a {
+        font-size: 14px;
+        color: #e9dfd3;
+        font-weight: 400;
+        text-decoration: none;
+      }
+      .dropdown-divider {
+        margin: 0;
+      }
+
+      .header-dropdown-wrap-product-item {
+        border-radius: 5px;
+        position: absolute;
+        top: -73px;
+        transform: translate3d(1px, 70px, 0px) !important;
+        border: none;
+        width: 165px;
+        padding: 4px 0 32px 0;
+        background: #20404f;
+        left: 100%;
+        z-index: 10000;
+        display: none;
+      }
+      .visibleClass {
+        display: block;
+      }
+    </style>
+    <style>
+      /*-------------------------------- billing detail -------------------------------- */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      hr {
+        height: 0.63px;
+        margin: 0;
+        background: #20404f;
+        transform: rotate(-0.08deg);
+      }
+      .billing_detail_container {
+        width: 95%;
+        margin: auto 21px;
+      }
+      .billing_detail_breadcrumb {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 19px;
+        color: rgba(32, 64, 79, 0.8);
+      }
+      .billing_detail_title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 16px;
+        color: #20404f;
+        text-transform: uppercase;
+      }
+      .billing_detail_border_short {
+        border: 1px solid rgba(32, 64, 79, 0.7);
+        border-radius: 5px;
+        width: 246px;
+        height: 26px;
+      }
+      .billing_detail_border_long {
+        border: 1px solid rgba(32, 64, 79, 0.7);
+        border-radius: 5px;
+        width: 349px;
+        height: 26px;
+      }
+      .form-group {
+        margin-bottom: 5px !important;
+      }
+      .form-group > label {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 16px;
+        text-transform: capitalize;
+        color: #20404f;
+      }
+
+      .order {
+        background: rgba(191, 137, 119, 0.5);
+      }
+      .order_container {
+        padding: 0 21px;
+        margin-top: 30px;
+      }
+
+      input[type="radio"] {
+        color: #4e70f9;
+      }
+      .order_title {
+        padding: 20px 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 19px;
+        color: #20404f;
+      }
+      .upcase {
+        text-transform: uppercase;
+      }
+      .capti {
+        text-transform: capitalize;
+      }
+      .sub_title {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 19px;
+        color: #20404f;
+        justify-content: space-between;
+      }
+      .sub_total {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color: rgba(32, 64, 79, 0.8);
+        width: 282px;
+        height: 57px;
+        text-transform: capitalize;
+      }
+      .desc_paypal {
+        display: flex;
+        align-items: center;
+      }
+
+      .paypal_text {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 16px;
+      }
+      .desc_paypal > span {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+      }
+      .text_paypal {
+        margin-top: 20px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 19px;
+      }
+      .text_paypal > span {
+        opacity: 0.7;
+      }
+      .paypal_btn {
+        width: 169px;
+        height: 38px;
+        background: #20404f;
+        border-radius: 5px;
+      }
+      .paypal_btn > span {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+        color: #e9dfd3;
+      }
+    </style>
+    <style>
+      /*------------------------------- footer copyright ------------------------*/
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        font-family: "Nunito", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* border: 1px solid gray; */
+      }
+      #footer-copyright_container {
+        max-width: 500px;
+        background-color: rgba(191, 137, 119, 0.5);
+        color: #20404f;
+        padding: 0 22px;
+        margin: auto;
+      }
+
+      .footer-coppyright-title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+      }
+      .footer-copyright-subscribe {
+        padding: 11px 0;
+      }
+
+      #footer-copyright-collapse-wrap {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        border-bottom: 1px solid #d9d9d9;
+        padding: 4px 0;
+        height: 38px;
+      }
+      .footer_copyright-content-warp-items {
+        padding-top: 12px;
+      }
+      .footer_copyright-content-items {
+        padding: 5px 0;
+      }
+      .footer_copyright-content-items-thin {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 19px;
+        padding: 5px 0;
+      }
+      .footer-coppyright-content-detail1 {
+        padding: 8px 0 6px;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .footer-coppyright-content-detail2 {
+        font-size: 14px;
+        font-weight: 600;
+        padding-bottom: 12px;
+      }
+      button {
+        padding: 0;
+      }
+      .footer-coppyright-subcribe-wap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #footer-coppyright-subcribe-input {
+        border-radius: 4px;
+        border: 1px solid #20404f;
+        background: rgba(191, 137, 119, 0.01);
+        width: 244px;
+        height: 32px;
+        font-size: 12px;
+        padding-left: 11px;
+      }
+      #footer-coppyright-subcribe-button {
+        width: 89px;
+        border-radius: 4px;
+        height: 32px;
+        background-color: rgba(32, 64, 79, 1);
+        color: rgba(191, 137, 119, 1);
+        border: none;
+      }
+      .footer-coppyright-author {
+        font-size: 14px;
+        padding: 26px 0 12px 0;
+      }
+    </style>
+    <style>
+      /*-------------------- footer -----------------*/
+      #footer_container {
+        max-width: 500px;
+        margin: auto;
+      }
+      #footer_wrap {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        background-color: #20404f;
+        color: #bf8977;
+        padding: 15px 24px;
+      }
+      #footer_wrap-left {
+        margin-top: 3px;
+        display: flex;
+      }
+      .footer_icon-social {
+        display: flex;
+        font-size: 18px;
+        overflow: hidden;
+      }
+      .footer_icon-social-center {
+        margin: 0 12px;
+      }
+
+      #footer_wrap-right {
+        display: flex;
+      }
+      .footer_icon-paycard {
+        width: 42px;
+        border-radius: 2px;
+      }
+      .footer_icon-paycard img {
+        width: 42px;
+      }
+      .footer_icon-paycard-center {
+        margin: 0 39px;
+      }
+      #footer-coppyright-subcribe-wap {
+        align-items: center;
+      }
+      #footer-coppyright-subcribe-wap button {
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header_container">
+      <div id="header_wrap">
+        <div id="header-wrap-left">
+          <div id="header_bar" onclick="onMenuDropdown()">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+
+          <!-- dropdown -->
+
+          <div class="header-dropdown-wrap-item" onclick="">
+            <div class="header-dropdown-item"><a href="#">Home</a></div>
+
+            <div class="header-dropdown-item">
+              <a href="#">Best Sallers</a>
+            </div>
+
+            <div
+              class="header-dropdown-item header-dropdown-item-dropdown"
+              onclick="onProductMenuDropdown()"
+            >
+              <div>Product</div>
+              <i
+                class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
+              ></i>
+              <div class="header-dropdown-wrap-product-item">
+                <a href="https://fmzee.com/?page_id=3039&preview=true">
+                  <div class="header-dropdown-item"><div>Ornament</div></div>
+                </a>
+                <a href="https://fmzee.com/?page_id=3041&preview=true">
+                  <div class="header-dropdown-item">
+                    <div>Tumbler</div>
+                  </div>
+                </a>
+
+                <a href="https://fmzee.com/?page_id=3043&preview=true">
+                  <div class="header-dropdown-item">
+                    <div>Door mat</div>
+                  </div>
+                </a>
+
+                <a href="https://fmzee.com/?page_id=3045&preview=true">
+                  <div class="header-dropdown-item">
+                    <div>Door sign</div>
+                  </div>
+                </a>
+
+                <a href="https://fmzee.com/?page_id=3047&preview=true">
+                  <div class="header-dropdown-item">
+                    <div>2 Layered Door Sign</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- dropdown Product -->
+
+            <div class="header-dropdown-item">
+              <a href="#">Wishdivst</a>
+            </div>
+
+            <div class="header-dropdown-item">
+              <a href="#">Gift Card</a>
+            </div>
+
+            <div class="header-dropdown-item">
+              <a href="https://fmzee.com/?page_id=2999&preview=true">Login</a>
+            </div>
+
+            <!-- test -->
+          </div>
+          <div id="header_brand-icon">
+            <img src="https://fmzee.com/header-logo/" alt="logo_brand" />
+          </div>
+        </div>
+
+        <div id="header-wrap-right">
+          <div id="header_search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div id="header_user-info"><i class="fa-regular fa-user"></i></div>
+          <div id="header_card">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div id="header_card-index">1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="billing_detail_container">
+        <div class="billing_detail_breadcrumb pt-3">
+          <p>Home / Product / Gift / Checkout / Billing Details</p>
+        </div>
+        <p class="billing_detail_title">billing details</p>
+      </div>
+      <hr />
+      <div class="billing_detail_container">
+        <div class="form-group">
+          <label for="">First Name*</label>
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_short"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Last Name*</label>
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_short"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Company Name (Optional)</label>
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_long"
+          />
+        </div>
+        <select>
+          <option value="AF">Afghanistan</option>
+          <option value="AX">Åland Islands</option>
+          <option value="AL">Albania</option>
+          <option value="DZ">Algeria</option>
+          <option value="AS">American Samoa</option>
+          <option value="AD">Andorra</option>
+          <option value="AO">Angola</option>
+          <option value="AI">Anguilla</option>
+          <option value="AQ">Antarctica</option>
+          <option value="AG">Antigua and Barbuda</option>
+          <option value="AR">Argentina</option>
+          <option value="AM">Armenia</option>
+          <option value="AW">Aruba</option>
+          <option value="AU">Australia</option>
+          <option value="AT">Austria</option>
+          <option value="AZ">Azerbaijan</option>
+          <option value="BS">Bahamas</option>
+          <option value="BH">Bahrain</option>
+          <option value="BD">Bangladesh</option>
+          <option value="BB">Barbados</option>
+          <option value="BY">Belarus</option>
+          <option value="BE">Belgium</option>
+          <option value="BZ">Belize</option>
+          <option value="BJ">Benin</option>
+          <option value="BM">Bermuda</option>
+          <option value="BT">Bhutan</option>
+          <option value="BO">Bolivia, Plurinational State of</option>
+          <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+          <option value="BA">Bosnia and Herzegovina</option>
+          <option value="BW">Botswana</option>
+          <option value="BV">Bouvet Island</option>
+          <option value="BR">Brazil</option>
+          <option value="IO">British Indian Ocean Territory</option>
+          <option value="BN">Brunei Darussalam</option>
+          <option value="BG">Bulgaria</option>
+          <option value="BF">Burkina Faso</option>
+          <option value="BI">Burundi</option>
+          <option value="KH">Cambodia</option>
+          <option value="CM">Cameroon</option>
+          <option value="CA">Canada</option>
+          <option value="CV">Cape Verde</option>
+          <option value="KY">Cayman Islands</option>
+          <option value="CF">Central African Republic</option>
+          <option value="TD">Chad</option>
+          <option value="CL">Chile</option>
+          <option value="CN">China</option>
+          <option value="CX">Christmas Island</option>
+          <option value="CC">Cocos (Keeling) Islands</option>
+          <option value="CO">Colombia</option>
+          <option value="KM">Comoros</option>
+          <option value="CG">Congo</option>
+          <option value="CD">Congo, the Democratic Republic of the</option>
+          <option value="CK">Cook Islands</option>
+          <option value="CR">Costa Rica</option>
+          <option value="CI">Côte d'Ivoire</option>
+          <option value="HR">Croatia</option>
+          <option value="CU">Cuba</option>
+          <option value="CW">Curaçao</option>
+          <option value="CY">Cyprus</option>
+          <option value="CZ">Czech Republic</option>
+          <option value="DK">Denmark</option>
+          <option value="DJ">Djibouti</option>
+          <option value="DM">Dominica</option>
+          <option value="DO">Dominican Republic</option>
+          <option value="EC">Ecuador</option>
+          <option value="EG">Egypt</option>
+          <option value="SV">El Salvador</option>
+          <option value="GQ">Equatorial Guinea</option>
+          <option value="ER">Eritrea</option>
+          <option value="EE">Estonia</option>
+          <option value="ET">Ethiopia</option>
+          <option value="FK">Falkland Islands (Malvinas)</option>
+          <option value="FO">Faroe Islands</option>
+          <option value="FJ">Fiji</option>
+          <option value="FI">Finland</option>
+          <option value="FR">France</option>
+          <option value="GF">French Guiana</option>
+          <option value="PF">French Polynesia</option>
+          <option value="TF">French Southern Territories</option>
+          <option value="GA">Gabon</option>
+          <option value="GM">Gambia</option>
+          <option value="GE">Georgia</option>
+          <option value="DE">Germany</option>
+          <option value="GH">Ghana</option>
+          <option value="GI">Gibraltar</option>
+          <option value="GR">Greece</option>
+          <option value="GL">Greenland</option>
+          <option value="GD">Grenada</option>
+          <option value="GP">Guadeloupe</option>
+          <option value="GU">Guam</option>
+          <option value="GT">Guatemala</option>
+          <option value="GG">Guernsey</option>
+          <option value="GN">Guinea</option>
+          <option value="GW">Guinea-Bissau</option>
+          <option value="GY">Guyana</option>
+          <option value="HT">Haiti</option>
+          <option value="HM">Heard Island and McDonald Islands</option>
+          <option value="VA">Holy See (Vatican City State)</option>
+          <option value="HN">Honduras</option>
+          <option value="HK">Hong Kong</option>
+          <option value="HU">Hungary</option>
+          <option value="IS">Iceland</option>
+          <option value="IN">India</option>
+          <option value="ID">Indonesia</option>
+          <option value="IR">Iran, Islamic Republic of</option>
+          <option value="IQ">Iraq</option>
+          <option value="IE">Ireland</option>
+          <option value="IM">Isle of Man</option>
+          <option value="IL">Israel</option>
+          <option value="IT">Italy</option>
+          <option value="JM">Jamaica</option>
+          <option value="JP">Japan</option>
+          <option value="JE">Jersey</option>
+          <option value="JO">Jordan</option>
+          <option value="KZ">Kazakhstan</option>
+          <option value="KE">Kenya</option>
+          <option value="KI">Kiribati</option>
+          <option value="KP">Korea, Democratic People's Republic of</option>
+          <option value="KR">Korea, Republic of</option>
+          <option value="KW">Kuwait</option>
+          <option value="KG">Kyrgyzstan</option>
+          <option value="LA">Lao People's Democratic Republic</option>
+          <option value="LV">Latvia</option>
+          <option value="LB">Lebanon</option>
+          <option value="LS">Lesotho</option>
+          <option value="LR">Liberia</option>
+          <option value="LY">Libya</option>
+          <option value="LI">Liechtenstein</option>
+          <option value="LT">Lithuania</option>
+          <option value="LU">Luxembourg</option>
+          <option value="MO">Macao</option>
+          <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+          <option value="MG">Madagascar</option>
+          <option value="MW">Malawi</option>
+          <option value="MY">Malaysia</option>
+          <option value="MV">Maldives</option>
+          <option value="ML">Mali</option>
+          <option value="MT">Malta</option>
+          <option value="MH">Marshall Islands</option>
+          <option value="MQ">Martinique</option>
+          <option value="MR">Mauritania</option>
+          <option value="MU">Mauritius</option>
+          <option value="YT">Mayotte</option>
+          <option value="MX">Mexico</option>
+          <option value="FM">Micronesia, Federated States of</option>
+          <option value="MD">Moldova, Republic of</option>
+          <option value="MC">Monaco</option>
+          <option value="MN">Mongolia</option>
+          <option value="ME">Montenegro</option>
+          <option value="MS">Montserrat</option>
+          <option value="MA">Morocco</option>
+          <option value="MZ">Mozambique</option>
+          <option value="MM">Myanmar</option>
+          <option value="NA">Namibia</option>
+          <option value="NR">Nauru</option>
+          <option value="NP">Nepal</option>
+          <option value="NL">Netherlands</option>
+          <option value="NC">New Caledonia</option>
+          <option value="NZ">New Zealand</option>
+          <option value="NI">Nicaragua</option>
+          <option value="NE">Niger</option>
+          <option value="NG">Nigeria</option>
+          <option value="NU">Niue</option>
+          <option value="NF">Norfolk Island</option>
+          <option value="MP">Northern Mariana Islands</option>
+          <option value="NO">Norway</option>
+          <option value="OM">Oman</option>
+          <option value="PK">Pakistan</option>
+          <option value="PW">Palau</option>
+          <option value="PS">Palestinian Territory, Occupied</option>
+          <option value="PA">Panama</option>
+          <option value="PG">Papua New Guinea</option>
+          <option value="PY">Paraguay</option>
+          <option value="PE">Peru</option>
+          <option value="PH">Philippines</option>
+          <option value="PN">Pitcairn</option>
+          <option value="PL">Poland</option>
+          <option value="PT">Portugal</option>
+          <option value="PR">Puerto Rico</option>
+          <option value="QA">Qatar</option>
+          <option value="RE">Réunion</option>
+          <option value="RO">Romania</option>
+          <option value="RU">Russian Federation</option>
+          <option value="RW">Rwanda</option>
+          <option value="BL">Saint Barthélemy</option>
+          <option value="SH">
+            Saint Helena, Ascension and Tristan da Cunha
+          </option>
+          <option value="KN">Saint Kitts and Nevis</option>
+          <option value="LC">Saint Lucia</option>
+          <option value="MF">Saint Martin (French part)</option>
+          <option value="PM">Saint Pierre and Miquelon</option>
+          <option value="VC">Saint Vincent and the Grenadines</option>
+          <option value="WS">Samoa</option>
+          <option value="SM">San Marino</option>
+          <option value="ST">Sao Tome and Principe</option>
+          <option value="SA">Saudi Arabia</option>
+          <option value="SN">Senegal</option>
+          <option value="RS">Serbia</option>
+          <option value="SC">Seychelles</option>
+          <option value="SL">Sierra Leone</option>
+          <option value="SG">Singapore</option>
+          <option value="SX">Sint Maarten (Dutch part)</option>
+          <option value="SK">Slovakia</option>
+          <option value="SI">Slovenia</option>
+          <option value="SB">Solomon Islands</option>
+          <option value="SO">Somalia</option>
+          <option value="ZA">South Africa</option>
+          <option value="GS">
+            South Georgia and the South Sandwich Islands
+          </option>
+          <option value="SS">South Sudan</option>
+          <option value="ES">Spain</option>
+          <option value="LK">Sri Lanka</option>
+          <option value="SD">Sudan</option>
+          <option value="SR">Suriname</option>
+          <option value="SJ">Svalbard and Jan Mayen</option>
+          <option value="SZ">Swaziland</option>
+          <option value="SE">Sweden</option>
+          <option value="CH">Switzerland</option>
+          <option value="SY">Syrian Arab Republic</option>
+          <option value="TW">Taiwan, Province of China</option>
+          <option value="TJ">Tajikistan</option>
+          <option value="TZ">Tanzania, United Republic of</option>
+          <option value="TH">Thailand</option>
+          <option value="TL">Timor-Leste</option>
+          <option value="TG">Togo</option>
+          <option value="TK">Tokelau</option>
+          <option value="TO">Tonga</option>
+          <option value="TT">Trinidad and Tobago</option>
+          <option value="TN">Tunisia</option>
+          <option value="TR">Turkey</option>
+          <option value="TM">Turkmenistan</option>
+          <option value="TC">Turks and Caicos Islands</option>
+          <option value="TV">Tuvalu</option>
+          <option value="UG">Uganda</option>
+          <option value="UA">Ukraine</option>
+          <option value="AE">United Arab Emirates</option>
+          <option value="GB">United Kingdom</option>
+          <option value="US">United States</option>
+          <option value="UM">United States Minor Outlying Islands</option>
+          <option value="UY">Uruguay</option>
+          <option value="UZ">Uzbekistan</option>
+          <option value="VU">Vanuatu</option>
+          <option value="VE">Venezuela, Bolivarian Republic of</option>
+          <option value="VN">Viet Nam</option>
+          <option value="VG">Virgin Islands, British</option>
+          <option value="VI">Virgin Islands, U.S.</option>
+          <option value="WF">Wallis and Futuna</option>
+          <option value="EH">Western Sahara</option>
+          <option value="YE">Yemen</option>
+          <option value="ZM">Zambia</option>
+          <option value="ZW">Zimbabwe</option>
+        </select>
+        <div class="form-group">
+          <label for="">Country / Region*</label>
+          <select
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_long"
+          ></select>
+        </div>
+        <div class="form-group">
+          <label for="">Street Address*</label>
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_short"
+          />
+          <p></p>
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_short"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Town / City*</label>
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_long"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Postcode / ZIP*</label>
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_long"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Phone*</label>
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_long"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Email Address*</label>
+          <input
+            type="text"
+            name=""
+            id=""
+            class="form-control billing_detail_border_long"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="order">
+      <div class="order_container">
+        <div class="order_title">your order</div>
+        <div class="sub_title d-flex upcase">
+          <div>Product</div>
+          <div>Subtotal</div>
+        </div>
+      </div>
+      <hr />
+      <div class="order_container">
+        <p class="sub_total">
+          Personalized teacher door sign, classroom
+          <br />
+          door sign, custom teacher sign, Boho
+          <br />
+          classroom decor
+        </p>
+        <div class="sub_title d-flex capti">
+          <div>8 Inches x1</div>
+          <div>$21.69</div>
+        </div>
+      </div>
+      <hr />
+      <div class="order_container">
+        <div class="sub_title d-flex">
+          <div>Subtotal:</div>
+          <div>$21.69</div>
+        </div>
+      </div>
+      <hr />
+      <div class="order_container">
+        <div class="sub_title d-flex">
+          <div>Coupon:</div>
+          <div>$ 0</div>
+        </div>
+      </div>
+      <hr />
+      <div class="order_container">
+        <div class="sub_title d-flex">
+          <div>Total:</div>
+          <div>$21.69</div>
+        </div>
+      </div>
+      <hr />
+      <div class="order_container">
+        <div class="desc_paypal">
+          <div class="pr-4">
+            <input type="radio" name="" id="" checked />
+            <span class="paypal_text">PayPal</span>
+          </div>
+          <img
+            class="pr-4"
+            src="https://fmzee.com/wp-content/uploads/2022/08/ProductDetail-pay-Paypal.png"
+            alt=""
+          />
+          <span>what is PayPal?</span>
+        </div>
+        <div class="text_paypal pb-3">
+          Pay through PayPal: you can pay with a credit card
+          <br />
+          if you don't have a PayPal account. Sandbox mode is enabled.
+          <br />
+          You have can use sandbox account to test. Read more about
+          <span> Instructions for checking PayPal using Sandbox </span>
+        </div>
+      </div>
+      <hr />
+      <div class="order_container pb-4">
+        <div>
+          <input type="radio" name="" id="" />
+          <span class="paypal_text"> PayPal </span>
+        </div>
+
+        <button class="paypal_btn mt-4"><span> Place Order </span></button>
+        <div class="text_paypal">
+          You personal information will be used to process orders,
+          <br />
+          enhance your website experience, and for other specific
+          <br />
+          purposes described in this article. <span>privacy policy</span>
+        </div>
+      </div>
+      <div class="mt-5"></div>
+    </div>
+
+    <div id="footer-copyright_container">
+      <div id="footer-copyright_wrap">
+        <div class="footer-copyright-collapse">
+          <div
+            data-bs-toggle="collapse"
+            href="#quick_link"
+            aria-expanded="false"
+            aria-controls="quick_link"
+            id="footer-copyright-collapse-wrap"
+          >
+            <div class="footer-coppyright-title">Quick Links</div>
+            <div class="footer-copyright-icon">
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+          <div class="collapse" id="quick_link">
+            <div class="footer_copyright-content-warp-items">
+              <div class="footer_copyright-content-items">Home</div>
+              <div class="footer_copyright-content-items">About Us</div>
+              <div class="footer_copyright-content-items">Contact Us</div>
+              <div class="footer_copyright-content-items">FAQ</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright-collapse">
+          <div class="footer-copyright-collapse">
+            <div
+              data-bs-toggle="collapse"
+              href="#Policies"
+              aria-expanded="false"
+              aria-controls="Policies"
+              id="footer-copyright-collapse-wrap"
+            >
+              <div class="footer-coppyright-title">Policies</div>
+              <div class="footer-copyright-icon">
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse" id="Policies">
+              <div class="footer_copyright-content-warp-items">
+                <div class="footer_copyright-content-items">Privacy Policy</div>
+                <div class="footer_copyright-content-items">
+                  Shipping Policy
+                </div>
+                <div class="footer_copyright-content-items">
+                  Refund & Return Policy
+                </div>
+                <div class="footer_copyright-content-items">
+                  Terms and Conditions
+                </div>
+                <div class="footer_copyright-content-items">Payment Method</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright-collapse">
+          <div class="footer-copyright-collapse">
+            <div
+              data-bs-toggle="collapse"
+              href="#getInTouch"
+              aria-expanded="false"
+              aria-controls="getInTouch"
+              id="footer-copyright-collapse-wrap"
+            >
+              <div class="footer-coppyright-title">Get In Touch</div>
+              <div class="footer-copyright-icon">
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse" id="getInTouch">
+              <div class="footer_copyright-content-warp-items">
+                <div class="footer_copyright-content-items-thin">
+                  If you have any questions, please contact us by this email
+                  below
+                </div>
+                <div class="footer_copyright-content-items-thin">
+                  <i class="fa-regular fa-envelope"></i>
+                  Email: suppost.fmzee@gmail.com UK Address: 24-26 Arcadia
+                </div>
+                <div class="footer_copyright-content-items-thin">
+                  Avenue, Dephna House #105, London, Greater London, United
+                  Kingdom, N3 2JU
+                </div>
+
+                <div class="footer_copyright-content-items-thin">
+                  Delivery Delays Due To Covid-19
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright-subscribe">
+          <div class="footer-coppyright-title">Newsletter</div>
+          <div class="footer-coppyright-content">
+            <div class="footer-coppyright-content-detail1">
+              Subscribe to be notified about product launches,
+              <br />special offers and news.
+            </div>
+            <div class="footer-coppyright-content-detail2">
+              Enter your email and get your first treat,
+              <br />
+              an instant 25% discount off your first order!
+            </div>
+          </div>
+          <div class="footer-coppyright-subcribe-wap">
+            <input
+              id="footer-coppyright-subcribe-input"
+              type="text"
+              placeholder="your email:"
+            />
+            <button id="footer-coppyright-subcribe-button">Subcribe</button>
+          </div>
+          <div class="footer-coppyright-author">
+            © 2022 FMzee - Personalized Door Sign, Ornament, Tumbler & Home
+            Decor
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer_container">
+      <div id="footer_wrap">
+        <div id="footer_wrap-left">
+          <div class="footer_icon-social">
+            <i class="fa-brands fa-facebook"></i>
+          </div>
+          <div class="footer_icon-social footer_icon-social-center">
+            <i class="fa-brands fa-square-twitter"></i>
+          </div>
+          <div class="footer_icon-social">
+            <i class="fa-brands fa-square-instagram"></i>
+          </div>
+        </div>
+        <div id="footer_wrap-right">
+          <div class="footer_icon-paycard">
+            <img src=" https://fmzee.com/productdetail-pay-visa/" alt="" />
+          </div>
+          <div class="footer_icon-paycard footer_icon-paycard-center">
+            <img src="https://fmzee.com/productdetail-pay-paypal/" alt="" />
+          </div>
+          <div class="footer_icon-paycard">
+            <img
+              src=" https://fmzee.com/productdetail-pay-mastercard/"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    //----------------------- footer -----------------------
+    function onMenuDropdown() {
+      $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+    }
+    function onProductMenuDropdown() {
+      $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
+    }
+
+    $(document).click(function (e) {
+      if (
+        $(e.target?.parentElement?.parentElement).is(
+          $(".header-dropdown-wrap-item")[0]
+        ) ||
+        $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
+        $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
+        $(e.target.parentElement).is($("#header_bar")[0]) ||
+        $(e.target).is($("#header_bar")[0])
+      ) {
+      } else {
+        if (
+          $(".header-dropdown-wrap-item")[0].classList.contains("visibleClass")
+        ) {
+          $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+        }
+      }
+    });
+  </script>
+</html>
