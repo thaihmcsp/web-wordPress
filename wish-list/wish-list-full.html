@@ -1493,4 +1493,10 @@
       }
     });
   </script>
+  <script>
+    // display img on product
+    $("img.lazy-load").each(function () {
+      $(this).attr("src", $(this).attr("data-src"));
+    });
+  </script>
 </html>
