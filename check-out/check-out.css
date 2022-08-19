@@ -1,0 +1,14 @@
+#checkout-detail-breadcrumb-container {
+  height: 40px;
+  border-bottom: 1px solid #20404f;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 5px 21px;
+}
+
+.checkout-detail-breadcrumb-item {
+  color: rgba(32, 64, 79, 0.8);
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 19px;
+}

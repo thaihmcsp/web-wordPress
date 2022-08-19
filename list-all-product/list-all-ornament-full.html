@@ -575,8 +575,8 @@
     </div>
     <div class="listAllProduct-container">
       <div class="listAllProduct-title">
-        <p class="listAllProduct-title_title">DOOR SIGN</p>
-        <p class="listAllProduct-title_text">150 product</p>
+        <p class="listAllProduct-title_title">ORNAMENT</p>
+        <p class="listAllProduct-title_text">[count_product_in_category category="ornament"] product</p>
       </div>
       <div class="listAllProduct-title_img">
         <img
@@ -597,7 +597,7 @@
       </div>
         
       </div>
-      <hr />
+      <hr style="max-width: 500px; margin: auto"/>
       <div class="listALLProduct-pagination">
         <button class="listALLProduct-pagination-button">Next</button>
         <ul style="list-style-type: none; display: flex">
@@ -820,6 +820,8 @@
         let newPrice = $(product).find('.price-wrapper .price > ins bdi').eq(0).html().split('&nbsp;')[0];;
         const linkProductDetail = $(product).find('.title-wrapper a').attr('href');
         const addToWishList = $(product).find('.wishlist-popup.dark a').attr('href');
+        const isAdded = ($(product).find('.wishlist-popup.dark a').attr('data-title') === 'Add to wishlist');
+        const color = isAdded ? "color: rgba(32, 64, 79, 0.5)" :"color: rgb(255, 0, 0, 0.5)"
         // $(product).find('.price-wrapper .price > del bdi').each(function(i, price){
         //     if(i > 0) dellPrice += ' - ';
         //     dellPrice += `$${$(price).html().split('&nbsp;')[0]}`
@@ -854,7 +856,7 @@
                   <a href='${addToWishList}'>
                     <i
                         class="fa-solid fa-heart"
-                        style="color: rgba(32, 64, 79, 0.5)"
+                        style="${color}"
                     ></i>
                   </a>
                   
