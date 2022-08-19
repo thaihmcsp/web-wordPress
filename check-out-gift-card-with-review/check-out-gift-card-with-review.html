@@ -188,6 +188,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
       }
       .name_voucher {
         font-family: "Nunito";
@@ -222,6 +223,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
       }
       .total_name {
         font-family: "Nunito";
@@ -274,6 +276,15 @@
         margin-top: 16px;
         margin-bottom: 30px;
       }
+      .div_max_width {
+        max-width: 500px;
+      }
+      .div_center_btn {
+        width: 88px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
     </style>
   </head>
   <body>
@@ -301,21 +312,25 @@
           <span id="end1_text">$ 24</span>
           <span id="end2_text">$ 22.8</span>
         </div>
-        <div class="quantity_add_toCart">
-          <div class="btn_tru_add">-</div>
-          <span>1</span>
-          <div class="btn_cong_add">+</div>
+        <div class="div_center_btn">
+          <div class="quantity_add_toCart">
+            <div class="btn_tru_add">-</div>
+            <span>1</span>
+            <div class="btn_cong_add">+</div>
+          </div>
+          <div class="remove_cart">Remove</div>
         </div>
-        <div class="remove_cart">Remove</div>
       </div>
       <div class="border_contained"></div>
-      <div class="voucher_gift_cart">
-        <div class="name_voucher">Voucher:</div>
-        <div class="enter_code">enter code</div>
-      </div>
-      <div class="gift_cart_total">
-        <div class="total_name">Total</div>
-        <div class="price_total">$22.8</div>
+      <div class="div_max_width">
+        <div class="voucher_gift_cart">
+          <div class="name_voucher">Voucher:</div>
+          <div class="enter_code">enter code</div>
+        </div>
+        <div class="gift_cart_total">
+          <div class="total_name">Total</div>
+          <div class="price_total">$22.8</div>
+        </div>
       </div>
       <div class="btn_center">
         <button class="btn_checkout_gift">Checkout</button>
