@@ -576,7 +576,7 @@
     <div class="listAllProduct-container">
       <div class="listAllProduct-title">
         <p class="listAllProduct-title_title">TUMBLER</p>
-        <p class="listAllProduct-title_text">150 product</p>
+        <p class="listAllProduct-title_text">[product_count] product</p>
       </div>
       <div class="listAllProduct-title_img">
         <img
@@ -601,16 +601,12 @@
       <div class="listALLProduct-pagination">
         <button class="listALLProduct-pagination-button">Next</button>
         <ul style="list-style-type: none; display: flex">
-          <li style="color: #20404f">1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>...</li>
-          <li>50</li>
+          
         </ul>
-        <div class="listALLProduct-pagination-i">
+        <!-- <div class="listALLProduct-pagination-i">
           <i class="fa-solid fa-angles-left" style="display: none"></i>
           <i class="fa-solid fa-angles-right"></i>
-        </div>
+        </div> -->
       </div>
     </div>
     <div id="footer-copyright_container">
@@ -872,6 +868,22 @@
     `
     $('.listALLProduct-pagination-button')[0].outerHTML = nextBtn;
         
+  </script>
+  <script>
+    // pagination Product
+    $('.woocommerce-pagination .page-number').each((i, button) => {
+      let href = $(button).attr('href');
+      let buttonText = $(button).html();
+      buttonText = buttonText.includes('left')? '<i class="fa-solid fa-angles-left"></i>' : buttonText;
+      buttonText = buttonText.includes('right') ? '<i class="fa-solid fa-angles-right"></i>' : buttonText;
+      $('.listALLProduct-pagination ul').append(`
+        <li>
+          ${href ? 
+          `<a style='text-decoration:none; color: rgba(32, 64, 79, 0.5);' href='${href}'> ${buttonText} </a>` 
+          : `<span style='color: #20404f'>${buttonText}</span>`}
+        </li>
+      `)
+    });
   </script>
       <script>
         // display img on product
