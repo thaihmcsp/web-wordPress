@@ -315,17 +315,12 @@
         color: #20404f;
         margin: 0 0 20px 0;
       }
-      .checkout_container-footer-content {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        align-items: center;
-      }
+
       .checkout_container-footer-content-modal {
-        width: 44%;
+        width: 48%;
       }
       .checkout_container-footer-content-modal img {
-        width: 100%;
+        width: 93%;
         border-radius: 8px;
       }
       .checkout_container-footer-content-modal p {
@@ -336,10 +331,26 @@
         color: #20404f;
         margin: 10px 0 6px 0;
       }
-      .fa-angle-left,
-      .fa-angle-right {
-        margin: -120px 1px 0 1px;
-        padding: 0 2px;
+      .checkout-wrap {
+        display: flex;
+        justify-content: space-evenly;
+        width: 95%;
+        margin-left: 4%;
+      }
+      .carousel-left {
+        position: absolute;
+        top: 25%;
+        left: 1%;
+        color: #676767;
+      }
+      .carousel-right {
+        position: absolute;
+        top: 25%;
+        right: 1%;
+        color: #676767;
+      }
+      .carousel-right:focus,
+      .carousel-left:focus {
         color: #676767;
       }
     </style>
@@ -551,7 +562,7 @@
       <div class="checkout_container-content">
         <div class="checkout_container-content-modal">
           <img
-            src="https://fmzee.com/wp-content/uploads/2022/08/ListProductByCategory-product9.png"
+            src="https://fmzee.com/wp-content/uploads/2022/08/CheckoutProduct-product1.png"
             alt="img"
           />
           <p>
@@ -586,7 +597,7 @@
       <div class="checkout_container-content">
         <div class="checkout_container-content-modal">
           <img
-            src="https://fmzee.com/wp-content/uploads/2022/08/ListAllProduct-product1.png"
+            src="https://fmzee.com/wp-content/uploads/2022/08/CheckoutProduct-product2.png"
             alt="img"
           />
           <p>
@@ -688,11 +699,12 @@
               </div>
             </div>
             <div class="checkout_container-card-icon-text">
-              <span style="font-weight: 700">Aug 09</span>
-              <span style="margin: 0 0 0 12%; font-weight: 700"
-                >Aug 13 - Aug 15</span
-              >
-              <span style="font-weight: 700">Aug 26 - Sep 02</span>
+              <span style="font-weight: 700" class="order-time"></span>
+              <span
+                style="margin: 0 0 0 12%; font-weight: 700"
+                class="ready-time"
+              ></span>
+              <span style="font-weight: 700" class="delive-time"></span>
             </div>
             <div class="checkout_container-card-icon-text">
               <span>Ordered</span>
@@ -706,56 +718,246 @@
       <div class="checkout_container-footer">
         <div class="checkout_container-footer-title">Best Sallers</div>
         <div class="checkout_container-footer-content">
-          <i class="fa-solid fa-angle-left"></i>
-          <div class="checkout_container-footer-content-modal">
-            <img
-              src="https://fmzee.com/wp-content/uploads/2022/06/wnv8cbGO_mk3.jpg"
-              alt="img"
-            />
-            <p>
-              Personalized Teacher Door Sign, Classroom Door Sign, Custom
-              Teacher Sign,
-            </p>
-            <span style="color: #676767; text-decoration: line-through">
-              $28.92
-            </span>
-            <span style="color: #bf8977; margin: 0 0 0 10px"> $21.69 </span>
-            <div style="display: flex; align-items: center">
-              <div style="color: #bf8977; font-size: 12px; margin: 10px 3px">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+          <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="checkout-wrap">
+                  <div class="checkout_container-footer-content-modal">
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/06/wnv8cbGO_mk3.jpg"
+                      alt="img"
+                    />
+                    <p>
+                      Personalized Teacher Door Sign, Classroom Door Sign,
+                      Custom Teacher Sign,
+                    </p>
+                    <span style="color: #676767; text-decoration: line-through">
+                      $28.92
+                    </span>
+                    <span style="color: #bf8977; margin: 0 0 0 10px">
+                      $21.69
+                    </span>
+                    <div style="display: flex; align-items: center">
+                      <div
+                        style="
+                          color: #bf8977;
+                          font-size: 12px;
+                          margin: 10px 3px;
+                        "
+                      >
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <span style="margin: 0 0 0 5px; font-size: 14px"
+                        >(15)</span
+                      >
+                    </div>
+                  </div>
+                  <div class="checkout_container-footer-content-modal">
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/06/1BufbpqI_mk3.jpg"
+                      alt="img"
+                    />
+                    <p>
+                      Personalized Teacher Door Sign, Classroom Door Sign,
+                      Custom Teacher Sign,
+                    </p>
+                    <span style="color: #676767; text-decoration: line-through">
+                      $28.92
+                    </span>
+                    <span style="color: #bf8977; margin: 0 0 0 10px">
+                      $21.69
+                    </span>
+                    <div style="display: flex; align-items: center">
+                      <div
+                        style="
+                          color: #bf8977;
+                          font-size: 12px;
+                          margin: 10px 3px;
+                        "
+                      >
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <span style="margin: 0 0 0 5px; font-size: 14px"
+                        >(15)</span
+                      >
+                    </div>
+                  </div>
+                </div>
               </div>
-              <span style="margin: 0 0 0 5px; font-size: 14px">(15)</span>
-            </div>
-          </div>
-          <div class="checkout_container-footer-content-modal">
-            <img
-              src="https://fmzee.com/wp-content/uploads/2022/06/1BufbpqI_mk3.jpg"
-              alt="img"
-            />
-            <p>
-              Personalized Teacher Door Sign, Classroom Door Sign, Custom
-              Teacher Sign,
-            </p>
-            <span style="color: #676767; text-decoration: line-through">
-              $28.92
-            </span>
-            <span style="color: #bf8977; margin: 0 0 0 10px"> $21.69 </span>
-            <div style="display: flex; align-items: center">
-              <div style="color: #bf8977; font-size: 12px; margin: 10px 3px">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+              <div class="carousel-item">
+                <div class="checkout-wrap">
+                  <div class="checkout_container-footer-content-modal">
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/06/wnv8cbGO_mk3.jpg"
+                      alt="img"
+                    />
+                    <p>
+                      Personalized Teacher Door Sign, Classroom Door Sign,
+                      Custom Teacher Sign,
+                    </p>
+                    <span style="color: #676767; text-decoration: line-through">
+                      $28.92
+                    </span>
+                    <span style="color: #bf8977; margin: 0 0 0 10px">
+                      $21.69
+                    </span>
+                    <div style="display: flex; align-items: center">
+                      <div
+                        style="
+                          color: #bf8977;
+                          font-size: 12px;
+                          margin: 10px 3px;
+                        "
+                      >
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <span style="margin: 0 0 0 5px; font-size: 14px"
+                        >(15)</span
+                      >
+                    </div>
+                  </div>
+                  <div class="checkout_container-footer-content-modal">
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/06/1BufbpqI_mk3.jpg"
+                      alt="img"
+                    />
+                    <p>
+                      Personalized Teacher Door Sign, Classroom Door Sign,
+                      Custom Teacher Sign,
+                    </p>
+                    <span style="color: #676767; text-decoration: line-through">
+                      $28.92
+                    </span>
+                    <span style="color: #bf8977; margin: 0 0 0 10px">
+                      $21.69
+                    </span>
+                    <div style="display: flex; align-items: center">
+                      <div
+                        style="
+                          color: #bf8977;
+                          font-size: 12px;
+                          margin: 10px 3px;
+                        "
+                      >
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <span style="margin: 0 0 0 5px; font-size: 14px"
+                        >(15)</span
+                      >
+                    </div>
+                  </div>
+                </div>
               </div>
-              <span style="margin: 0 0 0 5px; font-size: 14px">(15)</span>
+              <div class="carousel-item">
+                <div class="checkout-wrap">
+                  <div class="checkout_container-footer-content-modal">
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/06/wnv8cbGO_mk3.jpg"
+                      alt="img"
+                    />
+                    <p>
+                      Personalized Teacher Door Sign, Classroom Door Sign,
+                      Custom Teacher Sign,
+                    </p>
+                    <span style="color: #676767; text-decoration: line-through">
+                      $28.92
+                    </span>
+                    <span style="color: #bf8977; margin: 0 0 0 10px">
+                      $21.69
+                    </span>
+                    <div style="display: flex; align-items: center">
+                      <div
+                        style="
+                          color: #bf8977;
+                          font-size: 12px;
+                          margin: 10px 3px;
+                        "
+                      >
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <span style="margin: 0 0 0 5px; font-size: 14px"
+                        >(15)</span
+                      >
+                    </div>
+                  </div>
+                  <div class="checkout_container-footer-content-modal">
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/06/1BufbpqI_mk3.jpg"
+                      alt="img"
+                    />
+                    <p>
+                      Personalized Teacher Door Sign, Classroom Door Sign,
+                      Custom Teacher Sign,
+                    </p>
+                    <span style="color: #676767; text-decoration: line-through">
+                      $28.92
+                    </span>
+                    <span style="color: #bf8977; margin: 0 0 0 10px">
+                      $21.69
+                    </span>
+                    <div style="display: flex; align-items: center">
+                      <div
+                        style="
+                          color: #bf8977;
+                          font-size: 12px;
+                          margin: 10px 3px;
+                        "
+                      >
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <span style="margin: 0 0 0 5px; font-size: 14px"
+                        >(15)</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <a
+              class="carousel-left"
+              href="#carouselExampleControls"
+              role="button"
+              data-slide="prev"
+            >
+              <i class="fa-solid fa-angle-left"></i>
+            </a>
+            <a
+              class="carousel-right"
+              href="#carouselExampleControls"
+              role="button"
+              data-slide="next"
+            >
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
           </div>
-          <i class="fa-solid fa-angle-right"></i>
         </div>
       </div>
     </div>
@@ -943,6 +1145,49 @@
         console.log($(".header-dropdown-item-dropdown"));
         $(".header-dropdown-wrap-product-item").toggle("visibleClass");
       }
+      let thisTime = new Date();
+      let thisMonth = thisTime.getMonth();
+      let thisDay = thisTime.getDate();
+      const month = [
+        "Jan",
+        "Feb",
+        "Mar",
+        " Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      const day = [31, 28, 31, 30, 31, 10, 31, 31, 30, 31, 30, 31];
+      $(".order-time").text(month[thisMonth] + " " + thisDay);
+      let readyMonth = thisDay < 27 ? thisMonth : thisMonth + 1;
+      let readyDay =
+        thisDay < 27 ? thisDay + 4 : thisDay + 4 - day[thisMonth + 1];
+      $(".ready-time").text(
+        month[readyMonth] +
+          " " +
+          readyDay +
+          "-" +
+          month[readyMonth] +
+          " " +
+          (readyDay + 2)
+      );
+      let deliveMonth = thisDay < 15 ? thisMonth : thisMonth + 1;
+      let deliveDay =
+        thisDay < 15 ? thisDay + 15 : thisDay + 15 - day[thisMonth + 1];
+      $(".delive-time").text(
+        month[deliveMonth] +
+          " " +
+          deliveDay +
+          "-" +
+          month[deliveMonth] +
+          " " +
+          (deliveDay + 2)
+      );
     </script>
   </body>
 </html>
