@@ -1,0 +1,2903 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  <style>
+    /*------------------- header -------------------*/
+    @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    * {
+      font-family: "Nunito", sans-serif;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      /* border: 1px solid gray; */
+    }
+    #header {
+      display: none;
+    }
+    .page-wrapper {
+      padding-top: 0;
+    }
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .col {
+      padding: 0;
+    }
+    #header_container {
+      max-width: 500px; /*figma: 390px */
+      height: 69px;
+      background-color: #20404f;
+      color: #e9dfd3;
+      margin: auto;
+    }
+    #header_wrap {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0 21px 5px 21px;
+      position: relative;
+    }
+    #header-wrap-left {
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+    }
+    #header_bar {
+      position: relative;
+      font-size: 25px;
+      padding-right: 21px;
+    }
+
+    #header_brand-icon {
+      width: 133px;
+      height: 46px;
+    }
+
+    #header-wrap-right {
+      display: flex;
+      margin-bottom: 6px;
+    }
+    #header_search {
+      font-size: 20px;
+    }
+    #header_user-info {
+      font-size: 20px;
+      margin: 0 11px;
+    }
+    #header_card {
+      font-size: 20px;
+      position: relative;
+    }
+    #header_card-index {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #bf8977;
+      text-align: center;
+      line-height: 15px;
+      font-size: 13px;
+    }
+    .header-dropdown-wrap-item {
+      border-radius: 5px;
+      position: absolute;
+      top: 0px;
+      transform: translate3d(1px, 70px, 0px) !important;
+      border: none;
+      left: 0;
+      width: 189px;
+      padding: 4px 0 32px 0;
+      background: #20404f;
+      z-index: 100000;
+      display: none;
+    }
+    .header-dropdown-item {
+      padding: 5px 0 2px 22px;
+      margin-top: 4px;
+      font-size: 14px;
+      color: #e9dfd3;
+      font-weight: 400;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+    }
+    .header-dropdown-item-dropdown {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-dropdown-item-dropdown-icon {
+      margin-right: 16px;
+    }
+    .header-dropdown-item a {
+      font-size: 14px;
+      color: #e9dfd3;
+      font-weight: 400;
+      text-decoration: none;
+    }
+    .dropdown-divider {
+      margin: 0;
+    }
+
+    .header-dropdown-wrap-product-item {
+      border-radius: 5px;
+      position: absolute;
+      top: -73px;
+      transform: translate3d(1px, 70px, 0px) !important;
+      border: none;
+      width: 165px;
+      padding: 4px 0 32px 0;
+      background: #20404f;
+      left: 100%;
+      z-index: 10000;
+      display: none;
+    }
+    .visibleClass {
+      display: block;
+    }
+  </style>
+
+    <style>
+      /*------------------- HẾT CSS HEADER---------------- */
+      /* PRODUCT DETAIL CSS */
+      .product-detail-container{
+        max-width: 500px;
+        margin: auto;
+      }
+      #product-detail-breadcrumb-container {
+        height: 35px;
+        max-width: 348px;
+        margin: auto;
+        /* border-bottom: 1px solid #20404f; */
+        display: flex;
+        align-items: flex-end;
+        padding: 0 0 5px 0px;
+      }
+
+      .product-detail-breadcrumb-item {
+        color: rgba(32, 64, 79, 0.8);
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 19px;
+      }
+      .product-detail-production-main-img {
+        max-width: 348px;
+        margin: 0px auto 14px;
+      }
+      .product-detail-production-main-img img {
+        max-width: 348px;
+        border-radius: 5px;
+      }
+      .product-detail-production-warp-img-small {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* padding: 0 21px 0 21px; */
+        max-width: 348px;
+        margin: auto;
+      }
+      .product-detail-production-warp-img-small img {
+        max-width: 80px;
+        max-height: 80px;
+      }
+      .product-detail-description-product {
+        margin: auto;
+        max-width: 348px;
+        margin-top: 10px;
+      }
+      .product-detail-production-description-content {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 19px;
+        color: #20404f;
+      }
+      .product-detail-production-wrap-price {
+        display: flex;
+        max-width: 348px;
+        margin: auto;
+        padding: 10px 0 8px 0;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 16px;
+        letter-spacing: -0.02em;
+        color: rgba(0, 0, 0, 0.55);
+      }
+      .product-detail-production-price-old {
+        text-decoration: line-through;
+      }
+      .product-detail-production-price-new {
+        color: #bf8977;
+        margin-left: 16px;
+      }
+      .product-detail-production-rate {
+        display: flex;
+        align-items: center;
+        max-width: 348px;
+        margin: auto;
+        color: #bf8977;
+      }
+      .product-detail-production-rate-star i {
+        padding-right: 2px;
+        font-size: 14px;
+      }
+      .product-detail-production-price-quatity {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        padding-left: 2px;
+        letter-spacing: -0.02em;
+        color: rgba(0, 0, 0, 0.6);
+      }
+      /* divide */
+
+      .product-detail-divide {
+        margin-top: 17px;
+        margin-bottom: 20px;
+
+        border-top: 0.65px solid #20404f;
+      }
+      .product-detail-divide-crumb {
+        border-top: 0.65px solid #20404f;
+        height: 25.58px;
+      }
+
+      /* <!-- Choose size --> */
+      .product-detail-production-choose-size {
+        margin: auto;
+        max-width: 348px;
+      }
+
+      .product-detail-production-choose-size-title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        /* identical to box height, or 100% */
+        letter-spacing: 0.05em;
+        color: #20404f;
+        margin-bottom: 6px;
+      }
+
+      .product-detail-production-choose-size-button-wrap {
+        width: 262px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .product-detail-production-choose-size-button {
+        width: 75px;
+        height: 32px;
+        background: #20404f;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+        border: none;
+      }
+
+      /* Note */
+      .product-detail-production-note-container {
+        /* max-width: 390px; */
+        /* height: 161px; */
+        background: rgba(191, 137, 119, 0.5);
+        padding: 12px 0;
+      }
+      .product-detail-production-note-description {
+        width: 350px;
+        /* height: 89px; */
+        margin: auto;
+        padding: 8px 18px 5px 17px;
+        border: 1px solid rgba(32, 64, 79, 0.8);
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 19px;
+        /* or 146% */
+
+        color: rgba(32, 64, 79, 0.6);
+      }
+      .product-detail-production-note-input-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        max-width: 348px;
+        margin-top: 11px;
+      }
+      .product-detail-production-note-input-wrap input{
+        margin-left: 16px;
+        border-radius: 5px;
+      }
+      .product-detail-production-note-lable {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        /* or 114% */
+
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+
+        color: #20404f;
+      }
+      .product-detail-production-note-input {
+        width: 293px;
+        height: 35px;
+        background: #ffffff;
+        border: 1px solid rgba(32, 64, 79, 0.8);
+        border-radius: 5px;
+      }
+      /* Add to card */
+      .product-detail-add-cart-wrap {
+        max-width: 348px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        margin-bottom: 30px;
+      }
+
+      .product-detail-add-cart-add-quatity-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 88px;
+        height: 35px;
+
+        border: 1px solid #20404f;
+        border-radius: 5px;
+      }
+      .product-detail-add-cart-sub {
+        border: none;
+        width: 24px;
+        height: 35px;
+
+        background: rgba(32, 64, 79, 0.5);
+        border-radius: 5px 0px 0px 5px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        /* identical to box height, or 100% */
+
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .product-detail-add-cart-numb {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        /* or 100% */
+
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+
+        color: #20404f;
+      }
+      .product-detail-add-cart-plus {
+        border: none;
+        width: 24px;
+        height: 35px;
+
+        background: #20404f;
+        border-radius: 0px 5px 5px 0px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        /* identical to box height, or 100% */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+
+        color: #ffffff;
+        cursor: pointer;
+      }
+      .product-detail-add-cart-add-quatity-remove {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        /* or 114% */
+
+        letter-spacing: -0.04em;
+        text-transform: capitalize;
+
+        color: #20404f;
+      }
+      .product-detail-add-cart-btn {
+        width: 234px;
+        height: 35px;
+        left: 136px;
+        top: 1003px;
+
+        background: #20404f;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 16px;
+        /* identical to box height, or 89% */
+
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+
+        color: #e9dfd3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      /* Stickit ------------------------------------------------*/
+      .product-detail-stickit-wrap {
+        height: 168px;
+
+        background: #e9dfd3;
+        padding-top: 12px;
+        padding-bottom: 2px;
+      }
+      .product-detail-stickit-title {
+        max-width: 348px;
+        margin: auto;
+        font-weight: 650;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        color: #20404f;
+        padding-bottom: 12px;
+      }
+      .product-detail-stickit-item {
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        max-width: 348px;
+        margin-bottom: 14px;
+      }
+      .product-detail-stickit-item-child-buy {
+        width: 154px;
+        height: 28px;
+        left: 21px;
+        top: 1108px;
+
+        background: #20404f;
+        border-radius: 5px;
+        font-weight: 650;
+        font-size: 16px;
+        line-height: 16px;
+        /* identical to box height, or 100% */
+
+        color: #e9dfd3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .product-detail-stickit-item-child-discount {
+        width: 154px;
+        height: 28px;
+
+        border: 1px solid rgba(32, 64, 79, 0.8);
+        border-radius: 5px;
+        font-weight: 650;
+        font-size: 16px;
+        line-height: 16px;
+        /* identical to box height, or 100% */
+
+        color: #20404f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      /* Payment ---------------------------------------------- */
+      .product-detail-payment-warp {
+        height: 300px;
+        max-width: 348px;
+        margin: auto;
+      }
+      .product-detail-payment-description {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        /* or 114% */
+        margin-top: 18px;
+
+        color: #20404f;
+      }
+      .product-detail-payment-description-bold {
+        font-weight: 650;
+      }
+      .product-detail-payment-range {
+        margin-top: 33px;
+        position: relative;
+      }
+      .product-detail-payment-range-rule {
+        width: 308px;
+        height: 2px;
+        background: #20404f;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+      }
+      .product-detail-payment-icon-wrap {
+        width: 348px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: -20px;
+      }
+      .product-detail-payment-addcart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        background: #20404f;
+        border-radius: 100px;
+      }
+      .product-detail-payment-addcart img {
+        width: 25px;
+      }
+
+      .product-detail-payment-deliver {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        background: #20404f;
+        border-radius: 100px;
+      }
+
+      .product-detail-payment-done {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        background: #20404f;
+        border-radius: 100px;
+      }
+      .product-detail-payment-done img {
+        width: 24px;
+      }
+      .product-detail-payment-progress-description {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 26px;
+      }
+      .product-detail-payment-progress-description-detail {
+        display: flex;
+        flex-direction: column;
+      }
+      .product-detail-payment-progress-description-detail-center {
+        margin-left: 60px;
+        justify-content: center;
+        align-items: center;
+      }
+      .product-detail-payment-progress-description-detail-end {
+        justify-content: end;
+        align-items: flex-end;
+      }
+      .product-detail-payment-progress-description-detail-date {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        /* identical to box height, or 114% */
+
+        color: #20404f;
+      }
+      .product-detail-payment-progress-description-detail-status {
+        font-weight: 500;
+        margin-top: 14px;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 133% */
+
+        color: rgba(32, 64, 79, 0.8);
+      }
+      /* Phương thức thanh toán--------------------------------------- */
+      .product-detail-payment-method-wrap {
+        margin-top: 22px;
+      }
+      .product-detail-payment-method-icon {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .product-detail-payment-method-default {
+        margin-top: 19px;
+        width: 348px;
+        height: 38px;
+        border: none;
+        background: #f9c645;
+        border-radius: 5px;
+      }
+      .product-detail-payment-method-more-payment-option {
+        font-weight: 550;
+        font-size: 12px;
+        line-height: 19px;
+        /* identical to box height, or 158% */
+
+        color: #20404f;
+        margin-top: 4px;
+        cursor: pointer;
+      }
+      /* Desciption payment------------------------------ */
+      .product-detail-payment-description-container {
+        padding-top: 25px;
+        padding-bottom: 12px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 16px;
+        /* or 107% */
+        color: #20404f;
+        background: rgba(191, 137, 119, 0.5);
+      }
+      .product-detail-payment-description-wrap {
+        max-width: 348px;
+        margin: auto;
+      }
+      .product-detail-payment-description-header-main {
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .product-detail-payment-description-phase {
+        margin-bottom: 20px;
+      }
+      .product-detail-payment-description-header {
+        font-weight: 700;
+      }
+      .opacity08 {
+        opacity: 0.8;
+      }
+      /* HẾT PRODUCT DETAIL CSS */
+
+      /* CSS BEST SELLER CALOSEL */
+
+      .home-page-container {
+        width: 100%;
+
+        background: #f5f5f5;
+      }
+
+      .home-page-wrapper {
+        width: 100%;
+        max-width: 390px;
+        margin: auto;
+      }
+      .carousel-wrapper {
+        /* border-bottom: 1px solid #20404f; */
+        padding-bottom: 28.44px;
+      }
+      .title-carousel {
+        margin-top: 25px;
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 16px;
+        /* identical to box height, or 80% */
+
+        color: #20404f;
+      }
+      .carousel-control-prev {
+        width: fit-content;
+        left: -4px;
+        color: #000000;
+        bottom: 35%;
+      }
+      .checked {
+        color: #bf8977;
+      }
+      .star-icon {
+        font-size: 12px;
+      }
+      .rating-item .number-person-rating {
+        padding-left: 5px;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+      }
+      .carousel-control-next {
+        width: fit-content;
+        margin-left: 175px;
+        color: #000000;
+        bottom: 30%;
+        margin-left: 30px;
+      }
+      .carousel-control-next-icon,
+      .carousel-control-prev-icon {
+        background-image: none;
+      }
+      .home-page-container .home-page-banner {
+        width: 390px;
+        height: 530px;
+      }
+
+      .home-page-carousel .carousel-home-slide {
+        width: 100%;
+        max-width: 350px;
+        margin: auto;
+        justify-content: space-between;
+      }
+      .carousel-home-item {
+        width: 100%;
+        max-width: 170px;
+      }
+      .carousel-home-item .img-item-carousel {
+        width: 170px;
+        height: 170px;
+        border-radius: 5px;
+      }
+      .carousel-home-item .carousel-item-detail {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 100%;
+        font-size: 13px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .caroudel-button {
+        margin-top: 15px;
+      }
+      .carousel-home-item .price-item {
+        width: 96px;
+        height: 15px;
+        justify-content: space-between;
+        font-size: 14px;
+        letter-spacing: -0.02em;
+        margin-bottom: 4px;
+      }
+
+      .font-text-carousel {
+        font-weight: 400;
+        line-height: 18px;
+      }
+
+      .price-item .old-price {
+        color: black;
+        text-decoration: line-through;
+      }
+
+      .price-item .new-price {
+        color: #bf8977;
+      }
+      .button-show-more {
+        width: 92px;
+        height: 28px;
+        background: #20404f;
+        border-radius: 3px;
+        color: #ffffff;
+        font-size: 15px;
+      }
+      .three-step-wrapper {
+        width: 100%;
+        max-width: 348px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 28px;
+        padding-bottom: 28px;
+      }
+      .title-three-step {
+        width: 244px;
+        height: 31px;
+        background: #20404f;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        border-radius: 6px;
+      }
+      .once-of-three-step .title-step {
+        margin-top: 11px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+      .once-of-three-step .step-content {
+        width: 348px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+        background: #e9dfd3;
+        color: #20404f;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .block {
+        width: 281px;
+      }
+      /* HẾT CSS BEST SELLER */
+
+      /*-------------------------------- CSS RATE AND COMENT OF USER  */
+      #div_main_checkout_gift {
+        max-width: 500px;
+
+        background: #ffffff;
+      }
+      /* //// */
+      .text_Product_Gift {
+        width: 95px;
+        height: 19px;
+        left: 21px;
+        top: 83px;
+        margin-left: 21px;
+        margin-bottom: 8px;
+      }
+      .text_Product_Gift span {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 19px;
+        width: 70px;
+        height: 19px;
+        color: rgba(32, 64, 79, 0.8);
+        margin-left: 21px;
+        margin-top: 24px;
+        margin-left: 8px;
+      }
+      .border_contained {
+        width: 100%;
+        height: 0.63px;
+        background: #20404f;
+        transform: rotate(-0.08deg);
+        margin-bottom: 25px;
+      }
+      /****/
+      .img_gift_card1 {
+        width: 90%;
+        height: 326px;
+        margin: auto;
+        background: #d9d9d9;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+        padding: 0px 21px 0px 21px;
+      }
+      #img1_card1-gift {
+        width: 306px;
+        height: 202px;
+        position: absolute;
+        margin-top: -153px;
+      }
+      #img2_card1-gift {
+        width: 306px;
+        height: 202px;
+        position: absolute;
+        margin-top: 153px;
+      }
+      /****/
+      .img_gift_card2 {
+        display: flex;
+        margin-left: 21px;
+        margin-right: 21px;
+        justify-content: space-between;
+        margin-top: 16px;
+      }
+      .img_gift_card2_1 {
+        width: 109px;
+        height: 104px;
+        background: #d9d9d9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+      .img_gift_card2_1 #img1_card2-gift {
+        width: 97px;
+        height: 65px;
+        position: absolute;
+        top: 43px;
+      }
+      .img_gift_card2_1 #img2_card2-gift {
+        width: 97px;
+        height: 65px;
+        top: -5px;
+        position: absolute;
+      }
+      /******/
+      .img_gift_card2_2 {
+        width: 109px;
+        height: 104px;
+        background: #d9d9d9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+      .img_gift_card2_2 #img1_card2-gift {
+        width: 97px;
+        height: 65px;
+        position: absolute;
+        top: 43px;
+      }
+      .img_gift_card2_2 #img2_card2-gift {
+        width: 97px;
+        height: 65px;
+        top: -5px;
+        position: absolute;
+      }
+      /*******/
+      .img_gift_card2_3 {
+        width: 109px;
+        height: 104px;
+        background: #d9d9d9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+      .img_gift_card2_3 #img1_card2-gift {
+        width: 97px;
+        height: 65px;
+        position: absolute;
+        top: 43px;
+      }
+      .img_gift_card2_3 #img2_card2-gift {
+        width: 97px;
+        height: 65px;
+        top: -5px;
+        position: absolute;
+      }
+      .nav_Macorner_cart {
+        margin-left: 21px;
+      }
+      .title_Macorner_gift_Card {
+        height: 16px;
+        padding-top: 16px;
+        padding-bottom: 8px;
+
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 16px;
+        /* identical to box height, or 80% */
+
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+
+        color: #20404f;
+      }
+      .text_Sold {
+        padding-top: 16px;
+        padding-bottom: 8px;
+        font-family: "ABeeZee";
+        font-style: normal;
+        font-weight: 00;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 133% */
+
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+
+        color: #000000;
+      }
+      /* //// */
+      .all-btn-1Cart {
+        display: flex;
+        flex-direction: column;
+      }
+      .column1_btn_Cart {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .btn_Gift_Cart_main {
+        width: 68px;
+        height: 28px;
+        border-radius: 5px;
+        margin-right: 15px;
+        margin-bottom: 12px;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #20404f;
+      }
+      .btn_Gift_Cart {
+        width: 68px;
+        height: 28px;
+        border-radius: 5px;
+        margin-right: 15px;
+        margin-bottom: 12px;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(32, 64, 79, 0.8);
+      }
+      .btn_Gift_Cart span {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        /* or 100% */
+
+        letter-spacing: -0.02em;
+      }
+      #end1_text {
+        color: rgba(0, 0, 0, 0.55);
+        text-decoration: line-through;
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 16px;
+        margin-right: 16px;
+        /* or 89% */
+
+        letter-spacing: -0.02em;
+      }
+      #end2_text {
+        color: #bf8977;
+        text-decoration: line-through;
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 16px;
+        /* or 89% */
+        letter-spacing: -0.02em;
+      }
+      .quantity_add_toCart {
+        border: 1px solid #20404f;
+        border-radius: 5px;
+        width: 88px;
+        height: 35px;
+        display: flex;
+        overflow: hidden;
+      }
+      .btn_tru_add {
+        width: 24px;
+        height: 35px;
+        background: rgba(32, 64, 79, 0.5);
+        border-radius: 3px 0px 0px 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        color: #ffffff;
+      }
+      .btn_cong_add {
+        width: 24px;
+        height: 35px;
+        background: #20404f;
+        border-radius: 0px 3px 3px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        color: #ffffff;
+      }
+      .quantity_add_toCart span {
+        margin-left: 15px;
+        margin-right: 15px;
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        /* or 100% */
+        width: 10px;
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        color: #20404f;
+      }
+      .nav_btn_to_cart {
+        background: #20404f;
+        border-radius: 5px;
+        width: 234px;
+        height: 35px;
+      }
+      .nav_btn_to_cart span {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 16px;
+        /* identical to box height, or 89% */
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+        color: #e9dfd3;
+      }
+      .Add_to_cart_main {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 21px;
+        margin-right: 21px;
+      }
+      .dis100_payment {
+        text-align: center;
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+      .dis100_payment span {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        /* identical to box height, or 119% */
+
+        text-align: center;
+        text-transform: capitalize;
+
+        color: #20404f;
+      }
+      .img_end_payment {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 16px 21px 21px;
+      }
+      .PayPal_btn {
+        background: #f9c645;
+        border-radius: 5px;
+        width: 348px;
+        height: 38px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+      }
+      .PayPal_btn img {
+        width: 82px;
+        height: 26px;
+      }
+      .more_payment {
+        margin-left: 21px;
+        margin-bottom: 21px;
+        margin-top: 4px;
+      }
+      .more_payment span {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 19px;
+        /* identical to box height, or 158% */
+
+        color: #20404f;
+      }
+      .description_main {
+        background: rgba(191, 137, 119, 0.5);
+
+        height: 290px;
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 16px;
+        /* or 107% */
+        text-transform: capitalize;
+        color: #20404f;
+      }
+      .description_main {
+        padding-left: 21px;
+        padding-right: 21px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+      }
+      .customer_review {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #e9dfd3;
+        padding: 25px 0;
+        margin-top: 25px;
+      }
+      .name_title_review {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 16px;
+        /* identical to box height, or 73% */
+
+        color: #20404f;
+      }
+      .rate_review {
+        color: #bf8977;
+        padding-bottom: 8px;
+        margin-top: 8px;
+        font-size: 14px;
+      }
+      .text_review {
+        font-family: "ABeeZee";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        /* identical to box height, or 114% */
+        padding-bottom: 8px;
+
+        color: #20404f;
+      }
+      .btn_review {
+        background: #ffffff;
+        border: 1px solid rgba(32, 64, 79, 0.8);
+        border-radius: 5px;
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        /* identical to box height, or 114% */
+
+        color: #20404f;
+        width: 194px;
+        height: 35px;
+      }
+      .content_rating {
+        margin: 8px 0;
+        display: flex;
+        align-items: center;
+      }
+      .box_rating {
+        background: #bf8977;
+        border: 0.7px solid rgba(32, 64, 79, 0.5);
+        border-radius: 50px;
+        width: 102px;
+        height: 12px;
+        margin-left: 12px;
+        margin-right: 6px;
+      }
+      .rating_relust {
+        color: #bf8977;
+      }
+      .text_results span {
+        margin-right: 6px;
+      }
+      .box_rating1 {
+        border: 0.7px solid rgba(32, 64, 79, 0.5);
+        border-radius: 50px;
+        width: 102px;
+        height: 12px;
+        margin-left: 12px;
+        margin-right: 6px;
+      }
+      .ratimg_customer {
+        max-width: 348px;
+        margin: auto;
+        margin-bottom: 25px;
+        margin-top: 25px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 133% */
+
+        color: #20404f;
+      }
+      .user_icon {
+        width: 39.77px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #d9d9d9;
+        margin-right: 4px;
+      }
+      .cus_rate {
+        color: #bf8977;
+        border-radius: 0.4px;
+        padding-left: 4px;
+        padding-right: 7px;
+        font-size: 13px;
+      }
+      .date_rate {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 133% */
+
+        text-transform: lowercase;
+
+        color: rgba(32, 64, 79, 0.8);
+      }
+      .user_cus_rate {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 8px;
+      }
+      .flex_center {
+        display: flex;
+        align-items: center;
+      }
+      #rate_review {
+        width: 100%;
+        height: 90px;
+        border: 1px solid rgba(32, 64, 79, 0.8);
+        border-radius: 5px;
+        resize: none;
+        padding: 8px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        width: 209.8px;
+        height: 90px;
+        /* or 114% */
+
+        text-transform: lowercase;
+
+        color: #20404f;
+      }
+      .picture_Add {
+        width: 129.26px;
+        height: 130px;
+
+        background: #d9d9d9;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .picture_Add img {
+        width:42px;
+      }
+      .user_customer_main {
+        margin-right: 8px;
+        display: flex;
+        flex-direction: column;
+      }
+      .customer {
+        max-width: 348px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+        /* height: 138px; */
+        align-items: flex-end;
+      }
+      .btn_next_wishlist {
+        background: #20404f;
+        border-radius: 5px;
+        width: 66px;
+        height: 21px;
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        /* or 100% */
+
+        text-transform: capitalize;
+
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .pagetion_wishlist {
+        max-width: 348px;
+        margin: auto;
+
+        display: flex;
+        position: relative;
+        height: 44px;
+        align-items: center;
+        margin-top: 12px;
+      }
+      .pagation_wishlist_next {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        /* identical to box height, or 136% */
+        letter-spacing: 0.1em;
+        text-transform: lowercase;
+        color: #20404f;
+      }
+      .btn_next_wishlist {
+        margin: auto;
+      }
+      .pagation_wishlist_next {
+        position: absolute;
+        right: 0;
+      }
+      #footer-copyright_container {
+        max-width: 500px;
+        background-color: rgba(191, 137, 119, 0.5);
+        color: #20404f;
+        padding: 0 22px;
+        margin: auto;
+      }
+
+      .footer-coppyright-title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+      }
+      .footer-copyright-subscribe {
+        padding: 11px 0;
+      }
+
+      #footer-copyright-collapse-wrap {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        border-bottom: 1px solid #d9d9d9;
+        padding: 4px 0;
+        height: 38px;
+      }
+      .footer_copyright-content-warp-items {
+        padding-top: 12px;
+      }
+      .footer_copyright-content-items {
+        padding: 5px 0;
+      }
+      .footer_copyright-content-items-thin {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 19px;
+        padding: 5px 0;
+      }
+      .footer-coppyright-content-detail1 {
+        padding: 8px 0 6px;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .footer-coppyright-content-detail2 {
+        font-size: 14px;
+        font-weight: 600;
+        padding-bottom: 12px;
+      }
+      .footer-coppyright-subcribe-wap {
+        display: flex;
+        justify-content: space-between;
+      }
+      #footer-coppyright-subcribe-input {
+        border-radius: 4px;
+        border: 1px solid #20404f;
+        background: rgba(191, 137, 119, 0.01);
+        width: 244px;
+        height: 32px;
+        font-size: 12px;
+        padding-left: 11px;
+      }
+      #footer-coppyright-subcribe-button {
+        width: 89px;
+        border-radius: 4px;
+        height: 32px;
+        background-color: rgba(32, 64, 79, 1);
+        color: rgba(191, 137, 119, 1);
+        border: none;
+      }
+      .footer-coppyright-author {
+        font-size: 14px;
+        padding: 26px 0 12px 0;
+      }
+      button {
+        border: none;
+      }
+    </style>
+    <style>
+      #footer_container {
+        max-width: 500px;
+        margin: auto;
+      }
+      #footer_wrap {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        background-color: #20404f;
+        color: #bf8977;
+        padding: 15px 24px;
+      }
+      #footer_wrap-left {
+        margin-top: 3px;
+        display: flex;
+      }
+      .footer_icon-social {
+        display: flex;
+        font-size: 18px;
+        overflow: hidden;
+      }
+      .footer_icon-social-center {
+        margin: 0 12px;
+      }
+
+      #footer_wrap-right {
+        display: flex;
+      }
+      .footer_icon-paycard {
+        width: 42px;
+        border-radius: 2px;
+      }
+      .footer_icon-paycard img {
+        width: 42px;
+      }
+      .footer_icon-paycard-center {
+        margin: 0 39px;
+      }
+      #footer-coppyright-subcribe-wap {
+        align-items: center;
+      }
+      #footer-coppyright-subcribe-wap button {
+        padding: 0;
+      }
+      #header {
+        display: none;
+      }
+      .page-wrapper {
+        padding-top: 0;
+      }
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .col {
+        padding: 0;
+      }
+
+     
+      .visibleClass {
+        display: block;
+      }
+      #header {
+        display: none;
+      }
+      .page-wrapper {
+        padding-top: 0;
+      }
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .col {
+        padding: 0;
+      }
+    </style>
+    <style>
+      .customer_rating_contained-app {
+        background: #e9dfd3;
+      }
+      .customer_rating_contained {
+        max-width: 348px;
+        margin: auto;
+        padding-top: 25px;
+        padding-bottom: 30px;
+      }
+      .display_name,
+      .email_customer,
+      .text_rate,
+      .title_review,
+      .title_review_cs {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 16px;
+        /* or 73% */
+        margin-bottom: 8px;
+
+        color: #20404f;
+        width: 214px;
+      }
+      .display_name span {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+      }
+      #namecustommer,
+      #emailcustomer,
+      #GiveReview {
+        background: #ffffff;
+        border: 1px solid rgba(32, 64, 79, 0.8);
+        border-radius: 5px;
+        width: 348px;
+        height: 35px;
+        margin-top: 8px;
+        padding: 8px;
+      }
+      .text_box_name_tate,
+      .text_box_email,
+      .Rating_container,
+      .review_main,
+      .Review_cs {
+        margin-bottom: 16px;
+        
+      }
+      .Review_cs textarea {
+        background: #ffffff;
+        border: 1px solid rgba(32, 64, 79, 0.8);
+        border-radius: 5px;
+        width: 348px;
+        height: 135px;
+        resize: none;
+        padding: 8px;
+        margin-right: 21px;
+      }
+      .rating_5sao {
+        color: #bf8977;
+      }
+      .title_picture_video {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 16px;
+        /* identical to box height, or 73% */
+
+        color: #20404f;
+      }
+
+      .title_picture_video span {
+        font-weight: 500;
+      }
+      .picture_video_add {
+        background: #ffffff;
+        border: 1px solid rgba(32, 64, 79, 0.8);
+        border-radius: 5px;
+        width: 70px;
+        height: 69px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 8px;
+      }
+      .picture_video_add img {
+        width: 60%;
+        height: 48%;
+      }
+      .picture_video_container_rate {
+        margin-left: 21px;
+      }
+      .btn_submit_review {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 16px;
+        /* or 80% */
+
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+        background: #20404f;
+        width: 252px;
+        height: 39px;
+        border-radius: 5px;
+
+        color: #e9dfd3;
+      }
+      .margin_btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+      }
+      .border_contained1 {
+        width: 100%;
+        height: 0.63px;
+        background: #20404f;
+        transform: rotate(-0.08deg);
+      }
+      .review_display_onclick {
+        display: none;
+        transition: all 1s ease-in-out;
+      }
+      .review_onclick_block_rate {
+        transition: all 1s ease-in-out;
+      }
+
+      /*----------------------- HẾT CUSTOMER REVIEWS AND RATE -----------------------------------*/
+
+
+    </style>
+  </head>
+  <body>
+    <div class="product-detail-container">
+      <!-------------------------- HEADER------------------------------------ -->
+
+      <div id="header_container">
+        <div id="header_wrap">
+          <div id="header-wrap-left">
+            <div id="header_bar" onclick="onMenuDropdown()">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+  
+            <!-- dropdown -->
+  
+            <div class="header-dropdown-wrap-item" onclick="">
+              <div class="header-dropdown-item"><a href="#">Home</a></div>
+  
+              <div class="header-dropdown-item">
+                <a href="#">Best Sallers</a>
+              </div>
+  
+              <div
+                class="header-dropdown-item header-dropdown-item-dropdown"
+                onclick="onProductMenuDropdown()"
+              >
+                <div>Product</div>
+                <i
+                  class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
+                ></i>
+                <div class="header-dropdown-wrap-product-item">
+                  <a href="https://fmzee.com/?page_id=3039&preview=true">
+                    <div class="header-dropdown-item"><div>Ornament</div></div>
+                  </a>
+                  <a href="https://fmzee.com/?page_id=3041&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>Tumbler</div>
+                    </div>
+                  </a>
+  
+                  <a href="https://fmzee.com/?page_id=3043&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>Door mat</div>
+                    </div>
+                  </a>
+  
+                  <a href="https://fmzee.com/?page_id=3045&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>Door sign</div>
+                    </div>
+                  </a>
+  
+                  <a href="https://fmzee.com/?page_id=3047&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>2 Layered Door Sign</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- dropdown Product -->
+  
+              <div class="header-dropdown-item">
+                <a href="#">Wishdivst</a>
+              </div>
+  
+              <div class="header-dropdown-item">
+                <a href="#">Gift Card</a>
+              </div>
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/?page_id=2999&preview=true">Login</a>
+              </div>
+  
+              <!-- test -->
+            </div>
+            <div id="header_brand-icon">
+              <img src="https://fmzee.com/header-logo/" alt="logo_brand" />
+            </div>
+          </div>
+  
+          <div id="header-wrap-right">
+            <div id="header_search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div id="header_user-info"><i class="fa-regular fa-user"></i></div>
+            <div id="header_card">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <div id="header_card-index">1</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- --------------------------HẾT HEADER-------------------------------- -->
+      <!-- BreadCrumb -->
+      <div id="product-detail-breadcrumb-container">
+        <div class="product-detail-breadcrumb-item">
+          Home / Product / teacher
+        </div>
+      </div>
+      <div class="product-detail-divide-crumb"></div>
+      <!-- Product detail content -->
+      <div id="product-detail-content-container">
+        <!-- detail productiono-->
+        <div id="product-detail-production">
+          <div class="product-detail-production-main-img">
+            <img
+              src="https://fmzee.com/productdetail-thumbnail/"
+              alt="img-main product"
+            />
+          </div>
+          <div class="product-detail-production-warp-img-small">
+            <div class="product-detail-production-img-item">
+              <img src="https://fmzee.com/productdetail-option1/" alt="ảnh1" />
+            </div>
+            <div class="product-detail-production-img-item">
+              <img src="https://fmzee.com/productdetail-option2/" alt="ảnh2" />
+            </div>
+            <div class="product-detail-production-img-item">
+              <img src="https://fmzee.com/productdetail-option3/" alt="ảnh3" />
+            </div>
+            <div class="product-detail-production-img-item">
+              <img src="https://fmzee.com/productdetail-option4/" alt="ảnh4" />
+            </div>
+          </div>
+          <div class="product-detail-description-product">
+            <div class="product-detail-production-description-content">
+              Personalized Teacher Door Sign,<br />
+              Classroom Door Sign, Custom <br />
+              Teacher Sign, Boho Classroom Decor
+            </div>
+          </div>
+          <div class="product-detail-production-wrap-price">
+            <div class="product-detail-production-price-old">$28.92</div>
+            <div class="product-detail-production-price-new">$21.69</div>
+          </div>
+          <div class="product-detail-production-rate">
+            <div class="product-detail-production-rate-star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="product-detail-production-price-quatity">(15)</div>
+          </div>
+          <div class="product-detail-divide"></div>
+          <!-- Choose size -->
+          <div class="product-detail-production-choose-size">
+            <div class="product-detail-production-choose-size-title">Size</div>
+            <div class="product-detail-production-choose-size-button-wrap">
+              <button class="product-detail-production-choose-size-button">
+                12 inches
+              </button>
+              <button
+                class="product-detail-production-choose-size-button opacity08"
+              >
+                14 inches
+              </button>
+              <button
+                class="product-detail-production-choose-size-button opacity08"
+              >
+                18 inches
+              </button>
+            </div>
+          </div>
+
+          <!-- Note -->
+          <div class="product-detail-production-note-container">
+            <div class="product-detail-production-note-description">
+              Add your personalization: <br />
+              Enter the text you want to add on this sign. <br />
+              Ex: Mrs. Laura’s <br />
+              <span style="color: red">❤</span>
+              please ask about special requests via message
+              <span style="color: red">❤</span>
+            </div>
+            <div class="product-detail-production-note-input-wrap">
+              <div class="product-detail-production-note-lable">Note:</div>
+              <input type="text" class="product-detail-production-note-input" />
+            </div>
+          </div>
+
+          <!-- Add to card -->
+
+          <div class="product-detail-add-cart-wrap">
+            <div class="product-detail-add-cart-add-quatity">
+              <div class="product-detail-add-cart-add-quatity-wrap">
+                <button class="product-detail-add-cart-sub">-</button>
+                <div class="product-detail-add-cart-numb">1</div>
+                <button class="product-detail-add-cart-plus">+</button>
+              </div>
+            </div>
+            <div class="product-detail-add-cart-btn">Add To Card</div>
+          </div>
+
+          <!-- Stickit -->
+          <div class="product-detail-stickit-wrap">
+            <div class="product-detail-stickit-title">BUY MORE, SAVE MORE!</div>
+            <div class="product-detail-stickit-item">
+              <div class="product-detail-stickit-item-child-buy">
+                Buy 2 items
+              </div>
+              <div class="product-detail-stickit-item-child-discount">
+                Get 5% OFF
+              </div>
+            </div>
+            <div class="product-detail-stickit-item">
+              <div class="product-detail-stickit-item-child-buy">
+                Buy 3 items
+              </div>
+              <div class="product-detail-stickit-item-child-discount">
+                Get 10% OFF
+              </div>
+            </div>
+            <div class="product-detail-stickit-item">
+              <div class="product-detail-stickit-item-child-buy">
+                Buy 5+ items
+              </div>
+              <div class="product-detail-stickit-item-child-discount">
+                Get 15% OFF
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment ----------------------------------------->
+          <div class="product-detail-payment-warp">
+            <div class="product-detail-payment-description">
+              Order today, and you'll receive your package between <br />
+              <div class="product-detail-payment-description-bold">
+                Aug 26 and Sep 02
+              </div>
+            </div>
+            <div class="product-detail-payment-progression-wrap">
+              <div class="product-detail-payment-progress-icon-wrap">
+                <div class="product-detail-payment-range">
+                  <div class="product-detail-payment-range-rule"></div>
+                  <div class="product-detail-payment-icon-wrap">
+                    <div class="product-detail-payment-addcart">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/cartok.png"
+                        alt="buy"
+                      />
+                    </div>
+                    <div class="product-detail-payment-deliver">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/xehang.png"
+                        alt="diliver"
+                      />
+                    </div>
+                    <div class="product-detail-payment-done">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/xe.png"
+                        alt="done"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-detail-payment-progress-description">
+                <div class="product-detail-payment-progress-description-detail">
+                  <div
+                    class="product-detail-payment-progress-description-detail-date"
+                  >
+                    Aug 09
+                  </div>
+                  <div
+                    class="product-detail-payment-progress-description-detail-status"
+                  >
+                    Ordered
+                  </div>
+                </div>
+                <div
+                  class="product-detail-payment-progress-description-detail product-detail-payment-progress-description-detail-center"
+                >
+                  <div
+                    class="product-detail-payment-progress-description-detail-date"
+                  >
+                    Aug 13 - Aug 15
+                  </div>
+                  <div
+                    class="product-detail-payment-progress-description-detail-status"
+                  >
+                    Order Ready
+                  </div>
+                </div>
+                <div
+                  class="product-detail-payment-progress-description-detail product-detail-payment-progress-description-detail-end"
+                >
+                  <div
+                    class="product-detail-payment-progress-description-detail-date"
+                  >
+                    Aug 26 - Sep 02
+                  </div>
+                  <div
+                    class="product-detail-payment-progress-description-detail-status"
+                  >
+                    Delivered
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phương thức thanh toán -->
+
+            <div class="product-detail-payment-method-wrap">
+              <div class="product-detail-payment-method-icon">
+                <div class="product-detail-payment-method-icon-child">
+                  <img src="https://fmzee.com/productdetail-pay-visa/" alt="" />
+                </div>
+                <div class="product-detail-payment-method-icon-child">
+                  <img
+                    src="https://fmzee.com/productdetail-pay-paypal/"
+                    alt=""
+                  />
+                </div>
+                <div class="product-detail-payment-method-icon-child">
+                  <img
+                    src="https://fmzee.com/productdetail-pay-mastercard/"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <button class="product-detail-payment-method-default">
+                <img src="https://fmzee.com/productdetail-pay-button/" alt="" />
+              </button>
+              <div class="product-detail-payment-method-more-payment-option">
+                More payment options
+              </div>
+            </div>
+          </div>
+          <!-- Description payment -->
+          <div class="product-detail-payment-description-container">
+            <div class="product-detail-payment-description-wrap">
+              <div class="product-detail-payment-description-header-main">
+                Description
+              </div>
+
+              <div class="product-detail-payment-description-phase">
+                <div class="product-detail-payment-description-header">
+                  Product Details
+                </div>
+                <div class="product-detail-payment-description-content">
+                  High-quality plywood, wood thickness measures 0.5cm. It is
+                  bright and vivid colors, lifelike graphics with high precision
+                  UV printing.
+                </div>
+              </div>
+              <div class="product-detail-payment-description-phase">
+                <div class="product-detail-payment-description-header">
+                  Shapes: Round Sign: /12″/14″/18″.
+                </div>
+                <div class="product-detail-payment-description-content"></div>
+              </div>
+              <div class="product-detail-payment-description-phase">
+                <div class="product-detail-payment-description-header">
+                  Unique Features:
+                </div>
+                <div class="product-detail-payment-description-content">
+                  One side printing. The front side is printed and the backside
+                  is blank. Each hanging sign comes with a thick Beige Cotton
+                  rope and the rope is fixed by stapler on the back. Ready for
+                  hanging and ensuring durability and lasting hold.
+                </div>
+              </div>
+              <div class="product-detail-payment-description-phase">
+                <div class="product-detail-payment-description-header">
+                  Uses:
+                </div>
+                <div class="product-detail-payment-description-content">
+                  This wooden door sign is ideal to display at your room, front
+                  doors, garage, kitchen, garden, office, shop, cafe, or
+                  restaurant etc. A unique rustic wooden hanging sign decor will
+                  fit into any occasion. And matches other modern farmhouse and
+                  country-themed decorations.
+                </div>
+              </div>
+              <div class="product-detail-payment-description-phase">
+                <div class="product-detail-payment-description-header">
+                  Personalization:
+                </div>
+                <div class="product-detail-payment-description-content">
+                  Please fill in the required fields and carefully double-check
+                  the spelling.
+                </div>
+              </div>
+              <div class="product-detail-payment-description-phase">
+                <div class="product-detail-payment-description-header">
+                  Specification:
+                </div>
+                <div class="product-detail-payment-description-content">
+                  Processing Time: 3 – 5 working days average after payment.
+                  Shipping Time: 7 – 15 working days average (US)
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Best Salers -------------------------------------->
+        <div class="product-detail-best-salers-wrap">
+          <div class="home-page-carousel">
+            <div class="carousel-wrapper">
+              <div class="title-carousel">Best Salers</div>
+              <div
+                id="carouselExampleControls"
+                class="carousel slide"
+                data-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="carousel-home-slide d-flex">
+                      <div class="carousel-home-item">
+                        <img
+                          src="https://fmzee.com/ornament1/"
+                          alt=""
+                          class="img-item-carousel"
+                          alt="First slide"
+                        />
+                        <div class="carousel-item-detail font-text-carousel">
+                          Personalized Teacher Door Sign, Classroom Door Sign,
+                          Custom Teacher Sign,
+                        </div>
+                        <div class="price-item d-flex">
+                          <p class="old-price font-text-carousel">$28.92</p>
+                          <p class="new-price font-text-carousel">$21.9</p>
+                        </div>
+                        <div class="rating-item d-flex">
+                          <div class="">
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                          </div>
+                          <div class="number-person-rating font-text-carousel">
+                            (15)
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-home-item">
+                        <img
+                          src="https://fmzee.com/ornament2/"
+                          alt=""
+                          class="img-item-carousel"
+                          alt="First slide"
+                        />
+                        <div class="carousel-item-detail font-text-carousel">
+                          Personalized Teacher Door Sign, Classroom Door Sign,
+                          Custom Teacher Sign,
+                        </div>
+                        <div class="price-item d-flex">
+                          <p class="old-price font-text-carousel">$28.92</p>
+                          <p class="new-price font-text-carousel">$21.9</p>
+                        </div>
+                        <div class="rating-item d-flex">
+                          <div class="">
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                          </div>
+                          <div class="number-person-rating font-text-carousel">
+                            (15)
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-home-slide d-flex" alt="Third slide">
+                      <div class="carousel-home-item">
+                        <img
+                          src="https://fmzee.com/?attachment_id=2640#main"
+                          alt=""
+                          class="img-item-carousel"
+                        />
+                        <div class="carousel-item-detail font-text-carousel">
+                          Personalized Teacher Door Sign, Classroom Door Sign,
+                          Custom Teacher Sign,
+                        </div>
+                        <div class="price-item d-flex">
+                          <p class="old-price font-text-carousel">$28.92</p>
+                          <p class="new-price font-text-carousel">$21.9</p>
+                        </div>
+                        <div class="rating-item d-flex">
+                          <div class="">
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                          </div>
+                          <div class="number-person-rating font-text-carousel">
+                            (15)
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-home-item">
+                        <img
+                          src="https://fmzee.com/?attachment_id=2632#main"
+                          alt=""
+                          class="img-item-carousel"
+                        />
+                        <div class="carousel-item-detail font-text-carousel">
+                          Personalized Teacher Door Sign, Classroom Door Sign,
+                          Custom Teacher Sign,
+                        </div>
+                        <div class="price-item d-flex">
+                          <p class="old-price font-text-carousel">$28.92</p>
+                          <p class="new-price font-text-carousel">$21.9</p>
+                        </div>
+                        <div class="rating-item d-flex">
+                          <div class="">
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                          </div>
+                          <div class="number-person-rating font-text-carousel">
+                            (15)
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-home-slide d-flex">
+                      <div class="carousel-home-item">
+                        <img
+                          src="https://fmzee.com/?attachment_id=2515#main"
+                          alt=""
+                          class="img-item-carousel"
+                          alt="Second slide"
+                        />
+                        <div class="carousel-item-detail font-text-carousel">
+                          Personalized Teacher Door Sign, Classroom Door Sign,
+                          Custom Teacher Sign,
+                        </div>
+                        <div class="price-item d-flex">
+                          <p class="old-price font-text-carousel">$28.92</p>
+                          <p class="new-price font-text-carousel">$21.9</p>
+                        </div>
+                        <div class="rating-item d-flex">
+                          <div class="">
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                          </div>
+                          <div class="number-person-rating font-text-carousel">
+                            (15)
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-home-item">
+                        <img
+                          src="https://fmzee.com/?attachment_id=2404#main"
+                          alt=""
+                          class="img-item-carousel"
+                          alt="Second slide"
+                        />
+                        <div class="carousel-item-detail font-text-carousel">
+                          Personalized Teacher Door Sign, Classroom Door Sign,
+                          Custom Teacher Sign,
+                        </div>
+                        <div class="price-item d-flex">
+                          <p class="old-price font-text-carousel">$28.92</p>
+                          <p class="new-price font-text-carousel">$21.9</p>
+                        </div>
+                        <div class="rating-item d-flex">
+                          <div class="">
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                          </div>
+                          <div class="number-person-rating font-text-carousel">
+                            (15)
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item" alt="Third slide">
+                    <div class="carousel-home-slide d-flex">
+                      <div class="carousel-home-item">
+                        <img
+                          src="https://fmzee.com/?attachment_id=2349#main"
+                          alt=""
+                          class="img-item-carousel"
+                          alt="Third slide"
+                          alt="Third slide"
+                        />
+                        <div class="carousel-item-detail font-text-carousel">
+                          Personalized Teacher Door Sign, Classroom Door Sign,
+                          Custom Teacher Sign,
+                        </div>
+                        <div class="price-item d-flex">
+                          <p class="old-price font-text-carousel">$28.92</p>
+                          <p class="new-price font-text-carousel">$21.9</p>
+                        </div>
+                        <div class="rating-item d-flex">
+                          <div class="">
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                          </div>
+                          <div class="number-person-rating font-text-carousel">
+                            (15)
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-home-item">
+                        <img
+                          src="https://fmzee.com/?attachment_id=2336#main"
+                          alt=""
+                          class="img-item-carousel"
+                          alt="Third slide"
+                        />
+                        <div class="carousel-item-detail font-text-carousel">
+                          Personalized Teacher Door Sign, Classroom Door Sign,
+                          Custom Teacher Sign,
+                        </div>
+                        <div class="price-item d-flex">
+                          <p class="old-price font-text-carousel">$28.92</p>
+                          <p class="new-price font-text-carousel">$21.9</p>
+                        </div>
+                        <div class="rating-item d-flex">
+                          <div class="">
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                            <span class="fa fa-star checked star-icon"></span>
+                          </div>
+                          <div class="number-person-rating font-text-carousel">
+                            (15)
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a
+                    class="carousel-control-prev"
+                    href="#carouselExampleControls"
+                    role="button"
+                    data-slide="prev"
+                  >
+                    <span class="carousel-control-prev-icon" aria-hidden="true">
+                      <i class="fa-solid fa-angle-left"></i>
+                    </span>
+                    <span class="sr-only"></span>
+                  </a>
+                  <a
+                    class="carousel-control-next"
+                    href="#carouselExampleControls"
+                    role="button"
+                    data-slide="next"
+                  >
+                    <span class="carousel-control-next-icon" aria-hidden="true">
+                      <i class="fa-solid fa-angle-right"></i>
+                    </span>
+                    <span class="sr-only"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--  CUSTOMER REVIEWS AND RATE-------------------------------------------------->
+        <div class="product-detail-customer-reviews-container">
+          <div class="review_onclick_block_rate">
+            <div class="customer_review">
+              <div class="name_title_review">Customer Reviews</div>
+              <div class="rate_review">
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="text_review">Be the first to write a review</div>
+              <button class="btn_review" onclick="handleClickWrite()">
+                write a review
+              </button>
+            </div>
+            <div class="ratimg_customer">
+              <div class="content_rating">
+                <div class="rating_relust">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="box_rating"></div>
+                <div class="text_results">
+                  <span>100%</span><span>(9)</span>
+                </div>
+              </div>
+              <div class="content_rating">
+                <div class="rating_relust">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="box_rating1"></div>
+                <div class="text_results"><span>%</span><span></span></div>
+              </div>
+              <div class="content_rating">
+                <div class="rating_relust">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="box_rating1"></div>
+                <div class="text_results"><span>%</span><span></span></div>
+              </div>
+              <div class="content_rating">
+                <div class="rating_relust">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="box_rating1"></div>
+                <div class="text_results"><span>%</span><span></span></div>
+              </div>
+              <div class="content_rating">
+                <div class="rating_relust">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="box_rating1"></div>
+                <div class="text_results"><span>%</span><span></span></div>
+              </div>
+            </div>
+            <div class="border_contained"></div>
+            <div class="customer">
+              <div class="user_customer_main">
+                <div class="user_cus_rate">
+                  <div class="user_icon">C</div>
+                  <div class="flex_center">
+                    <div class="cus_rate">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="date_rate">08/04/2022</div>
+                  </div>
+                </div>
+                <textarea
+                  id="rate_review"
+                  rows="4"
+                  cols="25"
+                  placeholder="Phần đánh giá của khách       hàng"
+                ></textarea>
+              </div>
+              <div class="picture_Add">
+                <img
+                 
+                  src="https://fmzee.com/mayanh/"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="pagetion_wishlist">
+              <div class="btn_next_wishlist">Next</div>
+              <div class="pagation_wishlist_next">
+                <span>1 </span><span2 style="color:#a19a9a;">2 3 ... 9</span><i class="fa-solid fa-angles-right"></i>
+              </div>
+            </div>
+            <div class="border_contained"></div>
+          </div>
+          <!-- Rate -->
+          <div class="review_display_onclick">
+            <div class="rate_customer_product_content">
+              <div class="customer_review">
+                <div class="name_title_review">Customer Reviews</div>
+                <div class="rate_review">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="text_review">Be the first to write a review</div>
+                <button class="btn_review" onclick="handleOnclickCancel()">
+                  Cancel review
+                </button>
+              </div>
+            </div>
+            <div class="border_contained1"></div>
+
+            <div class="customer_rating_contained-app">
+              <div class="customer_rating_contained">
+                <div class="text_box_name_tate">
+                  <div class="display_name">
+                    Name (Display name <span>John Smith )</span>
+                  </div>
+                  <input
+                    type="text"
+                    name=""
+                    id="namecustommer"
+                    placeholder="Enter your name (public)"
+                  />
+                </div>
+                <div class="text_box_email">
+                  <div class="email_customer">Email</div>
+                  <input
+                    type="text"
+                    name=""
+                    id="emailcustomer"
+                    placeholder="Enter your email (private)"
+                  />
+                </div>
+                <div class="Rating_container">
+                  <div class="text_rate">Rating</div>
+                  <div class="rating_5sao">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+                <div class="review_main">
+                  <div class="title_review">Review title</div>
+                  <input
+                    type="text"
+                    name=""
+                    id="GiveReview"
+                    placeholder="Give your review a title"
+                  />
+                </div>
+                <div class="Review_cs">
+                  <div class="title_review_cs">Review</div>
+                  <textarea
+                    name=""
+                    id=""
+                    placeholder="Write your comments here"
+                  ></textarea>
+                </div>
+                <div class="picture_video_container_rate">
+                  <div class="title_picture_video">
+                    Picture/ Video <span>( Optional )</span>
+                  </div>
+                  <div class="picture_video_add">
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/08/mayAnh.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="margin_btn">
+                  <button class="btn_submit_review">Submit Review</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer-copyright_container">
+        <div id="footer-copyright_wrap">
+          <div class="footer-copyright-collapse">
+            <div
+              data-bs-toggle="collapse"
+              href="#quick_link"
+              aria-expanded="false"
+              aria-controls="quick_link"
+              id="footer-copyright-collapse-wrap"
+            >
+              <div class="footer-coppyright-title">Quick Links</div>
+              <div class="footer-copyright-icon">
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse" id="quick_link">
+              <div class="footer_copyright-content-warp-items">
+                <div class="footer_copyright-content-items">Home</div>
+                <div class="footer_copyright-content-items">About Us</div>
+                <div class="footer_copyright-content-items">Contact Us</div>
+                <div class="footer_copyright-content-items">FAQ</div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright-collapse">
+            <div class="footer-copyright-collapse">
+              <div
+                data-bs-toggle="collapse"
+                href="#Policies"
+                aria-expanded="false"
+                aria-controls="Policies"
+                id="footer-copyright-collapse-wrap"
+              >
+                <div class="footer-coppyright-title">Policies</div>
+                <div class="footer-copyright-icon">
+                  <i class="fa-solid fa-caret-down"></i>
+                </div>
+              </div>
+              <div class="collapse" id="Policies">
+                <div class="footer_copyright-content-warp-items">
+                  <div class="footer_copyright-content-items">Privacy Policy</div>
+                  <div class="footer_copyright-content-items">
+                    Shipping Policy
+                  </div>
+                  <div class="footer_copyright-content-items">
+                    Refund & Return Policy
+                  </div>
+                  <div class="footer_copyright-content-items">
+                    Terms and Conditions
+                  </div>
+                  <div class="footer_copyright-content-items">Payment Method</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright-collapse">
+            <div class="footer-copyright-collapse">
+              <div
+                data-bs-toggle="collapse"
+                href="#getInTouch"
+                aria-expanded="false"
+                aria-controls="getInTouch"
+                id="footer-copyright-collapse-wrap"
+              >
+                <div class="footer-coppyright-title">Get In Touch</div>
+                <div class="footer-copyright-icon">
+                  <i class="fa-solid fa-caret-down"></i>
+                </div>
+              </div>
+              <div class="collapse" id="getInTouch">
+                <div class="footer_copyright-content-warp-items">
+                  <div class="footer_copyright-content-items-thin">
+                    If you have any questions, please contact us by this email
+                    below
+                  </div>
+                  <div class="footer_copyright-content-items-thin">
+                    <i class="fa-regular fa-envelope"></i>
+                    Email: suppost.fmzee@gmail.com UK Address: 24-26 Arcadia
+                  </div>
+                  <div class="footer_copyright-content-items-thin">
+                    Avenue, Dephna House #105, London, Greater London, United
+                    Kingdom, N3 2JU
+                  </div>
+  
+                  <div class="footer_copyright-content-items-thin">
+                    Delivery Delays Due To Covid-19
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright-subscribe">
+            <div class="footer-coppyright-title">Newsletter</div>
+            <div class="footer-coppyright-content">
+              <div class="footer-coppyright-content-detail1">
+                Subscribe to be notified about product launches,
+                <br />special offers and news.
+              </div>
+              <div class="footer-coppyright-content-detail2">
+                Enter your email and get your first treat,
+                <br />
+                an instant 25% discount off your first order!
+              </div>
+            </div>
+            <div class="footer-coppyright-subcribe-wap">
+              <input
+                id="footer-coppyright-subcribe-input"
+                type="text"
+                placeholder="your email:"
+              />
+              <button id="footer-coppyright-subcribe-button">Subcribe</button>
+            </div>
+            <div class="footer-coppyright-author">
+              © 2022 FMzee - Personalized Door Sign, Ornament, Tumbler & Home
+              Decor
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer_container">
+        <div id="footer_wrap">
+          <div id="footer_wrap-left">
+            <div class="footer_icon-social">
+              <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="footer_icon-social footer_icon-social-center">
+              <i class="fa-brands fa-square-twitter"></i>
+            </div>
+            <div class="footer_icon-social">
+              <i class="fa-brands fa-square-instagram"></i>
+            </div>
+          </div>
+          <div id="footer_wrap-right">
+            <div class="footer_icon-paycard">
+              <img src=" https://fmzee.com/productdetail-pay-visa/" alt="" />
+            </div>
+            <div class="footer_icon-paycard footer_icon-paycard-center">
+              <img src="https://fmzee.com/productdetail-pay-paypal/" alt="" />
+            </div>
+            <div class="footer_icon-paycard">
+              <img
+                src=" https://fmzee.com/productdetail-pay-mastercard/"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- CUSTOMER REVIEWS AND RATE------------------------------------------- -->
+    <!-- HẾT HTML PRODUCT DETAIL -->
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JS CONFIG CAROUSEL -->
+    <script>
+      $.fn.modal.Constructor.Default.keyboard = false;
+      var bootstrapButton = $.fn.button.noConflict(); // return $.fn.button to previously assigned value
+      $.fn.bootstrapBtn = bootstrapButton;
+      $.fn.tooltip.Constructor.VERSION;
+      $(".carousel").carousel({
+        interval: 2000,
+        ride: true,
+      });
+    </script>
+    <!-- JS show comment rate when click to button  -->
+    <script>
+      function handleClickWrite() {
+        document.querySelector(".review_onclick_block_rate").style.display =
+          "none";
+        document.querySelector(".review_display_onclick").style.display =
+          "block";
+      }
+      function handleOnclickCancel() {
+        document.querySelector(".review_onclick_block_rate").style.display =
+          "block";
+        document.querySelector(".review_display_onclick").style.display =
+          "none";
+      }
+    </script>
+    <!-- JS HEADER -------------------------------------------------------------------- -->
+
+    <script>
+      function onMenuDropdown() {
+        $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+      }
+      function onProductMenuDropdown() {
+        $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
+      }
+
+      $(document).click(function (e) {
+        if (
+          $(e.target?.parentElement?.parentElement).is(
+            $(".header-dropdown-wrap-item")[0]
+          ) ||
+          $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
+          $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
+          $(e.target.parentElement).is($("#header_bar")[0]) ||
+          $(e.target).is($("#header_bar")[0])
+        ) {
+        } else {
+          if (
+            $(".header-dropdown-wrap-item")[0].classList.contains(
+              "visibleClass"
+            )
+          ) {
+            $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+          }
+        }
+      });
+    </script>
+    <!--HẾT JS HEADER ------------------------------------------------------------------------------- -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+        //----------------------- footer -----------------------
+        function onMenuDropdown() {
+          $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+        }
+        function onProductMenuDropdown() {
+          $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
+        }
+  
+        $(document).click(function (e) {
+          if (
+            $(e.target?.parentElement?.parentElement).is(
+              $(".header-dropdown-wrap-item")[0]
+            ) ||
+            $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
+            $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
+            $(e.target.parentElement).is($("#header_bar")[0]) ||
+            $(e.target).is($("#header_bar")[0])
+          ) {
+          } else {
+            if (
+              $(".header-dropdown-wrap-item")[0].classList.contains(
+                "visibleClass"
+              )
+            ) {
+              $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+            }
+          }
+        });
+      </script>
+      <script>
+        // display img on product
+        $("img.lazy-load").each(function () {
+          $(this).attr("src", $(this).attr("data-src"));
+        });
+      </script>
+  </body>
+</html>

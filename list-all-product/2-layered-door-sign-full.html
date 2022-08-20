@@ -575,8 +575,8 @@
     </div>
     <div class="listAllProduct-container">
       <div class="listAllProduct-title">
-        <p class="listAllProduct-title_title">DOOR SIGN</p>
-        <p class="listAllProduct-title_text">150 product</p>
+        <p class="listAllProduct-title_title">DOOR SIGN 2 LAYERED</p>
+        <p class="listAllProduct-title_text">[count_product_in_category category="door-sign-2-layered"] product</p>
       </div>
       <div class="listAllProduct-title_img">
         <img
@@ -597,20 +597,15 @@
       </div>
         
       </div>
-      <hr />
+      <hr style="max-width: 500px; margin: auto"/>
       <div class="listALLProduct-pagination">
         <button class="listALLProduct-pagination-button">Next</button>
         <ul style="list-style-type: none; display: flex">
-          <li style="color: #20404f">1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>...</li>
-          <li>50</li>
         </ul>
-        <div class="listALLProduct-pagination-i">
+        <!-- <div class="listALLProduct-pagination-i">
           <i class="fa-solid fa-angles-left" style="display: none"></i>
           <i class="fa-solid fa-angles-right"></i>
-        </div>
+        </div> -->
       </div>
     </div>
     <div id="footer-copyright_container">
@@ -820,6 +815,8 @@
         let newPrice = $(product).find('.price-wrapper .price > ins bdi').eq(0).html().split('&nbsp;')[0];;
         const linkProductDetail = $(product).find('.title-wrapper a').attr('href');
         const addToWishList = $(product).find('.wishlist-popup.dark a').attr('href');
+        const isAdded = ($(product).find('.wishlist-popup.dark a').attr('data-title') === 'Add to wishlist');
+        const color = isAdded ? "color: rgba(32, 64, 79, 0.5)" :"color: rgb(255, 0, 0, 0.5)"
         // $(product).find('.price-wrapper .price > del bdi').each(function(i, price){
         //     if(i > 0) dellPrice += ' - ';
         //     dellPrice += `$${$(price).html().split('&nbsp;')[0]}`
@@ -854,7 +851,7 @@
                   <a href='${addToWishList}'>
                     <i
                         class="fa-solid fa-heart"
-                        style="color: rgba(32, 64, 79, 0.5)"
+                        style="${color}"
                     ></i>
                   </a>
                   
@@ -872,6 +869,22 @@
     `
     $('.listALLProduct-pagination-button')[0].outerHTML = nextBtn;
         
+  </script>
+  <script>
+    // pagination Product
+    $('.woocommerce-pagination .page-number').each((i, button) => {
+      let href = $(button).attr('href');
+      let buttonText = $(button).html();
+      buttonText = buttonText.includes('left')? '<i class="fa-solid fa-angles-left"></i>' : buttonText;
+      buttonText = buttonText.includes('right') ? '<i class="fa-solid fa-angles-right"></i>' : buttonText;
+      $('.listALLProduct-pagination ul').append(`
+        <li>
+          ${href ? 
+          `<a style='text-decoration:none; color: rgba(32, 64, 79, 0.5);' href='${href}'> ${buttonText} </a>` 
+          : `<span style='color: #20404f'>${buttonText}</span>`}
+        </li>
+      `)
+    });
   </script>
       <script>
         // display img on product

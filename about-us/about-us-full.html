@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
     <link
@@ -158,145 +158,65 @@
       }
     </style>
     <style>
-      /*-------------------------- listAllProduct ------------------------------*/
-      .col-inner{
-        background: white;
-      }
-      .listAllProduct-container {
-        padding: 2px 0;
-        margin: 0 0 32.8px 0;
-        box-sizing: border-box;
-        max-width: 500px;
-        margin: auto;
-        margin-bottom: 33px;
-        background: white;
-      }
-      .listAllProduct-title {
-        text-align: center;
-        margin-top: 33px;
-      }
-      .listAllProduct-title_title {
-        color: #20404f;
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 16px;
+      /*------------------------- about-us ------------------------- */
+      * {
+        font-family: "Nunito", sans-serif;
+        padding: 0;
         margin: 0;
-      }
-      .listAllProduct-title_text {
-        color: rgba(32, 64, 79, 0.8);
-        font-family: "ABeeZee";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 16px;
-        margin: 9px 0 0 0;
-        text-transform: lowercase;
-      }
-      .listAllProduct-title_img {
-        text-align: right;
-        margin-right: 20px;
+        box-sizing: border-box;
       }
       hr {
-        color: #20404f;
-        border: solid 0.5px #20404f;
-        margin: 0;
+        height: 0.63px;
+        background: #20404f;
         transform: rotate(-0.08deg);
+        margin: 0;
       }
-      .listAllProduct-content {
-        padding: 31px 21px 0 21px;
+      .about_us_container {
+        /* width: 95%;
+        margin: auto 21px; */
+        max-width: 500px;
+        padding: 16px 21px 0 21px;
+        margin: auto;
       }
-      .listAllProduct-product {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: 122px;
-        box-sizing: border-box;
-        margin-bottom: 25px;
+      .cus_breadcrumb {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 19px;
+        color: rgba(32, 64, 79, 0.8);
       }
-      .listAllProduct-product img {
-        width: 122px;
-        left: 21px;
-        top: 191px;
+      .about_sub_title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        text-transform: capitalize;
+
+        color: #20404f;
       }
-      .listAllProduct-product-right {
-        margin-left: 22px;
-      }
-      .listAllProduct-product-right p {
-        font-family: "Nunito";
+      .about_title {
         font-style: normal;
         font-weight: 600;
-        font-size: 15px;
+        font-size: 18px;
         line-height: 16px;
-        color: #20404f;
-        margin: 0 0 7px 0;
-        text-align: left;
+        text-transform: uppercase;
+        text-align: center;
       }
-      .listAllProduct_icon_star i {
-        width: 12px;
-        margin-right: 2px;
-      }
-      .listAllProduct_footer {
-        margin-top: 8px;
-        position: relative;
-      }
-      .listAllProduct_footer i {
-        position: absolute;
-        right: 15px;
-      }
-      .listAllProduct_footer span {
-        margin-right: 6px;
-        font-family: "Nunito";
+      .paragraph {
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
-        line-height: 16px;
-        letter-spacing: -0.02em;
+        line-height: 20px;
+        /* padding-bottom: 20px;
+        margin: 0; */
       }
-      .listAllProduct_icon_star {
-        color: #bf8977;
+      .highlight {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        color: #20404f;
       }
-      .listALLProduct-pagination {
-        display: flex;
-        padding: 10px 0;
-        position: relative;
+      .my-2 {
         max-width: 500px;
         margin: auto;
-        /* height: 50px; */
-        border-bottom: solid 1.5px rgba(32, 64, 79, 0.4);
-        justify-content: center;
-      }
-      .listALLProduct-pagination button {
-        width: 66px;
-        height: 24px;
-        background: #20404f;
-        border-radius: 5px;
-        color: #fff;
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 15px;
-        /* position: absolute;
-        left: 40%;
-        top: 25%; */
-        border: none;
-      }
-      .listALLProduct-pagination ul {
-        position: absolute;
-        top: 32%;
-        right: 11%;
-      }
-      .listALLProduct-pagination ul li {
-        margin: 0 1px;
-        color: rgba(32, 64, 79, 0.5);
-      }
-      .listALLProduct-pagination-i {
-        position: absolute;
-        top: 30%;
-        right: 7%;
-        color: rgba(32, 64, 79, 0.5);
       }
     </style>
     <style>
@@ -433,58 +353,6 @@
         padding: 0;
       }
     </style>
-    <style>
-        /*--------------- word-press-convert ----------------*/
-        .small-columns-2>.col{
-            max-width: 100%;
-            flex-basis: 100%;
-        }
-        .product-small.box{
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            height: 122px;
-            box-sizing: border-box;
-            margin-bottom: 25px;
-        } 
-        .image-zoom img{
-            width: 122px;
-            left: 21px;
-            top: 191px;
-        }
-        .box-text.box-text-products{
-            margin-left: 22px;
-        }
-        .listAllProduct-product a{
-            width: 122px;
-        }
-        .listAllProduct-product-image{
-            flex-basis: 122px;
-            flex-grow: 0;
-            flex-shrink: 0;
-        }
-        .listAllProduct-product-right p a{
-            display: -webkit-box;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;  
-            overflow: hidden;
-            width: 100%;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 15px;
-            line-height: 16px;
-            color: #20404f;
-            margin: 0 0 7px 0;
-            text-align: left;
-            text-decoration: none;
-        }
-        #footer{
-            display: none;
-        }
-        .wordpress-data{
-            display: none;
-        }
-    </style>
   </head>
   <body>
     <div id="header_container">
@@ -573,39 +441,66 @@
         </div>
       </div>
     </div>
-    <div class="listAllProduct-container">
-      <div class="listAllProduct-title">
-        <p class="listAllProduct-title_title">ORNAMENT</p>
-        <p class="listAllProduct-title_text">[count_product_in_category category="ornament"] product</p>
-      </div>
-      <div class="listAllProduct-title_img">
-        <img
-          src="https://fmzee.com/wp-content/uploads/2022/08/listAllproduct-icon1.png"
-          alt="s"
-          style="margin: 0 4px"
-        />
-        <img
-          src="https://fmzee.com/wp-content/uploads/2022/08/listAllProduct-icon2.png"
-          alt="s"
-        />
-      </div>
-      <hr />
-      <div class="listAllProduct-content">
-        <div class="wordpress-data">
-            [products limit="10" columns="1" category="ornament" cat_operator="IN" paginate="true"]
+    <div class="about_us_container">
+      <span class="cus_breadcrumb">Home / About Us</span>
+    </div>
+    <hr class="my-2" />
+    <div class="about_us_container">
+      <div class="about_content">
+        <div class="about_title">ABOUT FMZEE TEAM</div>
+        <div class="about_sub_title pb-2 pt-3">About Us</div>
+        <div class="paragraph">
+          <span class="highlight pl-1"> FMzee </span>
+          starts operating in early 2021. We are passionate about providing
+          unique gifts for many special occasions for yourself and your loved
+          ones. We are currently focusing on individual products such as
+          Tumbler, door signs, doormats, Ornament,… We feature new products
+          often too. We aim to create a one- stop shop for you to show
+          everything to your corner. With a professional design team,
+          <span class="highlight"> FMzee </span>
+          will bring the best quality products at affordable prices to customers
         </div>
-      </div>
-        
-      </div>
-      <hr style="max-width: 500px; margin: auto"/>
-      <div class="listALLProduct-pagination">
-        <button class="listALLProduct-pagination-button">Next</button>
-        <ul style="list-style-type: none; display: flex">
-        </ul>
-        <!-- <div class="listALLProduct-pagination-i">
-          <i class="fa-solid fa-angles-left" style="display: none"></i>
-          <i class="fa-solid fa-angles-right"></i>
-        </div> -->
+        <div class="about_sub_title pb-2 pt-3">Our Story</div>
+        <div class="paragraph">
+          <p>
+            <span class="pl-1">Our</span> store is committed to improving the
+            quality of better shopping experience with our wide selection of top
+            high products at rock bottom prices, our innovative marketing
+            department constantly searches for cutting- edge products to attract
+            and satisfy the broad demand of our customer base.
+          </p>
+          <p>
+            <span class="pl-1">Over</span> the last few years,
+            <span>FMzee</span> has achieved a leading market position, which has
+            helped us win over thousands of loyal customers all around the
+            world, more and more new and returning customers accessing our site
+            to get the unique personalized gifts idea.
+          </p>
+        </div>
+        <div class="about_sub_title pb-2 pt-2">Our mission</div>
+        <div class="paragraph">
+          <p>
+            <span class="pl-1">We</span> strive to bring you a variety of
+            high-quality products for the lowest possible prices. We also
+            believe that personalization is the most powerful way to express
+            your love to the person (or your beloved pets) you honor and also
+            your personal characteristics as well.
+          </p>
+          <p>
+            <span class="pl-1">We</span> are sure you will be pleased at the
+            time when your order arrives at your door, thus please don’t
+            hesitate to trust us by clicking the personalized products you like
+            here!
+          </p>
+        </div>
+        <span class="highlight">Email:</span>
+        <span class="paragraph">suppost.fmzee@gmail.com </span>
+        <span class="highlight">UK Address:</span>
+        <span class="paragraph"
+          >24-26 Arcadia Avenue, Dephna House #105, London, Greater London,
+          United Kingdom, N3 2JU</span
+        >
+        <div style="padding-bottom: 16px"></div>
       </div>
     </div>
     <div id="footer-copyright_container">
@@ -778,7 +673,6 @@
     crossorigin="anonymous"
   ></script>
   <script>
-    //----------------------- footer -----------------------
     function onMenuDropdown() {
       $(".header-dropdown-wrap-item").toggleClass("visibleClass");
     }
@@ -806,90 +700,9 @@
     });
   </script>
   <script>
-    // ------------------------ get data --------------------------
-    const listAll = $('.listAllProduct-content');
-    $('.product-small.box ').each(function(index, product){
-        const thumbnail = $(product).find('.image-zoom img').attr('data-src');
-        const title = $(product).find('.title-wrapper strong').html();
-        let dellPrice = $(product).find('.price-wrapper .price > del bdi').eq(0).html().split('&nbsp;')[0];
-        let newPrice = $(product).find('.price-wrapper .price > ins bdi').eq(0).html().split('&nbsp;')[0];;
-        const linkProductDetail = $(product).find('.title-wrapper a').attr('href');
-        const addToWishList = $(product).find('.wishlist-popup.dark a').attr('href');
-        const isAdded = ($(product).find('.wishlist-popup.dark a').attr('data-title') === 'Add to wishlist');
-        const color = isAdded ? "color: rgba(32, 64, 79, 0.5)" :"color: rgb(255, 0, 0, 0.5)"
-        // $(product).find('.price-wrapper .price > del bdi').each(function(i, price){
-        //     if(i > 0) dellPrice += ' - ';
-        //     dellPrice += `$${$(price).html().split('&nbsp;')[0]}`
-        // });
-        // $(product).find('.price-wrapper .price > ins bdi').each(function(i, price){
-        //     if(i > 0) newPrice += ' - ';
-        //     newPrice += `$${$(price).html().split('&nbsp;')[0]}`
-        // });
-            let newProduct = `
-            <div class="listAllProduct-product">
-              <div class='listAllProduct-product-image'>
-                <a href='${linkProductDetail}'><img
-                  src="${thumbnail}"
-                  alt="product"
-                /></a>
-              </div>
-              <div class="listAllProduct-product-right">
-                <p><a href='${linkProductDetail}'> ${title} </a></p>
-                <div class="listAllProduct_icon_star">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <span style="color: black">(15)</span>
-                </div>
-                <div class="listAllProduct_footer">
-                  <span style="color: #676767; text-decoration: line-through"
-                    >$${dellPrice}</span
-                  >
-                  <span style="color: #bf8977">$${newPrice}</span>
-                  <a href='${addToWishList}'>
-                    <i
-                        class="fa-solid fa-heart"
-                        style="${color}"
-                    ></i>
-                  </a>
-                  
-                </div>
-              </div>
-            </div>
-        `
-        listAll.append(newProduct);
-    });
-//    console.log($('.next.page-number').attr('href'));
-    let nextBtn = `
-        <a href='${$('.next.page-number').attr('href')}'>
-            ${$('.listALLProduct-pagination-button')[0].outerHTML}
-        </a>
-    `
-    $('.listALLProduct-pagination-button')[0].outerHTML = nextBtn;
-        
-  </script>
-  <script>
-    // pagination Product
-    $('.woocommerce-pagination .page-number').each((i, button) => {
-      let href = $(button).attr('href');
-      let buttonText = $(button).html();
-      buttonText = buttonText.includes('left')? '<i class="fa-solid fa-angles-left"></i>' : buttonText;
-      buttonText = buttonText.includes('right') ? '<i class="fa-solid fa-angles-right"></i>' : buttonText;
-      $('.listALLProduct-pagination ul').append(`
-        <li>
-          ${href ? 
-          `<a style='text-decoration:none; color: rgba(32, 64, 79, 0.5);' href='${href}'> ${buttonText} </a>` 
-          : `<span style='color: #20404f'>${buttonText}</span>`}
-        </li>
-      `)
+    // display img on product
+    $("img.lazy-load").each(function () {
+      $(this).attr("src", $(this).attr("data-src"));
     });
   </script>
-      <script>
-        // display img on product
-        $("img.lazy-load").each(function () {
-            $(this).attr("src", $(this).attr("data-src"));
-        });
-    </script>
 </html>
