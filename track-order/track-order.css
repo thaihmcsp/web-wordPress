@@ -38,7 +38,7 @@
 }
 .sign_in_body > button {
   margin-top: 10px;
-
+  border: none;
   width: 246px;
   height: 35px;
   background: #20404f;
@@ -71,8 +71,9 @@
   font-size: 12px;
   font-weight: 600;
   line-height: 16px;
-  text-align: start;
-  margin-left: 73px;
+  text-align: left;
+  margin-left: 19%;
+  /* text-align: start; */
 }
 #warning_ordNum > p,
 #warning_email > p {

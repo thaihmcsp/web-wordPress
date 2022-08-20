@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+    <style>
+      /*------------------- header -------------------*/
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        font-family: "Nunito", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* border: 1px solid gray; */
+      }
+      #header {
+        display: none;
+      }
+      .page-wrapper {
+        padding-top: 0;
+      }
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .col {
+        padding: 0;
+      }
+      #header_container {
+        max-width: 500px; /*figma: 390px */
+        height: 69px;
+        background-color: #20404f;
+        color: #e9dfd3;
+        margin: auto;
+      }
+      #header_wrap {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0 21px 5px 21px;
+        position: relative;
+      }
+      #header-wrap-left {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+      }
+      #header_bar {
+        position: relative;
+        font-size: 25px;
+        padding-right: 21px;
+      }
+
+      #header_brand-icon {
+        width: 133px;
+        height: 46px;
+      }
+
+      #header-wrap-right {
+        display: flex;
+        margin-bottom: 6px;
+      }
+      #header_search {
+        font-size: 20px;
+      }
+      #header_user-info {
+        font-size: 20px;
+        margin: 0 11px;
+      }
+      #header_card {
+        font-size: 20px;
+        position: relative;
+      }
+      #header_card-index {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #bf8977;
+        text-align: center;
+        line-height: 15px;
+        font-size: 13px;
+      }
+      .header-dropdown-wrap-item {
+        border-radius: 5px;
+        position: absolute;
+        top: 0px;
+        transform: translate3d(1px, 70px, 0px) !important;
+        border: none;
+        left: 0;
+        width: 189px;
+        padding: 4px 0 32px 0;
+        background: #20404f;
+        z-index: 100000;
+        display: none;
+      }
+      .header-dropdown-item {
+        padding: 5px 0 2px 22px;
+        margin-top: 4px;
+        font-size: 14px;
+        color: #e9dfd3;
+        font-weight: 400;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+      }
+      .header-dropdown-item-dropdown {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .header-dropdown-item-dropdown-icon {
+        margin-right: 16px;
+      }
+      .header-dropdown-item a {
+        font-size: 14px;
+        color: #e9dfd3;
+        font-weight: 400;
+        text-decoration: none;
+      }
+      .dropdown-divider {
+        margin: 0;
+      }
+
+      .header-dropdown-wrap-product-item {
+        border-radius: 5px;
+        position: absolute;
+        top: -73px;
+        transform: translate3d(1px, 70px, 0px) !important;
+        border: none;
+        width: 165px;
+        padding: 4px 0 32px 0;
+        background: #20404f;
+        left: 100%;
+        z-index: 10000;
+        display: none;
+      }
+      .visibleClass {
+        display: block;
+      }
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        font-family: "Nunito", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* border: 1px solid gray; */
+      }
+    </style>
+    <style>
+      /* -------------------------- Home -------------------------- */
+      .home-page-container {
+        width: 100%;
+        max-width: 500px;
+        background: #f5f5f5;
+        margin: auto;
+      }
+
+      .home-page-wrapper {
+        width: 100%;
+        max-width: 390px;
+        margin: auto;
+      }
+      .carousel-wrapper {
+        margin-top: 15px;
+        padding-bottom: 22px;
+        border-bottom: 1px solid #20404f;
+      }
+      .title-carousel {
+        margin-bottom: 14px;
+        display: flex;
+        justify-content: center;
+      }
+      .carousel-control-prev {
+        left: -21px;
+        color: #000000;
+        bottom: 35%;
+      }
+      .checked {
+        color: #bf8977;
+      }
+      .star-icon {
+        font-size: 12px;
+      }
+      .rating-item .number-person-rating {
+        padding-left: 5px;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+      }
+      .carousel-control-next {
+        right: -21px;
+        color: #000000;
+        bottom: 30%;
+      }
+      .carousel-control-next-icon,
+      .carousel-control-prev-icon {
+        background-image: none;
+      }
+      .home-page-container .home-page-banner {
+        width: 390px;
+        height: 530px;
+      }
+      .home-page-carousel .title-carousel {
+        color: #20404f;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 16px;
+      }
+      .home-page-carousel .carousel-home-slide {
+        width: 100%;
+        max-width: 350px;
+        margin: auto;
+        justify-content: space-between;
+      }
+      .carousel-home-item {
+        width: 100%;
+        max-width: 170px;
+      }
+      .carousel-home-item .img-item-carousel {
+        width: 170px;
+        height: 170px;
+        border-radius: 5px;
+      }
+      .carousel-home-item .carousel-item-detail {
+        width: 100%;
+        font-size: 13px;
+      }
+      .caroudel-button {
+        margin-top: 15px;
+      }
+      .carousel-home-item .price-item {
+        width: 118px;
+        height: 15px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        letter-spacing: -0.02em;
+      }
+
+      .font-text-carousel {
+        font-weight: 400;
+        line-height: 16px;
+      }
+
+      .price-item .old-price {
+        color: black;
+        text-decoration: line-through;
+      }
+
+      .price-item .new-price {
+        color: #bf8977;
+      }
+      .button-show-more {
+        width: 74px;
+        height: 14px;
+        background: #20404f;
+        border-radius: 3px;
+        color: #ffffff;
+        font-size: 13px;
+      }
+      .three-step-wrapper {
+        width: 100%;
+        max-width: 348px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 28px;
+        padding-bottom: 40px;
+      }
+      .title-three-step {
+        width: 244px;
+        height: 31px;
+        background: #20404f;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        border-radius: 6px;
+      }
+      .once-of-three-step .title-step {
+        margin-top: 11px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+      .once-of-three-step .step-content {
+        width: 348px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+        background: #e9dfd3;
+        color: #20404f;
+        font-size: 14px;
+      }
+    </style>
+    <style>
+      /*------------------------------- footer copyright ------------------------*/
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        font-family: "Nunito", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* border: 1px solid gray; */
+      }
+      #footer-copyright_container {
+        max-width: 500px;
+        background-color: rgba(191, 137, 119, 0.5);
+        color: #20404f;
+        padding: 0 22px;
+        margin: auto;
+      }
+
+      .footer-coppyright-title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+      }
+      .footer-copyright-subscribe {
+        padding: 11px 0;
+      }
+
+      #footer-copyright-collapse-wrap {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        border-bottom: 1px solid #d9d9d9;
+        padding: 4px 0;
+        height: 38px;
+      }
+      .footer_copyright-content-warp-items {
+        padding-top: 12px;
+      }
+      .footer_copyright-content-items {
+        padding: 5px 0;
+      }
+      .footer_copyright-content-items-thin {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 19px;
+        padding: 5px 0;
+      }
+      .footer-coppyright-content-detail1 {
+        padding: 8px 0 6px;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .footer-coppyright-content-detail2 {
+        font-size: 14px;
+        font-weight: 600;
+        padding-bottom: 12px;
+      }
+      button {
+        padding: 0;
+      }
+      .footer-coppyright-subcribe-wap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #footer-coppyright-subcribe-input {
+        border-radius: 4px;
+        border: 1px solid #20404f;
+        background: rgba(191, 137, 119, 0.01);
+        width: 244px;
+        height: 32px;
+        font-size: 12px;
+        padding-left: 11px;
+      }
+      #footer-coppyright-subcribe-button {
+        width: 89px;
+        border-radius: 4px;
+        height: 32px;
+        background-color: rgba(32, 64, 79, 1);
+        color: rgba(191, 137, 119, 1);
+        border: none;
+      }
+      .footer-coppyright-author {
+        font-size: 14px;
+        padding: 26px 0 12px 0;
+      }
+    </style>
+    <style>
+      /*-------------------- footer -----------------*/
+      #footer_container {
+        max-width: 500px;
+        margin: auto;
+      }
+      #footer_wrap {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        background-color: #20404f;
+        color: #bf8977;
+        padding: 15px 24px;
+      }
+      #footer_wrap-left {
+        margin-top: 3px;
+        display: flex;
+      }
+      .footer_icon-social {
+        display: flex;
+        font-size: 18px;
+        overflow: hidden;
+      }
+      .footer_icon-social-center {
+        margin: 0 12px;
+      }
+
+      #footer_wrap-right {
+        display: flex;
+      }
+      .footer_icon-paycard {
+        width: 42px;
+        border-radius: 2px;
+      }
+      .footer_icon-paycard img {
+        width: 42px;
+      }
+      .footer_icon-paycard-center {
+        margin: 0 39px;
+      }
+      #footer-coppyright-subcribe-wap {
+        align-items: center;
+      }
+      #footer-coppyright-subcribe-wap button {
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header_container">
+      <div id="header_wrap">
+        <div id="header-wrap-left">
+          <div id="header_bar" onclick="onMenuDropdown()">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+
+          <!-- dropdown -->
+
+          <div class="header-dropdown-wrap-item" onclick="">
+            <div class="header-dropdown-item"><a href="#">Home</a></div>
+
+            <div class="header-dropdown-item">
+              <a href="#">Best Sallers</a>
+            </div>
+
+            <div
+              class="header-dropdown-item header-dropdown-item-dropdown"
+              onclick="onProductMenuDropdown()"
+            >
+              <div>Product</div>
+              <i
+                class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
+              ></i>
+              <div class="header-dropdown-wrap-product-item">
+                <a href="https://fmzee.com/?page_id=3039&preview=true">
+                  <div class="header-dropdown-item"><div>Ornament</div></div>
+                </a>
+                <a href="https://fmzee.com/?page_id=3041&preview=true">
+                  <div class="header-dropdown-item">
+                    <div>Tumbler</div>
+                  </div>
+                </a>
+
+                <a href="https://fmzee.com/?page_id=3043&preview=true">
+                  <div class="header-dropdown-item">
+                    <div>Door mat</div>
+                  </div>
+                </a>
+
+                <a href="https://fmzee.com/?page_id=3045&preview=true">
+                  <div class="header-dropdown-item">
+                    <div>Door sign</div>
+                  </div>
+                </a>
+
+                <a href="https://fmzee.com/?page_id=3047&preview=true">
+                  <div class="header-dropdown-item">
+                    <div>2 Layered Door Sign</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- dropdown Product -->
+
+            <div class="header-dropdown-item">
+              <a href="#">Wishlist</a>
+            </div>
+
+            <div class="header-dropdown-item">
+              <a href="#">Gift Card</a>
+            </div>
+
+            <div class="header-dropdown-item">
+              <a href="https://fmzee.com/?page_id=2999&preview=true">Login</a>
+            </div>
+
+            <!-- test -->
+          </div>
+          <div id="header_brand-icon">
+            <img src="https://fmzee.com/header-logo/" alt="logo_brand" />
+          </div>
+        </div>
+
+        <div id="header-wrap-right">
+          <div id="header_search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div id="header_user-info"><i class="fa-regular fa-user"></i></div>
+          <div id="header_card">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div id="header_card-index">1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="home-page-container">
+      <div class="home-page-wrapper">
+        <div>
+          <img
+            class="home-page-banner"
+            src="https://fmzee.com/wp-content/uploads/2022/08/gd-MOBI-01.png"
+            alt=""
+          />
+        </div>
+        <div class="home-page-carousel">
+          <div class="carousel-wrapper">
+            <div class="title-carousel">TUMBLER</div>
+            <div
+              id="carouselExampleControls-TUMBLER"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="carousel-home-slide d-flex">
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-home-slide d-flex">
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-home-slide d-flex">
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-home-slide d-flex">
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleControls-TUMBLER"
+                role="button"
+                data-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true">
+                  <i class="fa-solid fa-angle-left"></i>
+                </span>
+                <span class="sr-only"></span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleControls-TUMBLER"
+                data-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true">
+                  <i class="fa-solid fa-angle-right"></i>
+                </span>
+                <span class="sr-only"></span>
+              </a>
+            </div>
+            <div class="caroudel-button d-flex justify-content-center">
+              <div
+                class="button-show-more font-text-carousel d-flex justify-content-center align-items-center"
+              >
+                + see more
+              </div>
+            </div>
+          </div>
+          <div class="carousel-wrapper">
+            <div class="title-carousel">DOOR-SIGN</div>
+            <div
+              id="carouselExampleControls-Door-Sign"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="carousel-home-slide d-flex">
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-home-slide d-flex">
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-home-slide d-flex">
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-home-slide d-flex">
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleControls-Door-Sign"
+                role="button"
+                data-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true">
+                  <i class="fa-solid fa-angle-left"></i>
+                </span>
+                <span class="sr-only"></span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleControls-Door-Sign"
+                role="button"
+                data-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true">
+                  <i class="fa-solid fa-angle-right"></i>
+                </span>
+                <span class="sr-only"></span>
+              </a>
+            </div>
+            <div class="caroudel-button d-flex justify-content-center">
+              <div
+                class="button-show-more font-text-carousel d-flex justify-content-center align-items-center"
+              >
+                + see more
+              </div>
+            </div>
+          </div>
+          <div class="carousel-wrapper">
+            <div class="title-carousel">ORNAMENT</div>
+            <div
+              id="carouselExampleControls-ORNAMENT"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="carousel-home-slide d-flex">
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-home-slide d-flex">
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-home-slide d-flex">
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-home-slide d-flex">
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-home-item">
+                      <img
+                        src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
+                        alt=""
+                        class="img-item-carousel"
+                      />
+                      <div class="carousel-item-detail font-text-carousel">
+                        Personalized Teacher Door Sign, Classroom Door Sign,
+                        Custom Teacher Sign,
+                      </div>
+                      <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$28.92</p>
+                        <p class="new-price font-text-carousel">$21.9</p>
+                      </div>
+                      <div class="rating-item d-flex">
+                        <div class="star-rating">
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                          <span class="fa fa-star checked star-icon"></span>
+                        </div>
+                        <div class="number-person-rating font-text-carousel">
+                          (15)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleControls-ORNAMENT"
+                role="button"
+                data-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true">
+                  <i class="fa-solid fa-angle-left"></i>
+                </span>
+                <span class="sr-only"></span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleControls-ORNAMENT"
+                role="button"
+                data-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true">
+                  <i class="fa-solid fa-angle-right"></i>
+                </span>
+                <span class="sr-only"></span>
+              </a>
+            </div>
+            <div class="caroudel-button d-flex justify-content-center">
+              <div
+                class="button-show-more font-text-carousel d-flex justify-content-center align-items-center"
+              >
+                + see more
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="three-step-wrapper">
+          <div class="title-three-step-blog d-flex justify-content-center">
+            <div
+              class="title-three-step d-flex justify-content-center align-items-center"
+            >
+              How to customize yours
+            </div>
+          </div>
+          <div class="once-of-three-step">
+            <p class="title-step d-flex justify-content-center">
+              Step 1: Choose Producth
+            </p>
+            <div
+              class="step-content font-text-carousel d-flex justify-content-center text-alight-center"
+            >
+              Choose the product you want to purchase.
+            </div>
+          </div>
+          <div class="once-of-three-step">
+            <p class="title-step d-flex justify-content-center">
+              Step 2: Pick Your Buddies
+            </p>
+            <div
+              class="step-content font-text-carousel d-flex justify-content-center text-alight-center"
+            >
+              1000+ furry buddies are waiting to be added to your final gifts.
+              don’t forget put his/ her name as well.
+            </div>
+          </div>
+          <div class="once-of-three-step">
+            <p class="title-step d-flex justify-content-center">
+              Step 3: Place Your Order
+            </p>
+            <div
+              class="step-content font-text-carousel d-flex justify-content-center text-alight-center"
+            >
+              Let’s add to cart, process payments and wait for the final gifts
+              to knock on your door!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer-copyright_container">
+      <div id="footer-copyright_wrap">
+        <div class="footer-copyright-collapse">
+          <div
+            data-bs-toggle="collapse"
+            href="#quick_link"
+            aria-expanded="false"
+            aria-controls="quick_link"
+            id="footer-copyright-collapse-wrap"
+          >
+            <div class="footer-coppyright-title">Quick Links</div>
+            <div class="footer-copyright-icon">
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+          <div class="collapse" id="quick_link">
+            <div class="footer_copyright-content-warp-items">
+              <div class="footer_copyright-content-items">Home</div>
+              <div class="footer_copyright-content-items">About Us</div>
+              <div class="footer_copyright-content-items">Contact Us</div>
+              <div class="footer_copyright-content-items">FAQ</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright-collapse">
+          <div class="footer-copyright-collapse">
+            <div
+              data-bs-toggle="collapse"
+              href="#Policies"
+              aria-expanded="false"
+              aria-controls="Policies"
+              id="footer-copyright-collapse-wrap"
+            >
+              <div class="footer-coppyright-title">Policies</div>
+              <div class="footer-copyright-icon">
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse" id="Policies">
+              <div class="footer_copyright-content-warp-items">
+                <div class="footer_copyright-content-items">Privacy Policy</div>
+                <div class="footer_copyright-content-items">
+                  Shipping Policy
+                </div>
+                <div class="footer_copyright-content-items">
+                  Refund & Return Policy
+                </div>
+                <div class="footer_copyright-content-items">
+                  Terms and Conditions
+                </div>
+                <div class="footer_copyright-content-items">Payment Method</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright-collapse">
+          <div class="footer-copyright-collapse">
+            <div
+              data-bs-toggle="collapse"
+              href="#getInTouch"
+              aria-expanded="false"
+              aria-controls="getInTouch"
+              id="footer-copyright-collapse-wrap"
+            >
+              <div class="footer-coppyright-title">Get In Touch</div>
+              <div class="footer-copyright-icon">
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse" id="getInTouch">
+              <div class="footer_copyright-content-warp-items">
+                <div class="footer_copyright-content-items-thin">
+                  If you have any questions, please contact us by this email
+                  below
+                </div>
+                <div class="footer_copyright-content-items-thin">
+                  <i class="fa-regular fa-envelope"></i>
+                  Email: suppost.fmzee@gmail.com UK Address: 24-26 Arcadia
+                </div>
+                <div class="footer_copyright-content-items-thin">
+                  Avenue, Dephna House #105, London, Greater London, United
+                  Kingdom, N3 2JU
+                </div>
+
+                <div class="footer_copyright-content-items-thin">
+                  Delivery Delays Due To Covid-19
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright-subscribe">
+          <div class="footer-coppyright-title">Newsletter</div>
+          <div class="footer-coppyright-content">
+            <div class="footer-coppyright-content-detail1">
+              Subscribe to be notified about product launches,
+              <br />special offers and news.
+            </div>
+            <div class="footer-coppyright-content-detail2">
+              Enter your email and get your first treat,
+              <br />
+              an instant 25% discount off your first order!
+            </div>
+          </div>
+          <div class="footer-coppyright-subcribe-wap">
+            <input
+              id="footer-coppyright-subcribe-input"
+              type="text"
+              placeholder="your email:"
+            />
+            <button id="footer-coppyright-subcribe-button">Subcribe</button>
+          </div>
+          <div class="footer-coppyright-author">
+            © 2022 FMzee - Personalized Door Sign, Ornament, Tumbler & Home
+            Decor
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer_container">
+      <div id="footer_wrap">
+        <div id="footer_wrap-left">
+          <div class="footer_icon-social">
+            <i class="fa-brands fa-facebook"></i>
+          </div>
+          <div class="footer_icon-social footer_icon-social-center">
+            <i class="fa-brands fa-square-twitter"></i>
+          </div>
+          <div class="footer_icon-social">
+            <i class="fa-brands fa-square-instagram"></i>
+          </div>
+        </div>
+        <div id="footer_wrap-right">
+          <div class="footer_icon-paycard">
+            <img src=" https://fmzee.com/productdetail-pay-visa/" alt="" />
+          </div>
+          <div class="footer_icon-paycard footer_icon-paycard-center">
+            <img src="https://fmzee.com/productdetail-pay-paypal/" alt="" />
+          </div>
+          <div class="footer_icon-paycard">
+            <img
+              src=" https://fmzee.com/productdetail-pay-mastercard/"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function onMenuDropdown() {
+        $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+      }
+      function onProductMenuDropdown() {
+        $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
+      }
+
+      $(document).click(function (e) {
+        if (
+          $(e.target?.parentElement?.parentElement).is(
+            $(".header-dropdown-wrap-item")[0]
+          ) ||
+          $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
+          $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
+          $(e.target.parentElement).is($("#header_bar")[0]) ||
+          $(e.target).is($("#header_bar")[0])
+        ) {
+        } else {
+          if (
+            $(".header-dropdown-wrap-item")[0].classList.contains(
+              "visibleClass"
+            )
+          ) {
+            $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+          }
+        }
+      });
+    </script>
+    <script>
+      // display img on product
+      $("img.lazy-load").each(function () {
+        $(this).attr("src", $(this).attr("data-src"));
+      });
+    </script>
+  </body>
+</html>
