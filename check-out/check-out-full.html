@@ -116,6 +116,10 @@
         z-index: 100000;
         display: none;
       }
+      .header-dropdown-wrap-item a {
+        width: 100%;
+        display: inline-block;
+      }
       .header-dropdown-item {
         padding: 5px 0 2px 22px;
         margin-top: 4px;
@@ -159,6 +163,9 @@
       }
       .visibleClass {
         display: block;
+      }
+      .select-header-menu {
+        color: #bf8977;
       }
     </style>
     <!-- content -->
@@ -487,6 +494,10 @@
       .footer_copyright-content-warp-items {
         padding-top: 12px;
       }
+      .footer_copyright-content-warp-items a {
+        text-decoration: none;
+        color: #20404f;
+      }
       .footer_copyright-content-items {
         padding: 5px 0;
       }
@@ -534,6 +545,9 @@
       .footer-coppyright-author {
         font-size: 14px;
         padding: 26px 0 12px 0;
+      }
+      .pr-4 {
+        padding-right: 16px;
       }
     </style>
     <style>
@@ -595,10 +609,12 @@
           <!-- dropdown -->
 
           <div class="header-dropdown-wrap-item" onclick="">
-            <div class="header-dropdown-item"><a href="#">Home</a></div>
+            <div class="header-dropdown-item">
+              <a href="https://fmzee.com/mobile-home/">Home</a>
+            </div>
 
             <div class="header-dropdown-item">
-              <a href="#">Best Sallers</a>
+              <a href="https://fmzee.com/mobile-best-seller/">Best Sallers</a>
             </div>
 
             <div
@@ -641,21 +657,23 @@
             <!-- dropdown Product -->
 
             <div class="header-dropdown-item">
-              <a href="#">Wishdivst</a>
+              <a href="https://fmzee.com/mobile-wish-list/">Wishdivst</a>
             </div>
 
             <div class="header-dropdown-item">
-              <a href="#">Gift Card</a>
+              <a href="https://fmzee.com/mobile-giftcard-detail/">Gift Card</a>
             </div>
 
             <div class="header-dropdown-item">
-              <a href="https://fmzee.com/?page_id=2999&preview=true">Login</a>
+              <a href="https://fmzee.com/mobile-sign-in/">Login</a>
             </div>
 
             <!-- test -->
           </div>
           <div id="header_brand-icon">
-            <img src="https://fmzee.com/header-logo/" alt="logo_brand" />
+            <a href="https://fmzee.com/mobile-home/"
+              ><img src="https://fmzee.com/header-logo/" alt="logo_brand"
+            /></a>
           </div>
         </div>
 
@@ -1173,9 +1191,15 @@
           </div>
           <div class="collapse" id="quick_link">
             <div class="footer_copyright-content-warp-items">
-              <div class="footer_copyright-content-items">Home</div>
-              <div class="footer_copyright-content-items">About Us</div>
-              <div class="footer_copyright-content-items">Contact Us</div>
+              <div class="footer_copyright-content-items">
+                <a href="https://fmzee.com/mobile-home/">Home</a>
+              </div>
+              <div class="footer_copyright-content-items">
+                <a href="https://fmzee.com/mobile-about-us/">About Us</a>
+              </div>
+              <div class="footer_copyright-content-items">
+                <a href="https://fmzee.com/mobile-contact-us/">Contact Us</a>
+              </div>
               <div class="footer_copyright-content-items">FAQ</div>
             </div>
           </div>
@@ -1196,17 +1220,29 @@
             </div>
             <div class="collapse" id="Policies">
               <div class="footer_copyright-content-warp-items">
-                <div class="footer_copyright-content-items">Privacy Policy</div>
                 <div class="footer_copyright-content-items">
-                  Shipping Policy
+                  <a href="https://fmzee.com/mobile-Privacy-Policy/"
+                    >Privacy Policy</a
+                  >
                 </div>
                 <div class="footer_copyright-content-items">
-                  Refund & Return Policy
+                  <a href="https://fmzee.com/mobile-Shipping-Policy/"
+                    >Shipping Policy</a
+                  >
                 </div>
                 <div class="footer_copyright-content-items">
-                  Terms and Conditions
+                  <a href="https://fmzee.com/mobile-Return-refund/"
+                    >Refund & Return Policy</a
+                  >
                 </div>
-                <div class="footer_copyright-content-items">Payment Method</div>
+                <div class="footer_copyright-content-items">
+                  <a href="https://fmzee.com/mobile-Terms-Conditions/"
+                    >Terms and Conditions</a
+                  >
+                </div>
+                <div class="footer_copyright-content-items">
+                  <a href="#">Payment Method</a>
+                </div>
               </div>
             </div>
           </div>
@@ -1324,6 +1360,40 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // header
+      function onMenuDropdown() {
+        $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+      }
+      function onProductMenuDropdown() {
+        $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
+      }
+      $(".header-dropdown-item").on("click", function () {
+        console.log($(this));
+        $(this).addClass("select-header-menu");
+      });
+
+      $(document).click(function (e) {
+        if (
+          $(e.target?.parentElement?.parentElement).is(
+            $(".header-dropdown-wrap-item")[0]
+          ) ||
+          $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
+          $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
+          $(e.target.parentElement).is($("#header_bar")[0]) ||
+          $(e.target).is($("#header_bar")[0])
+        ) {
+        } else {
+          if (
+            $(".header-dropdown-wrap-item")[0].classList.contains(
+              "visibleClass"
+            )
+          ) {
+            $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+          }
+        }
+      });
+    </script>
     <script>
       //----------------------- footer -----------------------
       function onMenuDropdown() {

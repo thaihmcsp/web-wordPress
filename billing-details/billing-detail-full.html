@@ -19,144 +19,151 @@
       referrerpolicy="no-referrer"
     />
     <style>
-      /*------------------- header -------------------*/
-      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-      * {
-        font-family: "Nunito", sans-serif;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        /* border: 1px solid gray; */
-      }
-      #header {
-        display: none;
-      }
-      .page-wrapper {
-        padding-top: 0;
-      }
-      .row {
-        margin-left: 0;
-        margin-right: 0;
-      }
-      .col {
-        padding: 0;
-      }
-      #header_container {
-        max-width: 500px; /*figma: 390px */
-        height: 69px;
-        background-color: #20404f;
-        color: #e9dfd3;
-        margin: auto;
-      }
-      #header_wrap {
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        padding: 0 21px 5px 21px;
-        position: relative;
-      }
-      #header-wrap-left {
-        height: 100%;
-        display: flex;
-        align-items: flex-end;
-      }
-      #header_bar {
-        position: relative;
-        font-size: 25px;
-        padding-right: 21px;
-      }
-
-      #header_brand-icon {
-        width: 133px;
-        height: 46px;
-      }
-
-      #header-wrap-right {
-        display: flex;
-        margin-bottom: 6px;
-      }
-      #header_search {
-        font-size: 20px;
-      }
-      #header_user-info {
-        font-size: 20px;
-        margin: 0 11px;
-      }
-      #header_card {
-        font-size: 20px;
-        position: relative;
-      }
-      #header_card-index {
-        position: absolute;
-        top: -5px;
-        right: -5px;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: #bf8977;
-        text-align: center;
-        line-height: 15px;
-        font-size: 13px;
-      }
-      .header-dropdown-wrap-item {
-        border-radius: 5px;
-        position: absolute;
-        top: 0px;
-        transform: translate3d(1px, 70px, 0px) !important;
-        border: none;
-        left: 0;
-        width: 189px;
-        padding: 4px 0 32px 0;
-        background: #20404f;
-        z-index: 100000;
-        display: none;
-      }
-      .header-dropdown-item {
-        padding: 5px 0 2px 22px;
-        margin-top: 4px;
-        font-size: 14px;
-        color: #e9dfd3;
-        font-weight: 400;
-        text-decoration: none;
-        border-bottom: 1px solid rgba(217, 217, 217, 0.5);
-      }
-      .header-dropdown-item-dropdown {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .header-dropdown-item-dropdown-icon {
-        margin-right: 16px;
-      }
-      .header-dropdown-item a {
-        font-size: 14px;
-        color: #e9dfd3;
-        font-weight: 400;
-        text-decoration: none;
-      }
-      .dropdown-divider {
-        margin: 0;
-      }
-
-      .header-dropdown-wrap-product-item {
-        border-radius: 5px;
-        position: absolute;
-        top: -73px;
-        transform: translate3d(1px, 70px, 0px) !important;
-        border: none;
-        width: 165px;
-        padding: 4px 0 32px 0;
-        background: #20404f;
-        left: 100%;
-        z-index: 10000;
-        display: none;
-      }
-      .visibleClass {
-        display: block;
-      }
-    </style>
+        /*------------------- header -------------------*/
+        @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+        * {
+          font-family: "Nunito", sans-serif;
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          /* border: 1px solid gray; */
+        }
+        #header {
+          display: none;
+        }
+        .page-wrapper {
+          padding-top: 0;
+        }
+        .row {
+          margin-left: 0;
+          margin-right: 0;
+        }
+        .col {
+          padding: 0;
+        }
+        #header_container {
+          max-width: 500px; /*figma: 390px */
+          height: 69px;
+          background-color: #20404f;
+          color: #e9dfd3;
+          margin: auto;
+        }
+        #header_wrap {
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          padding: 0 21px 5px 21px;
+          position: relative;
+        }
+        #header-wrap-left {
+          height: 100%;
+          display: flex;
+          align-items: flex-end;
+        }
+        #header_bar {
+          position: relative;
+          font-size: 25px;
+          padding-right: 21px;
+        }
+  
+        #header_brand-icon {
+          width: 133px;
+          height: 46px;
+        }
+  
+        #header-wrap-right {
+          display: flex;
+          margin-bottom: 6px;
+        }
+        #header_search {
+          font-size: 20px;
+        }
+        #header_user-info {
+          font-size: 20px;
+          margin: 0 11px;
+        }
+        #header_card {
+          font-size: 20px;
+          position: relative;
+        }
+        #header_card-index {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: #bf8977;
+          text-align: center;
+          line-height: 15px;
+          font-size: 13px;
+        }
+        .header-dropdown-wrap-item {
+          border-radius: 5px;
+          position: absolute;
+          top: 0px;
+          transform: translate3d(1px, 70px, 0px) !important;
+          border: none;
+          left: 0;
+          width: 189px;
+          padding: 4px 0 32px 0;
+          background: #20404f;
+          z-index: 100000;
+          display: none;
+        }
+        .header-dropdown-wrap-item a {
+          width: 100%;
+          display: inline-block;
+        }
+        .header-dropdown-item {
+          padding: 5px 0 2px 22px;
+          margin-top: 4px;
+          font-size: 14px;
+          color: #e9dfd3;
+          font-weight: 400;
+          text-decoration: none;
+          border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+        }
+        .header-dropdown-item-dropdown {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .header-dropdown-item-dropdown-icon {
+          margin-right: 16px;
+        }
+        .header-dropdown-item a {
+          font-size: 14px;
+          color: #e9dfd3;
+          font-weight: 400;
+          text-decoration: none;
+        }
+        .dropdown-divider {
+          margin: 0;
+        }
+  
+        .header-dropdown-wrap-product-item {
+          border-radius: 5px;
+          position: absolute;
+          top: -73px;
+          transform: translate3d(1px, 70px, 0px) !important;
+          border: none;
+          width: 165px;
+          padding: 4px 0 32px 0;
+          background: #20404f;
+          left: 100%;
+          z-index: 10000;
+          display: none;
+        }
+        .visibleClass {
+          display: block;
+        }
+        .select-header-menu {
+          color: #bf8977;
+        }
+      </style>
     <style>
       /*-------------------------------- billing detail -------------------------------- */
       * {
@@ -171,6 +178,7 @@
         transform: rotate(-0.08deg);
       }
       .billing_detail_container {
+        width: 95%;
         max-width: 500px;
         margin: auto;
         padding: 0 21px;
@@ -292,6 +300,7 @@
         text-transform: capitalize;
         color: #e9dfd3;
       }
+
       hr {
         max-width: 500px;
         margin: auto;
@@ -334,6 +343,10 @@
       }
       .footer_copyright-content-warp-items {
         padding-top: 12px;
+      }
+      .footer_copyright-content-warp-items a {
+        text-decoration: none;
+        color: #20404f;
       }
       .footer_copyright-content-items {
         padding: 5px 0;
@@ -437,92 +450,95 @@
   </head>
   <body>
     <div id="header_container">
-      <div id="header_wrap">
-        <div id="header-wrap-left">
-          <div id="header_bar" onclick="onMenuDropdown()">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-
-          <!-- dropdown -->
-
-          <div class="header-dropdown-wrap-item" onclick="">
-            <div class="header-dropdown-item"><a href="#">Home</a></div>
-
-            <div class="header-dropdown-item">
-              <a href="#">Best Sallers</a>
+        <div id="header_wrap">
+          <div id="header-wrap-left">
+            <div id="header_bar" onclick="onMenuDropdown()">
+              <i class="fa-solid fa-bars"></i>
             </div>
-
-            <div
-              class="header-dropdown-item header-dropdown-item-dropdown"
-              onclick="onProductMenuDropdown()"
-            >
-              <div>Product</div>
-              <i
-                class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
-              ></i>
-              <div class="header-dropdown-wrap-product-item">
-                <a href="https://fmzee.com/?page_id=3039&preview=true">
-                  <div class="header-dropdown-item"><div>Ornament</div></div>
-                </a>
-                <a href="https://fmzee.com/?page_id=3041&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>Tumbler</div>
-                  </div>
-                </a>
-
-                <a href="https://fmzee.com/?page_id=3043&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>Door mat</div>
-                  </div>
-                </a>
-
-                <a href="https://fmzee.com/?page_id=3045&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>Door sign</div>
-                  </div>
-                </a>
-
-                <a href="https://fmzee.com/?page_id=3047&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>2 Layered Door Sign</div>
-                  </div>
-                </a>
+  
+            <!-- dropdown -->
+  
+            <div class="header-dropdown-wrap-item" onclick="">
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/mobile-home/">Home</a>
               </div>
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/mobile-best-seller/">Best Sallers</a>
+              </div>
+  
+              <div
+                class="header-dropdown-item header-dropdown-item-dropdown"
+                onclick="onProductMenuDropdown()"
+              >
+                <div>Product</div>
+                <i
+                  class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
+                ></i>
+                <div class="header-dropdown-wrap-product-item">
+                  <a href="https://fmzee.com/?page_id=3039&preview=true">
+                    <div class="header-dropdown-item"><div>Ornament</div></div>
+                  </a>
+                  <a href="https://fmzee.com/?page_id=3041&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>Tumbler</div>
+                    </div>
+                  </a>
+  
+                  <a href="https://fmzee.com/?page_id=3043&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>Door mat</div>
+                    </div>
+                  </a>
+  
+                  <a href="https://fmzee.com/?page_id=3045&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>Door sign</div>
+                    </div>
+                  </a>
+  
+                  <a href="https://fmzee.com/?page_id=3047&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>2 Layered Door Sign</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- dropdown Product -->
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/mobile-wish-list/">Wishdivst</a>
+              </div>
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/mobile-giftcard-detail/">Gift Card</a>
+              </div>
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/mobile-sign-in/">Login</a>
+              </div>
+  
+              <!-- test -->
             </div>
-            <!-- dropdown Product -->
-
-            <div class="header-dropdown-item">
-              <a href="#">Wishdivst</a>
+            <div id="header_brand-icon">
+              <a href="https://fmzee.com/mobile-home/"
+                ><img src="https://fmzee.com/header-logo/" alt="logo_brand"
+              /></a>
             </div>
-
-            <div class="header-dropdown-item">
-              <a href="#">Gift Card</a>
-            </div>
-
-            <div class="header-dropdown-item">
-              <a href="https://fmzee.com/?page_id=2999&preview=true">Login</a>
-            </div>
-
-            <!-- test -->
           </div>
-          <div id="header_brand-icon">
-            <img src="https://fmzee.com/header-logo/" alt="logo_brand" />
-          </div>
-        </div>
-
-        <div id="header-wrap-right">
-          <div id="header_search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <div id="header_user-info"><i class="fa-regular fa-user"></i></div>
-          <div id="header_card">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <div id="header_card-index">1</div>
+  
+          <div id="header-wrap-right">
+            <div id="header_search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div id="header_user-info"><i class="fa-regular fa-user"></i></div>
+            <div id="header_card">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <div id="header_card-index">1</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div>
       <div class="billing_detail_container">
         <div class="billing_detail_breadcrumb pt-3">
           <p>Home / Product / Gift / Checkout / Billing Details</p>
@@ -704,7 +720,6 @@
         </div>
       </div>
       <div class="mt-5"></div>
-    </div>
 
     <div id="footer-copyright_container">
       <div id="footer-copyright_wrap">
@@ -723,9 +738,15 @@
           </div>
           <div class="collapse" id="quick_link">
             <div class="footer_copyright-content-warp-items">
-              <div class="footer_copyright-content-items">Home</div>
-              <div class="footer_copyright-content-items">About Us</div>
-              <div class="footer_copyright-content-items">Contact Us</div>
+              <div class="footer_copyright-content-items">
+                <a href="https://fmzee.com/mobile-home/">Home</a>
+              </div>
+              <div class="footer_copyright-content-items">
+                <a href="https://fmzee.com/mobile-about-us/">About Us</a>
+              </div>
+              <div class="footer_copyright-content-items">
+                <a href="https://fmzee.com/mobile-contact-us/">Contact Us</a>
+              </div>
               <div class="footer_copyright-content-items">FAQ</div>
             </div>
           </div>
@@ -746,17 +767,29 @@
             </div>
             <div class="collapse" id="Policies">
               <div class="footer_copyright-content-warp-items">
-                <div class="footer_copyright-content-items">Privacy Policy</div>
                 <div class="footer_copyright-content-items">
-                  Shipping Policy
+                  <a href="https://fmzee.com/mobile-Privacy-Policy/"
+                    >Privacy Policy</a
+                  >
                 </div>
                 <div class="footer_copyright-content-items">
-                  Refund & Return Policy
+                  <a href="https://fmzee.com/mobile-Shipping-Policy/"
+                    >Shipping Policy</a
+                  >
                 </div>
                 <div class="footer_copyright-content-items">
-                  Terms and Conditions
+                  <a href="https://fmzee.com/mobile-Return-refund/"
+                    >Refund & Return Policy</a
+                  >
                 </div>
-                <div class="footer_copyright-content-items">Payment Method</div>
+                <div class="footer_copyright-content-items">
+                  <a href="https://fmzee.com/mobile-Terms-Conditions/"
+                    >Terms and Conditions</a
+                  >
+                </div>
+                <div class="footer_copyright-content-items">
+                  <a href="#">Payment Method</a>
+                </div>
               </div>
             </div>
           </div>
@@ -876,13 +909,17 @@
     crossorigin="anonymous"
   ></script>
   <script>
-    //----------------------- footer -----------------------
+    // header footer
     function onMenuDropdown() {
       $(".header-dropdown-wrap-item").toggleClass("visibleClass");
     }
     function onProductMenuDropdown() {
       $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
     }
+    $(".header-dropdown-item").on("click", function () {
+      console.log($(this));
+      $(this).addClass("select-header-menu");
+    });
 
     $(document).click(function (e) {
       if (

@@ -12,6 +12,12 @@
       crossorigin="anonymous"
     />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
       integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
@@ -165,65 +171,76 @@
       }
     </style>
     <style>
-      /*------------------------- about-us ------------------------- */
+      /* -------------------------- imtroduction ------------------------- */
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
       * {
-        font-family: "Nunito", sans-serif;
         padding: 0;
         margin: 0;
         box-sizing: border-box;
+        font-family: "Nunito", sans-serif;
       }
-      hr {
-        height: 0.63px;
-        background: #20404f;
-        transform: rotate(-0.08deg);
-        margin: 0;
-      }
-      .about_us_container {
-        /* width: 95%;
-        margin: auto 21px; */
+      #introduction-container {
         max-width: 500px;
-        padding: 16px 21px 0 21px;
         margin: auto;
+        color: #20404f;
       }
-      .cus_breadcrumb {
-        font-weight: 400;
+      .introduction-container-toast {
+        border-bottom: 1px solid #20404f;
+        padding-top: 15px;
+        padding-left: 21px;
+        padding-bottom: 4px;
+      }
+
+      .introduction-container-toast p {
         font-size: 10px;
+        font-weight: 400;
         line-height: 19px;
-        color: rgba(32, 64, 79, 0.8);
       }
-      .about_sub_title {
+      .introduction-container-about {
+        padding: 0 21px;
+        padding-bottom: 17px;
+        border-bottom: 1px solid #20404f;
+      }
+      .introduction-container-about h2 {
+        padding-top: 22px;
+        text-transform: uppercase;
+        font-style: normal;
         font-weight: 700;
         font-size: 16px;
         line-height: 16px;
-        text-transform: capitalize;
-
-        color: #20404f;
       }
-      .about_title {
+      .introduction-container-about p {
+        margin-top: 10px;
         font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+      .introduction-container-share {
+        padding: 0 21px;
+      }
+      .introduction-container-share h2 {
+        margin-top: 24px;
+        font-size: 16px;
         line-height: 16px;
-        text-transform: uppercase;
-        text-align: center;
-      }
-      .paragraph {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 20px;
-        /* padding-bottom: 20px;
-        margin: 0; */
-      }
-      .highlight {
         font-weight: 700;
-        font-size: 14px;
-        line-height: 20px;
-        color: #20404f;
       }
-      .my-2 {
-        max-width: 500px;
-        margin: auto;
+      .introduction-container-share p {
+        font-style: normal;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
+      }
+      .introduction-container-share button {
+        background: #20404f;
+        border-radius: 5px;
+        border: none;
+        padding: 8px 51px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 16px;
+        color: #e9dfd3;
+        margin-top: 18px;
+        margin-bottom: 33px;
       }
     </style>
     <style>
@@ -459,66 +476,40 @@
         </div>
       </div>
     </div>
-    <div class="about_us_container">
-      <span class="cus_breadcrumb">Home / About Us</span>
-    </div>
-    <hr class="my-2" />
-    <div class="about_us_container">
-      <div class="about_content">
-        <div class="about_title">ABOUT FMZEE TEAM</div>
-        <div class="about_sub_title pb-2 pt-3">About Us</div>
-        <div class="paragraph">
-          <span class="highlight pl-1"> FMzee </span>
-          starts operating in early 2021. We are passionate about providing
-          unique gifts for many special occasions for yourself and your loved
-          ones. We are currently focusing on individual products such as
-          Tumbler, door signs, doormats, Ornament,… We feature new products
-          often too. We aim to create a one- stop shop for you to show
-          everything to your corner. With a professional design team,
-          <span class="highlight"> FMzee </span>
+    <!-- <div id="introduction-total-container"> -->
+    <div id="introduction-container">
+      <div class="introduction-container-toast">
+        <p>Home / Introduct</p>
+      </div>
+      <div class="introduction-container-about">
+        <h2>About us</h2>
+        <p>
+          <b>FMzee</b> starts operating in early 2021. We are passionate about
+          providing unique gifts for many special occasions for yourself and
+          your loved ones. We are currently focusing on individual products such
+          as Tumbler, door signs, doormats, Ornament,… We feature new products
+          often too. We aim to create a one-stop shop for you to show everything
+          to YOUR CORNER. With a professional design team,
+          <b>FMzee</b>
           will bring the best quality products at affordable prices to customers
-        </div>
-        <div class="about_sub_title pb-2 pt-3">Our Story</div>
-        <div class="paragraph">
-          <p>
-            <span class="pl-1">Our</span> store is committed to improving the
-            quality of better shopping experience with our wide selection of top
-            high products at rock bottom prices, our innovative marketing
-            department constantly searches for cutting- edge products to attract
-            and satisfy the broad demand of our customer base.
-          </p>
-          <p>
-            <span class="pl-1">Over</span> the last few years,
-            <span>FMzee</span> has achieved a leading market position, which has
-            helped us win over thousands of loyal customers all around the
-            world, more and more new and returning customers accessing our site
-            to get the unique personalized gifts idea.
-          </p>
-        </div>
-        <div class="about_sub_title pb-2 pt-2">Our mission</div>
-        <div class="paragraph">
-          <p>
-            <span class="pl-1">We</span> strive to bring you a variety of
-            high-quality products for the lowest possible prices. We also
-            believe that personalization is the most powerful way to express
-            your love to the person (or your beloved pets) you honor and also
-            your personal characteristics as well.
-          </p>
-          <p>
-            <span class="pl-1">We</span> are sure you will be pleased at the
-            time when your order arrives at your door, thus please don’t
-            hesitate to trust us by clicking the personalized products you like
-            here!
-          </p>
-        </div>
-        <span class="highlight">Email:</span>
-        <span class="paragraph">suppost.fmzee@gmail.com </span>
-        <span class="highlight">UK Address:</span>
-        <span class="paragraph"
-          >24-26 Arcadia Avenue, Dephna House #105, London, Greater London,
-          United Kingdom, N3 2JU</span
-        >
-        <div style="padding-bottom: 16px"></div>
+        </p>
+        <h2>Our mission</h2>
+        <p>
+          We strive to bring you a variety of high-quality products for the
+          lowest possible prices. We also believe that personalization is the
+          most powerful way to express your love to the person (or your beloved
+          pets) you honor and also your personal characteristics as well.
+        </p>
+        <p>
+          We are sure you will be pleased at the time when your order arrives at
+          your door, thus please don’t hesitate to trust us by clicking the
+          personalized products you like here!
+        </p>
+      </div>
+      <div class="introduction-container-share">
+        <h2>SHARE YOUR NEEDS</h2>
+        <p>Please contact us, all your wishes are heard.</p>
+        <button>Advise</button>
       </div>
     </div>
     <div id="footer-copyright_container">
@@ -687,6 +678,7 @@
         </div>
       </div>
     </div>
+    <!-- </div> -->
   </body>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
