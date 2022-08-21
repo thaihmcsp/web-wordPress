@@ -32,7 +32,8 @@
       box-sizing: border-box;
       /* border: 1px solid gray; */
     }
-    #header {
+    @media (max-width: 500px) {
+        #header {
       display: none;
     }
     .page-wrapper {
@@ -160,6 +161,7 @@
     .visibleClass {
       display: block;
     }
+    }
   </style>
     <style>
         /*------------------- header -------------------*/
@@ -171,6 +173,7 @@
           box-sizing: border-box;
           /* border: 1px solid gray; */
         }
+        @media (max-width: 500px){
         #header {
           display: none;
         }
@@ -306,11 +309,38 @@
         .select-header-menu {
           color: #bf8977;
         }
+            
+        }
       </style>
+
+    <style>
+        /*=========================== wordpress ========================*/
+        .large-5 {
+            flex-basis: 41.6666666667%;
+            max-width: 41.6666666667%;
+        }
+        .large-7 {
+            flex-basis: 58.3333333333%;
+            max-width: 58.3333333333%;
+        }
+        .row{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .button.icon.circle{
+            display: none;
+        }
+        @media (max-width:500px) {
+            .page-header-wrapper{
+                display: none;
+            }
+        }
+    </style>
     <style>
       /*------------------- HẾT CSS HEADER---------------- */
       /* PRODUCT DETAIL CSS */
-      .product-detail-container{
+        @media (max-width: 500px) {
+        .product-detail-container{
         max-width: 500px;
         margin: auto;
       }
@@ -337,6 +367,7 @@
       .product-detail-production-main-img img {
         max-width: 348px;
         border-radius: 5px;
+        width: 100%;
       }
       .product-detail-production-warp-img-small {
         display: flex;
@@ -349,6 +380,7 @@
       .product-detail-production-warp-img-small img {
         max-width: 80px;
         max-height: 80px;
+        border-radius: 5px;
       }
       .product-detail-description-product {
         margin: auto;
@@ -1671,9 +1703,11 @@
       button {
         border: none;
       }
+        }
     </style>
     <style>
-      #footer_container {
+      @media (max-width: 500px) {
+        #footer_container {
         max-width: 500px;
         margin: auto;
       }
@@ -1748,9 +1782,11 @@
       .col {
         padding: 0;
       }
+      }
     </style>
     <style>
-      .customer_rating_contained-app {
+        @media (max-width: 500px) {
+            .customer_rating_contained-app {
         background: #e9dfd3;
       }
       .customer_rating_contained {
@@ -1879,6 +1915,7 @@
       .review_onclick_block_rate {
         transition: all 1s ease-in-out;
       }
+        }
 
       /*----------------------- HẾT CUSTOMER REVIEWS AND RATE -----------------------------------*/
 
@@ -1894,7 +1931,8 @@
               box-sizing: border-box;
               /* border: 1px solid gray; */
             }
-            #footer-copyright_container {
+            @media (max-width: 500px) {
+                #footer-copyright_container {
               max-width: 500px;
               background-color: rgba(191, 137, 119, 0.5);
               color: #20404f;
@@ -1977,10 +2015,12 @@
             .pr-4 {
               padding-right: 16px;
             }
+            }
           </style>
           <style>
             /*-------------------- footer -----------------*/
-            #footer_container {
+            @media (max-width: 500px) {
+                #footer_container {
               max-width: 500px;
               margin: auto;
             }
@@ -2023,6 +2063,7 @@
             }
             #footer-coppyright-subcribe-wap button {
               padding: 0;
+            }
             }
           </style>
   </head>
@@ -2139,18 +2180,6 @@
             />
           </div>
           <div class="product-detail-production-warp-img-small">
-            <div class="product-detail-production-img-item">
-              <img src="https://fmzee.com/productdetail-option1/" alt="ảnh1" />
-            </div>
-            <div class="product-detail-production-img-item">
-              <img src="https://fmzee.com/productdetail-option2/" alt="ảnh2" />
-            </div>
-            <div class="product-detail-production-img-item">
-              <img src="https://fmzee.com/productdetail-option3/" alt="ảnh3" />
-            </div>
-            <div class="product-detail-production-img-item">
-              <img src="https://fmzee.com/productdetail-option4/" alt="ảnh4" />
-            </div>
           </div>
           <div class="product-detail-description-product">
             <div class="product-detail-production-description-content">
@@ -2160,8 +2189,8 @@
             </div>
           </div>
           <div class="product-detail-production-wrap-price">
-            <div class="product-detail-production-price-old">$28.92</div>
-            <div class="product-detail-production-price-new">$21.69</div>
+            <div class="product-detail-production-price-old"></div>
+            <div class="product-detail-production-price-new"></div>
           </div>
           <div class="product-detail-production-rate">
             <div class="product-detail-production-rate-star">
@@ -2427,6 +2456,9 @@
         </div>
 
         <!-- Best Salers -------------------------------------->
+        <div class="wordpress-data">
+            [products limit="10" columns="1" category="best-sallers" cat_operator="IN" paginate="true"]
+        </div>
         <div class="product-detail-best-salers-wrap">
           <div class="home-page-carousel">
             <div class="carousel-wrapper">
@@ -3230,11 +3262,89 @@
               readyDateEarly.toString().slice(3, 10) +
               " -" +
               readyDateLate.toString().slice(3, 10);
+            
+              let text = readyDateEarly.toString().slice(3, 10) +
+              " and" +
+              readyDateLate.toString().slice(3, 10);
             console.log(orderDate, readyDate, deliveryDate);
             $(".product-detail-payment-progress-description-detail-order-date").html(orderDate);
             $(".product-detail-payment-progress-description-detail-ready-date").html(readyDate);
             $(".product-detail-payment-progress-description-detail-delivery-date").html(deliveryDate);
+
+            $('.product-detail-payment-description-bold').html(text)
           </script>
-      
+      <script>
+        // get product info from word-press
+
+        // get image
+        $('.product-detail-production-main-img > img').attr('src', $('.wp-post-image').attr('src'))
+        $('.product-thumbnails.thumbnails').find('img').each(function(index, image){
+            $('.product-detail-production-warp-img-small').append(`
+            <div class="product-detail-production-img-item">
+              <img src="${$(image).attr('src')}" alt="ảnh${index}" />
+            </div>
+            `)
+        });
+
+        $('.product-detail-production-img-item').on('click', function(){
+            $('.product-detail-production-main-img > img').attr('src', $(this).find('img').attr('src'))
+        })
+
+        // get name
+        $('.product-detail-production-description-content').html($('.product-title strong').html())
+        
+        // get price
+        let dellPrice=''
+        $('.price.product-page-price > del bdi').each(function(i, price){
+            if(i > 0) dellPrice += ' - ';
+            dellPrice += `$${$(price).html().split('&nbsp;')[0]}`
+        })
+
+        let newPrice=''
+        $('.price.product-page-price > del').siblings().each(function(i, price){
+            if(i > 0) newPrice += ' - ';
+            newPrice += `$${$(price).find('bdi').html().split('&nbsp;')[0]}`
+        })
+        console.log(newPrice);
+        $('.product-detail-production-price-old').html(dellPrice)
+        $('.product-detail-production-price-new').html(newPrice)
+
+        // add to cart click
+        $('.product-detail-add-cart-btn').on('click', function(){
+            $('.single_add_to_cart_button.button.alt').trigger('click');
+        })
+
+        // quantity 
+        $('.plus.button.is-form').on('click', function(){
+            let newQuantity = $('.input-text.qty.text').val() * 1 + 1;
+            $('.input-text.qty.text').val(newQuantity);
+            $('.product-detail-add-cart-numb').html(newQuantity);
+        })
+        $('.minus.button.is-form').on('click', function(){
+            let newQuantity = $('.input-text.qty.text').val() * 1 - 1;
+            newQuantity = newQuantity <= 1 ? 1 : newQuantity;
+            $('.input-text.qty.text').val(newQuantity);
+            $('.product-detail-add-cart-numb').html(newQuantity);
+        })
+        $('.product-detail-add-cart-plus').on('click', function(){
+            $('.plus.button.is-form').trigger('click');
+        })
+        $('.product-detail-add-cart-sub').on('click', function(){
+            $('.minus.button.is-form').trigger('click');
+        })
+      </script>
+
+      <script>
+        // add data to carousel
+        let listData = []
+        $('.wordpress-data .product-small.box').each(function(index, product){
+            console.log($(product).find('.woocommerce-LoopProduct-link').attr('href'));
+            listData.push({
+                thumbnail: $(product).find('.lazy-load.attachment-woocommerce_thumbnail').attr('data-src'),
+                productName: $(product).find('.woocommerce-LoopProduct-link strong').html(),
+                link: $(product).find('.woocommerce-LoopProduct-link').attr('href')
+            })
+        })
+      </script>
   </body>
 </html>
