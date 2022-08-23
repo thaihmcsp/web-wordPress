@@ -460,11 +460,12 @@
       }
 
       .product-detail-production-choose-size-button-wrap {
-        width: 262px;
-        display: flex;
+        /* width: 262px; */
+        /* flex-wrap: wrap; */
+        /* display: flex; */
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
       }
 
       .product-detail-production-choose-size-button {
@@ -478,6 +479,8 @@
         letter-spacing: -0.02em;
         color: #ffffff;
         border: none;
+        margin-right: 16px;
+        margin-bottom: 16px;
       }
 
       /* Note */
@@ -2207,19 +2210,6 @@
           <div class="product-detail-production-choose-size">
             <div class="product-detail-production-choose-size-title">Size</div>
             <div class="product-detail-production-choose-size-button-wrap">
-              <button class="product-detail-production-choose-size-button">
-                12 inches
-              </button>
-              <button
-                class="product-detail-production-choose-size-button opacity08"
-              >
-                14 inches
-              </button>
-              <button
-                class="product-detail-production-choose-size-button opacity08"
-              >
-                18 inches
-              </button>
             </div>
           </div>
 
@@ -3108,6 +3098,13 @@
       </div>
 
     </div>
+    <!-- custom head -->
+    <script>
+        $('head').prepend(`
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        `)
+    </script>
     <!-- CUSTOMER REVIEWS AND RATE------------------------------------------- -->
     <!-- HẾT HTML PRODUCT DETAIL -->
       <script
@@ -3245,6 +3242,7 @@
         });
       </script>
           <script>
+            // add delivery date realtime
             let today = new Date();
             const orderDate = today.toString().slice(3, 10);
             let readyDateEarly = new Date();
@@ -3331,6 +3329,15 @@
         })
         $('.product-detail-add-cart-sub').on('click', function(){
             $('.minus.button.is-form').trigger('click');
+        })
+
+        // variable-item
+        $('.variable-items-wrapper.button-variable-items-wrapper.wvs-style-squared').find('.variable-item-span.variable-item-span-button').each(function(index, item){
+            $('.product-detail-production-choose-size-button-wrap').append(`
+                <button class="product-detail-production-choose-size-button">
+                    ${$(item).html()}
+                </button>
+            `)
         })
       </script>
 
