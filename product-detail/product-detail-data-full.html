@@ -23,330 +23,196 @@
     />
     <style>
       /*------------------- header -------------------*/
-      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-      * {
+        /*------------------- header -------------------*/
+        @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+        * {
         font-family: "Nunito", sans-serif;
         padding: 0;
         margin: 0;
         box-sizing: border-box;
         /* border: 1px solid gray; */
-      }
-      @media (max-width: 500px) {
+        }
+        @media (max-width: 500px) {
         #header {
-          display: none;
+            display: none;
         }
         .page-wrapper {
-          padding-top: 0;
+            padding-top: 0;
         }
         .row {
-          margin-left: 0;
-          margin-right: 0;
+            margin-left: 0;
+            margin-right: 0;
         }
         .col {
-          padding: 0;
+            padding: 0;
         }
         #header_container {
-          max-width: 500px; /*figma: 390px */
-          height: 69px;
-          background-color: #20404f;
-          color: #e9dfd3;
-          margin: auto;
+            max-width: 500px; /*figma: 390px */
+            background-color: #20404f;
+            color: #e9dfd3;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
         }
         #header_wrap {
-          height: 100%;
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-end;
-          padding: 0 21px 5px 21px;
-          position: relative;
+            height: 69px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 0 21px 5px 21px;
+            position: relative;
         }
         #header-wrap-left {
-          height: 100%;
-          display: flex;
-          align-items: flex-end;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
         }
         #header_bar {
-          position: relative;
-          font-size: 25px;
-          padding-right: 21px;
+            position: relative;
+            font-size: 25px;
+            padding-right: 21px;
         }
 
         #header_brand-icon {
-          width: 133px;
-          height: 46px;
+            width: 133px;
+            height: 46px;
         }
 
         #header-wrap-right {
-          display: flex;
-          margin-bottom: 6px;
+            display: flex;
+            margin-bottom: 6px;
         }
         #header_search {
-          font-size: 20px;
+            font-size: 20px;
         }
         #header_user-info {
-          font-size: 20px;
-          margin: 0 11px;
+            font-size: 20px;
+            margin: 0 11px;
         }
         #header_card {
-          font-size: 20px;
-          position: relative;
+            font-size: 20px;
+            position: relative;
         }
-        #header_card a {
-            color:#E9DFD3;
+        #header_card a, #header_user-info a {
+            color: #e9dfd3;
         }
         #header_card-index {
-          position: absolute;
-          top: -5px;
-          right: -5px;
-          width: 15px;
-          height: 15px;
-          border-radius: 50%;
-          background-color: #bf8977;
-          text-align: center;
-          line-height: 15px;
-          font-size: 13px;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #bf8977;
+            text-align: center;
+            line-height: 15px;
+            font-size: 13px;
         }
         .header-dropdown-wrap-item {
-          border-radius: 5px;
-          position: absolute;
-          top: 0px;
-          transform: translate3d(1px, 70px, 0px) !important;
-          border: none;
-          left: 0;
-          width: 189px;
-          padding: 4px 0 32px 0;
-          background: #20404f;
-          z-index: 100000;
-          display: none;
+            border-radius: 5px;
+            position: absolute;
+            top: 0px;
+            transform: translate3d(1px, 70px, 0px) !important;
+            border: none;
+            left: 0;
+            width: 189px;
+            padding: 4px 0 32px 0;
+            background: #20404f;
+            z-index: 100000;
+            display: none;
+        }
+        .header-dropdown-wrap-item a {
+            width: 100%;
+            display: inline-block;
         }
         .header-dropdown-item {
-          padding: 5px 0 2px 22px;
-          margin-top: 4px;
-          font-size: 14px;
-          color: #e9dfd3;
-          font-weight: 400;
-          text-decoration: none;
-          border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+            padding: 5px 0 2px 22px;
+            margin-top: 4px;
+            font-size: 14px;
+            color: #e9dfd3;
+            font-weight: 400;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(217, 217, 217, 0.5);
         }
         .header-dropdown-item-dropdown {
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         .header-dropdown-item-dropdown-icon {
-          margin-right: 16px;
+            margin-right: 16px;
         }
         .header-dropdown-item a {
-          font-size: 14px;
-          color: #e9dfd3;
-          font-weight: 400;
-          text-decoration: none;
+            font-size: 14px;
+            color: #e9dfd3;
+            font-weight: 400;
+            text-decoration: none;
         }
         .dropdown-divider {
-          margin: 0;
+            margin: 0;
         }
 
         .header-dropdown-wrap-product-item {
-          border-radius: 5px;
-          position: absolute;
-          top: -73px;
-          transform: translate3d(1px, 70px, 0px) !important;
-          border: none;
-          width: 165px;
-          padding: 4px 0 32px 0;
-          background: #20404f;
-          left: 100%;
-          z-index: 10000;
-          display: none;
+            border-radius: 5px;
+            position: absolute;
+            top: -73px;
+            transform: translate3d(1px, 70px, 0px) !important;
+            border: none;
+            width: 165px;
+            padding: 4px 0 32px 0;
+            background: #20404f;
+            left: 100%;
+            z-index: 10000;
+            display: none;
         }
         .visibleClass {
-          display: block;
+            display: block;
         }
-        
-        #header-search-form{
+        .header-search-wrap{
+            padding: 10px 24px;
+            display: none;
+        }
+        #header-search-form {
+            display: flex;
             width: 100%;
             padding: 0 16px;
-            background: #E9DFD3;
-            display: none;
+            background: #e9dfd3;
             border-radius: 20px;
             align-items: center;
-            margin: 10px 12px;
         }
-        .header-search-form-input{
+        .header-search-form-input {
             width: 100%;
         }
-        .header-search-form-input input{
+        .header-search-form-input input {
             width: 100%;
-            background: #E9DFD3;
+            background: #e9dfd3;
             border: none;
             outline: none;
-            padding: 4px;
+            padding: 8px;
             font-family: Nunito;
             font-weight: 600;
             line-height: 16px;
             letter-spacing: 0em;
-            color: #20404F;
+            color: #20404f;
         }
-        .header-search-form-input input:focus{
-            background: #E9DFD3;
+        .header-search-form-input input:focus {
+            background: #e9dfd3;
             box-shadow: none;
-            color: #20404F;
+            color: #20404f;
         }
-        .header-search-form-button{
-            color: #20404F;
-        }
-      }
-    </style>
-    <style>
-      /*------------------- header -------------------*/
-      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-      * {
-        font-family: "Nunito", sans-serif;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        /* border: 1px solid gray; */
-      }
-      @media (max-width: 500px) {
-        #header {
-          display: none;
-        }
-        .page-wrapper {
-          padding-top: 0;
-        }
-        .row {
-          margin-left: 0;
-          margin-right: 0;
-        }
-        .col {
-          padding: 0;
-        }
-        #header_container {
-          max-width: 500px; /*figma: 390px */
-          height: 69px;
-          background-color: #20404f;
-          color: #e9dfd3;
-          margin: auto;
-        }
-        #header_wrap {
-          height: 100%;
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-end;
-          padding: 0 21px 5px 21px;
-          position: relative;
-        }
-        #header-wrap-left {
-          height: 100%;
-          display: flex;
-          align-items: flex-end;
-        }
-        #header_bar {
-          position: relative;
-          font-size: 25px;
-          padding-right: 21px;
-        }
-
-        #header_brand-icon {
-          width: 133px;
-          height: 46px;
-        }
-
-        #header-wrap-right {
-          display: flex;
-          margin-bottom: 6px;
-        }
-        #header_search {
-          font-size: 20px;
-        }
-        #header_user-info {
-          font-size: 20px;
-          margin: 0 11px;
-        }
-        #header_card {
-          font-size: 20px;
-          position: relative;
-        }
-        #header_card-index {
-          position: absolute;
-          top: -5px;
-          right: -5px;
-          width: 15px;
-          height: 15px;
-          border-radius: 50%;
-          background-color: #bf8977;
-          text-align: center;
-          line-height: 15px;
-          font-size: 13px;
-        }
-        .header-dropdown-wrap-item {
-          border-radius: 5px;
-          position: absolute;
-          top: 0px;
-          transform: translate3d(1px, 70px, 0px) !important;
-          border: none;
-          left: 0;
-          width: 189px;
-          padding: 4px 0 32px 0;
-          background: #20404f;
-          z-index: 100000;
-          display: none;
-        }
-        .header-dropdown-wrap-item a {
-          width: 100%;
-          display: inline-block;
-        }
-        .header-dropdown-item {
-          padding: 5px 0 2px 22px;
-          margin-top: 4px;
-          font-size: 14px;
-          color: #e9dfd3;
-          font-weight: 400;
-          text-decoration: none;
-          border-bottom: 1px solid rgba(217, 217, 217, 0.5);
-        }
-        .header-dropdown-item-dropdown {
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
-        .header-dropdown-item-dropdown-icon {
-          margin-right: 16px;
-        }
-        .header-dropdown-item a {
-          font-size: 14px;
-          color: #e9dfd3;
-          font-weight: 400;
-          text-decoration: none;
-        }
-        .dropdown-divider {
-          margin: 0;
-        }
-
-        .header-dropdown-wrap-product-item {
-          border-radius: 5px;
-          position: absolute;
-          top: -73px;
-          transform: translate3d(1px, 70px, 0px) !important;
-          border: none;
-          width: 165px;
-          padding: 4px 0 32px 0;
-          background: #20404f;
-          left: 100%;
-          z-index: 10000;
-          display: none;
-        }
-        .visibleClass {
-          display: block;
+        .header-search-form-button {
+            color: #20404f;
         }
         .select-header-menu {
-          color: #bf8977;
+            color: #bf8977;
         }
-      }
-    </style>
+        .visibleFlex{
+            display: flex;
+        }
+        }
 
+    </style>
     <style>
       /*=========================== wordpress ========================*/
       .large-5 {
@@ -2209,7 +2075,8 @@
                 </a>
               </div>
             </div>
-
+          </div>
+          <div class="header-search-wrap">
             <div id="header-search-form">
                 <div class="header-search-form-input">
                     <input type="text" placeholder="Seach...">
@@ -3229,18 +3096,13 @@
 
       // search header
       function openSearchHeader () {
-        $('#header-wrap-left').css('display', 'none');
-        $('#header-wrap-right').css('display', 'none');
-        $('#header-search-form').css('display', 'flex')
+        $('.header-search-wrap').toggleClass('visibleFlex')
       }
 
       function activeSearch () {
         let searchValue = $('.header-search-form-input input').val();
         $('.search-field').val(searchValue);
-        $('#header-search-form').css('display', 'none')
-        $('#header-wrap-left').css('display', 'flex');
-        $('#header-wrap-right').css('display', 'flex');
-
+        $('.header-search-wrap').toggleClass('visibleFlex')
         $('.ux-search-submit.submit-button').trigger('click');
       }
     
