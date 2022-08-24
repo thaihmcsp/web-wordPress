@@ -226,15 +226,19 @@
         display: inline-block;
       }
       @media (max-width: 500px) {
-        .page-header-wrapper {
+        .page-header-wrapper, 
+        .wordpress-data, 
+        .custom-product-page > .row, 
+        .related-products-wrapper,
+        .awdr-bulk-customizable-table,
+        #footer {
           display: none;
         }
       }
     </style>
     <style>
-      /*------------------- HẾT CSS HEADER---------------- */
-      /* PRODUCT DETAIL CSS */
-      @media (max-width: 500px) {
+         /* PRODUCT DETAIL CSS */
+    @media (max-width: 500px) {
         .product-detail-container {
           max-width: 500px;
           margin: auto;
@@ -767,9 +771,14 @@
           opacity: 0.8;
         }
         /* HẾT PRODUCT DETAIL CSS */
-
+    }
+    </style>
+    <style>
+    @media (max-width: 500px) {
         /* CSS BEST SELLER CALOSEL */
-
+        .carousel-home-item a{
+            text-decoration: none;
+        }
         .home-page-container {
           width: 100%;
 
@@ -794,8 +803,10 @@
           font-size: 20px;
           line-height: 16px;
           /* identical to box height, or 80% */
-
-          color: #20404f;
+        }
+        .title-carousel a {
+            color: #20404f;
+            text-decoration: none;
         }
         .carousel-control-prev {
           width: fit-content;
@@ -855,6 +866,7 @@
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
           overflow: hidden;
+          color: #20404F;
         }
         .caroudel-button {
           margin-top: 15px;
@@ -929,8 +941,14 @@
         .block {
           width: 281px;
         }
+        .number-person-rating {
+            color: #00000099;
+        }
         /* HẾT CSS BEST SELLER */
-
+    }
+    </style>
+    <style>
+      @media (max-width: 500px) {
         /*-------------------------------- CSS RATE AND COMENT OF USER  */
         #div_main_checkout_gift {
           max-width: 500px;
@@ -1683,6 +1701,7 @@
       }
     </style>
     <style>
+        /* CUSTOMER REVIEWS AND RATE */
       @media (max-width: 500px) {
         .customer_rating_contained-app {
           background: #e9dfd3;
@@ -1977,7 +1996,7 @@
     
               <div class="header-dropdown-wrap-item" onclick="">
                 <div class="header-dropdown-item">
-                  <a href="https://fmzee.com/mobile-home/">Home</a>
+                  <a href="https://fmzee.com/">Home</a>
                 </div>
     
                 <div class="header-dropdown-item">
@@ -2044,7 +2063,7 @@
                 <!-- test -->
               </div>
               <div id="header_brand-icon">
-                <a href="https://fmzee.com/mobile-home/"
+                <a href="https://fmzee.com/"
                   ><img src="https://fmzee.com/header-logo/" alt="logo_brand"
                 /></a>
               </div>
@@ -2109,7 +2128,7 @@
               <div class="product-detail-production-price-old"></div>
               <div class="product-detail-production-price-new"></div>
             </div>
-            <div class="product-detail-production-rate">
+            <!-- <div class="product-detail-production-rate">
               <div class="product-detail-production-rate-star">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -2118,7 +2137,7 @@
                 <i class="fa-solid fa-star"></i>
               </div>
               <div class="product-detail-production-price-quatity">(15)</div>
-            </div>
+            </div> -->
             <div class="product-detail-divide"></div>
             <!-- Choose size -->
             <div class="product-detail-production-choose-size">
@@ -2361,12 +2380,12 @@
   
           <!-- Best Salers -------------------------------------->
           <div class="wordpress-data">
-              [products limit="10" columns="1" category="best-sallers" cat_operator="IN" paginate="true"]
+              [products limit="6" columns="1" category="best-sallers" cat_operator="IN"]
           </div>
           <div class="product-detail-best-salers-wrap">
             <div class="home-page-carousel">
               <div class="carousel-wrapper">
-                <div class="title-carousel">Best Salers</div>
+                <div class="title-carousel"> <a href="https://fmzee.com/mobile-best-seller/">Best Salers</a> </div>
                 <div
                   id="carouselExampleControls"
                   class="carousel slide"
@@ -2376,239 +2395,24 @@
                     <div class="carousel-item active">
                       <div class="carousel-home-slide d-flex">
                         <div class="carousel-home-item">
-                          <img
-                            src="https://fmzee.com/ornament1/"
-                            alt=""
-                            class="img-item-carousel"
-                            alt="First slide"
-                          />
-                          <div class="carousel-item-detail font-text-carousel">
-                            Personalized Teacher Door Sign, Classroom Door Sign,
-                            Custom Teacher Sign,
-                          </div>
-                          <div class="price-item d-flex">
-                            <p class="old-price font-text-carousel">$28.92</p>
-                            <p class="new-price font-text-carousel">$21.9</p>
-                          </div>
-                          <div class="rating-item d-flex">
-                            <div class="">
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                            </div>
-                            <div class="number-person-rating font-text-carousel">
-                              (15)
-                            </div>
-                          </div>
                         </div>
                         <div class="carousel-home-item">
-                          <img
-                            src="https://fmzee.com/ornament2/"
-                            alt=""
-                            class="img-item-carousel"
-                            alt="First slide"
-                          />
-                          <div class="carousel-item-detail font-text-carousel">
-                            Personalized Teacher Door Sign, Classroom Door Sign,
-                            Custom Teacher Sign,
-                          </div>
-                          <div class="price-item d-flex">
-                            <p class="old-price font-text-carousel">$28.92</p>
-                            <p class="new-price font-text-carousel">$21.9</p>
-                          </div>
-                          <div class="rating-item d-flex">
-                            <div class="">
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                            </div>
-                            <div class="number-person-rating font-text-carousel">
-                              (15)
-                            </div>
-                          </div>
                         </div>
                       </div>
                     </div>
                     <div class="carousel-item">
                       <div class="carousel-home-slide d-flex" alt="Third slide">
                         <div class="carousel-home-item">
-                          <img
-                            src="https://fmzee.com/?attachment_id=2640#main"
-                            alt=""
-                            class="img-item-carousel"
-                          />
-                          <div class="carousel-item-detail font-text-carousel">
-                            Personalized Teacher Door Sign, Classroom Door Sign,
-                            Custom Teacher Sign,
-                          </div>
-                          <div class="price-item d-flex">
-                            <p class="old-price font-text-carousel">$28.92</p>
-                            <p class="new-price font-text-carousel">$21.9</p>
-                          </div>
-                          <div class="rating-item d-flex">
-                            <div class="">
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                            </div>
-                            <div class="number-person-rating font-text-carousel">
-                              (15)
-                            </div>
-                          </div>
                         </div>
                         <div class="carousel-home-item">
-                          <img
-                            src="https://fmzee.com/?attachment_id=2632#main"
-                            alt=""
-                            class="img-item-carousel"
-                          />
-                          <div class="carousel-item-detail font-text-carousel">
-                            Personalized Teacher Door Sign, Classroom Door Sign,
-                            Custom Teacher Sign,
-                          </div>
-                          <div class="price-item d-flex">
-                            <p class="old-price font-text-carousel">$28.92</p>
-                            <p class="new-price font-text-carousel">$21.9</p>
-                          </div>
-                          <div class="rating-item d-flex">
-                            <div class="">
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                            </div>
-                            <div class="number-person-rating font-text-carousel">
-                              (15)
-                            </div>
-                          </div>
                         </div>
                       </div>
                     </div>
                     <div class="carousel-item">
                       <div class="carousel-home-slide d-flex">
                         <div class="carousel-home-item">
-                          <img
-                            src="https://fmzee.com/?attachment_id=2515#main"
-                            alt=""
-                            class="img-item-carousel"
-                            alt="Second slide"
-                          />
-                          <div class="carousel-item-detail font-text-carousel">
-                            Personalized Teacher Door Sign, Classroom Door Sign,
-                            Custom Teacher Sign,
-                          </div>
-                          <div class="price-item d-flex">
-                            <p class="old-price font-text-carousel">$28.92</p>
-                            <p class="new-price font-text-carousel">$21.9</p>
-                          </div>
-                          <div class="rating-item d-flex">
-                            <div class="">
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                            </div>
-                            <div class="number-person-rating font-text-carousel">
-                              (15)
-                            </div>
-                          </div>
                         </div>
                         <div class="carousel-home-item">
-                          <img
-                            src="https://fmzee.com/?attachment_id=2404#main"
-                            alt=""
-                            class="img-item-carousel"
-                            alt="Second slide"
-                          />
-                          <div class="carousel-item-detail font-text-carousel">
-                            Personalized Teacher Door Sign, Classroom Door Sign,
-                            Custom Teacher Sign,
-                          </div>
-                          <div class="price-item d-flex">
-                            <p class="old-price font-text-carousel">$28.92</p>
-                            <p class="new-price font-text-carousel">$21.9</p>
-                          </div>
-                          <div class="rating-item d-flex">
-                            <div class="">
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                            </div>
-                            <div class="number-person-rating font-text-carousel">
-                              (15)
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item" alt="Third slide">
-                      <div class="carousel-home-slide d-flex">
-                        <div class="carousel-home-item">
-                          <img
-                            src="https://fmzee.com/?attachment_id=2349#main"
-                            alt=""
-                            class="img-item-carousel"
-                            alt="Third slide"
-                            alt="Third slide"
-                          />
-                          <div class="carousel-item-detail font-text-carousel">
-                            Personalized Teacher Door Sign, Classroom Door Sign,
-                            Custom Teacher Sign,
-                          </div>
-                          <div class="price-item d-flex">
-                            <p class="old-price font-text-carousel">$28.92</p>
-                            <p class="new-price font-text-carousel">$21.9</p>
-                          </div>
-                          <div class="rating-item d-flex">
-                            <div class="">
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                            </div>
-                            <div class="number-person-rating font-text-carousel">
-                              (15)
-                            </div>
-                          </div>
-                        </div>
-                        <div class="carousel-home-item">
-                          <img
-                            src="https://fmzee.com/?attachment_id=2336#main"
-                            alt=""
-                            class="img-item-carousel"
-                            alt="Third slide"
-                          />
-                          <div class="carousel-item-detail font-text-carousel">
-                            Personalized Teacher Door Sign, Classroom Door Sign,
-                            Custom Teacher Sign,
-                          </div>
-                          <div class="price-item d-flex">
-                            <p class="old-price font-text-carousel">$28.92</p>
-                            <p class="new-price font-text-carousel">$21.9</p>
-                          </div>
-                          <div class="rating-item d-flex">
-                            <div class="">
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                              <span class="fa fa-star checked star-icon"></span>
-                            </div>
-                            <div class="number-person-rating font-text-carousel">
-                              (15)
-                            </div>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -2667,10 +2471,13 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                   </div>
-                  <div class="box_rating"></div>
-                  <div class="text_results">
+                  <!-- <div class="box_rating"></div> -->
+                  <div class="box_rating1"></div>
+                  <!-- <div class="text_results">
                     <span>100%</span><span>(9)</span>
-                  </div>
+                  </div> -->
+                  <div class="text_results"><span>%</span><span></span></div>
+
                 </div>
                 <div class="content_rating">
                   <div class="rating_relust">
@@ -2862,7 +2669,7 @@
               <div class="collapse" id="quick_link">
                 <div class="footer_copyright-content-warp-items">
                   <div class="footer_copyright-content-items">
-                    <a href="https://fmzee.com/mobile-home/">Home</a>
+                    <a href="https://fmzee.com/">Home</a>
                   </div>
                   <div class="footer_copyright-content-items">
                     <a href="https://fmzee.com/mobile-about-us/">About Us</a>
@@ -3166,11 +2973,39 @@
     // add data to carousel
     let listData = []
     $('.wordpress-data .product-small.box').each(function(index, product){
-        listData.push({
-            thumbnail: $(product).find('.lazy-load.attachment-woocommerce_thumbnail').attr('data-src'),
-            productName: $(product).find('.woocommerce-LoopProduct-link strong').html(),
-            link: $(product).find('.woocommerce-LoopProduct-link').attr('href')
-        })
+        let oldPrice = $(product).find('.price-wrapper .price del bdi').html().split('&nbsp;')[0]
+        let newPrice = $(product).find('.price-wrapper .price > .woocommerce-Price-amount bdi').html();
+        if(!newPrice){
+            newPrice = $(product).find('.price-wrapper .price > ins .woocommerce-Price-amount bdi').html()
+        }
+        newPrice = newPrice.split('&nbsp;')[0]
+
+        let thumbnail= $(product).find('.lazy-load.attachment-woocommerce_thumbnail').attr('data-src');
+        let productName= $(product).find('.woocommerce-LoopProduct-link strong').html();
+        let link= $(product).find('.woocommerce-LoopProduct-link').attr('href');
+
+        $('.carousel-home-item').eq(index).prepend(`
+            <a href='${link}'>
+                <img src="${thumbnail}" alt="" class="img-item-carousel" alt="First slide" />
+                <div class="carousel-item-detail font-text-carousel"> ${productName} </div>
+                <div class="price-item d-flex">
+                    <p class="old-price font-text-carousel">$${oldPrice}</p>
+                    <p class="new-price font-text-carousel">$${newPrice}</p>
+                </div>
+            </a>
+        `)
+        // <div class="rating-item d-flex">
+        //     <div class="">
+        //         <span class="fa fa-star checked star-icon"></span>
+        //         <span class="fa fa-star checked star-icon"></span>
+        //         <span class="fa fa-star checked star-icon"></span>
+        //         <span class="fa fa-star checked star-icon"></span>
+        //         <span class="fa fa-star checked star-icon"></span>
+        //     </div>
+        //     <div class="number-person-rating font-text-carousel">
+        //         (15)
+        //     </div>
+        // </div>
     })
   </script>
     <script>
@@ -3178,7 +3013,7 @@
     
         // get image
         $('.product-detail-production-main-img > img').attr('src', $('.wp-post-image').attr('src'))
-        $('.product-thumbnails.thumbnails').find('img').each(function(index, image){
+        $($('.product-thumbnails.thumbnails').find('img').slice(0, 4)).each(function(index, image){
             $('.product-detail-production-warp-img-small').append(`
             <div class="product-detail-production-img-item">
               <img src="${$(image).attr('src')}" alt="ảnh${index}" />
@@ -3195,10 +3030,20 @@
         
         // get price
         function getPrice () {
-            let dellPrice= $('.single_variation_wrap .woocommerce-variation.single_variation .woocommerce-variation-price .price > del bdi').html().split('&nbsp;')[0];
-            let newPrice = $('.single_variation_wrap .woocommerce-variation.single_variation .woocommerce-variation-price .price > ins bdi').html().split('&nbsp;')[0];
-            $('.product-detail-production-price-old').html(dellPrice);
-            $('.product-detail-production-price-new').html(newPrice);
+            let dellPrice= $('.single_variation_wrap .woocommerce-variation.single_variation .woocommerce-variation-price .price > del bdi').html();
+            if(!dellPrice) {
+                dellPrice = $('.product-page-price > del bdi').html()
+            }
+            dellPrice = dellPrice.split('&nbsp;')[0];
+
+            let newPrice = $('.single_variation_wrap .woocommerce-variation.single_variation .woocommerce-variation-price .price > ins bdi').html();
+            if(!newPrice) {
+                newPrice = $('.product-page-price > ins bdi').html()
+            }
+            newPrice = newPrice.split('&nbsp;')[0];
+
+            $('.product-detail-production-price-old').html('$'+dellPrice);
+            $('.product-detail-production-price-new').html('$'+newPrice);
         }
         $( window ).on( "load", function() { getPrice() })
         // getPrice ();
@@ -3217,13 +3062,8 @@
             $('.product-detail-add-cart-numb').html(newQuantity);
         })
         $('.minus.button.is-form').on('click', function(){
-            console.log(3280, $('.input-text.qty.text').val());
-
             let newQuantity = $('.input-text.qty.text').val() * 1 - 1;
             newQuantity = newQuantity <= 1 ? 1 : newQuantity;
-            console.log(3288, newQuantity);
-
-            // $('.input-text.qty.text').val(newQuantity);
             $('.product-detail-add-cart-numb').html(newQuantity);
         })
         $('.product-detail-add-cart-plus').on('click', function(){
