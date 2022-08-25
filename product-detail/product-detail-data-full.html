@@ -218,12 +218,13 @@
         margin-left: auto;
         margin-right: auto;
       }
-      .button.icon.circle {
-        display: none;
-      }
       .wishlist-link.icon.primary.button.circle,
       .account-link.account-login.button.icon.circle{
         display: inline-block;
+      }
+      .col-2, .col-1, .col{
+        width: 100%;
+        flex:none
       }
       @media (max-width: 500px) {
         .page-header-wrapper, 
@@ -231,6 +232,7 @@
         .custom-product-page > .row, 
         .related-products-wrapper,
         .awdr-bulk-customizable-table,
+        .button.icon.circle
         #footer {
           display: none;
         }
@@ -1788,6 +1790,7 @@
           align-items: center;
           justify-content: center;
           margin-top: 8px;
+          margin-right: 16px;
         }
         .picture_video_add img {
           width: 60%;
@@ -1830,6 +1833,14 @@
         }
         .review_onclick_block_rate {
           transition: all 1s ease-in-out;
+        }
+
+        .upload-picture-video{
+            display: flex;
+            align-items: center;
+        }
+        .count-upload{
+            margin: 0
         }
       }
 
@@ -2636,12 +2647,16 @@
                     <div class="title_picture_video">
                       Picture/ Video <span>( Optional )</span>
                     </div>
-                    <div class="picture_video_add">
-                      <img
-                        src="https://fmzee.com/wp-content/uploads/2022/08/mayAnh.png"
-                        alt=""
-                      />
+                    <div class="upload-picture-video">
+                        <div class="picture_video_add">
+                            <img
+                              src="https://fmzee.com/wp-content/uploads/2022/08/mayAnh.png"
+                              alt=""
+                            />
+                        </div>
+                        <p class="count-upload" value='0' ></p>
                     </div>
+                    
                   </div>
                   <div class="margin_btn">
                     <button class="btn_submit_review">Submit Review</button>
@@ -3094,4 +3109,43 @@
     
       </script>
 
+<script>
+    // send rating
+
+    // star rating
+    $('.rating_5sao > i').each(function(index, star){
+        $(star).on('click', function(){
+            $('.rx_star_rating > label').eq(4 - index).trigger('click');
+        })
+    })
+
+    // open upload modal
+    $('.picture_video_add').on('click', function(){
+        $('.rx_upload_file.rx-form-btn').trigger('click');
+        $('.rx_upload_file.rx-form-btn #attachment').trigger('click');
+    })
+
+    // count upload
+    $('.rx_upload_file.rx-form-btn input[type="file"]').on('change', function(){
+        $('.count-upload').html('uploading...');
+        let inter = setInterval(function(){
+            if($('.rx_image_upload_spinner')[0].style.display === 'none'){
+                const count = $('#rx-images > .rx-image').length;
+                $('.count-upload').html(count + ' uploaded');
+                clearInterval(inter)
+            }
+        }, 1000)
+    })
+    
+    // submit review
+    $('.btn_submit_review').on('click', function(){
+        let username = $('#namecustommer').val();
+        let email = $('#emailcustomer').val();
+        let review = $('.Review_cs textarea').val()
+        $('#author').val(username);
+        $('#email').val(email);
+        $('#comment').val(review);
+        $('.form-submit #submit').trigger('click');
+    })
+</script>
 </html>

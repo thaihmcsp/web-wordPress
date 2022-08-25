@@ -32,9 +32,7 @@
         margin-left: auto;
         margin-right: auto;
       }
-      .button.icon.circle {
-        display: none;
-      }
+      
       .row.row-main {
         margin-left: auto;
         margin-right: auto;
@@ -43,11 +41,16 @@
       .account-link.account-login.button.icon.circle {
         display: inline-block;
       }
+      .col-2, .col-1, .col{
+        width: 100%;
+        flex:none
+      }
       @media (max-width: 500px) {
         .page-header-wrapper,
         .wordpress-data,
         #footer,
-        #header {
+        #header,
+        .button.icon.circle {
           display: none;
         }
       }
@@ -820,7 +823,7 @@
             </div>
             <div id="header_brand-icon">
               <a href="https://fmzee.com/"
-                ><img src="https://fmzee.com/header-logo/" alt="logo_brand"
+                ><img src="https://fmzee.com/wp-content/uploads/2022/08/logo-web_5.png" alt="logo_brand"
               /></a>
             </div>
           </div>
@@ -1386,24 +1389,37 @@
         // add data to carousel
         let listData = []
         $('.wordpress-data .product-small.box').each(function(index, product){
-            let oldPrice = $(product).find('.price-wrapper .price del bdi').html().split('&nbsp;')[0]
             let newPrice = $(product).find('.price-wrapper .price > .woocommerce-Price-amount bdi').html();
             if(!newPrice){
                 newPrice = $(product).find('.price-wrapper .price > ins .woocommerce-Price-amount bdi').html()
             }
             newPrice = newPrice.split('&nbsp;')[0]
-    
+            let higherNewPrice = ''
+
+            let oldPrice = $(product).find('.price-wrapper .price del bdi').html();
+            if(oldPrice){
+                oldPrice = oldPrice.split('&nbsp;')[0]
+            }else{
+                higherNewPrice = $(product).find('.price-wrapper .price > .woocommerce-Price-amount bdi');
+                higherNewPrice = higherNewPrice.eq(higherNewPrice.length - 1).html().split('&nbsp;')[0];
+            }
+
             let thumbnail= $(product).find('.lazy-load.attachment-woocommerce_thumbnail').attr('data-src');
             let productName= $(product).find('.woocommerce-LoopProduct-link strong').html();
             let link= $(product).find('.woocommerce-LoopProduct-link').attr('href');
-    
             $('.carousel-home-item').eq(index).prepend(`
                 <a href='${link}'>
                     <img src="${thumbnail}" alt="" class="img-item-carousel" alt="First slide" />
                     <div class="carousel-item-detail font-text-carousel"> ${productName} </div>
-                    <div class="price-item d-flex">
-                        <p class="old-price font-text-carousel">$${oldPrice}</p>
-                        <p class="new-price font-text-carousel">$${newPrice}</p>
+                    <div class="price-item d-flex" ${higherNewPrice?  "style='width: fit-content'" : ''}>
+                        ${oldPrice ? `<p class="old-price font-text-carousel">$${oldPrice}</p>` : ''}
+                        
+                        ${higherNewPrice ? 
+                            `<p class="new-price font-text-carousel">$${newPrice} - $${higherNewPrice}</p>`   
+                            : 
+                            `<p class="new-price font-text-carousel">$${newPrice}</p>`
+                        } 
+                        
                     </div>
                 </a>
             `)
