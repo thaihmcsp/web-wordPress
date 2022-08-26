@@ -3116,6 +3116,7 @@
     $('.rating_5sao > i').each(function(index, star){
         $(star).on('click', function(){
             $('.rx_star_rating > label').eq(4 - index).trigger('click');
+            console.log(3120, $(star).siblings);
         })
     })
 
@@ -3148,4 +3149,8 @@
         $('.form-submit #submit').trigger('click');
     })
 </script>
+<script>
+    // display product rating
+</script>
+
 </html>
