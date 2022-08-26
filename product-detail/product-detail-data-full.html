@@ -217,6 +217,8 @@
       .row {
         margin-left: auto;
         margin-right: auto;
+        flex-wrap: nowrap;
+        flex-flow: nowrap;
       }
       .wishlist-link.icon.primary.button.circle,
       .account-link.account-login.button.icon.circle{
@@ -224,7 +226,7 @@
       }
       .col-2, .col-1, .col{
         width: 100%;
-        flex:none
+        /* flex:none */
       }
       @media (max-width: 500px) {
         .page-header-wrapper, 
@@ -307,10 +309,10 @@
         }
         .product-detail-production-price-old {
           text-decoration: line-through;
+          margin-right: 16px;
         }
         .product-detail-production-price-new {
           color: #bf8977;
-          margin-left: 16px;
         }
         .product-detail-production-rate {
           display: flex;
@@ -2130,25 +2132,29 @@
             </div>
             <div class="product-detail-description-product">
               <div class="product-detail-production-description-content">
-                Personalized Teacher Door Sign,<br />
-                Classroom Door Sign, Custom <br />
-                Teacher Sign, Boho Classroom Decor
               </div>
             </div>
+
+            <div class="product-detail-production-choose-size gift-card-only">
+                <div class="product-detail-production-choose-size-title gift-card-only">Size</div>
+                <div class="product-detail-production-choose-size-button-wrap"></div>
+            </div>
+
             <div class="product-detail-production-wrap-price">
               <div class="product-detail-production-price-old"></div>
               <div class="product-detail-production-price-new"></div>
             </div>
-            <!-- <div class="product-detail-production-rate">
+            
+            <div class="product-detail-production-rate">
               <div class="product-detail-production-rate-star">
+                <!-- <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i> -->
               </div>
-              <div class="product-detail-production-price-quatity">(15)</div>
-            </div> -->
+              <div class="product-detail-production-price-quatity"></div>
+            </div>
             <div class="product-detail-divide"></div>
             <!-- Choose size -->
             <div class="product-detail-production-choose-size">
@@ -3041,13 +3047,20 @@
         })
     
         // get name
-        $('.product-detail-production-description-content').html($('.product-title strong').html())
+        let productName = $('.product-title.entry-title strong').html();
+        if(!productName){
+            productName = $('.product-title.entry-title').html()
+        }
+        $('.product-detail-production-description-content').html(productName);
         
         // get price
         function getPrice () {
             let dellPrice= $('.single_variation_wrap .woocommerce-variation.single_variation .woocommerce-variation-price .price > del bdi').html();
             if(!dellPrice) {
-                dellPrice = $('.product-page-price > del bdi').html()
+                dellPrice = $('.product-page-price > del bdi').html();
+            }
+            if(!dellPrice) {
+                dellPrice = '';
             }
             dellPrice = dellPrice.split('&nbsp;')[0];
 
@@ -3055,10 +3068,13 @@
             if(!newPrice) {
                 newPrice = $('.product-page-price > ins bdi').html()
             }
+            if(!newPrice) {
+                newPrice = $('.single_variation_wrap .woocommerce-variation.single_variation .woocommerce-variation-price .price bdi').html();
+            }
             newPrice = newPrice.split('&nbsp;')[0];
 
-            $('.product-detail-production-price-old').html('$'+dellPrice);
-            $('.product-detail-production-price-new').html('$'+newPrice);
+            dellPrice ? $('.product-detail-production-price-old').html('$'+dellPrice) : $('.product-detail-production-price-old').remove();
+            newPrice ? $('.product-detail-production-price-new').html('$'+newPrice) : null;
         }
         $( window ).on( "load", function() { getPrice() })
         // getPrice ();
@@ -3116,7 +3132,13 @@
     $('.rating_5sao > i').each(function(index, star){
         $(star).on('click', function(){
             $('.rx_star_rating > label').eq(4 - index).trigger('click');
-            console.log(3120, $(star).siblings);
+            $('.rating_5sao > i').attr('class', 'fa-regular fa-star');
+            console.log($('.rating_5sao > i'));
+            $('.rating_5sao > i').each( function (buttonIndex, buttonStar) {
+                if(!(buttonIndex > index)){
+                    $(buttonStar).attr('class', 'fa-solid fa-star' );
+                }
+            })
         })
     })
 
@@ -3151,6 +3173,64 @@
 </script>
 <script>
     // display product rating
+    let scoreRate = $('.temp-rating_avg').html();
+    if(scoreRate * 1){
+        Math.round(scoreRate * 1) 
+        let stringHTMLRate = ''
+        for(let i = 0; i < 5; i++){
+            if(i < scoreRate * 1){
+                stringHTMLRate += `<i class="fa-solid fa-star"></i>`
+            }else{
+                stringHTMLRate += `<i class="fa-regular fa-star"></i>`
+            }
+        }
+        $('.product-detail-production-rate-star').html(stringHTMLRate)
+        let rateText = $('.rx-temp-total-rating-count p').html().split(' ').find((value) => {
+            return value * 1
+        })
+        $('.product-detail-production-price-quatity').html(`(${rateText * 1})`)
+    }
+</script>
+<script>
+    // display user commnet
+    const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May','Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+    $('#rx-commentlist .rx_flex.rx_review_wrap').each(function(index, comment){
+        const authorName = $(comment).find('.rx_author_name h4').html().trim();
+        const avatar = $(comment).find('.rx_thumb img').attr('src');
+        const starRate = $(comment).find('.review_rating')[0];
+        const commentText = $(comment).find('.rx_body p').html();
+        const dateArr = $(comment).find('.rx_review_calender span').html().split(' ');
+        dateArr[1] = month.indexOf(dateArr[1])
+        let date = new Date(...dateArr.reverse())
+    })
+</script>
+<script>
+    // gift-card page
+    let check = window.location.href.includes('/gift-card')
+    if(check){
+        $('.product-detail-stickit-wrap').css({display:'none'})
+        $('.product-detail-production-note-container').css({display:'none'})
+        $('.product-detail-production-choose-size').css({display: 'none'});
+        $('.gift-card-only').css({display: 'block'});
+
+        // sold
+        let sold = $('.woo-vantheweb').text().split(' ').find( value => value * 1)
+        $('.product-detail-production-choose-size-title').html(`Sold: ${sold}`)
+        $('.product-detail-production-choose-size-title').css({margin: '16px 0 12px 0' })
+        $('.product-detail-production-wrap-price').css({padding: 0})
+    }else{
+        $('.gift-card-only').css({display: 'none'});
+    }
+
+    
+</script>
+<script>
+    // pay-pal
+    $('.product-detail-payment-method-default').on('click', function() {
+        console.log(3211, $('#buttons-container'));
+        $('.paypal-button-row').trigger('click')
+    })
 </script>
 
 </html>
