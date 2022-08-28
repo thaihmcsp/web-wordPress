@@ -28,8 +28,7 @@
         box-sizing: border-box;
         /* border: 1px solid gray; */
       }
-      @media (max-width: 500px) {
-        #header {
+      #header {
         display: none;
       }
       .page-wrapper {
@@ -164,12 +163,10 @@
       .select-header-menu {
         color: #bf8977;
       }
-      }
     </style>
     <style>
       /*------------------------ wish-list ------------------------ */
-      @media (max-width: 500px) {
-        .contained_main_my_wishlist {
+      .contained_main_my_wishlist {
         background: #ffffff;
         margin-bottom: 28px;
         max-width: 500px;
@@ -251,6 +248,16 @@
       }
       .flex_center_icon img {
         width: 122px;
+        height: 122px;
+      }
+      #img-cart {
+        max-width: 100%;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        width: 122px;
+        height: 122px;
+        border-radius: 5px;
       }
       .img_product_card {
         width: 40%;
@@ -330,23 +337,28 @@
       .btn_add_to_cart_wishlist {
         background: rgba(32, 64, 79, 0.8);
         border-radius: 5px;
-        width: 93px;
-        height: 26px;
+        width: 105px;
+        height: 39px;
         color: #e9dfd3;
         font-family: "Nunito";
         font-style: normal;
         font-weight: 600;
         font-size: 14px;
         line-height: 16px;
-
+        text-align: center;
         text-transform: capitalize;
         display: flex;
         align-items: center;
         justify-content: center;
+        text-decoration: none;
+      }
+      a {
+        text-decoration: none;
       }
       .product_cart_price_btn {
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
       }
       .all_product_cart {
         padding: 31px 22px 0 21px;
@@ -395,12 +407,10 @@
         position: absolute;
         right: 14px;
       }
-      }
     </style>
     <style>
       /* -------------wish-list  paginate -------------------- */
-      @media (max-width: 500px) {
-        .pagination ul {
+      .pagination ul {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -459,12 +469,10 @@
         height: 25px;
         color: #20404f;
       }
-      }
     </style>
     <style>
       /*------------------ list-all-product pagination ------------------ */
-      @media (max-width: 500px) {
-        hr {
+      hr {
         margin: 0;
       }
       .listALLProduct-pagination {
@@ -506,7 +514,6 @@
         right: 7%;
         color: rgba(32, 64, 79, 0.5);
       }
-      }
     </style>
     <style>
       /*------------------------------- footer copyright ------------------------*/
@@ -518,8 +525,7 @@
         box-sizing: border-box;
         /* border: 1px solid gray; */
       }
-      @media (max-width: 500px) {
-        #footer-copyright_container {
+      #footer-copyright_container {
         max-width: 500px;
         background-color: rgba(191, 137, 119, 0.5);
         color: #20404f;
@@ -602,12 +608,10 @@
       .pr-4 {
         padding-right: 16px;
       }
-      }
     </style>
     <style>
       /*-------------------- footer -----------------*/
-    @media (max-width: 500px) {
-        #footer_container {
+      #footer_container {
         max-width: 500px;
         margin: auto;
       }
@@ -651,7 +655,6 @@
       #footer-coppyright-subcribe-wap button {
         padding: 0;
       }
-    }
     </style>
   </head>
   <body>
@@ -750,7 +753,7 @@
       <div class="border1_home_wishlist"></div>
       <div class="title_wishlist">
         <div class="name_title_wishlist">MY WISHLIST</div>
-        <div class="count_product_list">9 product</div>
+        <div class="count_product_list"></div>
         <!-- <div class="icon_list_wishlist">
           <img
             src="https://fmzee.com/wp-content/uploads/2022/08/listAllproduct-icon1.png"
@@ -766,7 +769,7 @@
       </div>
       <div class="border1_home_wishlist"></div>
       <div class="all_product_cart">
-        <div class="product_wishlist">
+        <!-- <div class="product_wishlist">
           <div class="img_product_card">
             <div class="flex_center_icon">
               <div class="icon_close_product_wishlist">
@@ -818,406 +821,7 @@
             </div>
           </div>
         </div>
-        <div class="product_wishlist">
-          <div class="img_product_card">
-            <div class="flex_center_icon">
-              <div class="icon_close_product_wishlist">
-                <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
-              </div>
-            </div>
-            <img
-              src="https://fmzee.com/wp-content/uploads/2022/08/WishList-product2.png"
-              alt=""
-            />
-          </div>
-          <div class="info_product_card_wishlist">
-            <div class="title_product_cart_wishlist">
-              Personalized Teacher Door Sign, Classroom Door Sign, Custom
-              Teacher Sign, Boho Classroom Decor,
-            </div>
-            <div class="rate_product_wishlist">
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <span>(15)</span>
-            </div>
-            <div class="stock_product_cart">in stock</div>
-            <div class="product_cart_price_btn">
-              <div class="price_product_cart_wishlist">
-                <span id="text_price_wishlist">$28.92</span
-                ><span id="text_discount_wishlist">$21.69</span>
-              </div>
-              <div class="btn_add_to_cart_wishlist">Add To Cart</div>
-            </div>
-          </div>
-        </div>
-        <div class="product_wishlist">
-          <div class="img_product_card">
-            <div class="flex_center_icon">
-              <div class="icon_close_product_wishlist">
-                <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
-              </div>
-            </div>
-            <img
-              src="https://fmzee.com/wp-content/uploads/2022/08/ListProductByCategory-product9.png"
-              alt=""
-            />
-          </div>
-          <div class="info_product_card_wishlist">
-            <div class="title_product_cart_wishlist">
-              Personalized Teacher Door Sign, Classroom Door Sign, Custom
-              Teacher Sign, Boho Classroom Decor,
-            </div>
-            <div class="rate_product_wishlist">
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <span>(15)</span>
-            </div>
-            <div class="stock_product_cart">in stock</div>
-            <div class="product_cart_price_btn">
-              <div class="price_product_cart_wishlist">
-                <span id="text_price_wishlist">$28.92</span
-                ><span id="text_discount_wishlist">$21.69</span>
-              </div>
-              <div class="btn_add_to_cart_wishlist">Add To Cart</div>
-            </div>
-          </div>
-        </div>
-        <div class="product_wishlist">
-          <div class="img_product_card">
-            <div class="flex_center_icon">
-              <div class="icon_close_product_wishlist">
-                <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
-              </div>
-            </div>
-            <img
-              src="https://fmzee.com/wp-content/uploads/2022/08/ListProductByCategory-product3.png"
-              alt=""
-            />
-          </div>
-          <div class="info_product_card_wishlist">
-            <div class="title_product_cart_wishlist">
-              Personalized Teacher Door Sign, Classroom Door Sign, Custom
-              Teacher Sign, Boho Classroom Decor,
-            </div>
-            <div class="rate_product_wishlist">
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <span>(15)</span>
-            </div>
-            <div class="stock_product_cart">in stock</div>
-            <div class="product_cart_price_btn">
-              <div class="price_product_cart_wishlist">
-                <span id="text_price_wishlist">$28.92</span
-                ><span id="text_discount_wishlist">$21.69</span>
-              </div>
-              <div class="btn_add_to_cart_wishlist">Add To Cart</div>
-            </div>
-          </div>
-        </div>
-        <div class="product_wishlist">
-          <div class="img_product_card">
-            <div class="flex_center_icon">
-              <div class="icon_close_product_wishlist">
-                <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
-              </div>
-            </div>
-            <img
-              src="https://fmzee.com/wp-content/uploads/2022/08/WishList-product5.png"
-              alt=""
-            />
-          </div>
-          <div class="info_product_card_wishlist">
-            <div class="title_product_cart_wishlist">
-              Personalized Teacher Door Sign, Classroom Door Sign, Custom
-              Teacher Sign, Boho Classroom Decor,
-            </div>
-            <div class="rate_product_wishlist">
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <span>(15)</span>
-            </div>
-            <div class="stock_product_cart">in stock</div>
-            <div class="product_cart_price_btn">
-              <div class="price_product_cart_wishlist">
-                <span id="text_price_wishlist">$28.92</span
-                ><span id="text_discount_wishlist">$21.69</span>
-              </div>
-              <div class="btn_add_to_cart_wishlist">Add To Cart</div>
-            </div>
-          </div>
-        </div>
-        <div class="product_wishlist">
-          <div class="img_product_card">
-            <div class="flex_center_icon">
-              <div class="icon_close_product_wishlist">
-                <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
-              </div>
-            </div>
-            <img
-              src="https://fmzee.com/wp-content/uploads/2022/08/ListProductByCategory-product5.png"
-              alt=""
-            />
-          </div>
-          <div class="info_product_card_wishlist">
-            <div class="title_product_cart_wishlist">
-              Personalized Teacher Door Sign, Classroom Door Sign, Custom
-              Teacher Sign, Boho Classroom Decor,
-            </div>
-            <div class="rate_product_wishlist">
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <span>(15)</span>
-            </div>
-            <div class="stock_product_cart">in stock</div>
-            <div class="product_cart_price_btn">
-              <div class="price_product_cart_wishlist">
-                <span id="text_price_wishlist">$28.92</span
-                ><span id="text_discount_wishlist">$21.69</span>
-              </div>
-              <div class="btn_add_to_cart_wishlist">Add To Cart</div>
-            </div>
-          </div>
-        </div>
-        <div class="product_wishlist">
-          <div class="img_product_card">
-            <div class="flex_center_icon">
-              <div class="icon_close_product_wishlist">
-                <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
-              </div>
-            </div>
-            <img
-              src="https://fmzee.com/wp-content/uploads/2022/08/ListProductByCategory-product5.png"
-              alt=""
-            />
-          </div>
-          <div class="info_product_card_wishlist">
-            <div class="title_product_cart_wishlist">
-              Personalized Teacher Door Sign, Classroom Door Sign, Custom
-              Teacher Sign, Boho Classroom Decor,
-            </div>
-            <div class="rate_product_wishlist">
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <span>(15)</span>
-            </div>
-            <div class="stock_product_cart">in stock</div>
-            <div class="product_cart_price_btn">
-              <div class="price_product_cart_wishlist">
-                <span id="text_price_wishlist">$28.92</span
-                ><span id="text_discount_wishlist">$21.69</span>
-              </div>
-              <div class="btn_add_to_cart_wishlist">Add To Cart</div>
-            </div>
-          </div>
-        </div>
-        <div class="product_wishlist">
-          <div class="img_product_card">
-            <div class="flex_center_icon">
-              <div class="icon_close_product_wishlist">
-                <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
-              </div>
-            </div>
-            <img
-              src="https://fmzee.com/wp-content/uploads/2022/08/WishList-product8.png"
-              alt=""
-            />
-          </div>
-          <div class="info_product_card_wishlist">
-            <div class="title_product_cart_wishlist">
-              Personalized Teacher Door Sign, Classroom Door Sign, Custom
-              Teacher Sign, Boho Classroom Decor,
-            </div>
-            <div class="rate_product_wishlist">
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <span>(15)</span>
-            </div>
-            <div class="stock_product_cart">in stock</div>
-            <div class="product_cart_price_btn">
-              <div class="price_product_cart_wishlist">
-                <span id="text_price_wishlist">$28.92</span
-                ><span id="text_discount_wishlist">$21.69</span>
-              </div>
-              <div class="btn_add_to_cart_wishlist">Add To Cart</div>
-            </div>
-          </div>
-        </div>
-        <div class="product_wishlist">
-          <div class="img_product_card">
-            <div class="flex_center_icon">
-              <div class="icon_close_product_wishlist">
-                <i class="fa-solid fa-xmark" style="font-size: 12px"></i>
-              </div>
-            </div>
-            <img
-              src="https://fmzee.com/wp-content/uploads/2022/08/WishList-product9.png"
-              alt=""
-            />
-          </div>
-          <div class="info_product_card_wishlist">
-            <div class="title_product_cart_wishlist">
-              Personalized Teacher Door Sign, Classroom Door Sign, Custom
-              Teacher Sign, Boho Classroom Decor,
-            </div>
-            <div class="rate_product_wishlist">
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <i
-                class="fa-solid fa-star"
-                style="color: #bf8977; font-size: 12px"
-              ></i>
-              <span>(15)</span>
-            </div>
-            <div class="stock_product_cart">in stock</div>
-            <div class="product_cart_price_btn">
-              <div class="price_product_cart_wishlist">
-                <span id="text_price_wishlist">$28.92</span
-                ><span id="text_discount_wishlist">$21.69</span>
-              </div>
-              <div class="btn_add_to_cart_wishlist">Add To Cart</div>
-            </div>
-          </div>
-        </div>
+         -->
       </div>
       <!-- <div class="border1_home_wishlist"></div> -->
       <!-- <div class="pagetion_wishlist">
@@ -1529,7 +1133,7 @@
     $(document).click(function (e) {
       if (
         $(e.target?.parentElement?.parentElement).is(
-          $(".header-dropdown-wrap-item")[0]
+          $(".header-dropdown-wrap-item")[0],
         ) ||
         $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
         $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
@@ -1544,6 +1148,88 @@
         }
       }
     });
+  </script>
+
+  <script>
+    // get data wishlist
+    // let test = $(".wishlist-items-wrapper tr").each(function (i, item) {
+    //   let icon = $(item).find(".product-remove div").attr("src");
+    //   console.log(icon);
+    // });
+      let lengthProduct =  $(".shop_table.cart.wishlist_table li ").length
+    $(".shop_table.cart.wishlist_table li ").each(function (i, item) {
+      //lay icon x
+      let deleteLink = $(item).find(".product-remove a").attr("href");
+      // laays anh
+      let img = $(item).find(".product-thumbnail a img ").attr("data-src");
+      let imgLink = $(item).find(".product-thumbnail a").attr('href');
+      
+      // teen
+      let ten = $(item).find(".product-name strong").html();
+      let productLink = $(item).find(".product-name a").attr("href");
+      // console.log(1166,ten, productLink);
+
+      // status stock
+
+      let status = $(item)
+        .find(".wishlist-in-stock")
+        .html();
+
+      //button
+      let addToCardText = $(item).find(".product-add-to-cart a").html();
+      let addToCardLink = $(item).find(".product-add-to-cart a").attr("href");
+
+      let price1text = $(item).find(".woocommerce-Price-amount").html();
+      let textprice = price1text.slice(0, price1text.indexOf("&"));
+      let price2text = $(item)
+        .find(".woocommerce-Price-currencySymbol")
+        .html();
+      // console.log(1587, textprice);
+
+      // console.log(1580, price2text);
+      $(".all_product_cart").append(`
+        <div class="product_wishlist">
+          <div class="img_product_card">
+            <div class="flex_center_icon">
+              <div class="icon_close_product_wishlist">
+                <a href="${deleteLink}"><i class="fa-solid fa-xmark" style="font-size: 12px"></i></a>
+              </div>
+            </div>
+            <div>
+
+            <a href='${imgLink}'><img id='img-cart'
+              src=${img}
+              alt=""
+            /></a>
+              </div>
+
+          </div>
+          <div class="info_product_card_wishlist">
+            <a href='${productLink}'>
+              <div class="title_product_cart_wishlist">
+                ${ten}
+            </div></a>
+
+          
+            <div class="stock_product_cart">${status}</div>
+            <div class="product_cart_price_btn">
+              <div class="price_product_cart_wishlist">
+                <span id="text_price_wishlist">${textprice} ${price2text}</span
+                ><span id="text_discount_wishlist">${textprice} ${price2text}</span>
+              </div>
+              <a href="${addToCardLink}">
+                <div class="btn_add_to_cart_wishlist" style="background: #20404f">
+                  ${addToCardText==='Add to cart'? "Add to cart": "View Options"} 
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      `);
+     
+    });
+  $(".count_product_list").append(`
+     <div class="count_product_list">${lengthProduct} product</div>`)
   </script>
   <script>
     // display img on product
