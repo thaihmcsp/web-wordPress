@@ -851,12 +851,38 @@
     $('.product-small.box ').each(function(index, product){
         const thumbnail = $(product).find('.image-zoom img').attr('data-src');
         const title = $(product).find('.title-wrapper strong').html();
-        let dellPrice = $(product).find('.price-wrapper .price > del bdi').eq(0).html().split('&nbsp;')[0];
-        let newPrice = $(product).find('.price-wrapper .price > ins bdi').eq(0).html().split('&nbsp;')[0];;
         const linkProductDetail = $(product).find('.title-wrapper a').attr('href');
         const addToWishList = $(product).find('.wishlist-popup.dark a').attr('href');
         const isAdded = ($(product).find('.wishlist-popup.dark a').attr('data-title') === 'Add to wishlist');
         const color = isAdded ? "color: rgba(32, 64, 79, 0.5)" :"color: rgb(255, 0, 0, 0.5)"
+        let rating = $(product).find('.price-wrapper .star-rating .rating').html();
+        rating = rating ? rating[0] * 1 : rating
+        if(rating){
+            let rateString = ``;
+            for(let i = 0; i < 5; i++){
+                if(i < rating) {
+                    rateString += `<i class="fa-solid fa-star"></i>`
+                }else{
+                    rateString += `<i class="fa-solid fa-star" style='color: wheat'></i>`
+                }
+            }
+            rating = rateString;
+        }
+        let newPrice = $(product).find('.price-wrapper .price > .woocommerce-Price-amount bdi').html();
+        if(!newPrice){
+            newPrice = $(product).find('.price-wrapper .price > ins .woocommerce-Price-amount bdi').html()
+        }
+        newPrice = newPrice.split('&nbsp;')[0]
+        let higherNewPrice = ''
+
+        let oldPrice = $(product).find('.price-wrapper .price del bdi').html();
+        if(oldPrice){
+            oldPrice = oldPrice.split('&nbsp;')[0]
+        }else{
+            higherNewPrice = $(product).find('.price-wrapper .price > .woocommerce-Price-amount bdi');
+            higherNewPrice = higherNewPrice.eq(higherNewPrice.length - 1).html().split('&nbsp;')[0];
+            newPrice = newPrice + ' - $'+higherNewPrice
+        }
         // $(product).find('.price-wrapper .price > del bdi').each(function(i, price){
         //     if(i > 0) dellPrice += ' - ';
         //     dellPrice += `$${$(price).html().split('&nbsp;')[0]}`
@@ -876,17 +902,14 @@
               <div class="listAllProduct-product-right">
                 <p><a href='${linkProductDetail}'> ${title} </a></p>
                 <div class="listAllProduct_icon_star">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <span style="color: black">(15)</span>
+                  ${rating? rating : ''}
                 </div>
                 <div class="listAllProduct_footer">
-                  <span style="color: #676767; text-decoration: line-through"
-                    >$${dellPrice}</span
-                  >
+                  ${oldPrice ? 
+                    `<span style="color: #676767; text-decoration: line-through">$${oldPrice}</span>`
+                    :
+                    ``
+                }
                   <span style="color: #bf8977">$${newPrice}</span>
                   <a href='${addToWishList}'>
                     <i
@@ -902,12 +925,12 @@
         listAll.append(newProduct);
     });
 //    console.log($('.next.page-number').attr('href'));
-    let nextBtn = `
-        <a href='${$('.next.page-number').attr('href')}'>
-            ${$('.listALLProduct-pagination-button')[0].outerHTML}
-        </a>
-    `
-    $('.listALLProduct-pagination-button')[0].outerHTML = nextBtn;
+    // let nextBtn = `
+    //     <a href='${$('.next.page-number').attr('href')}'>
+    //         ${$('.listALLProduct-pagination-button')[0].outerHTML}
+    //     </a>
+    // `
+    // $('.listALLProduct-pagination-button')[0].outerHTML = nextBtn;
         
   </script>
   <script>

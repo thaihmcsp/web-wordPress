@@ -19,166 +19,251 @@
       referrerpolicy="no-referrer"
     />
     <style>
-      /*------------------- header -------------------*/
-      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-      * {
-        font-family: "Nunito", sans-serif;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        /* border: 1px solid gray; */
-      }
-      #header {
-        display: none;
-      }
-      .page-wrapper {
-        padding-top: 0;
-      }
-      .row {
-        margin-left: 0;
-        margin-right: 0;
-      }
-      .col {
-        padding: 0;
-      }
-      #header_container {
-        max-width: 500px; /*figma: 390px */
-        height: 69px;
-        background-color: #20404f;
-        color: #e9dfd3;
-        margin: auto;
-      }
-      #header_wrap {
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        padding: 0 21px 5px 21px;
-        position: relative;
-      }
-      #header-wrap-left {
-        height: 100%;
-        display: flex;
-        align-items: flex-end;
-      }
-      #header_bar {
-        position: relative;
-        font-size: 25px;
-        padding-right: 21px;
-      }
-
-      #header_brand-icon {
-        width: 133px;
-        height: 46px;
-      }
-
-      #header-wrap-right {
-        display: flex;
-        margin-bottom: 6px;
-      }
-      #header_search {
-        font-size: 20px;
-      }
-      #header_user-info {
-        font-size: 20px;
-        margin: 0 11px;
-      }
-      #header_card {
-        font-size: 20px;
-        position: relative;
-      }
-      #header_card-index {
-        position: absolute;
-        top: -5px;
-        right: -5px;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: #bf8977;
-        text-align: center;
-        line-height: 15px;
-        font-size: 13px;
-      }
-      .header-dropdown-wrap-item {
-        border-radius: 5px;
-        position: absolute;
-        top: 0px;
-        transform: translate3d(1px, 70px, 0px) !important;
-        border: none;
-        left: 0;
-        width: 189px;
-        padding: 4px 0 32px 0;
-        background: #20404f;
-        z-index: 100000;
-        display: none;
-      }
-      .header-dropdown-wrap-item a {
-        width: 100%;
-        display: inline-block;
-      }
-      .header-dropdown-item {
-        padding: 5px 0 2px 22px;
-        margin-top: 4px;
-        font-size: 14px;
-        color: #e9dfd3;
-        font-weight: 400;
-        text-decoration: none;
-        border-bottom: 1px solid rgba(217, 217, 217, 0.5);
-      }
-      .header-dropdown-item-dropdown {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .header-dropdown-item-dropdown-icon {
-        margin-right: 16px;
-      }
-      .header-dropdown-item a {
-        font-size: 14px;
-        color: #e9dfd3;
-        font-weight: 400;
-        text-decoration: none;
-      }
-      .dropdown-divider {
-        margin: 0;
-      }
-
-      .header-dropdown-wrap-product-item {
-        border-radius: 5px;
-        position: absolute;
-        top: -73px;
-        transform: translate3d(1px, 70px, 0px) !important;
-        border: none;
-        width: 165px;
-        padding: 4px 0 32px 0;
-        background: #20404f;
-        left: 100%;
-        z-index: 10000;
-        display: none;
-      }
-      .visibleClass {
-        display: block;
-      }
-      .select-header-menu {
-        color: #bf8977;
-      }
+        /*=========================== wordpress ========================*/
+        .large-5 {
+          flex-basis: 41.6666666667%;
+          max-width: 41.6666666667%;
+        }
+        .large-7 {
+          flex-basis: 58.3333333333%;
+          max-width: 58.3333333333%;
+        }
+        .row {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        
+        .row.row-main {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .wishlist-link.icon.primary.button.circle,
+        .account-link.account-login.button.icon.circle {
+          display: inline-block;
+        }
+        .col-2, .col-1, .col{
+          width: 100%;
+        }
+        @media (max-width: 500px) {
+          .page-header-wrapper,
+          .wordpress-data,
+          #footer,
+          #header,
+          .button.icon.circle {
+            display: none;
+          }
+        }
+      </style>
+  
+    <style>
+        /*------------------- header -------------------*/
+            /*------------------- header -------------------*/
+            @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+            * {
+            font-family: "Nunito", sans-serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            /* border: 1px solid gray; */
+            }
+            @media (max-width: 500px) {
+            #header {
+                display: none;
+            }
+            .page-wrapper {
+                padding-top: 0;
+            }
+            .row {
+                margin-left: 0;
+                margin-right: 0;
+                /* flex-flow: nowrap */
+            }
+            .col {
+                padding: 0;
+            }
+            #header_container {
+                max-width: 500px; /*figma: 390px */
+                background-color: #20404f;
+                color: #e9dfd3;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+            }
+            #header_wrap {
+                height: 69px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                padding: 0 21px 5px 21px;
+                position: relative;
+            }
+            #header-wrap-left {
+                height: 100%;
+                display: flex;
+                align-items: flex-end;
+            }
+            #header_bar {
+                position: relative;
+                font-size: 25px;
+                padding-right: 21px;
+            }
+    
+            #header_brand-icon {
+                width: 133px;
+                height: 46px;
+            }
+    
+            #header-wrap-right {
+                display: flex;
+                margin-bottom: 6px;
+            }
+            #header_search {
+                font-size: 20px;
+            }
+            #header_user-info {
+                font-size: 20px;
+                margin: 0 11px;
+            }
+            #header_card {
+                font-size: 20px;
+                position: relative;
+            }
+            #header_card a, #header_user-info a {
+                color: #e9dfd3;
+            }
+            #header_card-index {
+                position: absolute;
+                top: -5px;
+                right: -5px;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: #bf8977;
+                text-align: center;
+                line-height: 15px;
+                font-size: 13px;
+            }
+            .header-dropdown-wrap-item {
+                border-radius: 5px;
+                position: absolute;
+                top: 0px;
+                transform: translate3d(1px, 70px, 0px) !important;
+                border: none;
+                left: 0;
+                width: 189px;
+                padding: 4px 0 32px 0;
+                background: #20404f;
+                z-index: 100000;
+                display: none;
+            }
+            .header-dropdown-wrap-item a {
+                width: 100%;
+                display: inline-block;
+            }
+            .header-dropdown-item {
+                padding: 5px 0 2px 22px;
+                margin-top: 4px;
+                font-size: 14px;
+                color: #e9dfd3;
+                font-weight: 400;
+                text-decoration: none;
+                border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+            }
+            .header-dropdown-item-dropdown {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .header-dropdown-item-dropdown-icon {
+                margin-right: 16px;
+            }
+            .header-dropdown-item a {
+                font-size: 14px;
+                color: #e9dfd3;
+                font-weight: 400;
+                text-decoration: none;
+            }
+            .dropdown-divider {
+                margin: 0;
+            }
+    
+            .header-dropdown-wrap-product-item {
+                border-radius: 5px;
+                position: absolute;
+                top: -73px;
+                transform: translate3d(1px, 70px, 0px) !important;
+                border: none;
+                width: 165px;
+                padding: 4px 0 32px 0;
+                background: #20404f;
+                left: 100%;
+                z-index: 10000;
+                display: none;
+            }
+            .visibleClass {
+                display: block;
+            }
+            .header-search-wrap{
+                padding: 10px 24px;
+                display: none;
+            }
+            #header-search-form {
+                display: flex;
+                width: 100%;
+                padding: 0 16px;
+                background: #e9dfd3;
+                border-radius: 20px;
+                align-items: center;
+            }
+            .header-search-form-input {
+                width: 100%;
+            }
+            .header-search-form-input input {
+                width: 100%;
+                background: #e9dfd3;
+                border: none;
+                outline: none;
+                padding: 8px;
+                font-family: Nunito;
+                font-weight: 600;
+                line-height: 16px;
+                letter-spacing: 0em;
+                color: #20404f;
+            }
+            .header-search-form-input input:focus {
+                background: #e9dfd3;
+                box-shadow: none;
+                color: #20404f;
+            }
+            .header-search-form-button {
+                color: #20404f;
+            }
+            .select-header-menu {
+                color: #bf8977;
+            }
+            .visibleFlex{
+                display: flex;
+            }
+            }
+    
     </style>
     <style>
       /*---------------------------- sign up ----------------------------*/
-      * {
+        @media (max-width: 500px) {
+            * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
       }
-      .sign_in_container {
+      .sign_up_container {
         text-align: center;
       }
-      .sign_in_header {
+      .sign_up_header {
         padding-top: 50px;
         padding-bottom: 20px;
       }
-      .sign_in_header > p {
+      .sign_up_header > p {
         color: #20404f;
         text-transform: uppercase;
         font-size: 18px;
@@ -187,18 +272,18 @@
         margin-bottom: 0;
       }
 
-      .sign_in_header > span {
+      .sign_up_header > span {
         font-size: 12px;
         line-height: 19px;
         font-weight: 400;
         color: #20404f;
       }
-      .sign_in_body {
+      .sign_up_body {
         display: flex;
         flex-direction: column;
         align-items: center;
       }
-      .sign_in_body > input {
+      .sign_up_body > input {
         margin-top: 10px;
         justify-content: center;
         border-radius: 5px;
@@ -209,7 +294,7 @@
         padding-left: 5px;
         font-size: 12px;
       }
-      .sign_in_body > button {
+      .sign_up_body > button {
         margin-top: 10px;
 
         width: 246px;
@@ -218,26 +303,27 @@
         border-radius: 5px;
         color: #e9dfd3;
       }
-      .sign_in_footer {
+      .sign_up_footer {
         margin-top: 10px;
       }
 
-      .sign_in_footer .policy {
+      .sign_up_footer .policy {
         color: #20404f;
         font-size: 12px;
         line-height: 19px;
         font-weight: 600;
       }
-      .sign_in_footer .policy_link {
+      .sign_up_footer .policy_link {
         color: #20404f;
         font-size: 12px;
         line-height: 19px;
         font-weight: 700;
       }
-      .sign_in_footer .policy_link > p > span > a {
+      .sign_up_footer .policy_link > p > span > a {
         color: #bf8977;
         text-decoration: none;
       }
+        }
     </style>
     <style>
       /*------------------------------- footer copyright ------------------------*/
@@ -383,108 +469,130 @@
   </head>
   <body>
     <div id="header_container">
-      <div id="header_wrap">
-        <div id="header-wrap-left">
-          <div id="header_bar" onclick="onMenuDropdown()">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-
-          <!-- dropdown -->
-
-          <div class="header-dropdown-wrap-item" onclick="">
-            <div class="header-dropdown-item">
-              <a href="https://fmzee.com/mobile-home/">Home</a>
+        <div id="header_wrap">
+          <div id="header-wrap-left">
+            <div id="header_bar" onclick="onMenuDropdown()">
+              <i class="fa-solid fa-bars"></i>
             </div>
-
-            <div class="header-dropdown-item">
-              <a href="https://fmzee.com/mobile-best-seller/">Best Sallers</a>
-            </div>
-
-            <div
-              class="header-dropdown-item header-dropdown-item-dropdown"
-              onclick="onProductMenuDropdown()"
-            >
-              <div>Product</div>
-              <i
-                class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
-              ></i>
-              <div class="header-dropdown-wrap-product-item">
-                <a href="https://fmzee.com/?page_id=3039&preview=true">
-                  <div class="header-dropdown-item"><div>Ornament</div></div>
-                </a>
-                <a href="https://fmzee.com/?page_id=3041&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>Tumbler</div>
-                  </div>
-                </a>
-
-                <a href="https://fmzee.com/?page_id=3043&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>Door mat</div>
-                  </div>
-                </a>
-
-                <a href="https://fmzee.com/?page_id=3045&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>Door sign</div>
-                  </div>
-                </a>
-
-                <a href="https://fmzee.com/?page_id=3047&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>2 Layered Door Sign</div>
-                  </div>
-                </a>
+  
+            <!-- dropdown -->
+  
+            <div class="header-dropdown-wrap-item" onclick="">
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/">Home</a>
               </div>
-            </div>
-            <!-- dropdown Product -->
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/mobile-best-seller/">Best Sallers</a>
+              </div>
+  
+              <div
+                class="header-dropdown-item header-dropdown-item-dropdown"
+                onclick="onProductMenuDropdown()"
+              >
+                <div>Product</div>
+                <i
+                  class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
+                ></i>
+                <div class="header-dropdown-wrap-product-item">
+                  <a href="https://fmzee.com/?page_id=3039&preview=true">
+                    <div class="header-dropdown-item"><div>Ornament</div></div>
+                  </a>
+                  <a href="https://fmzee.com/?page_id=3041&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>Tumbler</div>
+                    </div>
+                  </a>
+  
+                  <a href="https://fmzee.com/?page_id=3043&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>Door mat</div>
+                    </div>
+                  </a>
+  
+                  <a href="https://fmzee.com/?page_id=3045&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>Door sign</div>
+                    </div>
+                  </a>
+  
+                  <a href="https://fmzee.com/?page_id=3047&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>2 Layered Door Sign</div>
+                    </div>
+                  </a>
 
-            <div class="header-dropdown-item">
-              <a href="https://fmzee.com/mobile-wish-list/">Wishdivst</a>
+                  <a href="https://fmzee.com/mobile-list-all-product/">
+                    <div class="header-dropdown-item">
+                      <div>All</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- dropdown Product -->
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/mobile-wish-list/">Wishdivst</a>
+              </div>
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/mobile-giftcard-detail/">Gift Card</a>
+              </div>
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/mobile-sign-in/">Login</a>
+              </div>
+  
+              <!-- test -->
             </div>
-
-            <div class="header-dropdown-item">
-              <a href="https://fmzee.com/mobile-giftcard-detail/">Gift Card</a>
+            <div id="header_brand-icon">
+              <a href="https://fmzee.com/"
+                ><img src="https://fmzee.com/wp-content/uploads/2022/08/logo-web_5.png" alt="logo_brand"
+              /></a>
             </div>
-
-            <div class="header-dropdown-item">
-              <a href="https://fmzee.com/mobile-sign-in/">Login</a>
-            </div>
-
-            <!-- test -->
           </div>
-          <div id="header_brand-icon">
-            <a href="https://fmzee.com/mobile-home/"
-              ><img src="https://fmzee.com/header-logo/" alt="logo_brand"
-            /></a>
+  
+          <div id="header-wrap-right">
+            <div id="header_search" onclick="openSearchHeader()">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div id="header_user-info">
+              <a href="https://fmzee.com/mobile-sign-in/">
+                  <i class="fa-regular fa-user"></i>
+              </a>
+            </div>
+            <div id="header_card">
+              <a href="https://fmzee.com/gio-hang/">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <div id="header_card-index">1</div>
+              </a>
+            </div>
           </div>
         </div>
-
-        <div id="header-wrap-right">
-          <div id="header_search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <div id="header_user-info"><i class="fa-regular fa-user"></i></div>
-          <div id="header_card">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <div id="header_card-index">1</div>
+        <div class="header-search-wrap">
+          <div id="header-search-form">
+              <div class="header-search-form-input">
+                  <input type="text" placeholder="Seach...">
+              </div>
+              <div class="header-search-form-button" onclick="activeSearch()">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
           </div>
         </div>
-      </div>
     </div>
-    <div class="sign_in_container">
-      <div class="sign_in_header">
+    <div class="sign_up_container">
+      <div class="sign_up_header">
         <p>Create my account</p>
         <span>Please fill in the information below:</span>
       </div>
-      <div class="sign_in_body">
-        <input type="text" name="" id="" placeholder="First Name:" />
-        <input type="text" name="" id="" placeholder="Last Name:" />
-        <input type="text" name="" id="" placeholder="Email:" />
-        <input type="password" name="" id="" placeholder="Password" />
-        <button>Create My Account</button>
+      <div class="sign_up_body">
+        <input type="text" name="" id="fisrtName" placeholder="First Name:" />
+        <input type="text" name="" id="lastName" placeholder="Last Name:" />
+        <input type="text" name="" id="email" placeholder="Email:" />
+        <input type="password" name="" id="pass" placeholder="Password" />
+        <button onclick="createAcc()">Create My Account</button>
       </div>
-      <div class="sign_in_footer">
+      <div class="sign_up_footer">
         <div class="policy">
           <p>
             This site is protected by reCAPTCHA and the Google
@@ -667,32 +775,14 @@
       </div>
     </div>
   </body>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"
-  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  crossorigin="anonymous"
+></script>
+
   <script>
     // header footer
     function onMenuDropdown() {
@@ -731,4 +821,22 @@
       $(this).attr("src", $(this).attr("data-src"));
     });
   </script>
+  <script>
+    // create user
+    function createAcc (){
+        const email = $('#email').val();
+        $('#reg_email').val(email);
+        $('.woocommerce-Button.woocommerce-button.button.woocommerce-form-register__submit').trigger('click');
+    }
+
+    // check create success
+    $( document ).ready(function(){
+        let check = $('#reg_email')
+        console.log($('#reg_email'));
+        if(!check.length){
+            window.location.href = 'https://fmzee.com'
+        }
+    })
+    
+    </script>
 </html>
