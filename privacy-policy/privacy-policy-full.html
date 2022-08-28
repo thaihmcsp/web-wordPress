@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
@@ -165,78 +171,64 @@
       }
     </style>
     <style>
-      /*---------------------- recover-password ----------------------*/
+      /*-------------------- privacy-policy -------------------- */
       * {
+        font-family: "Nunito", sans-serif;
         padding: 0;
         margin: 0;
         box-sizing: border-box;
       }
-      .sign_in_container {
+      hr {
+        height: 0.63px;
+        background: #20404f;
+        transform: rotate(-0.08deg);
+        margin: 0;
+      }
+      .about_us_container {
+        width: 95%;
+        max-width: 500px;
+        padding: 0px 21px;
+        margin: auto;
+      }
+      .cus_breadcrumb {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 19px;
+        color: rgba(32, 64, 79, 0.8);
+      }
+      .about_sub_title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        text-transform: capitalize;
+
+        color: #20404f;
+      }
+      .about_title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 16px;
+        text-transform: uppercase;
         text-align: center;
       }
-      .sign_in_header {
-        padding-top: 50px;
-        padding-bottom: 20px;
-      }
-      .sign_in_header > p {
-        color: #20404f;
-        text-transform: uppercase;
-        font-size: 18px;
-        font-weight: 700;
-        position: relative;
-        margin-bottom: 0;
-      }
-
-      .sign_in_header > span {
-        font-size: 12px;
-        line-height: 19px;
+      .paragraph {
+        font-style: normal;
         font-weight: 400;
-        color: #20404f;
+        font-size: 14px;
+        line-height: 20px;
       }
-      .sign_in_body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .sign_in_body > input {
-        margin-top: 10px;
-        justify-content: center;
-        border-radius: 5px;
-        border: 1px solid rgba(32, 64, 79, 0.7);
-        width: 246px;
-        height: 35px;
-        background: #e9dfd3;
-        padding-left: 5px;
-        font-size: 12px;
-      }
-      .sign_in_body > button {
-        margin-top: 10px;
-
-        width: 246px;
-        height: 35px;
-        background: #20404f;
-        border-radius: 5px;
-        color: #e9dfd3;
-      }
-      .sign_in_footer {
-        margin-top: 10px;
-      }
-
-      .sign_in_footer .policy {
-        color: #20404f;
-        font-size: 12px;
-        line-height: 19px;
-        font-weight: 600;
-      }
-      .sign_in_footer .policy_link {
-        color: #20404f;
-        font-size: 12px;
-        line-height: 19px;
+      .highlight {
         font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        color: #20404f;
       }
-      .sign_in_footer .policy_link > p > span > a {
-        color: #bf8977;
-        text-decoration: none;
+      .context-information {
+        padding-top: 20px;
+      }
+      .link-http {
+        color: darkolivegreen;
       }
     </style>
     <style>
@@ -472,22 +464,275 @@
         </div>
       </div>
     </div>
-    <div class="sign_in_container">
-      <div class="sign_in_header">
-        <p>Recover password</p>
-        <span>Enter your e-mail:</span>
-      </div>
-      <div class="sign_in_body">
-        <input type="text" name="" id="" placeholder="Email:" />
-        <button>Recover</button>
-      </div>
-      <div class="sign_in_footer">
-        <div class="policy_link">
+    <div class="about_us_container">
+      <span class="cus_breadcrumb">Home / Privacy Policy</span>
+    </div>
+    <hr class="my-2" />
+    <div class="about_us_container">
+      <div class="about_content">
+        <div class="about_sub_title pb-2 pt-3">Privacy Policy</div>
+        <div class="paragraph">
+          This Privacy Policy describes how your personal information is
+          collected, used, and shared when you visit or make a purchase from
+          fmzee.
+        </div>
+        <div class="about_sub_title pb-2 pt-3">
+          Collecting Personal Information
+        </div>
+        <div class="paragraph">
           <p>
-            Remembered your password?
-            <span> <a href="#"> Back to login </a> </span><br />
+            <span class="pl-1">When</span> you visit the Site, we collect
+            certain information <br />
+            about your device, your interaction with the Site, and information
+            necessary to process your purchases. We may also collect additional
+            information if you contact us for customer support. In this Privacy
+            Policy, we refer to any information that can uniquely identify an
+            individual (including the information below) as “Personal
+            Information”. See the list below for more information about what
+            Personal Information we collect and why.
           </p>
         </div>
+        <div class="about_sub_title pb-2 pt-2">Device information:</div>
+        <div class="paragraph">
+          <p>
+            <span class="highlight pl-1">
+              Examples of Personal Information collected:
+            </span>
+            version of web browser, IP address, time zone, cookie information,
+            what sites or products you view, search terms, and how you interact
+            with the Site.
+          </p>
+          <p>
+            <span class="highlight pl-1"> Purpose of collection: </span>
+            to load the Site accurately for you, and to perform analytics on
+            Site usage to optimize our Site.
+          </p>
+          <p>
+            <span class="highlight pl-1"> Source of collection: </span>
+            Collected automatically when you access our Site using cookies, log
+            files, web beacons, tags, or pixels.
+          </p>
+        </div>
+        <div class="about_sub_title pb-2 pt-2">Order information:</div>
+        <div class="paragraph">
+          <p>
+            <span class="highlight pl-1">
+              Examples of Personal Information collected:
+            </span>
+            name, billing address, shipping address, payment information
+            (including credit card numbers, VISA, MASTERCARD, Paypal), email
+            address, and phone number.
+          </p>
+          <p>
+            <span class="highlight pl-1"> Purpose of collection: </span>
+            to provide products or services to you to fulfill our contract, to
+            process your payment information, arrange for shipping, and provide
+            you with invoices and/or order confirmations, communicate with you,
+            screen our orders for potential risk or fraud, and when in line with
+            the preferences you have shared with us, provide you with
+            information or advertising relating to our products or services.
+          </p>
+          <p>
+            <span class="highlight pl-1"> Source of collection: </span>
+            collected from you.
+          </p>
+          <p>
+            <span class="highlight pl-1"> Purpose of collection: </span>
+            to provide products or services to you to fulfill our contract, to
+            process your payment information, arrange for shipping, and provide
+            you with invoices and/or order confirmations, communicate with you,
+            screen our orders for potential risk or fraud, and when in line with
+            the preferences you have shared with us, provide you with
+            information or advertising relating to our products or services.
+          </p>
+        </div>
+        <div class="about_sub_title pb-2 pt-2">
+          Customer support information:
+        </div>
+        <div class="paragraph">
+          <span class="highlight pl-1"> Personal Information collected: </span>
+          name, billing address, shipping address
+          <ul>
+            <li>Purpose of collection: to provide customer support.</li>
+            <li>Source of collection: collected from you.</li>
+            <li>Disclosure for a business purpose:</li>
+          </ul>
+        </div>
+        <div class="about_sub_title pb-2 pt-2">Minors</div>
+        <div class="paragraph">
+          <p>
+            <span class="pl-1">The </span>
+            Site is not intended for individuals under the age of 13. We do not
+            intentionally collect Personal Information from children. If you are
+            the parent or guardian and believe your child has provided us with
+            Personal Information, please contact us at the address below to
+            request deletion.
+          </p>
+        </div>
+        <div class="about_sub_title pb-2 pt-2">
+          Sharing Personal Information
+        </div>
+        <div class="paragraph">
+          <p>
+            <span class="pl-1">We </span>
+            share your Personal Information with service providers to help us
+            provide our services and fulfill our contracts with you, as
+            described above. For example:
+          </p>
+          <ul>
+            <li>
+              We may share your Personal Information to comply with applicable
+              laws and regulations, to respond to a subpoena, search warrant or
+              other lawful request for information we receive, or to otherwise
+              protect our rights.
+            </li>
+          </ul>
+        </div>
+        <div class="about_sub_title pb-2 pt-2">Behavioural Advertising</div>
+        <div class="paragraph">
+          <p>
+            <span class="pl-1">As </span>
+            described above, we use your Personal Information to provide you
+            with targeted advertisements or marketing communications we believe
+            may be of interest to you. For example:
+          </p>
+          <ul>
+            <li>
+              We use Google Analytics to help us understand how our customers
+              use the Site. You can read more about how Google uses your
+              Personal Information here:
+              <span class="link-http">
+                https://policies.google.com/privacy?hl=en
+              </span>
+            </li>
+            <li>
+              You can also opt-out of Google Analytics here:
+              <span class="link-http">
+                https://tools.google.com/dlpage/gaoptout
+              </span>
+            </li>
+            <li>
+              We share information about your use of the Site, your purchases,
+              and your interaction with our ads on other websites with our
+              advertising partners. We collect and share some of this
+              information directly with our advertising partners, and in some
+              cases through the use of cookies or other similar technologies
+              (which you may consent to, depending on your location).
+            </li>
+          </ul>
+          <p>
+            <span class="pl-1">For </span>
+            more information about how targeted advertising works, you can visit
+            the Network Advertising Initiative’s (“NAI”) educational page at
+          </p>
+          <span class="link-http">
+            http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work.
+          </span>
+          <p>You can opt out of targeted advertising by:</p>
+          <ul>
+            <li>
+              FACEBOOK –
+              <span class="link-http"
+                >https://www.facebook.com/settings/?tab=ads</span
+              >
+            </li>
+            <li>
+              GOOGLE –
+              <span class="link-http"
+                >https://www.google.com/settings/ads/anonymous</span
+              >
+            </li>
+            <li>
+              BING –
+              <span class="link-http"
+                >https://advertise.bingads.microsoft.com/en-us/resources/policies/personalized-ads</span
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="about_sub_title pb-2 pt-2">Using Personal Information</div>
+        <div class="paragraph">
+          <p>
+            <span class="pl-1">We </span>
+            use your personal Information to provide our services to you, which
+            includes: offering products for sale, processing payments, shipping
+            and fulfillment of your order, and keeping you up to date on new
+            products, services, and offers.
+          </p>
+        </div>
+        <div class="about_sub_title pb-2 pt-2">Lawful basis</div>
+        <div class="paragraph">
+          <p>
+            Pursuant to the General Data Protection Regulation (“GDPR”), if you
+            are a resident of the European Economic Area (“EEA”), we process
+            your personal information under the following lawful bases:
+          </p>
+          <ul>
+            <li>Your consent;</li>
+            <li>The performance of the contract between you and the Site;</li>
+            <li>Compliance with our legal obligations;</li>
+            <li>To protect your vital interests;</li>
+            <li>To perform a task carried out in the public interest;</li>
+            <li>
+              For our legitimate interests, which do not override your
+              fundamental rights and freedoms.
+            </li>
+          </ul>
+        </div>
+        <div class="about_sub_title pb-2 pt-2">Retention</div>
+        <div class="paragraph">
+          <p>
+            <span class="pl-1">When </span>
+            you place an order through the Site, we will retain your Personal
+            Information for our records unless and until you ask us to erase
+            this information. For more information on your right of erasure,
+            please see the ‘Your rights’ section below.
+          </p>
+        </div>
+        <div class="about_sub_title pb-2 pt-2">Your rights</div>
+        <div class="paragraph">
+          <p>
+            If you are a European resident, you have the right to access the
+            personal information we hold about you and to ask that your personal
+            information be corrected, updated, or deleted. If you would like to
+            exercise this right, please contact us through the contact
+            information below. Additionally, if you are a European resident we
+            note that we are processing your information to fulfill contracts we
+            might have with you (for example if you make an order through the
+            Site), or otherwise to pursue our legitimate business interests
+            listed above. Additionally, please note that your information will
+            be transferred outside of Europe, including to Canada and the United
+            States.
+          </p>
+        </div>
+        <div class="about_sub_title pb-2 pt-2">Do Not Track</div>
+        <div class="paragraph">
+          <p>
+            <span class="pl-1">Please </span>
+            note that because there is no consistent industry understanding of
+            how to respond to “Do Not Track” signals, we do not alter our data
+            collection and usage practices when we detect such a signal from
+            your browser.
+          </p>
+        </div>
+        <div class="about_sub_title pb-2 pt-2">Changes</div>
+        <div class="paragraph">
+          <p>
+            We may update this Privacy Policy from time to time in order to
+            reflect, for example, changes to our practices or for other
+            operational, legal, or regulatory reasons.
+          </p>
+        </div>
+        <div class="about_sub_title pb-2 pt-2">Contact</div>
+        <div class="paragraph">
+          <p>
+            <span class="pl-1">For </span>
+            more information about our privacy practices, if you have questions,
+            or if you would like to make a complaint, please contact us by
+          </p>
+        </div>
+        <span class="highlight">Email:</span>
+        <span class="paragraph">suppost.fmzee@gmail.com </span> <br />
       </div>
     </div>
     <div id="footer-copyright_container">

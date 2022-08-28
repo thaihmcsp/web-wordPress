@@ -240,10 +240,10 @@
         margin: 0 0 7px 0;
         text-align: left;
       }
-      /* .listAllProduct_icon_star i {
+      .listAllProduct_icon_star i {
         width: 12px;
         margin-right: 2px;
-      } */
+      }
       .listAllProduct_footer {
         margin-top: 8px;
         position: relative;
@@ -270,7 +270,7 @@
         position: relative;
         max-width: 500px;
         margin: auto;
-        height: 50px;
+        /* height: 50px; */
         border-bottom: solid 1.5px rgba(32, 64, 79, 0.4);
         justify-content: center;
       }
@@ -593,8 +593,8 @@
       </div>
     <div class="listAllProduct-container">
       <div class="listAllProduct-title">
-        <p class="listAllProduct-title_title">DOOR SIGN</p>
-        <p class="listAllProduct-title_text">[count_product_in_category category="door-sign"] product</p>
+        <p class="listAllProduct-title_title">DOOR MAT</p>
+        <p class="listAllProduct-title_text">[count_product_in_category category="door-mat"] product</p>
       </div>
       <!-- <div class="listAllProduct-title_img">
         <img
@@ -607,17 +607,17 @@
           alt="s"
         />
       </div> -->
-      <hr style="max-width: 500px; margin: auto"/>
+      <hr />
       <div class="listAllProduct-content">
         <div class="wordpress-data">
-            [products limit="10" columns="1" category="door-sign" cat_operator="IN" paginate="true"]
+            [products limit="10" columns="1" category="door-mat" cat_operator="IN" paginate="true"]
         </div>
       </div>
         
       </div>
       <hr style="max-width: 500px; margin: auto"/>
       <div class="listALLProduct-pagination">
-        <!-- <button class="listALLProduct-pagination-button">Next</button> -->
+        <button class="listALLProduct-pagination-button">Next</button>
         <ul style="list-style-type: none; display: flex">
         </ul>
         <!-- <div class="listALLProduct-pagination-i">
@@ -851,38 +851,12 @@
     $('.product-small.box ').each(function(index, product){
         const thumbnail = $(product).find('.image-zoom img').attr('data-src');
         const title = $(product).find('.title-wrapper strong').html();
+        let dellPrice = $(product).find('.price-wrapper .price > del bdi').eq(0).html().split('&nbsp;')[0];
+        let newPrice = $(product).find('.price-wrapper .price > ins bdi').eq(0).html().split('&nbsp;')[0];;
         const linkProductDetail = $(product).find('.title-wrapper a').attr('href');
         const addToWishList = $(product).find('.wishlist-popup.dark a').attr('href');
         const isAdded = ($(product).find('.wishlist-popup.dark a').attr('data-title') === 'Add to wishlist');
         const color = isAdded ? "color: rgba(32, 64, 79, 0.5)" :"color: rgb(255, 0, 0, 0.5)"
-        let rating = $(product).find('.price-wrapper .star-rating .rating').html();
-        rating = rating ? rating[0] * 1 : rating
-        if(rating){
-            let rateString = ``;
-            for(let i = 0; i < 5; i++){
-                if(i < rating) {
-                    rateString += `<i class="fa-solid fa-star"></i>`
-                }else{
-                    rateString += `<i class="fa-solid fa-star" style='color: wheat'></i>`
-                }
-            }
-            rating = rateString;
-        }
-        let newPrice = $(product).find('.price-wrapper .price > .woocommerce-Price-amount bdi').html();
-        if(!newPrice){
-            newPrice = $(product).find('.price-wrapper .price > ins .woocommerce-Price-amount bdi').html()
-        }
-        newPrice = newPrice.split('&nbsp;')[0]
-        let higherNewPrice = ''
-
-        let oldPrice = $(product).find('.price-wrapper .price del bdi').html();
-        if(oldPrice){
-            oldPrice = oldPrice.split('&nbsp;')[0]
-        }else{
-            higherNewPrice = $(product).find('.price-wrapper .price > .woocommerce-Price-amount bdi');
-            higherNewPrice = higherNewPrice.eq(higherNewPrice.length - 1).html().split('&nbsp;')[0];
-            newPrice = newPrice + ' - $'+higherNewPrice
-        }
         // $(product).find('.price-wrapper .price > del bdi').each(function(i, price){
         //     if(i > 0) dellPrice += ' - ';
         //     dellPrice += `$${$(price).html().split('&nbsp;')[0]}`
@@ -902,14 +876,17 @@
               <div class="listAllProduct-product-right">
                 <p><a href='${linkProductDetail}'> ${title} </a></p>
                 <div class="listAllProduct_icon_star">
-                  ${rating? rating : ''}
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span style="color: black">(15)</span>
                 </div>
                 <div class="listAllProduct_footer">
-                  ${oldPrice ? 
-                    `<span style="color: #676767; text-decoration: line-through">$${oldPrice}</span>`
-                    :
-                    ``
-                }
+                  <span style="color: #676767; text-decoration: line-through"
+                    >$${dellPrice}</span
+                  >
                   <span style="color: #bf8977">$${newPrice}</span>
                   <a href='${addToWishList}'>
                     <i
@@ -925,12 +902,12 @@
         listAll.append(newProduct);
     });
 //    console.log($('.next.page-number').attr('href'));
-    // let nextBtn = `
-    //     <a href='${$('.next.page-number').attr('href')}'>
-    //         ${$('.listALLProduct-pagination-button')[0].outerHTML}
-    //     </a>
-    // `
-    // $('.listALLProduct-pagination-button')[0].outerHTML = nextBtn;
+    let nextBtn = `
+        <a href='${$('.next.page-number').attr('href')}'>
+            ${$('.listALLProduct-pagination-button')[0].outerHTML}
+        </a>
+    `
+    $('.listALLProduct-pagination-button')[0].outerHTML = nextBtn;
         
   </script>
   <script>

@@ -5,12 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -112,6 +108,10 @@
         z-index: 100000;
         display: none;
       }
+      .header-dropdown-wrap-item a {
+        width: 100%;
+        display: inline-block;
+      }
       .header-dropdown-item {
         padding: 5px 0 2px 22px;
         margin-top: 4px;
@@ -155,6 +155,9 @@
       }
       .visibleClass {
         display: block;
+      }
+      .select-header-menu {
+        color: #bf8977;
       }
     </style>
     <style>
@@ -206,14 +209,14 @@
         padding: 0px 21px 0px 21px;
       }
       #img1_card1-gift {
-        width: 306px;
-        height: 202px;
+        width: 300px;
+        height: 140px;
         position: absolute;
         margin-top: -153px;
       }
       #img2_card1-gift {
-        width: 306px;
-        height: 202px;
+        width: 300px;
+        height: 140px;
         position: absolute;
         margin-top: 153px;
       }
@@ -313,10 +316,27 @@
       }
       .all-btn-1Cart {
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
+        flex-direction: row;
+        max-width: 270px;
+        flex-wrap: wrap;
       }
       .column1_btn_Cart {
         display: flex;
+      }
+
+      .btn_Gift_Cart {
+        cursor: pointer;
+        width: 68px;
+        height: 28px;
+        border-radius: 5px;
+        margin-right: 15px;
+        margin-bottom: 19px;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(32, 64, 79, 0.8);
       }
       .btn_Gift_Cart_main {
         width: 68px;
@@ -329,18 +349,6 @@
         align-items: center;
         justify-content: center;
         background: #20404f;
-      }
-      .btn_Gift_Cart {
-        width: 68px;
-        height: 28px;
-        border-radius: 5px;
-        margin-right: 15px;
-        margin-bottom: 19px;
-        color: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(32, 64, 79, 0.8);
       }
       .btn_Gift_Cart span {
         font-family: "Nunito";
@@ -835,6 +843,169 @@
       }
     </style>
     <style>
+      /* -------------------------- Home -------------------------- */
+      .home-page-container {
+        width: 100%;
+        max-width: 500px;
+        background: #f5f5f5;
+        margin: auto;
+      }
+
+      .home-page-wrapper {
+        width: 100%;
+        max-width: 390px;
+        margin: auto;
+      }
+      .carousel-wrapper {
+        margin-top: 15px;
+        padding-bottom: 22px;
+        border-bottom: 1px solid #20404f;
+      }
+      .title-carousel {
+        margin-bottom: 14px;
+        display: flex;
+        justify-content: center;
+      }
+      .carousel-control-prev {
+        left: -21px;
+        color: #000000;
+        bottom: 35%;
+      }
+      .checked {
+        color: #bf8977;
+      }
+      .star-icon {
+        font-size: 12px;
+      }
+      .rating-item .number-person-rating {
+        padding-left: 5px;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+      }
+      .carousel-control-next {
+        right: -21px;
+        color: #000000;
+        bottom: 30%;
+      }
+      .carousel-control-next-icon,
+      .carousel-control-prev-icon {
+        background-image: none;
+      }
+      .home-page-container .home-page-banner {
+        width: 390px;
+        height: 530px;
+      }
+      .home-page-carousel {
+        max-width: 500px;
+        margin: auto;
+      }
+      .home-page-carousel .title-carousel {
+        color: #20404f;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 16px;
+      }
+      .home-page-carousel .carousel-home-slide {
+        width: 90%;
+        max-width: 500px;
+        margin: auto;
+        justify-content: space-between;
+      }
+      .carousel-home-item {
+        width: 100%;
+        max-width: fit-content;
+        background: #d9d9d9;
+        display: flex;
+        flex-direction: column;
+        padding: 4px;
+      }
+      .carousel-home-item .img-item-carousel {
+        width: 100px;
+        height: 46px;
+        border-radius: 5px;
+        margin: 4px;
+      }
+      .carousel-home-item .carousel-item-detail {
+        width: 100%;
+        font-size: 13px;
+      }
+      .caroudel-button {
+        margin-top: 15px;
+      }
+      .carousel-home-item .price-item {
+        width: 118px;
+        height: 15px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        letter-spacing: -0.02em;
+      }
+      .carousel-control-next,
+      .carousel-control-prev {
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      .font-text-carousel {
+        font-weight: 400;
+        line-height: 16px;
+      }
+
+      .price-item .old-price {
+        color: black;
+        text-decoration: line-through;
+      }
+
+      .price-item .new-price {
+        color: #bf8977;
+      }
+      .button-show-more {
+        width: 74px;
+        /* height: 14px; */
+        padding: 4px;
+        background: #20404f;
+        border-radius: 3px;
+        color: #ffffff;
+        font-size: 13px;
+      }
+      .three-step-wrapper {
+        width: 100%;
+        max-width: 348px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 28px;
+        padding-bottom: 40px;
+      }
+      .title-three-step {
+        width: 244px;
+        height: 31px;
+        background: #20404f;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        border-radius: 6px;
+      }
+      .once-of-three-step .title-step {
+        margin-top: 11px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+      .once-of-three-step .step-content {
+        width: 348px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+        background: #e9dfd3;
+        color: #20404f;
+        font-size: 14px;
+      }
+    </style>
+    <style>
       /*------------------------------- footer copyright ------------------------*/
       @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
       * {
@@ -871,6 +1042,10 @@
       }
       .footer_copyright-content-warp-items {
         padding-top: 12px;
+      }
+      .footer_copyright-content-warp-items a {
+        text-decoration: none;
+        color: #20404f;
       }
       .footer_copyright-content-items {
         padding: 5px 0;
@@ -919,6 +1094,9 @@
       .footer-coppyright-author {
         font-size: 14px;
         padding: 26px 0 12px 0;
+      }
+      .pr-4 {
+        padding-right: 16px;
       }
     </style>
     <style>
@@ -980,10 +1158,12 @@
           <!-- dropdown -->
 
           <div class="header-dropdown-wrap-item" onclick="">
-            <div class="header-dropdown-item"><a href="#">Home</a></div>
+            <div class="header-dropdown-item">
+              <a href="https://fmzee.com/mobile-home/">Home</a>
+            </div>
 
             <div class="header-dropdown-item">
-              <a href="#">Best Sallers</a>
+              <a href="https://fmzee.com/mobile-best-seller/">Best Sallers</a>
             </div>
 
             <div
@@ -1026,21 +1206,23 @@
             <!-- dropdown Product -->
 
             <div class="header-dropdown-item">
-              <a href="#">Wishdivst</a>
+              <a href="https://fmzee.com/mobile-wish-list/">Wishdivst</a>
             </div>
 
             <div class="header-dropdown-item">
-              <a href="#">Gift Card</a>
+              <a href="https://fmzee.com/mobile-giftcard-detail/">Gift Card</a>
             </div>
 
             <div class="header-dropdown-item">
-              <a href="https://fmzee.com/?page_id=2999&preview=true">Login</a>
+              <a href="https://fmzee.com/mobile-sign-in/">Login</a>
             </div>
 
             <!-- test -->
           </div>
           <div id="header_brand-icon">
-            <img src="https://fmzee.com/header-logo/" alt="logo_brand" />
+            <a href="https://fmzee.com/mobile-home/"
+              ><img src="https://fmzee.com/header-logo/" alt="logo_brand"
+            /></a>
           </div>
         </div>
 
@@ -1064,16 +1246,16 @@
       <div class="img_gift_card1">
         <img
           id="img1_card1-gift"
-          src="https://fmzee.com/wp-content/uploads/2022/08/CheckoutGiftCard-gift-card1.png"
+          src="https://fmzee.com/wp-content/uploads/2022/08/25.jpg"
           alt=""
         />
         <img
           id="img2_card1-gift"
-          src="https://fmzee.com/wp-content/uploads/2022/08/CheckoutGiftCard-gift-card2.png"
+          src="https://fmzee.com/wp-content/uploads/2022/08/xx-1.jpg"
           alt=""
         />
       </div>
-      <div class="img_gift_card2">
+      <!-- <div class="img_gift_card2">
         <div class="img_gift_card2_1">
           <img
             id="img1_card2-gift"
@@ -1110,12 +1292,117 @@
             alt=""
           />
         </div>
+      </div> -->
+      <div class="home-page-carousel">
+        <div class="carousel-wrapper">
+          <div
+            id="carouselExampleControls-TUMBLER"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="carousel-home-slide d-flex">
+                  <div class="carousel-home-item">
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/08/xx-1.jpg"
+                      class="img-item-carousel"
+                    />
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/08/25.jpg"
+                      class="img-item-carousel"
+                    />
+                  </div>
+                  <div class="carousel-home-item">
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/08/xx-1.jpg"
+                      class="img-item-carousel"
+                    />
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/08/50.jpg"
+                      alt=""
+                      class="img-item-carousel"
+                    />
+                  </div>
+                  <div class="carousel-home-item">
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/08/xx-1.jpg"
+                      class="img-item-carousel"
+                    />
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/08/75.jpg"
+                      alt=""
+                      class="img-item-carousel"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-home-slide d-flex">
+                  <div class="carousel-home-item">
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/08/xx-1.jpg"
+                      class="img-item-carousel"
+                    />
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/08/100.jpg"
+                      class="img-item-carousel"
+                    />
+                  </div>
+                  <div class="carousel-home-item">
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/08/xx-1.jpg"
+                      class="img-item-carousel"
+                    />
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/08/150.jpg"
+                      alt=""
+                      class="img-item-carousel"
+                    />
+                  </div>
+                  <div class="carousel-home-item">
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/08/xx-1.jpg"
+                      class="img-item-carousel"
+                    />
+                    <img
+                      src="https://fmzee.com/wp-content/uploads/2022/08/200.jpg"
+                      alt=""
+                      class="img-item-carousel"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleControls-TUMBLER"
+              role="button"
+              data-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true">
+                <i class="fa-solid fa-angle-left"></i>
+              </span>
+              <span class="sr-only"></span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleControls-TUMBLER"
+              data-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true">
+                <i class="fa-solid fa-angle-right"></i>
+              </span>
+              <span class="sr-only"></span>
+            </a>
+          </div>
+        </div>
       </div>
       <div class="nav_Macorner_cart">
         <div class="title_Macorner_gift_Card">Macorner Gift Card</div>
         <div class="text_Sold">Sold: 1</div>
         <div class="all-btn-1Cart">
-          <div class="column1_btn_Cart">
+          <!-- <div class="column1_btn_Cart">
             <div class="btn_Gift_Cart_main"><span>$ 25</span></div>
             <div class="btn_Gift_Cart"><span>$ 50</span></div>
             <div class="btn_Gift_Cart"><span></span>$ 75</div>
@@ -1124,7 +1411,7 @@
             <div class="btn_Gift_Cart"><span>$ 100</span></div>
             <div class="btn_Gift_Cart"><span>$ 150</span></div>
             <div class="btn_Gift_Cart"><span>$ 200</span></div>
-          </div>
+          </div> -->
         </div>
         <div class="text_end_Cart">
           <span id="end1_text">$ 24</span>
@@ -1387,9 +1674,15 @@
           </div>
           <div class="collapse" id="quick_link">
             <div class="footer_copyright-content-warp-items">
-              <div class="footer_copyright-content-items">Home</div>
-              <div class="footer_copyright-content-items">About Us</div>
-              <div class="footer_copyright-content-items">Contact Us</div>
+              <div class="footer_copyright-content-items">
+                <a href="https://fmzee.com/mobile-home/">Home</a>
+              </div>
+              <div class="footer_copyright-content-items">
+                <a href="https://fmzee.com/mobile-about-us/">About Us</a>
+              </div>
+              <div class="footer_copyright-content-items">
+                <a href="https://fmzee.com/mobile-contact-us/">Contact Us</a>
+              </div>
               <div class="footer_copyright-content-items">FAQ</div>
             </div>
           </div>
@@ -1410,17 +1703,29 @@
             </div>
             <div class="collapse" id="Policies">
               <div class="footer_copyright-content-warp-items">
-                <div class="footer_copyright-content-items">Privacy Policy</div>
                 <div class="footer_copyright-content-items">
-                  Shipping Policy
+                  <a href="https://fmzee.com/mobile-Privacy-Policy/"
+                    >Privacy Policy</a
+                  >
                 </div>
                 <div class="footer_copyright-content-items">
-                  Refund & Return Policy
+                  <a href="https://fmzee.com/mobile-Shipping-Policy/"
+                    >Shipping Policy</a
+                  >
                 </div>
                 <div class="footer_copyright-content-items">
-                  Terms and Conditions
+                  <a href="https://fmzee.com/mobile-Return-refund/"
+                    >Refund & Return Policy</a
+                  >
                 </div>
-                <div class="footer_copyright-content-items">Payment Method</div>
+                <div class="footer_copyright-content-items">
+                  <a href="https://fmzee.com/mobile-Terms-Conditions/"
+                    >Terms and Conditions</a
+                  >
+                </div>
+                <div class="footer_copyright-content-items">
+                  <a href="#">Payment Method</a>
+                </div>
               </div>
             </div>
           </div>
@@ -1540,12 +1845,17 @@
     crossorigin="anonymous"
   ></script>
   <script>
+    // header footer
     function onMenuDropdown() {
       $(".header-dropdown-wrap-item").toggleClass("visibleClass");
     }
     function onProductMenuDropdown() {
       $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
     }
+    $(".header-dropdown-item").on("click", function () {
+      console.log($(this));
+      $(this).addClass("select-header-menu");
+    });
 
     $(document).click(function (e) {
       if (
@@ -1578,5 +1888,38 @@
         "block";
       document.querySelector(".review_display_onclick").style.display = "none";
     }
+  </script>
+  <script>
+    // display img on product
+    $("img.lazy-load").each(function () {
+      $(this).attr("src", $(this).attr("data-src"));
+    });
+  </script>
+  <script>
+    let imgArr = [
+      "https://fmzee.com/wp-content/uploads/2022/08/xx-1.jpg",
+      "https://fmzee.com/wp-content/uploads/2022/08/25.jpg",
+      "https://fmzee.com/wp-content/uploads/2022/08/50.jpg",
+      "https://fmzee.com/wp-content/uploads/2022/08/75.jpg",
+      "https://fmzee.com/wp-content/uploads/2022/08/100.jpg",
+      "https://fmzee.com/wp-content/uploads/2022/08/150.jpg",
+      "https://fmzee.com/wp-content/uploads/2022/08/200.jpg",
+    ];
+
+    imgArr.slice(1).forEach(function (image) {
+      let splitImg = image.split("/");
+      let imgName = splitImg[splitImg.length - 1].split(".")[0];
+      $(".all-btn-1Cart").append(`
+            <div class='btn_Gift_Cart' price='${imgName}'>
+                <span>$ ${imgName}</span>
+            </div>
+        `);
+      $(`.btn_Gift_Cart[price="${imgName}"]`).on("click", function () {
+        $(".btn_Gift_Cart").removeClass("btn_Gift_Cart_main");
+        $(this).addClass("btn_Gift_Cart_main");
+        $("#img1_card1-gift").attr("src", image);
+      });
+    });
+    $(".btn_Gift_Cart").eq(0).trigger("click");
   </script>
 </html>

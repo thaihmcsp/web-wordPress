@@ -19,144 +19,151 @@
       referrerpolicy="no-referrer"
     />
     <style>
-      /*------------------- header -------------------*/
-      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-      * {
-        font-family: "Nunito", sans-serif;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        /* border: 1px solid gray; */
-      }
-      #header {
-        display: none;
-      }
-      .page-wrapper {
-        padding-top: 0;
-      }
-      .row {
-        margin-left: 0;
-        margin-right: 0;
-      }
-      .col {
-        padding: 0;
-      }
-      #header_container {
-        max-width: 500px; /*figma: 390px */
-        height: 69px;
-        background-color: #20404f;
-        color: #e9dfd3;
-        margin: auto;
-      }
-      #header_wrap {
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        padding: 0 21px 5px 21px;
-        position: relative;
-      }
-      #header-wrap-left {
-        height: 100%;
-        display: flex;
-        align-items: flex-end;
-      }
-      #header_bar {
-        position: relative;
-        font-size: 25px;
-        padding-right: 21px;
-      }
-
-      #header_brand-icon {
-        width: 133px;
-        height: 46px;
-      }
-
-      #header-wrap-right {
-        display: flex;
-        margin-bottom: 6px;
-      }
-      #header_search {
-        font-size: 20px;
-      }
-      #header_user-info {
-        font-size: 20px;
-        margin: 0 11px;
-      }
-      #header_card {
-        font-size: 20px;
-        position: relative;
-      }
-      #header_card-index {
-        position: absolute;
-        top: -5px;
-        right: -5px;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: #bf8977;
-        text-align: center;
-        line-height: 15px;
-        font-size: 13px;
-      }
-      .header-dropdown-wrap-item {
-        border-radius: 5px;
-        position: absolute;
-        top: 0px;
-        transform: translate3d(1px, 70px, 0px) !important;
-        border: none;
-        left: 0;
-        width: 189px;
-        padding: 4px 0 32px 0;
-        background: #20404f;
-        z-index: 100000;
-        display: none;
-      }
-      .header-dropdown-item {
-        padding: 5px 0 2px 22px;
-        margin-top: 4px;
-        font-size: 14px;
-        color: #e9dfd3;
-        font-weight: 400;
-        text-decoration: none;
-        border-bottom: 1px solid rgba(217, 217, 217, 0.5);
-      }
-      .header-dropdown-item-dropdown {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .header-dropdown-item-dropdown-icon {
-        margin-right: 16px;
-      }
-      .header-dropdown-item a {
-        font-size: 14px;
-        color: #e9dfd3;
-        font-weight: 400;
-        text-decoration: none;
-      }
-      .dropdown-divider {
-        margin: 0;
-      }
-
-      .header-dropdown-wrap-product-item {
-        border-radius: 5px;
-        position: absolute;
-        top: -73px;
-        transform: translate3d(1px, 70px, 0px) !important;
-        border: none;
-        width: 165px;
-        padding: 4px 0 32px 0;
-        background: #20404f;
-        left: 100%;
-        z-index: 10000;
-        display: none;
-      }
-      .visibleClass {
-        display: block;
-      }
-    </style>
+        /*------------------- header -------------------*/
+        @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+        * {
+          font-family: "Nunito", sans-serif;
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          /* border: 1px solid gray; */
+        }
+        #header {
+          display: none;
+        }
+        .page-wrapper {
+          padding-top: 0;
+        }
+        .row {
+          margin-left: 0;
+          margin-right: 0;
+        }
+        .col {
+          padding: 0;
+        }
+        #header_container {
+          max-width: 500px; /*figma: 390px */
+          height: 69px;
+          background-color: #20404f;
+          color: #e9dfd3;
+          margin: auto;
+        }
+        #header_wrap {
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          padding: 0 21px 5px 21px;
+          position: relative;
+        }
+        #header-wrap-left {
+          height: 100%;
+          display: flex;
+          align-items: flex-end;
+        }
+        #header_bar {
+          position: relative;
+          font-size: 25px;
+          padding-right: 21px;
+        }
+  
+        #header_brand-icon {
+          width: 133px;
+          height: 46px;
+        }
+  
+        #header-wrap-right {
+          display: flex;
+          margin-bottom: 6px;
+        }
+        #header_search {
+          font-size: 20px;
+        }
+        #header_user-info {
+          font-size: 20px;
+          margin: 0 11px;
+        }
+        #header_card {
+          font-size: 20px;
+          position: relative;
+        }
+        #header_card-index {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: #bf8977;
+          text-align: center;
+          line-height: 15px;
+          font-size: 13px;
+        }
+        .header-dropdown-wrap-item {
+          border-radius: 5px;
+          position: absolute;
+          top: 0px;
+          transform: translate3d(1px, 70px, 0px) !important;
+          border: none;
+          left: 0;
+          width: 189px;
+          padding: 4px 0 32px 0;
+          background: #20404f;
+          z-index: 100000;
+          display: none;
+        }
+        .header-dropdown-wrap-item a {
+          width: 100%;
+          display: inline-block;
+        }
+        .header-dropdown-item {
+          padding: 5px 0 2px 22px;
+          margin-top: 4px;
+          font-size: 14px;
+          color: #e9dfd3;
+          font-weight: 400;
+          text-decoration: none;
+          border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+        }
+        .header-dropdown-item-dropdown {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .header-dropdown-item-dropdown-icon {
+          margin-right: 16px;
+        }
+        .header-dropdown-item a {
+          font-size: 14px;
+          color: #e9dfd3;
+          font-weight: 400;
+          text-decoration: none;
+        }
+        .dropdown-divider {
+          margin: 0;
+        }
+  
+        .header-dropdown-wrap-product-item {
+          border-radius: 5px;
+          position: absolute;
+          top: -73px;
+          transform: translate3d(1px, 70px, 0px) !important;
+          border: none;
+          width: 165px;
+          padding: 4px 0 32px 0;
+          background: #20404f;
+          left: 100%;
+          z-index: 10000;
+          display: none;
+        }
+        .visibleClass {
+          display: block;
+        }
+        .select-header-menu {
+          color: #bf8977;
+        }
+      </style>
     <style>
       /*-------------------------------- billing detail -------------------------------- */
       * {
@@ -172,7 +179,9 @@
       }
       .billing_detail_container {
         width: 95%;
-        margin: auto 21px;
+        max-width: 500px;
+        margin: auto;
+        padding: 0 21px;
       }
       .billing_detail_breadcrumb {
         font-weight: 400;
@@ -212,6 +221,8 @@
 
       .order {
         background: rgba(191, 137, 119, 0.5);
+        max-width: 500px;
+        margin: auto;
       }
       .order_container {
         padding: 0 21px;
@@ -289,6 +300,11 @@
         text-transform: capitalize;
         color: #e9dfd3;
       }
+
+      hr {
+        max-width: 500px;
+        margin: auto;
+      }
     </style>
     <style>
       /*------------------------------- footer copyright ------------------------*/
@@ -327,6 +343,10 @@
       }
       .footer_copyright-content-warp-items {
         padding-top: 12px;
+      }
+      .footer_copyright-content-warp-items a {
+        text-decoration: none;
+        color: #20404f;
       }
       .footer_copyright-content-items {
         padding: 5px 0;
@@ -375,6 +395,9 @@
       .footer-coppyright-author {
         font-size: 14px;
         padding: 26px 0 12px 0;
+      }
+      .pr-4 {
+        padding-right: 16px;
       }
     </style>
     <style>
@@ -427,92 +450,95 @@
   </head>
   <body>
     <div id="header_container">
-      <div id="header_wrap">
-        <div id="header-wrap-left">
-          <div id="header_bar" onclick="onMenuDropdown()">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-
-          <!-- dropdown -->
-
-          <div class="header-dropdown-wrap-item" onclick="">
-            <div class="header-dropdown-item"><a href="#">Home</a></div>
-
-            <div class="header-dropdown-item">
-              <a href="#">Best Sallers</a>
+        <div id="header_wrap">
+          <div id="header-wrap-left">
+            <div id="header_bar" onclick="onMenuDropdown()">
+              <i class="fa-solid fa-bars"></i>
             </div>
-
-            <div
-              class="header-dropdown-item header-dropdown-item-dropdown"
-              onclick="onProductMenuDropdown()"
-            >
-              <div>Product</div>
-              <i
-                class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
-              ></i>
-              <div class="header-dropdown-wrap-product-item">
-                <a href="https://fmzee.com/?page_id=3039&preview=true">
-                  <div class="header-dropdown-item"><div>Ornament</div></div>
-                </a>
-                <a href="https://fmzee.com/?page_id=3041&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>Tumbler</div>
-                  </div>
-                </a>
-
-                <a href="https://fmzee.com/?page_id=3043&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>Door mat</div>
-                  </div>
-                </a>
-
-                <a href="https://fmzee.com/?page_id=3045&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>Door sign</div>
-                  </div>
-                </a>
-
-                <a href="https://fmzee.com/?page_id=3047&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>2 Layered Door Sign</div>
-                  </div>
-                </a>
+  
+            <!-- dropdown -->
+  
+            <div class="header-dropdown-wrap-item" onclick="">
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/mobile-home/">Home</a>
               </div>
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/mobile-best-seller/">Best Sallers</a>
+              </div>
+  
+              <div
+                class="header-dropdown-item header-dropdown-item-dropdown"
+                onclick="onProductMenuDropdown()"
+              >
+                <div>Product</div>
+                <i
+                  class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
+                ></i>
+                <div class="header-dropdown-wrap-product-item">
+                  <a href="https://fmzee.com/?page_id=3039&preview=true">
+                    <div class="header-dropdown-item"><div>Ornament</div></div>
+                  </a>
+                  <a href="https://fmzee.com/?page_id=3041&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>Tumbler</div>
+                    </div>
+                  </a>
+  
+                  <a href="https://fmzee.com/?page_id=3043&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>Door mat</div>
+                    </div>
+                  </a>
+  
+                  <a href="https://fmzee.com/?page_id=3045&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>Door sign</div>
+                    </div>
+                  </a>
+  
+                  <a href="https://fmzee.com/?page_id=3047&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>2 Layered Door Sign</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- dropdown Product -->
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/mobile-wish-list/">Wishdivst</a>
+              </div>
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/mobile-giftcard-detail/">Gift Card</a>
+              </div>
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/mobile-sign-in/">Login</a>
+              </div>
+  
+              <!-- test -->
             </div>
-            <!-- dropdown Product -->
-
-            <div class="header-dropdown-item">
-              <a href="#">Wishdivst</a>
+            <div id="header_brand-icon">
+              <a href="https://fmzee.com/mobile-home/"
+                ><img src="https://fmzee.com/header-logo/" alt="logo_brand"
+              /></a>
             </div>
-
-            <div class="header-dropdown-item">
-              <a href="#">Gift Card</a>
-            </div>
-
-            <div class="header-dropdown-item">
-              <a href="https://fmzee.com/?page_id=2999&preview=true">Login</a>
-            </div>
-
-            <!-- test -->
           </div>
-          <div id="header_brand-icon">
-            <img src="https://fmzee.com/header-logo/" alt="logo_brand" />
-          </div>
-        </div>
-
-        <div id="header-wrap-right">
-          <div id="header_search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <div id="header_user-info"><i class="fa-regular fa-user"></i></div>
-          <div id="header_card">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <div id="header_card-index">1</div>
+  
+          <div id="header-wrap-right">
+            <div id="header_search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div id="header_user-info"><i class="fa-regular fa-user"></i></div>
+            <div id="header_card">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <div id="header_card-index">1</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div>
       <div class="billing_detail_container">
         <div class="billing_detail_breadcrumb pt-3">
           <p>Home / Product / Gift / Checkout / Billing Details</p>
@@ -548,261 +574,6 @@
             class="form-control billing_detail_border_long"
           />
         </div>
-        <select>
-          <option value="AF">Afghanistan</option>
-          <option value="AX">Åland Islands</option>
-          <option value="AL">Albania</option>
-          <option value="DZ">Algeria</option>
-          <option value="AS">American Samoa</option>
-          <option value="AD">Andorra</option>
-          <option value="AO">Angola</option>
-          <option value="AI">Anguilla</option>
-          <option value="AQ">Antarctica</option>
-          <option value="AG">Antigua and Barbuda</option>
-          <option value="AR">Argentina</option>
-          <option value="AM">Armenia</option>
-          <option value="AW">Aruba</option>
-          <option value="AU">Australia</option>
-          <option value="AT">Austria</option>
-          <option value="AZ">Azerbaijan</option>
-          <option value="BS">Bahamas</option>
-          <option value="BH">Bahrain</option>
-          <option value="BD">Bangladesh</option>
-          <option value="BB">Barbados</option>
-          <option value="BY">Belarus</option>
-          <option value="BE">Belgium</option>
-          <option value="BZ">Belize</option>
-          <option value="BJ">Benin</option>
-          <option value="BM">Bermuda</option>
-          <option value="BT">Bhutan</option>
-          <option value="BO">Bolivia, Plurinational State of</option>
-          <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
-          <option value="BA">Bosnia and Herzegovina</option>
-          <option value="BW">Botswana</option>
-          <option value="BV">Bouvet Island</option>
-          <option value="BR">Brazil</option>
-          <option value="IO">British Indian Ocean Territory</option>
-          <option value="BN">Brunei Darussalam</option>
-          <option value="BG">Bulgaria</option>
-          <option value="BF">Burkina Faso</option>
-          <option value="BI">Burundi</option>
-          <option value="KH">Cambodia</option>
-          <option value="CM">Cameroon</option>
-          <option value="CA">Canada</option>
-          <option value="CV">Cape Verde</option>
-          <option value="KY">Cayman Islands</option>
-          <option value="CF">Central African Republic</option>
-          <option value="TD">Chad</option>
-          <option value="CL">Chile</option>
-          <option value="CN">China</option>
-          <option value="CX">Christmas Island</option>
-          <option value="CC">Cocos (Keeling) Islands</option>
-          <option value="CO">Colombia</option>
-          <option value="KM">Comoros</option>
-          <option value="CG">Congo</option>
-          <option value="CD">Congo, the Democratic Republic of the</option>
-          <option value="CK">Cook Islands</option>
-          <option value="CR">Costa Rica</option>
-          <option value="CI">Côte d'Ivoire</option>
-          <option value="HR">Croatia</option>
-          <option value="CU">Cuba</option>
-          <option value="CW">Curaçao</option>
-          <option value="CY">Cyprus</option>
-          <option value="CZ">Czech Republic</option>
-          <option value="DK">Denmark</option>
-          <option value="DJ">Djibouti</option>
-          <option value="DM">Dominica</option>
-          <option value="DO">Dominican Republic</option>
-          <option value="EC">Ecuador</option>
-          <option value="EG">Egypt</option>
-          <option value="SV">El Salvador</option>
-          <option value="GQ">Equatorial Guinea</option>
-          <option value="ER">Eritrea</option>
-          <option value="EE">Estonia</option>
-          <option value="ET">Ethiopia</option>
-          <option value="FK">Falkland Islands (Malvinas)</option>
-          <option value="FO">Faroe Islands</option>
-          <option value="FJ">Fiji</option>
-          <option value="FI">Finland</option>
-          <option value="FR">France</option>
-          <option value="GF">French Guiana</option>
-          <option value="PF">French Polynesia</option>
-          <option value="TF">French Southern Territories</option>
-          <option value="GA">Gabon</option>
-          <option value="GM">Gambia</option>
-          <option value="GE">Georgia</option>
-          <option value="DE">Germany</option>
-          <option value="GH">Ghana</option>
-          <option value="GI">Gibraltar</option>
-          <option value="GR">Greece</option>
-          <option value="GL">Greenland</option>
-          <option value="GD">Grenada</option>
-          <option value="GP">Guadeloupe</option>
-          <option value="GU">Guam</option>
-          <option value="GT">Guatemala</option>
-          <option value="GG">Guernsey</option>
-          <option value="GN">Guinea</option>
-          <option value="GW">Guinea-Bissau</option>
-          <option value="GY">Guyana</option>
-          <option value="HT">Haiti</option>
-          <option value="HM">Heard Island and McDonald Islands</option>
-          <option value="VA">Holy See (Vatican City State)</option>
-          <option value="HN">Honduras</option>
-          <option value="HK">Hong Kong</option>
-          <option value="HU">Hungary</option>
-          <option value="IS">Iceland</option>
-          <option value="IN">India</option>
-          <option value="ID">Indonesia</option>
-          <option value="IR">Iran, Islamic Republic of</option>
-          <option value="IQ">Iraq</option>
-          <option value="IE">Ireland</option>
-          <option value="IM">Isle of Man</option>
-          <option value="IL">Israel</option>
-          <option value="IT">Italy</option>
-          <option value="JM">Jamaica</option>
-          <option value="JP">Japan</option>
-          <option value="JE">Jersey</option>
-          <option value="JO">Jordan</option>
-          <option value="KZ">Kazakhstan</option>
-          <option value="KE">Kenya</option>
-          <option value="KI">Kiribati</option>
-          <option value="KP">Korea, Democratic People's Republic of</option>
-          <option value="KR">Korea, Republic of</option>
-          <option value="KW">Kuwait</option>
-          <option value="KG">Kyrgyzstan</option>
-          <option value="LA">Lao People's Democratic Republic</option>
-          <option value="LV">Latvia</option>
-          <option value="LB">Lebanon</option>
-          <option value="LS">Lesotho</option>
-          <option value="LR">Liberia</option>
-          <option value="LY">Libya</option>
-          <option value="LI">Liechtenstein</option>
-          <option value="LT">Lithuania</option>
-          <option value="LU">Luxembourg</option>
-          <option value="MO">Macao</option>
-          <option value="MK">Macedonia, the former Yugoslav Republic of</option>
-          <option value="MG">Madagascar</option>
-          <option value="MW">Malawi</option>
-          <option value="MY">Malaysia</option>
-          <option value="MV">Maldives</option>
-          <option value="ML">Mali</option>
-          <option value="MT">Malta</option>
-          <option value="MH">Marshall Islands</option>
-          <option value="MQ">Martinique</option>
-          <option value="MR">Mauritania</option>
-          <option value="MU">Mauritius</option>
-          <option value="YT">Mayotte</option>
-          <option value="MX">Mexico</option>
-          <option value="FM">Micronesia, Federated States of</option>
-          <option value="MD">Moldova, Republic of</option>
-          <option value="MC">Monaco</option>
-          <option value="MN">Mongolia</option>
-          <option value="ME">Montenegro</option>
-          <option value="MS">Montserrat</option>
-          <option value="MA">Morocco</option>
-          <option value="MZ">Mozambique</option>
-          <option value="MM">Myanmar</option>
-          <option value="NA">Namibia</option>
-          <option value="NR">Nauru</option>
-          <option value="NP">Nepal</option>
-          <option value="NL">Netherlands</option>
-          <option value="NC">New Caledonia</option>
-          <option value="NZ">New Zealand</option>
-          <option value="NI">Nicaragua</option>
-          <option value="NE">Niger</option>
-          <option value="NG">Nigeria</option>
-          <option value="NU">Niue</option>
-          <option value="NF">Norfolk Island</option>
-          <option value="MP">Northern Mariana Islands</option>
-          <option value="NO">Norway</option>
-          <option value="OM">Oman</option>
-          <option value="PK">Pakistan</option>
-          <option value="PW">Palau</option>
-          <option value="PS">Palestinian Territory, Occupied</option>
-          <option value="PA">Panama</option>
-          <option value="PG">Papua New Guinea</option>
-          <option value="PY">Paraguay</option>
-          <option value="PE">Peru</option>
-          <option value="PH">Philippines</option>
-          <option value="PN">Pitcairn</option>
-          <option value="PL">Poland</option>
-          <option value="PT">Portugal</option>
-          <option value="PR">Puerto Rico</option>
-          <option value="QA">Qatar</option>
-          <option value="RE">Réunion</option>
-          <option value="RO">Romania</option>
-          <option value="RU">Russian Federation</option>
-          <option value="RW">Rwanda</option>
-          <option value="BL">Saint Barthélemy</option>
-          <option value="SH">
-            Saint Helena, Ascension and Tristan da Cunha
-          </option>
-          <option value="KN">Saint Kitts and Nevis</option>
-          <option value="LC">Saint Lucia</option>
-          <option value="MF">Saint Martin (French part)</option>
-          <option value="PM">Saint Pierre and Miquelon</option>
-          <option value="VC">Saint Vincent and the Grenadines</option>
-          <option value="WS">Samoa</option>
-          <option value="SM">San Marino</option>
-          <option value="ST">Sao Tome and Principe</option>
-          <option value="SA">Saudi Arabia</option>
-          <option value="SN">Senegal</option>
-          <option value="RS">Serbia</option>
-          <option value="SC">Seychelles</option>
-          <option value="SL">Sierra Leone</option>
-          <option value="SG">Singapore</option>
-          <option value="SX">Sint Maarten (Dutch part)</option>
-          <option value="SK">Slovakia</option>
-          <option value="SI">Slovenia</option>
-          <option value="SB">Solomon Islands</option>
-          <option value="SO">Somalia</option>
-          <option value="ZA">South Africa</option>
-          <option value="GS">
-            South Georgia and the South Sandwich Islands
-          </option>
-          <option value="SS">South Sudan</option>
-          <option value="ES">Spain</option>
-          <option value="LK">Sri Lanka</option>
-          <option value="SD">Sudan</option>
-          <option value="SR">Suriname</option>
-          <option value="SJ">Svalbard and Jan Mayen</option>
-          <option value="SZ">Swaziland</option>
-          <option value="SE">Sweden</option>
-          <option value="CH">Switzerland</option>
-          <option value="SY">Syrian Arab Republic</option>
-          <option value="TW">Taiwan, Province of China</option>
-          <option value="TJ">Tajikistan</option>
-          <option value="TZ">Tanzania, United Republic of</option>
-          <option value="TH">Thailand</option>
-          <option value="TL">Timor-Leste</option>
-          <option value="TG">Togo</option>
-          <option value="TK">Tokelau</option>
-          <option value="TO">Tonga</option>
-          <option value="TT">Trinidad and Tobago</option>
-          <option value="TN">Tunisia</option>
-          <option value="TR">Turkey</option>
-          <option value="TM">Turkmenistan</option>
-          <option value="TC">Turks and Caicos Islands</option>
-          <option value="TV">Tuvalu</option>
-          <option value="UG">Uganda</option>
-          <option value="UA">Ukraine</option>
-          <option value="AE">United Arab Emirates</option>
-          <option value="GB">United Kingdom</option>
-          <option value="US">United States</option>
-          <option value="UM">United States Minor Outlying Islands</option>
-          <option value="UY">Uruguay</option>
-          <option value="UZ">Uzbekistan</option>
-          <option value="VU">Vanuatu</option>
-          <option value="VE">Venezuela, Bolivarian Republic of</option>
-          <option value="VN">Viet Nam</option>
-          <option value="VG">Virgin Islands, British</option>
-          <option value="VI">Virgin Islands, U.S.</option>
-          <option value="WF">Wallis and Futuna</option>
-          <option value="EH">Western Sahara</option>
-          <option value="YE">Yemen</option>
-          <option value="ZM">Zambia</option>
-          <option value="ZW">Zimbabwe</option>
-        </select>
         <div class="form-group">
           <label for="">Country / Region*</label>
           <select
@@ -913,7 +684,7 @@
       <div class="order_container">
         <div class="desc_paypal">
           <div class="pr-4">
-            <input type="radio" name="" id="" checked />
+            <input type="radio" name="pay" id="" checked />
             <span class="paypal_text">PayPal</span>
           </div>
           <img
@@ -935,7 +706,7 @@
       <hr />
       <div class="order_container pb-4">
         <div>
-          <input type="radio" name="" id="" />
+          <input type="radio" name="pay" id="" />
           <span class="paypal_text"> PayPal </span>
         </div>
 
@@ -949,7 +720,6 @@
         </div>
       </div>
       <div class="mt-5"></div>
-    </div>
 
     <div id="footer-copyright_container">
       <div id="footer-copyright_wrap">
@@ -968,9 +738,15 @@
           </div>
           <div class="collapse" id="quick_link">
             <div class="footer_copyright-content-warp-items">
-              <div class="footer_copyright-content-items">Home</div>
-              <div class="footer_copyright-content-items">About Us</div>
-              <div class="footer_copyright-content-items">Contact Us</div>
+              <div class="footer_copyright-content-items">
+                <a href="https://fmzee.com/mobile-home/">Home</a>
+              </div>
+              <div class="footer_copyright-content-items">
+                <a href="https://fmzee.com/mobile-about-us/">About Us</a>
+              </div>
+              <div class="footer_copyright-content-items">
+                <a href="https://fmzee.com/mobile-contact-us/">Contact Us</a>
+              </div>
               <div class="footer_copyright-content-items">FAQ</div>
             </div>
           </div>
@@ -991,17 +767,29 @@
             </div>
             <div class="collapse" id="Policies">
               <div class="footer_copyright-content-warp-items">
-                <div class="footer_copyright-content-items">Privacy Policy</div>
                 <div class="footer_copyright-content-items">
-                  Shipping Policy
+                  <a href="https://fmzee.com/mobile-Privacy-Policy/"
+                    >Privacy Policy</a
+                  >
                 </div>
                 <div class="footer_copyright-content-items">
-                  Refund & Return Policy
+                  <a href="https://fmzee.com/mobile-Shipping-Policy/"
+                    >Shipping Policy</a
+                  >
                 </div>
                 <div class="footer_copyright-content-items">
-                  Terms and Conditions
+                  <a href="https://fmzee.com/mobile-Return-refund/"
+                    >Refund & Return Policy</a
+                  >
                 </div>
-                <div class="footer_copyright-content-items">Payment Method</div>
+                <div class="footer_copyright-content-items">
+                  <a href="https://fmzee.com/mobile-Terms-Conditions/"
+                    >Terms and Conditions</a
+                  >
+                </div>
+                <div class="footer_copyright-content-items">
+                  <a href="#">Payment Method</a>
+                </div>
               </div>
             </div>
           </div>
@@ -1121,13 +909,17 @@
     crossorigin="anonymous"
   ></script>
   <script>
-    //----------------------- footer -----------------------
+    // header footer
     function onMenuDropdown() {
       $(".header-dropdown-wrap-item").toggleClass("visibleClass");
     }
     function onProductMenuDropdown() {
       $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
     }
+    $(".header-dropdown-item").on("click", function () {
+      console.log($(this));
+      $(this).addClass("select-header-menu");
+    });
 
     $(document).click(function (e) {
       if (
@@ -1146,6 +938,12 @@
           $(".header-dropdown-wrap-item").toggleClass("visibleClass");
         }
       }
+    });
+  </script>
+  <script>
+    // display img on product
+    $("img.lazy-load").each(function () {
+      $(this).attr("src", $(this).attr("data-src"));
     });
   </script>
 </html>
