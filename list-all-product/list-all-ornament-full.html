@@ -5,12 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -19,151 +14,235 @@
       referrerpolicy="no-referrer"
     />
     <style>
-        /*------------------- header -------------------*/
-        @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-        * {
-          font-family: "Nunito", sans-serif;
-          padding: 0;
-          margin: 0;
-          box-sizing: border-box;
-          /* border: 1px solid gray; */
+        /*=========================== wordpress ========================*/
+        .large-5 {
+          flex-basis: 41.6666666667%;
+          max-width: 41.6666666667%;
         }
-        #header {
-          display: none;
-        }
-        .page-wrapper {
-          padding-top: 0;
+        .large-7 {
+          flex-basis: 58.3333333333%;
+          max-width: 58.3333333333%;
         }
         .row {
-          margin-left: 0;
-          margin-right: 0;
+          margin-left: auto;
+          margin-right: auto;
         }
-        .col {
-          padding: 0;
+        
+        .row.row-main {
+          margin-left: auto;
+          margin-right: auto;
         }
-        #header_container {
-          max-width: 500px; /*figma: 390px */
-          height: 69px;
-          background-color: #20404f;
-          color: #e9dfd3;
-          margin: auto;
-        }
-        #header_wrap {
-          height: 100%;
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-end;
-          padding: 0 21px 5px 21px;
-          position: relative;
-        }
-        #header-wrap-left {
-          height: 100%;
-          display: flex;
-          align-items: flex-end;
-        }
-        #header_bar {
-          position: relative;
-          font-size: 25px;
-          padding-right: 21px;
-        }
-  
-        #header_brand-icon {
-          width: 133px;
-          height: 46px;
-        }
-  
-        #header-wrap-right {
-          display: flex;
-          margin-bottom: 6px;
-        }
-        #header_search {
-          font-size: 20px;
-        }
-        #header_user-info {
-          font-size: 20px;
-          margin: 0 11px;
-        }
-        #header_card {
-          font-size: 20px;
-          position: relative;
-        }
-        #header_card-index {
-          position: absolute;
-          top: -5px;
-          right: -5px;
-          width: 15px;
-          height: 15px;
-          border-radius: 50%;
-          background-color: #bf8977;
-          text-align: center;
-          line-height: 15px;
-          font-size: 13px;
-        }
-        .header-dropdown-wrap-item {
-          border-radius: 5px;
-          position: absolute;
-          top: 0px;
-          transform: translate3d(1px, 70px, 0px) !important;
-          border: none;
-          left: 0;
-          width: 189px;
-          padding: 4px 0 32px 0;
-          background: #20404f;
-          z-index: 100000;
-          display: none;
-        }
-        .header-dropdown-wrap-item a {
-          width: 100%;
+        .wishlist-link.icon.primary.button.circle,
+        .account-link.account-login.button.icon.circle {
           display: inline-block;
         }
-        .header-dropdown-item {
-          padding: 5px 0 2px 22px;
-          margin-top: 4px;
-          font-size: 14px;
-          color: #e9dfd3;
-          font-weight: 400;
-          text-decoration: none;
-          border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+        .col-2, .col-1, .col{
+          width: 100%;
         }
-        .header-dropdown-item-dropdown {
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+        @media (max-width: 500px) {
+          .page-header-wrapper,
+          .wordpress-data,
+          #footer,
+          #header,
+          .button.icon.circle {
+            display: none;
+          }
         }
-        .header-dropdown-item-dropdown-icon {
-          margin-right: 16px;
-        }
-        .header-dropdown-item a {
-          font-size: 14px;
-          color: #e9dfd3;
-          font-weight: 400;
-          text-decoration: none;
-        }
-        .dropdown-divider {
-          margin: 0;
-        }
-  
-        .header-dropdown-wrap-product-item {
-          border-radius: 5px;
-          position: absolute;
-          top: -73px;
-          transform: translate3d(1px, 70px, 0px) !important;
-          border: none;
-          width: 165px;
-          padding: 4px 0 32px 0;
-          background: #20404f;
-          left: 100%;
-          z-index: 10000;
-          display: none;
-        }
-        .visibleClass {
-          display: block;
-        }
-        .select-header-menu {
-          color: #bf8977;
-        }
-      </style>
+    </style>
+
+    <style>
+        /*------------------- header -------------------*/
+            /*------------------- header -------------------*/
+            @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+            * {
+            font-family: "Nunito", sans-serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            /* border: 1px solid gray; */
+            }
+            @media (max-width: 500px) {
+            #header {
+                display: none;
+            }
+            .page-wrapper {
+                padding-top: 0;
+            }
+            .row {
+                margin-left: 0;
+                margin-right: 0;
+                /* flex-flow: nowrap */
+            }
+            .col {
+                padding: 0;
+            }
+            #header_container {
+                max-width: 500px; /*figma: 390px */
+                background-color: #20404f;
+                color: #e9dfd3;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+            }
+            #header_wrap {
+                height: 69px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                padding: 0 21px 5px 21px;
+                position: relative;
+            }
+            #header-wrap-left {
+                height: 100%;
+                display: flex;
+                align-items: flex-end;
+            }
+            #header_bar {
+                position: relative;
+                font-size: 25px;
+                padding-right: 21px;
+            }
+    
+            #header_brand-icon {
+                width: 133px;
+                height: 46px;
+            }
+    
+            #header-wrap-right {
+                display: flex;
+                margin-bottom: 6px;
+            }
+            #header_search {
+                font-size: 20px;
+            }
+            #header_user-info {
+                font-size: 20px;
+                margin: 0 11px;
+            }
+            #header_card {
+                font-size: 20px;
+                position: relative;
+            }
+            #header_card a, #header_user-info a {
+                color: #e9dfd3;
+            }
+            #header_card-index {
+                position: absolute;
+                top: -5px;
+                right: -5px;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: #bf8977;
+                text-align: center;
+                line-height: 15px;
+                font-size: 13px;
+            }
+            .header-dropdown-wrap-item {
+                border-radius: 5px;
+                position: absolute;
+                top: 0px;
+                transform: translate3d(1px, 70px, 0px) !important;
+                border: none;
+                left: 0;
+                width: 189px;
+                padding: 4px 0 32px 0;
+                background: #20404f;
+                z-index: 100000;
+                display: none;
+            }
+            .header-dropdown-wrap-item a {
+                width: 100%;
+                display: inline-block;
+            }
+            .header-dropdown-item {
+                padding: 5px 0 2px 22px;
+                margin-top: 4px;
+                font-size: 14px;
+                color: #e9dfd3;
+                font-weight: 400;
+                text-decoration: none;
+                border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+            }
+            .header-dropdown-item-dropdown {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .header-dropdown-item-dropdown-icon {
+                margin-right: 16px;
+            }
+            .header-dropdown-item a {
+                font-size: 14px;
+                color: #e9dfd3;
+                font-weight: 400;
+                text-decoration: none;
+            }
+            .dropdown-divider {
+                margin: 0;
+            }
+    
+            .header-dropdown-wrap-product-item {
+                border-radius: 5px;
+                position: absolute;
+                top: -73px;
+                transform: translate3d(1px, 70px, 0px) !important;
+                border: none;
+                width: 165px;
+                padding-top: 4px;
+                background: #20404f;
+                left: 100%;
+                z-index: 10000;
+                display: none;
+            }
+            .visibleClass {
+                display: block;
+            }
+            .header-search-wrap{
+                padding: 10px 24px;
+                display: none;
+            }
+            #header-search-form {
+                display: flex;
+                width: 100%;
+                padding: 0 16px;
+                background: #e9dfd3;
+                border-radius: 20px;
+                align-items: center;
+            }
+            .header-search-form-input {
+                width: 100%;
+            }
+            .header-search-form-input input {
+                width: 100%;
+                background: #e9dfd3;
+                border: none;
+                outline: none;
+                padding: 8px;
+                font-family: Nunito;
+                font-weight: 600;
+                line-height: 16px;
+                letter-spacing: 0em;
+                color: #20404f;
+            }
+            .header-search-form-input input:focus {
+                background: #e9dfd3;
+                box-shadow: none;
+                color: #20404f;
+            }
+            .header-search-form-button {
+                color: #20404f;
+            }
+            .select-header-menu {
+                color: #bf8977;
+            }
+            .visibleFlex{
+                display: flex;
+            }
+            }
+    
+    </style>
     <style>
       /*-------------------------- listAllProduct ------------------------------*/
       .col-inner{
@@ -202,8 +281,9 @@
         text-transform: lowercase;
       }
       .listAllProduct-title_img {
-        text-align: right;
-        margin-right: 20px;
+        /* text-align: right;
+        margin-right: 20px; */
+        height: 20px;
       }
       hr {
         color: #20404f;
@@ -240,10 +320,10 @@
         margin: 0 0 7px 0;
         text-align: left;
       }
-      .listAllProduct_icon_star i {
+      /* .listAllProduct_icon_star i {
         width: 12px;
         margin-right: 2px;
-      }
+      } */
       .listAllProduct_footer {
         margin-top: 8px;
         position: relative;
@@ -270,7 +350,7 @@
         position: relative;
         max-width: 500px;
         margin: auto;
-        /* height: 50px; */
+        height: 50px;
         border-bottom: solid 1.5px rgba(32, 64, 79, 0.4);
         justify-content: center;
       }
@@ -304,6 +384,9 @@
         top: 30%;
         right: 7%;
         color: rgba(32, 64, 79, 0.5);
+      }
+      .footer-copyright-collapse {
+        font-weight: normal
       }
     </style>
     <style>
@@ -399,54 +482,55 @@
         .pr-4 {
           padding-right: 16px;
         }
-      </style>
-      <style>
-        /*-------------------- footer -----------------*/
-        #footer_container {
-          max-width: 500px;
-          margin: auto;
-        }
-        #footer_wrap {
-          display: flex;
-          justify-content: space-between;
-          height: 80px;
-          background-color: #20404f;
-          color: #bf8977;
-          padding: 15px 24px;
-        }
-        #footer_wrap-left {
-          margin-top: 3px;
-          display: flex;
-        }
-        .footer_icon-social {
-          display: flex;
-          font-size: 18px;
-          overflow: hidden;
-        }
-        .footer_icon-social-center {
-          margin: 0 12px;
-        }
+    </style>
+    <style>
+    /*-------------------- footer -----------------*/
+    #footer_container {
+        max-width: 500px;
+        margin: auto;
+    }
+    #footer_wrap {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        background-color: #20404f;
+        color: #bf8977;
+        padding: 15px 24px;
+    }
+    #footer_wrap-left {
+        margin-top: 3px;
+        display: flex;
+    }
+    .footer_icon-social {
+        display: flex;
+        font-size: 18px;
+        overflow: hidden;
+    }
+    .footer_icon-social-center {
+        margin: 0 12px;
+    }
+
+    #footer_wrap-right {
+        display: flex;
+    }
+    .footer_icon-paycard {
+        width: 42px;
+        border-radius: 2px;
+    }
+    .footer_icon-paycard img {
+        width: 42px;
+    }
+    .footer_icon-paycard-center {
+        margin: 0 39px;
+    }
+    #footer-coppyright-subcribe-wap {
+        align-items: center;
+    }
+    #footer-coppyright-subcribe-wap button {
+        padding: 0;
+    }
+    </style>
   
-        #footer_wrap-right {
-          display: flex;
-        }
-        .footer_icon-paycard {
-          width: 42px;
-          border-radius: 2px;
-        }
-        .footer_icon-paycard img {
-          width: 42px;
-        }
-        .footer_icon-paycard-center {
-          margin: 0 39px;
-        }
-        #footer-coppyright-subcribe-wap {
-          align-items: center;
-        }
-        #footer-coppyright-subcribe-wap button {
-          padding: 0;
-        }
-      </style>
     <style>
         /*--------------- word-press-convert ----------------*/
         .small-columns-2>.col{
@@ -512,7 +596,7 @@
   
             <div class="header-dropdown-wrap-item" onclick="">
               <div class="header-dropdown-item">
-                <a href="https://fmzee.com/mobile-home/">Home</a>
+                <a href="https://fmzee.com/">Home</a>
               </div>
   
               <div class="header-dropdown-item">
@@ -554,16 +638,22 @@
                       <div>2 Layered Door Sign</div>
                     </div>
                   </a>
+
+                  <a href="https://fmzee.com/mobile-list-all-product/">
+                    <div class="header-dropdown-item">
+                      <div>All</div>
+                    </div>
+                  </a>
                 </div>
               </div>
               <!-- dropdown Product -->
   
               <div class="header-dropdown-item">
-                <a href="https://fmzee.com/mobile-wish-list/">Wishdivst</a>
+                <a href="https://fmzee.com/wishlist/">Wishdivst</a>
               </div>
   
               <div class="header-dropdown-item">
-                <a href="https://fmzee.com/mobile-giftcard-detail/">Gift Card</a>
+                <a href="https://fmzee.com/san-pham/gift-card/">Gift Card</a>
               </div>
   
               <div class="header-dropdown-item">
@@ -573,31 +663,47 @@
               <!-- test -->
             </div>
             <div id="header_brand-icon">
-              <a href="https://fmzee.com/mobile-home/"
-                ><img src="https://fmzee.com/header-logo/" alt="logo_brand"
+              <a href="https://fmzee.com/"
+                ><img src="https://fmzee.com/wp-content/uploads/2022/08/logo-web_5.png" alt="logo_brand"
               /></a>
             </div>
           </div>
   
           <div id="header-wrap-right">
-            <div id="header_search">
+            <div id="header_search" onclick="openSearchHeader()">
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <div id="header_user-info"><i class="fa-regular fa-user"></i></div>
+            <div id="header_user-info">
+              <a href="https://fmzee.com/mobile-sign-in/">
+                  <i class="fa-regular fa-user"></i>
+              </a>
+            </div>
             <div id="header_card">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <div id="header_card-index">1</div>
+              <a href="https://fmzee.com/gio-hang/">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <div id="header_card-index">1</div>
+              </a>
             </div>
           </div>
         </div>
-      </div>
+        <div class="header-search-wrap">
+          <div id="header-search-form">
+              <div class="header-search-form-input">
+                  <input type="text" placeholder="Seach...">
+              </div>
+              <div class="header-search-form-button" onclick="activeSearch()">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+          </div>
+        </div>
+    </div>
     <div class="listAllProduct-container">
       <div class="listAllProduct-title">
         <p class="listAllProduct-title_title">ORNAMENT</p>
         <p class="listAllProduct-title_text">[count_product_in_category category="ornament"] product</p>
       </div>
-      <!-- <div class="listAllProduct-title_img">
-        <img
+      <div class="listAllProduct-title_img">
+        <!-- <img
           src="https://fmzee.com/wp-content/uploads/2022/08/listAllproduct-icon1.png"
           alt="s"
           style="margin: 0 4px"
@@ -605,8 +711,8 @@
         <img
           src="https://fmzee.com/wp-content/uploads/2022/08/listAllProduct-icon2.png"
           alt="s"
-        />
-      </div> -->
+        /> -->
+      </div>
       <hr />
       <div class="listAllProduct-content">
         <div class="wordpress-data">
@@ -617,7 +723,7 @@
       </div>
       <hr style="max-width: 500px; margin: auto"/>
       <div class="listALLProduct-pagination">
-        <button class="listALLProduct-pagination-button">Next</button>
+        <!-- <button class="listALLProduct-pagination-button">Next</button> -->
         <ul style="list-style-type: none; display: flex">
         </ul>
         <!-- <div class="listALLProduct-pagination-i">
@@ -644,13 +750,13 @@
             <div class="collapse" id="quick_link">
               <div class="footer_copyright-content-warp-items">
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/mobile-home/">Home</a>
+                  <a href="https://fmzee.com/">Home</a>
                 </div>
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/mobile-about-us/">About Us</a>
+                  <a href="https://fmzee.com/about-us/">About Us</a>
                 </div>
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/mobile-contact-us/">Contact Us</a>
+                  <a href="https://fmzee.com/contact/">Contact Us</a>
                 </div>
                 <div class="footer_copyright-content-items">FAQ</div>
               </div>
@@ -673,22 +779,22 @@
               <div class="collapse" id="Policies">
                 <div class="footer_copyright-content-warp-items">
                   <div class="footer_copyright-content-items">
-                    <a href="https://fmzee.com/mobile-Privacy-Policy/"
+                    <a href="https://fmzee.com/privacy-policy/"
                       >Privacy Policy</a
                     >
                   </div>
                   <div class="footer_copyright-content-items">
-                    <a href="https://fmzee.com/mobile-Shipping-Policy/"
+                    <a href="https://fmzee.com/shipping-policy/"
                       >Shipping Policy</a
                     >
                   </div>
                   <div class="footer_copyright-content-items">
-                    <a href="https://fmzee.com/mobile-Return-refund/"
+                    <a href="https://fmzee.com/refund-policy/"
                       >Refund & Return Policy</a
                     >
                   </div>
                   <div class="footer_copyright-content-items">
-                    <a href="https://fmzee.com/mobile-Terms-Conditions/"
+                    <a href="https://fmzee.com/terms-and-conditions/"
                       >Terms and Conditions</a
                     >
                   </div>
@@ -762,101 +868,162 @@
             </div>
           </div>
         </div>
-      </div>
-      <div id="footer_container">
-        <div id="footer_wrap">
-          <div id="footer_wrap-left">
-            <div class="footer_icon-social">
-              <i class="fa-brands fa-facebook"></i>
-            </div>
-            <div class="footer_icon-social footer_icon-social-center">
-              <i class="fa-brands fa-square-twitter"></i>
-            </div>
-            <div class="footer_icon-social">
-              <i class="fa-brands fa-square-instagram"></i>
-            </div>
-          </div>
-          <div id="footer_wrap-right">
-            <div class="footer_icon-paycard">
-              <img src=" https://fmzee.com/productdetail-pay-visa/" alt="" />
-            </div>
-            <div class="footer_icon-paycard footer_icon-paycard-center">
-              <img src="https://fmzee.com/productdetail-pay-paypal/" alt="" />
-            </div>
-            <div class="footer_icon-paycard">
-              <img
-                src=" https://fmzee.com/productdetail-pay-mastercard/"
-                alt=""
-              />
-            </div>
-          </div>
+    </div>
+    <div id="footer_container">
+    <div id="footer_wrap">
+        <div id="footer_wrap-left">
+        <div class="footer_icon-social">
+            <i class="fa-brands fa-facebook"></i>
         </div>
-      </div>
+        <div class="footer_icon-social footer_icon-social-center">
+            <i class="fa-brands fa-square-twitter"></i>
+        </div>
+        <div class="footer_icon-social">
+            <i class="fa-brands fa-square-instagram"></i>
+        </div>
+        </div>
+        <div id="footer_wrap-right">
+        <div class="footer_icon-paycard">
+            <img src=" https://fmzee.com/productdetail-pay-visa/" alt="" />
+        </div>
+        <div class="footer_icon-paycard footer_icon-paycard-center">
+            <img src="https://fmzee.com/productdetail-pay-paypal/" alt="" />
+        </div>
+        <div class="footer_icon-paycard">
+            <img
+            src=" https://fmzee.com/productdetail-pay-mastercard/"
+            alt=""
+            />
+        </div>
+        </div>
+    </div>
+    </div>
   </body>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"
-  ></script>
-  <script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  crossorigin="anonymous"
+></script>
+
+<script>
     // header footer
     function onMenuDropdown() {
-      $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+    $(".header-dropdown-wrap-item").toggleClass("visibleClass");
     }
     function onProductMenuDropdown() {
-      $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
+    $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
     }
     $(".header-dropdown-item").on("click", function () {
-      console.log($(this));
-      $(this).addClass("select-header-menu");
+    $(this).addClass("select-header-menu");
     });
 
     $(document).click(function (e) {
-      if (
+    if (
         $(e.target?.parentElement?.parentElement).is(
-          $(".header-dropdown-wrap-item")[0]
+        $(".header-dropdown-wrap-item")[0]
         ) ||
         $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
         $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
         $(e.target.parentElement).is($("#header_bar")[0]) ||
         $(e.target).is($("#header_bar")[0])
-      ) {
-      } else {
+    ) {
+    } else {
         if (
-          $(".header-dropdown-wrap-item")[0].classList.contains("visibleClass")
+        $(".header-dropdown-wrap-item")[0].classList.contains("visibleClass")
         ) {
-          $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+        $(".header-dropdown-wrap-item").toggleClass("visibleClass");
         }
-      }
+    }
     });
-  </script>
-  <script>
+
+    // cart header
+    $('#header_card-index').html($('.cart-item.has-icon').find('.icon-shopping-bag').attr('data-icon-label'))
+
+    // search header
+    function openSearchHeader () {
+    $('.header-search-wrap').toggleClass('visibleFlex')
+    }
+
+    function activeSearch () {
+    let searchValue = $('.header-search-form-input input').val();
+    $('.search-field').val(searchValue);
+    $('.header-search-wrap').toggleClass('visibleFlex')
+    $('.ux-search-submit.submit-button').trigger('click');
+    }
+
+</script>
+<!--HẾT JS HEADER ------------------------------------------------------------------------------- -->
+<script>
+//----------------------- footer -----------------------
+function onMenuDropdown() {
+    $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+}
+function onProductMenuDropdown() {
+    $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
+}
+
+$(document).click(function (e) {
+    if (
+    $(e.target?.parentElement?.parentElement).is(
+        $(".header-dropdown-wrap-item")[0]
+    ) ||
+    $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
+    $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
+    $(e.target.parentElement).is($("#header_bar")[0]) ||
+    $(e.target).is($("#header_bar")[0])
+    ) {
+    } else {
+    if (
+        $(".header-dropdown-wrap-item")[0].classList.contains(
+        "visibleClass"
+        )
+    ) {
+        $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+    }
+    }
+});
+</script>
+
+<script>
     // ------------------------ get data --------------------------
     const listAll = $('.listAllProduct-content');
     $('.product-small.box ').each(function(index, product){
         const thumbnail = $(product).find('.image-zoom img').attr('data-src');
         const title = $(product).find('.title-wrapper strong').html();
-        let dellPrice = $(product).find('.price-wrapper .price > del bdi').eq(0).html().split('&nbsp;')[0];
-        let newPrice = $(product).find('.price-wrapper .price > ins bdi').eq(0).html().split('&nbsp;')[0];;
         const linkProductDetail = $(product).find('.title-wrapper a').attr('href');
         const addToWishList = $(product).find('.wishlist-popup.dark a').attr('href');
         const isAdded = ($(product).find('.wishlist-popup.dark a').attr('data-title') === 'Add to wishlist');
-        const color = isAdded ? "color: rgba(32, 64, 79, 0.5)" :"color: rgb(255, 0, 0, 0.5)"
+        const color = isAdded ? "color: rgba(32, 64, 79, 0.5)" :"color: #20404F"
+        let rating = $(product).find('.price-wrapper .star-rating .rating').html();
+        rating = rating ? rating[0] * 1 : rating
+        if(rating){
+            let rateString = ``;
+            for(let i = 0; i < 5; i++){
+                if(i < rating) {
+                    rateString += `<i class="fa-solid fa-star"></i>`
+                }else{
+                    rateString += `<i class="fa-solid fa-star" style='color: wheat'></i>`
+                }
+            }
+            rating = rateString;
+        }
+        let newPrice = $(product).find('.price-wrapper .price > .woocommerce-Price-amount bdi').html();
+        if(!newPrice){
+            newPrice = $(product).find('.price-wrapper .price > ins .woocommerce-Price-amount bdi').html()
+        }
+        newPrice = newPrice.split('&nbsp;')[0]
+        let higherNewPrice = ''
+
+        let oldPrice = $(product).find('.price-wrapper .price del bdi').html();
+        if(oldPrice){
+            oldPrice = oldPrice.split('&nbsp;')[0]
+        }else{
+            higherNewPrice = $(product).find('.price-wrapper .price > .woocommerce-Price-amount bdi');
+            higherNewPrice = higherNewPrice.eq(higherNewPrice.length - 1).html().split('&nbsp;')[0];
+            newPrice = newPrice + ' - $'+higherNewPrice
+        }
         // $(product).find('.price-wrapper .price > del bdi').each(function(i, price){
         //     if(i > 0) dellPrice += ' - ';
         //     dellPrice += `$${$(price).html().split('&nbsp;')[0]}`
@@ -876,17 +1043,14 @@
               <div class="listAllProduct-product-right">
                 <p><a href='${linkProductDetail}'> ${title} </a></p>
                 <div class="listAllProduct_icon_star">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <span style="color: black">(15)</span>
+                  ${rating? rating : ''}
                 </div>
                 <div class="listAllProduct_footer">
-                  <span style="color: #676767; text-decoration: line-through"
-                    >$${dellPrice}</span
-                  >
+                  ${oldPrice ? 
+                    `<span style="color: #676767; text-decoration: line-through">$${oldPrice}</span>`
+                    :
+                    ``
+                }
                   <span style="color: #bf8977">$${newPrice}</span>
                   <a href='${addToWishList}'>
                     <i
@@ -902,15 +1066,16 @@
         listAll.append(newProduct);
     });
 //    console.log($('.next.page-number').attr('href'));
-    let nextBtn = `
-        <a href='${$('.next.page-number').attr('href')}'>
-            ${$('.listALLProduct-pagination-button')[0].outerHTML}
-        </a>
-    `
-    $('.listALLProduct-pagination-button')[0].outerHTML = nextBtn;
+    // let nextBtn = `
+    //     <a href='${$('.next.page-number').attr('href')}'>
+    //         ${$('.listALLProduct-pagination-button')[0].outerHTML}
+    //     </a>
+    // `
+    // $('.listALLProduct-pagination-button')[0].outerHTML = nextBtn;
         
   </script>
-  <script>
+
+<script>
     // pagination Product
     $('.woocommerce-pagination .page-number').each((i, button) => {
       let href = $(button).attr('href');

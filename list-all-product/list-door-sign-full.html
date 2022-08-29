@@ -282,8 +282,9 @@
         text-transform: lowercase;
       }
       .listAllProduct-title_img {
-        text-align: right;
-        margin-right: 20px;
+        /* text-align: right;
+        margin-right: 20px; */
+        height: 20px;
       }
       hr {
         color: #20404f;
@@ -702,8 +703,8 @@
         <p class="listAllProduct-title_title">DOOR SIGN</p>
         <p class="listAllProduct-title_text">[count_product_in_category category="door-sign"] product</p>
       </div>
-      <!-- <div class="listAllProduct-title_img">
-        <img
+      <div class="listAllProduct-title_img">
+        <!-- <img
           src="https://fmzee.com/wp-content/uploads/2022/08/listAllproduct-icon1.png"
           alt="s"
           style="margin: 0 4px"
@@ -711,8 +712,9 @@
         <img
           src="https://fmzee.com/wp-content/uploads/2022/08/listAllProduct-icon2.png"
           alt="s"
-        />
-      </div> -->
+        /> -->
+      </div>
+      
       <hr style="max-width: 500px; margin: auto"/>
       <div class="listAllProduct-content">
         <div class="wordpress-data">
@@ -993,7 +995,7 @@ $(document).click(function (e) {
         const linkProductDetail = $(product).find('.title-wrapper a').attr('href');
         const addToWishList = $(product).find('.wishlist-popup.dark a').attr('href');
         const isAdded = ($(product).find('.wishlist-popup.dark a').attr('data-title') === 'Add to wishlist');
-        const color = isAdded ? "color: rgba(32, 64, 79, 0.5)" :"color: rgb(255, 0, 0, 0.5)"
+        const color = isAdded ? "color: rgba(32, 64, 79, 0.5)" :"color: #20404F"
         let rating = $(product).find('.price-wrapper .star-rating .rating').html();
         rating = rating ? rating[0] * 1 : rating
         if(rating){
