@@ -1156,14 +1156,14 @@
     //   let icon = $(item).find(".product-remove div").attr("src");
     //   console.log(icon);
     // });
-      let lengthProduct =  $(".shop_table.cart.wishlist_table li ").length
+    let lengthProduct = $(".shop_table.cart.wishlist_table li ").length;
     $(".shop_table.cart.wishlist_table li ").each(function (i, item) {
       //lay icon x
       let deleteLink = $(item).find(".product-remove a").attr("href");
       // laays anh
       let img = $(item).find(".product-thumbnail a img ").attr("data-src");
-      let imgLink = $(item).find(".product-thumbnail a").attr('href');
-      
+      let imgLink = $(item).find(".product-thumbnail a").attr("href");
+
       // teen
       let ten = $(item).find(".product-name strong").html();
       let productLink = $(item).find(".product-name a").attr("href");
@@ -1171,22 +1171,26 @@
 
       // status stock
 
-      let status = $(item)
-        .find(".wishlist-in-stock")
-        .html();
+      let status = $(item).find(".wishlist-in-stock").html();
 
       //button
       let addToCardText = $(item).find(".product-add-to-cart a").html();
       let addToCardLink = $(item).find(".product-add-to-cart a").attr("href");
-
-      let price1text = $(item).find(".woocommerce-Price-amount").html();
-      let textprice = price1text.slice(0, price1text.indexOf("&"));
-      let price2text = $(item)
+      //price
+      let price1text1 = $(item).find(".woocommerce-Price-amount").eq(0).html();
+      let textprice1 = price1text1.slice(0, price1text1.indexOf("&"));
+      let price2text1 = $(item)
         .find(".woocommerce-Price-currencySymbol")
+        .eq(0)
         .html();
-      // console.log(1587, textprice);
 
-      // console.log(1580, price2text);
+      let price1text2 = $(item).find(".woocommerce-Price-amount").eq(1).html();
+      let textprice2 = price1text2.slice(0, price1text2.indexOf("&"));
+      let price2text2 = $(item)
+        .find(".woocommerce-Price-currencySymbol")
+        .eq(1)
+        .html();
+
       $(".all_product_cart").append(`
         <div class="product_wishlist">
           <div class="img_product_card">
@@ -1210,26 +1214,28 @@
                 ${ten}
             </div></a>
 
-          
             <div class="stock_product_cart">${status}</div>
             <div class="product_cart_price_btn">
               <div class="price_product_cart_wishlist">
-                <span id="text_price_wishlist">${textprice} ${price2text}</span
-                ><span id="text_discount_wishlist">${textprice} ${price2text}</span>
+                <span id="text_price_wishlist">${price1text1} ${price2text1}</span
+                ><span id="text_discount_wishlist">${price1text2} ${price2text2}</span>
               </div>
               <a href="${addToCardLink}">
                 <div class="btn_add_to_cart_wishlist" style="background: #20404f">
-                  ${addToCardText==='Add to cart'? "Add to cart": "View Options"} 
+                  ${
+                    addToCardText === "Add to cart"
+                      ? "Add to cart"
+                      : "View Options"
+                  }
                 </div>
               </a>
             </div>
           </div>
         </div>
       `);
-     
     });
-  $(".count_product_list").append(`
-     <div class="count_product_list">${lengthProduct} product</div>`)
+    $(".count_product_list").append(`
+     <div class="count_product_list">${lengthProduct} product</div>`);
   </script>
   <script>
     // display img on product
