@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -13,7 +18,48 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <style>
+      /*=========================== wordpress ========================*/
+      .large-5 {
+        flex-basis: 41.6666666667%;
+        max-width: 41.6666666667%;
+      }
+      .large-7 {
+        flex-basis: 58.3333333333%;
+        max-width: 58.3333333333%;
+      }
+      .row {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .row.row-main {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .wishlist-link.icon.primary.button.circle,
+      .account-link.account-login.button.icon.circle {
+        display: inline-block;
+      }
+      .col-2,
+      .col-1,
+      .col {
+        width: 100%;
+      }
+      @media (max-width: 500px) {
+        .page-header-wrapper,
+        .wordpress-data,
+        #footer,
+        #header,
+        .button.icon.circle {
+          display: none;
+        }
+      }
+    </style>
+
+    <style>
+      /*------------------- header -------------------*/
       /*------------------- header -------------------*/
       @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
       * {
@@ -33,19 +79,21 @@
         .row {
           margin-left: 0;
           margin-right: 0;
+          /* flex-flow: nowrap */
         }
         .col {
           padding: 0;
         }
         #header_container {
           max-width: 500px; /*figma: 390px */
-          height: 69px;
           background-color: #20404f;
           color: #e9dfd3;
           margin: auto;
+          display: flex;
+          flex-direction: column;
         }
         #header_wrap {
-          height: 100%;
+          height: 69px;
           display: flex;
           justify-content: space-between;
           align-items: flex-end;
@@ -82,6 +130,10 @@
         #header_card {
           font-size: 20px;
           position: relative;
+        }
+        #header_card a,
+        #header_user-info a {
+          color: #e9dfd3;
         }
         #header_card-index {
           position: absolute;
@@ -147,7 +199,7 @@
           transform: translate3d(1px, 70px, 0px) !important;
           border: none;
           width: 165px;
-          padding: 4px 0 32px 0;
+          padding-top: 4px;
           background: #20404f;
           left: 100%;
           z-index: 10000;
@@ -156,8 +208,46 @@
         .visibleClass {
           display: block;
         }
+        .header-search-wrap {
+          padding: 10px 24px;
+          display: none;
+        }
+        #header-search-form {
+          display: flex;
+          width: 100%;
+          padding: 0 16px;
+          background: #e9dfd3;
+          border-radius: 20px;
+          align-items: center;
+        }
+        .header-search-form-input {
+          width: 100%;
+        }
+        .header-search-form-input input {
+          width: 100%;
+          background: #e9dfd3;
+          border: none;
+          outline: none;
+          padding: 8px;
+          font-family: Nunito;
+          font-weight: 600;
+          line-height: 16px;
+          letter-spacing: 0em;
+          color: #20404f;
+        }
+        .header-search-form-input input:focus {
+          background: #e9dfd3;
+          box-shadow: none;
+          color: #20404f;
+        }
+        .header-search-form-button {
+          color: #20404f;
+        }
         .select-header-menu {
           color: #bf8977;
+        }
+        .visibleFlex {
+          display: flex;
         }
       }
     </style>
@@ -365,8 +455,185 @@
           padding: 0 2px;
           color: #676767;
         }
+        .col-inner .woocommerce{
+            display: none;
+        }
       }
     </style>
+        <style>
+            @media (max-width: 500px) {
+                /* CSS BEST SELLER CALOSEL */
+                .carousel-home-item a{
+                    text-decoration: none;
+                }
+                .home-page-container {
+                  width: 100%;
+        
+                  background: #f5f5f5;
+                }
+        
+                .home-page-wrapper {
+                  width: 100%;
+                  max-width: 390px;
+                  margin: auto;
+                }
+                .carousel-wrapper {
+                  /* border-bottom: 1px solid #20404f; */
+                  padding-bottom: 28.44px;
+                }
+                .title-carousel {
+                  margin-top: 25px;
+                  margin-bottom: 24px;
+                  display: flex;
+                  justify-content: center;
+                  font-weight: 700;
+                  font-size: 20px;
+                  line-height: 16px;
+                  /* identical to box height, or 80% */
+                }
+                .title-carousel a {
+                    color: #20404f;
+                    text-decoration: none;
+                }
+                .carousel-control-prev {
+                  width: fit-content;
+                  left: -4px;
+                  color: #000000;
+                  bottom: 35%;
+                }
+                .checked {
+                  color: #bf8977;
+                }
+                .star-icon {
+                  font-size: 12px;
+                }
+                .rating-item .number-person-rating {
+                  padding-left: 5px;
+                  font-size: 10px;
+                  display: flex;
+                  align-items: center;
+                }
+                .carousel-control-next {
+                  width: fit-content;
+                  margin-left: 175px;
+                  color: #000000;
+                  bottom: 30%;
+                  margin-left: 30px;
+                }
+                .carousel-control-next-icon,
+                .carousel-control-prev-icon {
+                  background-image: none;
+                }
+                .home-page-container .home-page-banner {
+                  width: 390px;
+                  height: 530px;
+                }
+        
+                .home-page-carousel .carousel-home-slide {
+                  width: 100%;
+                  max-width: 350px;
+                  margin: auto;
+                  justify-content: space-between;
+                }
+                .carousel-home-item {
+                  width: 100%;
+                  max-width: 170px;
+                }
+                .carousel-home-item .img-item-carousel {
+                  width: 170px;
+                  height: 170px;
+                  border-radius: 5px;
+                }
+                .carousel-home-item .carousel-item-detail {
+                  margin-top: 5px;
+                  margin-bottom: 5px;
+                  width: 100%;
+                  font-size: 13px;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 3;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  color: #20404F;
+                }
+                .caroudel-button {
+                  margin-top: 15px;
+                }
+                .carousel-home-item .price-item {
+                  width: 96px;
+                  height: 15px;
+                  justify-content: space-between;
+                  font-size: 14px;
+                  letter-spacing: -0.02em;
+                  margin-bottom: 4px;
+                }
+        
+                .font-text-carousel {
+                  font-weight: 400;
+                  line-height: 18px;
+                }
+        
+                .price-item .old-price {
+                  color: black;
+                  text-decoration: line-through;
+                }
+        
+                .price-item .new-price {
+                  color: #bf8977;
+                }
+                .button-show-more {
+                  width: 92px;
+                  height: 28px;
+                  background: #20404f;
+                  border-radius: 3px;
+                  color: #ffffff;
+                  font-size: 15px;
+                }
+                .three-step-wrapper {
+                  width: 100%;
+                  max-width: 348px;
+                  margin-left: auto;
+                  margin-right: auto;
+                  margin-top: 28px;
+                  padding-bottom: 28px;
+                }
+                .title-three-step {
+                  width: 244px;
+                  height: 31px;
+                  background: #20404f;
+                  color: #ffffff;
+                  font-weight: 700;
+                  font-size: 16px;
+                  line-height: 16px;
+                  border-radius: 6px;
+                }
+                .once-of-three-step .title-step {
+                  margin-top: 11px;
+                  font-weight: 600;
+                  font-size: 16px;
+                  line-height: 16px;
+                }
+        
+                .once-of-three-step .step-content {
+                  width: 348px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  border-radius: 10px;
+                  background: #e9dfd3;
+                  color: #20404f;
+                  font-size: 14px;
+                  font-weight: 600;
+                }
+                .block {
+                  width: 281px;
+                }
+                .number-person-rating {
+                    color: #00000099;
+                }
+                /* HẾT CSS BEST SELLER */
+            }
+            </style>
     <style>
       /*---------------------- carousel ---------------------*/
       @media (max-width: 500px) {
@@ -381,7 +648,7 @@
           justify-content: center;
         }
         .carousel-control-prev {
-          left: -21px;
+          /* left: -21px; */
           color: #000000;
           bottom: 35%;
         }
@@ -398,7 +665,7 @@
           align-items: center;
         }
         .carousel-control-next {
-          right: -21px;
+          /* right: -21px; */
           color: #000000;
           bottom: 30%;
         }
@@ -463,139 +730,135 @@
         box-sizing: border-box;
         /* border: 1px solid gray; */
       }
-      @media (max-width: 500px) {
-        #footer-copyright_container {
-          max-width: 500px;
-          background-color: rgba(191, 137, 119, 0.5);
-          color: #20404f;
-          padding: 0 22px;
-          margin: auto;
-        }
+      #footer-copyright_container {
+        max-width: 500px;
+        background-color: rgba(191, 137, 119, 0.5);
+        color: #20404f;
+        padding: 0 22px;
+        margin: auto;
+      }
 
-        .footer-coppyright-title {
-          font-size: 16px;
-          font-weight: 700;
-          line-height: 19px;
-        }
-        .footer-copyright-subscribe {
-          padding: 11px 0;
-        }
+      .footer-coppyright-title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+      }
+      .footer-copyright-subscribe {
+        padding: 11px 0;
+      }
 
-        #footer-copyright-collapse-wrap {
-          display: flex;
-          align-items: flex-end;
-          justify-content: space-between;
-          border-bottom: 1px solid #d9d9d9;
-          padding: 4px 0;
-          height: 38px;
-        }
-        .footer_copyright-content-warp-items {
-          padding-top: 12px;
-        }
-        .footer_copyright-content-warp-items a {
-          text-decoration: none;
-          color: #20404f;
-        }
-        .footer_copyright-content-items {
-          padding: 5px 0;
-        }
-        .footer_copyright-content-items-thin {
-          font-size: 13px;
-          font-weight: 500;
-          line-height: 19px;
-          padding: 5px 0;
-        }
-        .footer-coppyright-content-detail1 {
-          padding: 8px 0 6px;
-          font-size: 14px;
-          font-weight: 400;
-        }
-        .footer-coppyright-content-detail2 {
-          font-size: 14px;
-          font-weight: 600;
-          padding-bottom: 12px;
-        }
-        button {
-          padding: 0;
-        }
-        .footer-coppyright-subcribe-wap {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-        #footer-coppyright-subcribe-input {
-          border-radius: 4px;
-          border: 1px solid #20404f;
-          background: rgba(191, 137, 119, 0.01);
-          width: 244px;
-          height: 32px;
-          font-size: 12px;
-          padding-left: 11px;
-        }
-        #footer-coppyright-subcribe-button {
-          width: 89px;
-          border-radius: 4px;
-          height: 32px;
-          background-color: rgba(32, 64, 79, 1);
-          color: rgba(191, 137, 119, 1);
-          border: none;
-        }
-        .footer-coppyright-author {
-          font-size: 14px;
-          padding: 26px 0 12px 0;
-        }
-        .pr-4 {
-          padding-right: 16px;
-        }
+      #footer-copyright-collapse-wrap {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        border-bottom: 1px solid #d9d9d9;
+        padding: 4px 0;
+        height: 38px;
+      }
+      .footer_copyright-content-warp-items {
+        padding-top: 12px;
+      }
+      .footer_copyright-content-warp-items a {
+        text-decoration: none;
+        color: #20404f;
+      }
+      .footer_copyright-content-items {
+        padding: 5px 0;
+      }
+      .footer_copyright-content-items-thin {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 19px;
+        padding: 5px 0;
+      }
+      .footer-coppyright-content-detail1 {
+        padding: 8px 0 6px;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .footer-coppyright-content-detail2 {
+        font-size: 14px;
+        font-weight: 600;
+        padding-bottom: 12px;
+      }
+      button {
+        padding: 0;
+      }
+      .footer-coppyright-subcribe-wap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #footer-coppyright-subcribe-input {
+        border-radius: 4px;
+        border: 1px solid #20404f;
+        background: rgba(191, 137, 119, 0.01);
+        width: 244px;
+        height: 32px;
+        font-size: 12px;
+        padding-left: 11px;
+      }
+      #footer-coppyright-subcribe-button {
+        width: 89px;
+        border-radius: 4px;
+        height: 32px;
+        background-color: rgba(32, 64, 79, 1);
+        color: rgba(191, 137, 119, 1);
+        border: none;
+      }
+      .footer-coppyright-author {
+        font-size: 14px;
+        padding: 26px 0 12px 0;
+      }
+      .pr-4 {
+        padding-right: 16px;
       }
     </style>
     <style>
       /*-------------------- footer -----------------*/
-      @media (max-width: 500px) {
-        #footer_container {
-          max-width: 500px;
-          margin: auto;
-        }
-        #footer_wrap {
-          display: flex;
-          justify-content: space-between;
-          height: 80px;
-          background-color: #20404f;
-          color: #bf8977;
-          padding: 15px 24px;
-        }
-        #footer_wrap-left {
-          margin-top: 3px;
-          display: flex;
-        }
-        .footer_icon-social {
-          display: flex;
-          font-size: 18px;
-          overflow: hidden;
-        }
-        .footer_icon-social-center {
-          margin: 0 12px;
-        }
+      #footer_container {
+        max-width: 500px;
+        margin: auto;
+      }
+      #footer_wrap {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        background-color: #20404f;
+        color: #bf8977;
+        padding: 15px 24px;
+      }
+      #footer_wrap-left {
+        margin-top: 3px;
+        display: flex;
+      }
+      .footer_icon-social {
+        display: flex;
+        font-size: 18px;
+        overflow: hidden;
+      }
+      .footer_icon-social-center {
+        margin: 0 12px;
+      }
 
-        #footer_wrap-right {
-          display: flex;
-        }
-        .footer_icon-paycard {
-          width: 42px;
-          border-radius: 2px;
-        }
-        .footer_icon-paycard img {
-          width: 42px;
-        }
-        .footer_icon-paycard-center {
-          margin: 0 39px;
-        }
-        #footer-coppyright-subcribe-wap {
-          align-items: center;
-        }
-        #footer-coppyright-subcribe-wap button {
-          padding: 0;
-        }
+      #footer_wrap-right {
+        display: flex;
+      }
+      .footer_icon-paycard {
+        width: 42px;
+        border-radius: 2px;
+      }
+      .footer_icon-paycard img {
+        width: 42px;
+      }
+      .footer_icon-paycard-center {
+        margin: 0 39px;
+      }
+      #footer-coppyright-subcribe-wap {
+        align-items: center;
+      }
+      #footer-coppyright-subcribe-wap button {
+        padding: 0;
       }
     </style>
   </head>
@@ -611,7 +874,7 @@
 
           <div class="header-dropdown-wrap-item" onclick="">
             <div class="header-dropdown-item">
-              <a href="https://fmzee.com/mobile-home/">Home</a>
+              <a href="https://fmzee.com/">Home</a>
             </div>
 
             <div class="header-dropdown-item">
@@ -653,16 +916,22 @@
                     <div>2 Layered Door Sign</div>
                   </div>
                 </a>
+
+                <a href="https://fmzee.com/mobile-list-all-product/">
+                  <div class="header-dropdown-item">
+                    <div>All</div>
+                  </div>
+                </a>
               </div>
             </div>
             <!-- dropdown Product -->
 
             <div class="header-dropdown-item">
-              <a href="https://fmzee.com/mobile-wish-list/">Wishdivst</a>
+              <a href="https://fmzee.com/wishlist/">Wishdivst</a>
             </div>
 
             <div class="header-dropdown-item">
-              <a href="https://fmzee.com/mobile-giftcard-detail/">Gift Card</a>
+              <a href="https://fmzee.com/san-pham/gift-card/">Gift Card</a>
             </div>
 
             <div class="header-dropdown-item">
@@ -672,20 +941,38 @@
             <!-- test -->
           </div>
           <div id="header_brand-icon">
-            <a href="https://fmzee.com/mobile-home/"
-              ><img src="https://fmzee.com/header-logo/" alt="logo_brand"
+            <a href="https://fmzee.com/"
+              ><img
+                src="https://fmzee.com/wp-content/uploads/2022/08/logo-web_5.png"
+                alt="logo_brand"
             /></a>
           </div>
         </div>
 
         <div id="header-wrap-right">
-          <div id="header_search">
+          <div id="header_search" onclick="openSearchHeader()">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
-          <div id="header_user-info"><i class="fa-regular fa-user"></i></div>
+          <div id="header_user-info">
+            <a href="https://fmzee.com/mobile-sign-in/">
+              <i class="fa-regular fa-user"></i>
+            </a>
+          </div>
           <div id="header_card">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <div id="header_card-index">1</div>
+            <a href="https://fmzee.com/gio-hang/">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <div id="header_card-index">1</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header-search-wrap">
+        <div id="header-search-form">
+          <div class="header-search-form-input">
+            <input type="text" placeholder="Seach..." />
+          </div>
+          <div class="header-search-form-button" onclick="activeSearch()">
+            <i class="fa-solid fa-magnifying-glass"></i>
           </div>
         </div>
       </div>
@@ -695,22 +982,36 @@
       <div class="checkout_container-title">
         <p>Home / Product / teacher / Checkout</p>
       </div>
-      <div class="list_cart_product_mobile">
-  
-      </div>
+      <div class="list_cart_product_mobile"></div>
       <div class="checkout_container-card">
         <div class="checkout_container-card-Voucher">
           <span style="color: #20404f"> <b> Voucher:</b></span>
-          <input type="text" class="coupon_code_mobile" style="font-size: 12px; color: rgba(32, 64, 79, 0.7); text-align: right; background-color: #e9dfd3;border: none;box-shadow: none;" placeholder="enter code">
+          <input
+            type="text"
+            class="coupon_code_mobile"
+            style="
+              font-size: 12px;
+              color: rgba(32, 64, 79, 0.7);
+              text-align: right;
+              background-color: #e9dfd3;
+              border: none;
+              box-shadow: none;
+            "
+            placeholder="enter code"
+          />
         </div>
         <div class="checkout_container-card-Total">
           <span style="color: #20404f; font-size: 14px"><b>Total</b> </span>
-          <span style="color: #20404f; font-weight: 700" class="total_price_mobile">$43.36</span>
+          <span
+            style="color: #20404f; font-weight: 700"
+            class="total_price_mobile"
+            >$43.36</span
+          >
         </div>
         <div class="checkout_container-card-wrap">
-          <a href='' class="link_to_checkout_mobile">
+          <!-- <a href="" class="link_to_checkout_mobile"> -->
             <button class="btn_checkout_card_mobile">Checkout</button>
-          </a>
+          <!-- </a> -->
           <p class="checkout_container-card-wrap-p">100% Secure Payments</p>
           <div class="checkout_container-card-img">
             <img
@@ -842,271 +1143,73 @@
           <i class="fa-solid fa-angle-right"></i>
         </div>
       </div> -->
-      <div class="home-page-carousel">
-        <div class="carousel-wrapper">
-          <div class="title-carousel">Best Sallers</div>
-          <div
-            id="carouselExampleControls-TUMBLER"
-            class="carousel slide"
-            data-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="carousel-home-slide d-flex">
-                  <div class="carousel-home-item">
-                    <img
-                      src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
-                      class="img-item-carousel"
-                    />
-                    <div class="carousel-item-detail font-text-carousel">
-                      Personalized Teacher Door Sign, Classroom Door Sign,
-                      Custom Teacher Sign,
+      <div class="wordpress-data">
+        [products limit="6" columns="1" category="best-sallers" cat_operator="IN"]
+      </div>
+
+      <div class="product-detail-best-salers-wrap">
+        <div class="home-page-carousel">
+          <div class="carousel-wrapper">
+            <div class="title-carousel"> <a href="https://fmzee.com/mobile-best-seller/">Best Salers</a> </div>
+            <div
+              id="carouselExampleControls"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="carousel-home-slide d-flex">
+                    <div class="carousel-home-item">
                     </div>
-                    <div class="price-item d-flex">
-                      <p class="old-price font-text-carousel">$28.92</p>
-                      <p class="new-price font-text-carousel">$21.9</p>
-                    </div>
-                    <div class="rating-item d-flex">
-                      <div class="">
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                      </div>
-                      <div class="number-person-rating font-text-carousel">
-                        (15)
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-home-item">
-                    <img
-                      src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
-                      alt=""
-                      class="img-item-carousel"
-                    />
-                    <div class="carousel-item-detail font-text-carousel">
-                      Personalized Teacher Door Sign, Classroom Door Sign,
-                      Custom Teacher Sign,
-                    </div>
-                    <div class="price-item d-flex">
-                      <p class="old-price font-text-carousel">$28.92</p>
-                      <p class="new-price font-text-carousel">$21.9</p>
-                    </div>
-                    <div class="rating-item d-flex">
-                      <div class="">
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                      </div>
-                      <div class="number-person-rating font-text-carousel">
-                        (15)
-                      </div>
+                    <div class="carousel-home-item">
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-home-slide d-flex">
-                  <div class="carousel-home-item">
-                    <img
-                      src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
-                      alt=""
-                      class="img-item-carousel"
-                    />
-                    <div class="carousel-item-detail font-text-carousel">
-                      Personalized Teacher Door Sign, Classroom Door Sign,
-                      Custom Teacher Sign,
+                <div class="carousel-item">
+                  <div class="carousel-home-slide d-flex" alt="Third slide">
+                    <div class="carousel-home-item">
                     </div>
-                    <div class="price-item d-flex">
-                      <p class="old-price font-text-carousel">$28.92</p>
-                      <p class="new-price font-text-carousel">$21.9</p>
-                    </div>
-                    <div class="rating-item d-flex">
-                      <div class="">
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                      </div>
-                      <div class="number-person-rating font-text-carousel">
-                        (15)
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-home-item">
-                    <img
-                      src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
-                      alt=""
-                      class="img-item-carousel"
-                    />
-                    <div class="carousel-item-detail font-text-carousel">
-                      Personalized Teacher Door Sign, Classroom Door Sign,
-                      Custom Teacher Sign,
-                    </div>
-                    <div class="price-item d-flex">
-                      <p class="old-price font-text-carousel">$28.92</p>
-                      <p class="new-price font-text-carousel">$21.9</p>
-                    </div>
-                    <div class="rating-item d-flex">
-                      <div class="">
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                      </div>
-                      <div class="number-person-rating font-text-carousel">
-                        (15)
-                      </div>
+                    <div class="carousel-home-item">
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-home-slide d-flex">
-                  <div class="carousel-home-item">
-                    <img
-                      src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
-                      alt=""
-                      class="img-item-carousel"
-                    />
-                    <div class="carousel-item-detail font-text-carousel">
-                      Personalized Teacher Door Sign, Classroom Door Sign,
-                      Custom Teacher Sign,
+                <div class="carousel-item">
+                  <div class="carousel-home-slide d-flex">
+                    <div class="carousel-home-item">
                     </div>
-                    <div class="price-item d-flex">
-                      <p class="old-price font-text-carousel">$28.92</p>
-                      <p class="new-price font-text-carousel">$21.9</p>
-                    </div>
-                    <div class="rating-item d-flex">
-                      <div class="">
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                      </div>
-                      <div class="number-person-rating font-text-carousel">
-                        (15)
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-home-item">
-                    <img
-                      src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
-                      alt=""
-                      class="img-item-carousel"
-                    />
-                    <div class="carousel-item-detail font-text-carousel">
-                      Personalized Teacher Door Sign, Classroom Door Sign,
-                      Custom Teacher Sign,
-                    </div>
-                    <div class="price-item d-flex">
-                      <p class="old-price font-text-carousel">$28.92</p>
-                      <p class="new-price font-text-carousel">$21.9</p>
-                    </div>
-                    <div class="rating-item d-flex">
-                      <div class="">
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                      </div>
-                      <div class="number-person-rating font-text-carousel">
-                        (15)
-                      </div>
+                    <div class="carousel-home-item">
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-home-slide d-flex">
-                  <div class="carousel-home-item">
-                    <img
-                      src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
-                      alt=""
-                      class="img-item-carousel"
-                    />
-                    <div class="carousel-item-detail font-text-carousel">
-                      Personalized Teacher Door Sign, Classroom Door Sign,
-                      Custom Teacher Sign,
-                    </div>
-                    <div class="price-item d-flex">
-                      <p class="old-price font-text-carousel">$28.92</p>
-                      <p class="new-price font-text-carousel">$21.9</p>
-                    </div>
-                    <div class="rating-item d-flex">
-                      <div class="">
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                      </div>
-                      <div class="number-person-rating font-text-carousel">
-                        (15)
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-home-item">
-                    <img
-                      src="https://fmzee.com/wp-content/uploads/2022/08/tumbler1.png"
-                      alt=""
-                      class="img-item-carousel"
-                    />
-                    <div class="carousel-item-detail font-text-carousel">
-                      Personalized Teacher Door Sign, Classroom Door Sign,
-                      Custom Teacher Sign,
-                    </div>
-                    <div class="price-item d-flex">
-                      <p class="old-price font-text-carousel">$28.92</p>
-                      <p class="new-price font-text-carousel">$21.9</p>
-                    </div>
-                    <div class="rating-item d-flex">
-                      <div class="">
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                        <span class="fa fa-star checked star-icon"></span>
-                      </div>
-                      <div class="number-person-rating font-text-carousel">
-                        (15)
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
+                <a
+                  class="carousel-control-prev"
+                  href="#carouselExampleControls"
+                  role="button"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon" aria-hidden="true">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </span>
+                  <span class="sr-only"></span>
+                </a>
+                <a
+                  class="carousel-control-next"
+                  href="#carouselExampleControls"
+                  role="button"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon" aria-hidden="true">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </span>
+                  <span class="sr-only"></span>
+                </a>
               </div>
             </div>
-            <a
-              class="carousel-control-prev"
-              href="#carouselExampleControls-TUMBLER"
-              role="button"
-              data-slide="prev"
-            >
-              <span class="carousel-control-prev-icon" aria-hidden="true">
-                <i class="fa-solid fa-angle-left"></i>
-              </span>
-              <span class="sr-only"></span>
-            </a>
-            <a
-              class="carousel-control-next"
-              href="#carouselExampleControls-TUMBLER"
-              data-slide="next"
-            >
-              <span class="carousel-control-next-icon" aria-hidden="true">
-                <i class="fa-solid fa-angle-right"></i>
-              </span>
-              <span class="sr-only"></span>
-            </a>
           </div>
         </div>
       </div>
+
     </div>
     <div id="footer-copyright_container">
       <div id="footer-copyright_wrap">
@@ -1126,13 +1229,13 @@
           <div class="collapse" id="quick_link">
             <div class="footer_copyright-content-warp-items">
               <div class="footer_copyright-content-items">
-                <a href="https://fmzee.com/mobile-home/">Home</a>
+                <a href="https://fmzee.com/">Home</a>
               </div>
               <div class="footer_copyright-content-items">
-                <a href="https://fmzee.com/mobile-about-us/">About Us</a>
+                <a href="https://fmzee.com/about-us/">About Us</a>
               </div>
               <div class="footer_copyright-content-items">
-                <a href="https://fmzee.com/mobile-contact-us/">Contact Us</a>
+                <a href="https://fmzee.com/contact/">Contact Us</a>
               </div>
               <div class="footer_copyright-content-items">FAQ</div>
             </div>
@@ -1155,22 +1258,20 @@
             <div class="collapse" id="Policies">
               <div class="footer_copyright-content-warp-items">
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/mobile-Privacy-Policy/"
-                    >Privacy Policy</a
-                  >
+                  <a href="https://fmzee.com/privacy-policy/">Privacy Policy</a>
                 </div>
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/mobile-Shipping-Policy/"
+                  <a href="https://fmzee.com/shipping-policy/"
                     >Shipping Policy</a
                   >
                 </div>
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/mobile-Return-refund/"
+                  <a href="https://fmzee.com/refund-policy/"
                     >Refund & Return Policy</a
                   >
                 </div>
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/mobile-Terms-Conditions/"
+                  <a href="https://fmzee.com/terms-and-conditions/"
                     >Terms and Conditions</a
                   >
                 </div>
@@ -1274,15 +1375,25 @@
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
       crossorigin="anonymous"
     ></script>
+
     <script>
-      // header
+      // header footer
       function onMenuDropdown() {
         $(".header-dropdown-wrap-item").toggleClass("visibleClass");
       }
@@ -1290,7 +1401,6 @@
         $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
       }
       $(".header-dropdown-item").on("click", function () {
-        console.log($(this));
         $(this).addClass("select-header-menu");
       });
 
@@ -1314,7 +1424,27 @@
           }
         }
       });
+
+      // cart header
+      $("#header_card-index").html(
+        $(".cart-item.has-icon")
+          .find(".icon-shopping-bag")
+          .attr("data-icon-label")
+      );
+
+      // search header
+      function openSearchHeader() {
+        $(".header-search-wrap").toggleClass("visibleFlex");
+      }
+
+      function activeSearch() {
+        let searchValue = $(".header-search-form-input input").val();
+        $(".search-field").val(searchValue);
+        $(".header-search-wrap").toggleClass("visibleFlex");
+        $(".ux-search-submit.submit-button").trigger("click");
+      }
     </script>
+    <!--HẾT JS HEADER ------------------------------------------------------------------------------- -->
     <script>
       //----------------------- footer -----------------------
       function onMenuDropdown() {
@@ -1369,22 +1499,31 @@
       $(".delivery-date").html(deliveryDate);
     </script>
     <script>
-      $(".shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents").find('.woocommerce-cart-form__cart-item.cart_item').each(function(index, item){
-        let imgLink = $(item).find('.product-thumbnail img').attr('data-src')
-        let productName = $(item).find('.product-name strong').html();
-        if(!productName){
-          productName = $(item).find('.product-name a').html();
-        }
-        let linkProduct = $(item).find('.product-name a').attr('href');
-        let priceRanger = [];
-         $(item).find('.product-price .woocommerce-Price-amount bdi').each(function(index1, value) {
-          priceRanger.push(value.innerText)
-        });
-        let linkRemove = $(item).find('.product-remove a').attr('href');
-        let numberProduct = $(item).find('.product-quantity .quantity.buttons_added .input-text.qty.text').val()
+      $(
+        ".shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents"
+      )
+        .find(".woocommerce-cart-form__cart-item.cart_item")
+        .each(function (index, item) {
+          let imgLink = $(item).find(".product-thumbnail img").attr("data-src");
+          let productName = $(item).find(".product-name strong").html();
+          if (!productName) {
+            productName = $(item).find(".product-name a").html();
+          }
+          let linkProduct = $(item).find(".product-name a").attr("href");
+          let priceRanger = [];
+          $(item)
+            .find(".product-price .woocommerce-Price-amount bdi")
+            .each(function (index1, value) {
+              priceRanger.push(value.innerText);
+            });
+          let linkRemove = $(item).find(".product-remove a").attr("href");
+          let numberProduct = $(item)
+            .find(
+              ".product-quantity .quantity.buttons_added .input-text.qty.text"
+            )
+            .val();
 
-
-          $('.list_cart_product_mobile').append(`
+          $(".list_cart_product_mobile").append(`
           <div class="checkout_container-content">
           <div class="checkout_container-content-modal">
             <a href="${linkProduct}">
@@ -1398,12 +1537,24 @@
               ${productName} 
               </p>
             </a>
+            
+            ${
+              priceRanger[1]
+                ? `
             <span style="color: #676767; text-decoration: line-through">
               ${priceRanger[0]}
             </span>
             <span style="color: #bf8977; margin: 0 0 0 10px"> 
               ${priceRanger[1]}  
             </span>
+            `
+                : `
+                <span style="color: #bf8977">
+                  ${priceRanger[0]}
+                </span>
+                `
+            }  
+            
             <div
               style="
                 margin: 10px 0;
@@ -1425,20 +1576,23 @@
             <a href=${linkRemove} style='text-decoration: none'><span class="checkout_container-content-modal-Remove"> Remove </span></a>
           </div>
         </div>
-          `)
-          $('.up_product_mobile').eq(index).on('click', function () {
-            $(item).find('.plus.button.is-form').trigger('click')
-          })
-          $('.down_product_mobile').eq(index).on('click', function () {
-            $(item).find('.minus.button.is-form').trigger('click')
-          })
-          $(item).find('.input-text.qty.text').on('change', function(){
-            $('.checkout_container-content-modal-buttonGroup-2').eq(index).html($(this).val())
-            let dataTotal =$('.Total bdi').html();
-            $('.checkout_container-card-Total .total_price_mobile').html(dataTotal)
-          })
-      })
-      
+          `);
+          $(".up_product_mobile").eq(index).on("click", function () {
+              $(item).find(".plus.button.is-form").trigger("click");
+            //   $('button[name=update_cart]').trigger("click");
+            });
+          $(".down_product_mobile").eq(index).on("click", function () {
+              $(item).find(".minus.button.is-form").trigger("click");
+            //   $('button[name=update_cart]').trigger("click");
+            });
+          $(item).find(".input-text.qty.text").on("change", function () {
+              $(".checkout_container-content-modal-buttonGroup-2").eq(index).html($(this).val());
+              let dataTotal = $(".order-total bdi").html();
+              $(".checkout_container-card-Total .total_price_mobile").html(dataTotal);
+            });
+        });
+        $(".checkout_container-card-Total .total_price_mobile").html($('.order-total bdi').text());
+        
     </script>
     <script>
       // display img on product
@@ -1447,14 +1601,67 @@
       });
     </script>
     <script>
-      let linkCheckout = $('.wc-proceed-to-checkout a').attr('href')
-      $('.link_to_checkout_mobile').attr('href', linkCheckout)
-      $('.btn_checkout_card_mobile').on('click', function(){
-        
-        let data = $('.coupon_code_mobile').val();
-        $('.coupon #coupon_code').val(data); 
-        $('.wc-proceed-to-checkout a').attr('href')
-      })
+        $(".coupon_code_mobile").on('change', function(){
+            let data = $(".coupon_code_mobile").val();
+            $(".coupon #coupon_code").val(data);
+            $('.is-form.expand[name=apply_coupon]').trigger('click');
+        })
+
+      let linkCheckout = $(".wc-proceed-to-checkout a").attr("href");
+    //   $(".link_to_checkout_mobile").attr("href", linkCheckout);
+      $(".btn_checkout_card_mobile").on("click", function () {
+        let data = $(".coupon_code_mobile").val();
+        if(data){
+            $(".coupon #coupon_code").val(data);
+            $('.is-form.expand[name=apply_coupon]').trigger('click');
+            return
+        }
+        window.location.href = linkCheckout;
+      });
     </script>
+      <script>
+        // add data to carousel
+        let listData = []
+        $('.wordpress-data .product-small.box').each(function(index, product){
+            let oldPrice, newPrice
+            let listPrice = $(product).find('.price-wrapper .price .woocommerce-Price-amount.amount');
+            if (listPrice.length == 2){
+                oldPrice = listPrice.eq(0).find('bdi').html().split('&nbsp;')[0];
+                newPrice = listPrice.eq(1).find('bdi').html().split('&nbsp;')[0];
+            }
+            if (listPrice.length == 4){
+                oldPrice = listPrice.eq(0).find('bdi').html().split('&nbsp;')[0];
+                newPrice = listPrice.eq(2).find('bdi').html().split('&nbsp;')[0];
+            }
+           
+    
+            let thumbnail= $(product).find('.lazy-load.attachment-woocommerce_thumbnail').attr('data-src');
+            let productName= $(product).find('.woocommerce-LoopProduct-link strong').html();
+            let link= $(product).find('.woocommerce-LoopProduct-link').attr('href');
+    
+            $('.carousel-home-item').eq(index).prepend(`
+                <a href='${link}'>
+                    <img src="${thumbnail}" alt="" class="img-item-carousel" alt="First slide" />
+                    <div class="carousel-item-detail font-text-carousel"> ${productName} </div>
+                    <div class="price-item d-flex">
+                        <p class="old-price font-text-carousel">$${oldPrice}</p>
+                        <p class="new-price font-text-carousel">$${newPrice}</p>
+                    </div>
+                </a>
+            `)
+            // <div class="rating-item d-flex">
+            //     <div class="">
+            //         <span class="fa fa-star checked star-icon"></span>
+            //         <span class="fa fa-star checked star-icon"></span>
+            //         <span class="fa fa-star checked star-icon"></span>
+            //         <span class="fa fa-star checked star-icon"></span>
+            //         <span class="fa fa-star checked star-icon"></span>
+            //     </div>
+            //     <div class="number-person-rating font-text-carousel">
+            //         (15)
+            //     </div>
+            // </div>
+        })
+      </script>
   </body>
 </html>

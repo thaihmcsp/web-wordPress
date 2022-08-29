@@ -308,8 +308,9 @@
           color: rgba(32, 64, 79, 0.8);
         }
         .icon_list_wishlist {
-          display: flex;
-          justify-content: flex-end;
+          height: 20px;
+          /* display: flex;
+          justify-content: flex-end; */
         }
         #padding_icon1 {
           margin-right: 22px;
@@ -406,7 +407,7 @@
         .product_cart_price_btn {
           height: 26px;
         }
-        #text_price_wishlist {
+        .text_price_wishlist {
           font-family: "Nunito";
           font-style: normal;
           font-weight: 400;
@@ -417,7 +418,7 @@
           text-decoration: line-through;
           margin-right: 8px;
         }
-        #text_discount_wishlist {
+        .text_discount_wishlist {
           font-family: "Nunito";
           font-style: normal;
           font-weight: 400;
@@ -453,7 +454,7 @@
           align-items: flex-end;
         }
         .all_product_cart {
-          padding: 31px 22px 0 21px;
+          padding: 31px 16px 0 16px;
           width: 100%;
         }
         .btn_next_wishlist {
@@ -503,6 +504,13 @@
         .wishlist-title-container,
         .yith_wcwl_wishlist_footer {
           display: none;
+        }
+
+        .icon_close_product_wishlist i {
+          color: #20404f4d;
+        }
+        .icon_close_product_wishlist {
+          border-color: #20404f4d;
         }
       }
 
@@ -889,8 +897,8 @@
       <div class="title_wishlist">
         <div class="name_title_wishlist">MY WISHLIST</div>
         <div class="count_product_list"></div>
-        <!-- <div class="icon_list_wishlist">
-          <img
+        <div class="icon_list_wishlist">
+          <!-- <img
             src="https://fmzee.com/wp-content/uploads/2022/08/listAllproduct-icon1.png"
             alt=""
             id="padding_icon"
@@ -899,8 +907,8 @@
             src="https://fmzee.com/wp-content/uploads/2022/08/listAllProduct-icon2.png"
             alt=""
             id="padding_icon1"
-          />
-        </div> -->
+          /> -->
+        </div>
       </div>
       <div class="border1_home_wishlist"></div>
       <div class="all_product_cart">
@@ -1260,6 +1268,9 @@
 
       // teen
       let ten = $(item).find(".product-name strong").html();
+      if (!ten) {
+        ten = $(item).find(".product-name a").html();
+      }
       let productLink = $(item).find(".product-name a").attr("href");
       // console.log(1166,ten, productLink);
 
@@ -1271,9 +1282,28 @@
       let addToCardText = $(item).find(".product-add-to-cart a").html();
       let addToCardLink = $(item).find(".product-add-to-cart a").attr("href");
 
-      let price1text = $(item).find(".woocommerce-Price-amount").html();
-      let textprice = price1text.slice(0, price1text.indexOf("&"));
-      let price2text = $(item).find(".woocommerce-Price-currencySymbol").html();
+      let price1text = $(item)
+        .find(".item-details-table .value > del .woocommerce-Price-amount")
+        .html();
+      if (!price1text) {
+        price1text = $(item)
+          .find(".item-details-table .value .woocommerce-Price-amount")
+          .eq(0)
+          .html();
+      }
+      price1text = price1text.slice(0, price1text.indexOf("&"));
+      console.log(1290, price1text);
+
+      let price2text = $(item)
+        .find(".item-details-table .value > ins .woocommerce-Price-amount")
+        .html();
+      if (!price2text) {
+        price2text = $(item)
+          .find(".item-details-table .value .woocommerce-Price-amount")
+          .eq(1)
+          .html();
+      }
+      price2text = price2text.slice(0, price2text.indexOf("&"));
       // console.log(1587, textprice);
 
       // console.log(1580, price2text);
@@ -1305,8 +1335,12 @@
             <div class="stock_product_cart">${status}</div>
             <div class="product_cart_price_btn">
               <div class="price_product_cart_wishlist">
-                <span id="text_price_wishlist">${textprice} ${price2text}</span
-                ><span id="text_discount_wishlist">${textprice} ${price2text}</span>
+                <span class=${
+                  price1text > price2text
+                    ? "text_price_wishlist"
+                    : "text_discount_wishlist"
+                } style='margin-right: 8px'>$${price1text}</span
+                ><span class="text_discount_wishlist">$${price2text}</span>
               </div>
               <a href="${addToCardLink}">
                 <div class="btn_add_to_cart_wishlist" style="background: #20404f">
