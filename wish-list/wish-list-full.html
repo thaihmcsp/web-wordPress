@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
     <link
@@ -19,6 +19,46 @@
       referrerpolicy="no-referrer"
     />
     <style>
+      /*=========================== wordpress ========================*/
+      .large-5 {
+        flex-basis: 41.6666666667%;
+        max-width: 41.6666666667%;
+      }
+      .large-7 {
+        flex-basis: 58.3333333333%;
+        max-width: 58.3333333333%;
+      }
+      .row {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .row.row-main {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .wishlist-link.icon.primary.button.circle,
+      .account-link.account-login.button.icon.circle {
+        display: inline-block;
+      }
+      .col-2,
+      .col-1,
+      .col {
+        width: 100%;
+      }
+      @media (max-width: 500px) {
+        .page-header-wrapper,
+        .wordpress-data,
+        #footer,
+        #header,
+        .button.icon.circle {
+          display: none;
+        }
+      }
+    </style>
+
+    <style>
+      /*------------------- header -------------------*/
       /*------------------- header -------------------*/
       @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
       * {
@@ -28,491 +68,561 @@
         box-sizing: border-box;
         /* border: 1px solid gray; */
       }
-      #header {
-        display: none;
-      }
-      .page-wrapper {
-        padding-top: 0;
-      }
-      .row {
-        margin-left: 0;
-        margin-right: 0;
-      }
-      .col {
-        padding: 0;
-      }
-      #header_container {
-        max-width: 500px; /*figma: 390px */
-        height: 69px;
-        background-color: #20404f;
-        color: #e9dfd3;
-        margin: auto;
-      }
-      #header_wrap {
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        padding: 0 21px 5px 21px;
-        position: relative;
-      }
-      #header-wrap-left {
-        height: 100%;
-        display: flex;
-        align-items: flex-end;
-      }
-      #header_bar {
-        position: relative;
-        font-size: 25px;
-        padding-right: 21px;
-      }
+      @media (max-width: 500px) {
+        #header {
+          display: none;
+        }
+        .page-wrapper {
+          padding-top: 0;
+        }
+        .row {
+          margin-left: 0;
+          margin-right: 0;
+          /* flex-flow: nowrap */
+        }
+        .col {
+          padding: 0;
+        }
+        #header_container {
+          max-width: 500px; /*figma: 390px */
+          background-color: #20404f;
+          color: #e9dfd3;
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+        }
+        #header_wrap {
+          height: 69px;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          padding: 0 21px 5px 21px;
+          position: relative;
+        }
+        #header-wrap-left {
+          height: 100%;
+          display: flex;
+          align-items: flex-end;
+        }
+        #header_bar {
+          position: relative;
+          font-size: 25px;
+          padding-right: 21px;
+        }
 
-      #header_brand-icon {
-        width: 133px;
-        height: 46px;
-      }
+        #header_brand-icon {
+          width: 133px;
+          height: 46px;
+        }
 
-      #header-wrap-right {
-        display: flex;
-        margin-bottom: 6px;
-      }
-      #header_search {
-        font-size: 20px;
-      }
-      #header_user-info {
-        font-size: 20px;
-        margin: 0 11px;
-      }
-      #header_card {
-        font-size: 20px;
-        position: relative;
-      }
-      #header_card-index {
-        position: absolute;
-        top: -5px;
-        right: -5px;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: #bf8977;
-        text-align: center;
-        line-height: 15px;
-        font-size: 13px;
-      }
-      .header-dropdown-wrap-item {
-        border-radius: 5px;
-        position: absolute;
-        top: 0px;
-        transform: translate3d(1px, 70px, 0px) !important;
-        border: none;
-        left: 0;
-        width: 189px;
-        padding: 4px 0 32px 0;
-        background: #20404f;
-        z-index: 100000;
-        display: none;
-      }
-      .header-dropdown-wrap-item a {
-        width: 100%;
-        display: inline-block;
-      }
-      .header-dropdown-item {
-        padding: 5px 0 2px 22px;
-        margin-top: 4px;
-        font-size: 14px;
-        color: #e9dfd3;
-        font-weight: 400;
-        text-decoration: none;
-        border-bottom: 1px solid rgba(217, 217, 217, 0.5);
-      }
-      .header-dropdown-item-dropdown {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .header-dropdown-item-dropdown-icon {
-        margin-right: 16px;
-      }
-      .header-dropdown-item a {
-        font-size: 14px;
-        color: #e9dfd3;
-        font-weight: 400;
-        text-decoration: none;
-      }
-      .dropdown-divider {
-        margin: 0;
-      }
+        #header-wrap-right {
+          display: flex;
+          margin-bottom: 6px;
+        }
+        #header_search {
+          font-size: 20px;
+        }
+        #header_user-info {
+          font-size: 20px;
+          margin: 0 11px;
+        }
+        #header_card {
+          font-size: 20px;
+          position: relative;
+        }
+        #header_card a,
+        #header_user-info a {
+          color: #e9dfd3;
+        }
+        #header_card-index {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: #bf8977;
+          text-align: center;
+          line-height: 15px;
+          font-size: 13px;
+        }
+        .header-dropdown-wrap-item {
+          border-radius: 5px;
+          position: absolute;
+          top: 0px;
+          transform: translate3d(1px, 70px, 0px) !important;
+          border: none;
+          left: 0;
+          width: 189px;
+          padding: 4px 0 32px 0;
+          background: #20404f;
+          z-index: 100000;
+          display: none;
+        }
+        .header-dropdown-wrap-item a {
+          width: 100%;
+          display: inline-block;
+        }
+        .header-dropdown-item {
+          padding: 5px 0 2px 22px;
+          margin-top: 4px;
+          font-size: 14px;
+          color: #e9dfd3;
+          font-weight: 400;
+          text-decoration: none;
+          border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+        }
+        .header-dropdown-item-dropdown {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .header-dropdown-item-dropdown-icon {
+          margin-right: 16px;
+        }
+        .header-dropdown-item a {
+          font-size: 14px;
+          color: #e9dfd3;
+          font-weight: 400;
+          text-decoration: none;
+        }
+        .dropdown-divider {
+          margin: 0;
+        }
 
-      .header-dropdown-wrap-product-item {
-        border-radius: 5px;
-        position: absolute;
-        top: -73px;
-        transform: translate3d(1px, 70px, 0px) !important;
-        border: none;
-        width: 165px;
-        padding: 4px 0 32px 0;
-        background: #20404f;
-        left: 100%;
-        z-index: 10000;
-        display: none;
-      }
-      .visibleClass {
-        display: block;
-      }
-      .select-header-menu {
-        color: #bf8977;
+        .header-dropdown-wrap-product-item {
+          border-radius: 5px;
+          position: absolute;
+          top: -73px;
+          transform: translate3d(1px, 70px, 0px) !important;
+          border: none;
+          width: 165px;
+          padding-top: 4px;
+          background: #20404f;
+          left: 100%;
+          z-index: 10000;
+          display: none;
+        }
+        .visibleClass {
+          display: block;
+        }
+        .header-search-wrap {
+          padding: 10px 24px;
+          display: none;
+        }
+        #header-search-form {
+          display: flex;
+          width: 100%;
+          padding: 0 16px;
+          background: #e9dfd3;
+          border-radius: 20px;
+          align-items: center;
+        }
+        .header-search-form-input {
+          width: 100%;
+        }
+        .header-search-form-input input {
+          width: 100%;
+          background: #e9dfd3;
+          border: none;
+          outline: none;
+          padding: 8px;
+          font-family: Nunito;
+          font-weight: 600;
+          line-height: 16px;
+          letter-spacing: 0em;
+          color: #20404f;
+        }
+        .header-search-form-input input:focus {
+          background: #e9dfd3;
+          box-shadow: none;
+          color: #20404f;
+        }
+        .header-search-form-button {
+          color: #20404f;
+        }
+        .select-header-menu {
+          color: #bf8977;
+        }
+        .visibleFlex {
+          display: flex;
+        }
       }
     </style>
+
     <style>
       /*------------------------ wish-list ------------------------ */
-      .contained_main_my_wishlist {
-        background: #ffffff;
-        margin-bottom: 28px;
-        max-width: 500px;
-        margin: auto;
-        padding-top: 16px;
-      }
-      .title_url_wishlist {
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 10px;
-        line-height: 19px;
-        width: 70px;
-        height: 19px;
-        color: rgba(32, 64, 79, 0.8);
-        /* margin-left: 21px; */
-        /* margin-top: 24px; */
-        margin-left: 8px;
-        padding-left: 21px;
-      }
-      .border1_home_wishlist {
-        width: 100%;
-        height: 0.63px;
-        background: #20404f;
-        transform: rotate(-0.08deg);
-        margin: 4px 0;
-      }
-      .name_title_wishlist {
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 16px;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        text-transform: uppercase;
-        color: #20404f;
-        text-align: center;
-      }
-      .count_product_list {
-        text-align: center;
-        font-family: "ABeeZee";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 10px;
-        line-height: 16px;
-        /* or 160% */
+      @media (max-width: 500px) {
+        .contained_main_my_wishlist {
+          background: #ffffff;
+          margin-bottom: 28px;
+          max-width: 500px;
+          margin: auto;
+          padding-top: 16px;
+        }
+        .title_url_wishlist {
+          font-family: "Nunito";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 19px;
+          width: 70px;
+          height: 19px;
+          color: rgba(32, 64, 79, 0.8);
+          /* margin-left: 21px; */
+          /* margin-top: 24px; */
+          margin-left: 8px;
+          padding-left: 21px;
+        }
+        .border1_home_wishlist {
+          width: 100%;
+          height: 0.63px;
+          background: #20404f;
+          transform: rotate(-0.08deg);
+          margin: 4px 0;
+        }
+        .name_title_wishlist {
+          font-family: "Nunito";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 16px;
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-transform: uppercase;
+          color: #20404f;
+          text-align: center;
+        }
+        .count_product_list {
+          text-align: center;
+          font-family: "ABeeZee";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 16px;
+          /* or 160% */
 
-        text-transform: lowercase;
+          text-transform: lowercase;
 
-        color: rgba(32, 64, 79, 0.8);
-      }
-      .icon_list_wishlist {
-        display: flex;
-        justify-content: flex-end;
-      }
-      #padding_icon1 {
-        margin-right: 22px;
-      }
-      #padding_icon {
-        margin-right: 8px;
-        margin-right: 8px;
+          color: rgba(32, 64, 79, 0.8);
+        }
+        .icon_list_wishlist {
+          display: flex;
+          justify-content: flex-end;
+        }
+        #padding_icon1 {
+          margin-right: 22px;
+        }
+        #padding_icon {
+          margin-right: 8px;
+          margin-right: 8px;
+        }
+
+        .icon_close_product_wishlist {
+          border: 1px solid #20404f;
+          border-radius: 50%;
+          width: 16px;
+          height: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: rgba(32, 64, 79, 0.5);
+        }
+        .flex_center_icon {
+          display: flex;
+          align-items: center;
+          margin-right: 4px;
+        }
+        .flex_center_icon img {
+          width: 122px;
+          height: 122px;
+        }
+        #img-cart {
+          max-width: 100%;
+          height: auto;
+          display: inline-block;
+          vertical-align: middle;
+          width: 122px;
+          height: 122px;
+          border-radius: 5px;
+        }
+        .img_product_card {
+          width: 40%;
+          height: 122px;
+          border-radius: 5px;
+          background-size: cover;
+          display: flex;
+          align-items: center;
+        }
+        .title_product_cart_wishlist {
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          font-family: "Nunito";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 16px;
+          color: #20404f;
+        }
+        .product_wishlist {
+          display: flex;
+          margin-left: 22px;
+          align-items: center;
+          margin: 25px 0;
+          width: 100%;
+          height: 122px;
+          justify-content: space-between;
+        }
+        .info_product_card_wishlist {
+          width: 60%;
+          margin-left: 21px;
+        }
+        .rate_product_wishlist {
+          letter-spacing: -0.02em;
+
+          color: rgba(0, 0, 0, 0.6);
+          font-family: "Nunito";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 16px;
+          margin: 8px 0;
+        }
+        .stock_product_cart {
+          /* font-family: "ABenZee";git */
+          font-style: normal;
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 16px;
+          /* or 160% */
+
+          text-transform: lowercase;
+
+          color: rgba(32, 64, 79, 0.8);
+        }
+        .product_cart_price_btn {
+          height: 26px;
+        }
+        #text_price_wishlist {
+          font-family: "Nunito";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: -0.02em;
+          color: rgba(0, 0, 0, 0.55);
+          text-decoration: line-through;
+          margin-right: 8px;
+        }
+        #text_discount_wishlist {
+          font-family: "Nunito";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: -0.02em;
+          color: #bf8977;
+        }
+        .btn_add_to_cart_wishlist {
+          background: rgba(32, 64, 79, 0.8);
+          border-radius: 5px;
+          width: 104px;
+          height: 32px;
+          color: #e9dfd3;
+          font-family: "Nunito";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 16px;
+          text-align: center;
+          text-transform: capitalize;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+        }
+        a {
+          text-decoration: none;
+        }
+        .product_cart_price_btn {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+        }
+        .all_product_cart {
+          padding: 31px 22px 0 21px;
+          width: 100%;
+        }
+        .btn_next_wishlist {
+          background: #20404f;
+          border-radius: 5px;
+          width: 66px;
+          height: 21px;
+          font-family: "Nunito";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 16px;
+          /* or 100% */
+
+          text-transform: capitalize;
+
+          color: #ffffff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .pagetion_wishlist {
+          display: flex;
+          position: relative;
+          height: 44px;
+          align-items: center;
+        }
+        .pagation_wishlist_next {
+          font-family: "Nunito";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 19px;
+          /* identical to box height, or 136% */
+          letter-spacing: 0.1em;
+          text-transform: lowercase;
+          color: #20404f;
+        }
+        .btn_next_wishlist {
+          margin: auto;
+        }
+        .pagation_wishlist_next {
+          position: absolute;
+          right: 14px;
+        }
+        .shop_table.cart.wishlist_table.wishlist_view.responsive.mobile,
+        .wishlist-title-container,
+        .yith_wcwl_wishlist_footer {
+          display: none;
+        }
       }
 
-      .icon_close_product_wishlist {
-        border: 1px solid #20404f;
-        border-radius: 50%;
-        width: 16px;
-        height: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: rgba(32, 64, 79, 0.5);
-      }
-      .flex_center_icon {
-        display: flex;
-        align-items: center;
-        margin-right: 4px;
-      }
-      .flex_center_icon img {
-        width: 122px;
-        height: 122px;
-      }
-      #img-cart {
-        max-width: 100%;
-        height: auto;
-        display: inline-block;
-        vertical-align: middle;
-        width: 122px;
-        height: 122px;
-        border-radius: 5px;
-      }
-      .img_product_card {
-        width: 40%;
-        height: 122px;
-        border-radius: 5px;
-        background-size: cover;
-        display: flex;
-        align-items: center;
-      }
-      .title_product_cart_wishlist {
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 15px;
-        line-height: 16px;
-        color: #20404f;
-      }
-      .product_wishlist {
-        display: flex;
-        margin-left: 22px;
-        align-items: center;
-        margin: 25px 0;
-        width: 100%;
-        height: 122px;
-        justify-content: space-between;
-      }
-      .info_product_card_wishlist {
-        width: 60%;
-        margin-left: 21px;
-      }
-      .rate_product_wishlist {
-        letter-spacing: -0.02em;
-
-        color: rgba(0, 0, 0, 0.6);
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 10px;
-        line-height: 16px;
-        margin: 8px 0;
-      }
-      .stock_product_cart {
-        /* font-family: "ABenZee";git */
-        font-style: normal;
-        font-weight: 400;
-        font-size: 10px;
-        line-height: 16px;
-        /* or 160% */
-
-        text-transform: lowercase;
-
-        color: rgba(32, 64, 79, 0.8);
-      }
-      .product_cart_price_btn {
-        height: 26px;
-      }
-      #text_price_wishlist {
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 16px;
-        letter-spacing: -0.02em;
-        color: rgba(0, 0, 0, 0.55);
-        text-decoration: line-through;
-        margin-right: 8px;
-      }
-      #text_discount_wishlist {
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 16px;
-        letter-spacing: -0.02em;
-        color: #bf8977;
-      }
-      .btn_add_to_cart_wishlist {
-        background: rgba(32, 64, 79, 0.8);
-        border-radius: 5px;
-        width: 105px;
-        height: 39px;
-        color: #e9dfd3;
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 16px;
-        text-align: center;
-        text-transform: capitalize;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      .wishlist-items-wrapper tr a {
+        color: #8b968b;
         text-decoration: none;
       }
-      a {
-        text-decoration: none;
-      }
-      .product_cart_price_btn {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-      }
-      .all_product_cart {
-        padding: 31px 22px 0 21px;
-        width: 100%;
-      }
-      .btn_next_wishlist {
-        background: #20404f;
-        border-radius: 5px;
-        width: 66px;
-        height: 21px;
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 16px;
-        /* or 100% */
-
-        text-transform: capitalize;
-
-        color: #ffffff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .pagetion_wishlist {
-        display: flex;
-        position: relative;
-        height: 44px;
-        align-items: center;
-      }
-      .pagation_wishlist_next {
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 19px;
-        /* identical to box height, or 136% */
-        letter-spacing: 0.1em;
-        text-transform: lowercase;
-        color: #20404f;
-      }
-      .btn_next_wishlist {
-        margin: auto;
-      }
-      .pagation_wishlist_next {
-        position: absolute;
-        right: 14px;
+      .footer-copyright-collapse {
+        font-weight: normal;
       }
     </style>
     <style>
       /* -------------wish-list  paginate -------------------- */
-      .pagination ul {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        align-items: center;
-      }
-      .pagination ul li {
-        color: rgba(32, 64, 79, 0.5);
-        list-style: none;
-        /* line-height: 45px; */
-        text-align: center;
-        font-size: 18px;
-        font-weight: 500;
-        cursor: pointer;
-        user-select: none;
-        transition: all 0.3s ease;
-      }
-      .pagination ul li.numb {
-        list-style: none;
+      @media (max-width: 500px) {
+        .pagination ul {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+          align-items: center;
+        }
+        .pagination ul li {
+          color: rgba(32, 64, 79, 0.5);
+          list-style: none;
+          /* line-height: 45px; */
+          text-align: center;
+          font-size: 18px;
+          font-weight: 500;
+          cursor: pointer;
+          user-select: none;
+          transition: all 0.3s ease;
+        }
+        .pagination ul li.numb {
+          list-style: none;
 
-        margin: 0 3px;
-        /* line-height: 45px; */
-        border-radius: 50%;
-      }
-      .pagination ul li.numb.first {
-        margin: 0px 3px 0 -5px;
-      }
-      .pagination ul li.numb.last {
-        margin: 0px -5px 0 3px;
-      }
-      .pagination ul li.dots {
-        font-size: 22px;
-        cursor: default;
-      }
-      .pagination ul li.btn {
-        padding: 0 px;
-        border-radius: 50px;
-      }
-      .pagination li.active,
-      .pagination ul li.numb:hover,
-      .pagination ul li:first-child:hover,
-      .pagination ul li:last-child:hover {
-        color: #20404f;
-      }
-      .pagination {
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 19px;
-        /* identical to box height, or 136% */
-        height: 25px;
-        text-align: center;
-        letter-spacing: 0.1em;
-        text-transform: lowercase;
-        height: 25px;
-        color: #20404f;
+          margin: 0 3px;
+          /* line-height: 45px; */
+          border-radius: 50%;
+        }
+        .pagination ul li.numb.first {
+          margin: 0px 3px 0 -5px;
+        }
+        .pagination ul li.numb.last {
+          margin: 0px -5px 0 3px;
+        }
+        .pagination ul li.dots {
+          font-size: 22px;
+          cursor: default;
+        }
+        .pagination ul li.btn {
+          padding: 0 px;
+          border-radius: 50px;
+        }
+        .pagination li.active,
+        .pagination ul li.numb:hover,
+        .pagination ul li:first-child:hover,
+        .pagination ul li:last-child:hover {
+          color: #20404f;
+        }
+        .pagination {
+          font-family: "Nunito";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 19px;
+          /* identical to box height, or 136% */
+          height: 25px;
+          text-align: center;
+          letter-spacing: 0.1em;
+          text-transform: lowercase;
+          height: 25px;
+          color: #20404f;
+        }
       }
     </style>
     <style>
       /*------------------ list-all-product pagination ------------------ */
-      hr {
-        margin: 0;
-      }
-      .listALLProduct-pagination {
-        display: flex;
-        padding: 10px 0;
-        position: relative;
-        /* height: 50px; */
-        border-bottom: solid 1.5px rgba(32, 64, 79, 0.4);
-        justify-content: center;
-      }
-      .listALLProduct-pagination button {
-        width: 66px;
-        height: 24px;
-        background: #20404f;
-        border-radius: 5px;
-        color: #fff;
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 15px;
-        /* position: absolute;
+      @media (max-width: 500px) {
+        hr {
+          margin: 0;
+        }
+        .listALLProduct-pagination {
+          display: flex;
+          padding: 20px 0;
+          position: relative;
+          /* height: 50px; */
+          border-bottom: solid 1.5px rgba(32, 64, 79, 0.4);
+          justify-content: center;
+        }
+        .listALLProduct-pagination button {
+          width: 66px;
+          height: 24px;
+          background: #20404f;
+          border-radius: 5px;
+          color: #fff;
+          font-family: "Nunito";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 15px;
+          /* position: absolute;
         left: 40%;
         top: 25%; */
-        border: none;
-      }
-      .listALLProduct-pagination ul {
-        position: absolute;
-        top: 32%;
-        right: 11%;
-      }
-      .listALLProduct-pagination ul li {
-        margin: 0 1px;
-        color: rgba(32, 64, 79, 0.5);
-      }
-      .listALLProduct-pagination-i {
-        position: absolute;
-        top: 30%;
-        right: 7%;
-        color: rgba(32, 64, 79, 0.5);
+          border: none;
+        }
+        .listALLProduct-pagination ul {
+          position: absolute;
+          top: 32%;
+          right: 11%;
+        }
+        .listALLProduct-pagination ul li {
+          margin: 0 1px;
+          color: rgba(32, 64, 79, 0.5);
+        }
+        .listALLProduct-pagination-i {
+          position: absolute;
+          top: 30%;
+          right: 7%;
+          color: rgba(32, 64, 79, 0.5);
+        }
       }
     </style>
     <style>
@@ -669,7 +779,7 @@
 
           <div class="header-dropdown-wrap-item" onclick="">
             <div class="header-dropdown-item">
-              <a href="https://fmzee.com/mobile-home/">Home</a>
+              <a href="https://fmzee.com/">Home</a>
             </div>
 
             <div class="header-dropdown-item">
@@ -711,16 +821,22 @@
                     <div>2 Layered Door Sign</div>
                   </div>
                 </a>
+
+                <a href="https://fmzee.com/mobile-list-all-product/">
+                  <div class="header-dropdown-item">
+                    <div>All</div>
+                  </div>
+                </a>
               </div>
             </div>
             <!-- dropdown Product -->
 
             <div class="header-dropdown-item">
-              <a href="https://fmzee.com/mobile-wish-list/">Wishdivst</a>
+              <a href="https://fmzee.com/wishlist/">Wishdivst</a>
             </div>
 
             <div class="header-dropdown-item">
-              <a href="https://fmzee.com/mobile-giftcard-detail/">Gift Card</a>
+              <a href="https://fmzee.com/san-pham/gift-card/">Gift Card</a>
             </div>
 
             <div class="header-dropdown-item">
@@ -730,24 +846,43 @@
             <!-- test -->
           </div>
           <div id="header_brand-icon">
-            <a href="https://fmzee.com/mobile-home/"
-              ><img src="https://fmzee.com/header-logo/" alt="logo_brand"
+            <a href="https://fmzee.com/"
+              ><img
+                src="https://fmzee.com/wp-content/uploads/2022/08/logo-web_5.png"
+                alt="logo_brand"
             /></a>
           </div>
         </div>
 
         <div id="header-wrap-right">
-          <div id="header_search">
+          <div id="header_search" onclick="openSearchHeader()">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
-          <div id="header_user-info"><i class="fa-regular fa-user"></i></div>
+          <div id="header_user-info">
+            <a href="https://fmzee.com/mobile-sign-in/">
+              <i class="fa-regular fa-user"></i>
+            </a>
+          </div>
           <div id="header_card">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <div id="header_card-index">1</div>
+            <a href="https://fmzee.com/gio-hang/">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <div id="header_card-index">1</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header-search-wrap">
+        <div id="header-search-form">
+          <div class="header-search-form-input">
+            <input type="text" placeholder="Seach..." />
+          </div>
+          <div class="header-search-form-button" onclick="activeSearch()">
+            <i class="fa-solid fa-magnifying-glass"></i>
           </div>
         </div>
       </div>
     </div>
+
     <div class="contained_main_my_wishlist">
       <div class="title_url_wishlist">Home/wishlist</div>
       <div class="border1_home_wishlist"></div>
@@ -829,18 +964,18 @@
       </div> -->
       <hr />
       <div class="listALLProduct-pagination">
-        <button class="listALLProduct-pagination-button">Next</button>
-        <ul style="list-style-type: none; display: flex">
+        <!-- <button class="listALLProduct-pagination-button">Next</button> -->
+        <!-- <ul style="list-style-type: none; display: flex">
           <li style="color: #20404f">1</li>
           <li>2</li>
           <li>3</li>
           <li>...</li>
           <li>50</li>
-        </ul>
-        <div class="listALLProduct-pagination-i">
+        </ul> -->
+        <!-- <div class="listALLProduct-pagination-i">
           <i class="fa-solid fa-angles-left" style="display: none"></i>
           <i class="fa-solid fa-angles-right"></i>
-        </div>
+        </div> -->
       </div>
       <!-- <div class="pagination">
         <ul>
@@ -868,13 +1003,13 @@
           <div class="collapse" id="quick_link">
             <div class="footer_copyright-content-warp-items">
               <div class="footer_copyright-content-items">
-                <a href="https://fmzee.com/mobile-home/">Home</a>
+                <a href="https://fmzee.com/">Home</a>
               </div>
               <div class="footer_copyright-content-items">
-                <a href="https://fmzee.com/mobile-about-us/">About Us</a>
+                <a href="https://fmzee.com/about-us/">About Us</a>
               </div>
               <div class="footer_copyright-content-items">
-                <a href="https://fmzee.com/mobile-contact-us/">Contact Us</a>
+                <a href="https://fmzee.com/contact/">Contact Us</a>
               </div>
               <div class="footer_copyright-content-items">FAQ</div>
             </div>
@@ -897,22 +1032,20 @@
             <div class="collapse" id="Policies">
               <div class="footer_copyright-content-warp-items">
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/mobile-Privacy-Policy/"
-                    >Privacy Policy</a
-                  >
+                  <a href="https://fmzee.com/privacy-policy/">Privacy Policy</a>
                 </div>
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/mobile-Shipping-Policy/"
+                  <a href="https://fmzee.com/shipping-policy/"
                     >Shipping Policy</a
                   >
                 </div>
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/mobile-Return-refund/"
+                  <a href="https://fmzee.com/refund-policy/"
                     >Refund & Return Policy</a
                   >
                 </div>
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/mobile-Terms-Conditions/"
+                  <a href="https://fmzee.com/terms-and-conditions/"
                     >Terms and Conditions</a
                   >
                 </div>
@@ -1018,105 +1151,21 @@
     </div>
   </body>
   <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"
   ></script>
   <script
-    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous"
+    referrerpolicy="no-referrer"
   ></script>
   <script
     src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"
   ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"
-  ></script>
-  <script>
-    // selecting required element
-    const element = document.querySelector(".pagination ul");
-    let totalPages = 50;
-    let page = 1;
-
-    //calling function with passing parameters and adding inside element which is ul tag
-    element.innerHTML = createPagination(totalPages, page);
-    function createPagination(totalPages, page) {
-      let liTag = "";
-      let active;
-      let beforePage = page - 1;
-      let afterPage = page + 1;
-      if (page > 1) {
-        //show the next button if the page value is greater than 1
-        liTag += `<li class="btn prev" onclick="createPagination(totalPages, ${
-          page - 1
-        })"><span><i class="fa-solid fa-angles-left"></i></span></li>`;
-      }
-
-      if (page > 2) {
-        //if page value is less than 2 then add 1 after the previous button
-        liTag += `<li class="first numb" onclick="createPagination(totalPages, 1)"><span>1</span></li>`;
-        if (page > 3) {
-          //if page value is greater than 3 then add this (...) after the first li or page
-          liTag += `<li class="dots"><span>...</span></li>`;
-        }
-      }
-
-      // how many pages or li show before the current li
-      if (page == totalPages) {
-        beforePage = beforePage - 2;
-      } else if (page == totalPages - 1) {
-        beforePage = beforePage - 1;
-      }
-      // how many pages or li show after the current li
-      if (page == 1) {
-        afterPage = afterPage + 2;
-      } else if (page == 2) {
-        afterPage = afterPage + 1;
-      }
-
-      for (var plength = beforePage; plength <= afterPage; plength++) {
-        if (plength > totalPages) {
-          //if plength is greater than totalPage length then continue
-          continue;
-        }
-        if (plength == 0) {
-          //if plength is 0 than add +1 in plength value
-          plength = plength + 1;
-        }
-        if (page == plength) {
-          //if page is equal to plength than assign active string in the active variable
-          active = "active";
-        } else {
-          //else leave empty to the active variable
-          active = "";
-        }
-        liTag += `<li class="numb ${active}" onclick="createPagination(totalPages, ${plength})"><span>${plength}</span></li>`;
-      }
-
-      if (page < totalPages - 1) {
-        //if page value is less than totalPage value by -1 then show the last li or page
-        if (page < totalPages - 2) {
-          //if page value is less than totalPage value by -2 then add this (...) before the last li or page
-          liTag += `<li class="dots"><span>...</span></li>`;
-        }
-        liTag += `<li class="last numb" onclick="createPagination(totalPages, ${totalPages})"><span>${totalPages}</span></li>`;
-      }
-
-      if (page < totalPages) {
-        //show the next button if the page value is less than totalPage(20)
-        liTag += `<li class="btn next" onclick="createPagination(totalPages, ${
-          page + 1
-        })"><span><i class="fa-solid fa-angles-right"></i></span></li>`;
-      }
-      element.innerHTML = liTag; //add li tag inside ul tag
-      return liTag; //reurn the li tag
-    }
-  </script>
   <script>
     // header footer
     function onMenuDropdown() {
@@ -1126,14 +1175,61 @@
       $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
     }
     $(".header-dropdown-item").on("click", function () {
-      console.log($(this));
       $(this).addClass("select-header-menu");
     });
 
     $(document).click(function (e) {
       if (
         $(e.target?.parentElement?.parentElement).is(
-          $(".header-dropdown-wrap-item")[0],
+          $(".header-dropdown-wrap-item")[0]
+        ) ||
+        $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
+        $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
+        $(e.target.parentElement).is($("#header_bar")[0]) ||
+        $(e.target).is($("#header_bar")[0])
+      ) {
+      } else {
+        if (
+          $(".header-dropdown-wrap-item")[0].classList.contains("visibleClass")
+        ) {
+          $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+        }
+      }
+    });
+
+    // cart header
+    $("#header_card-index").html(
+      $(".cart-item.has-icon")
+        .find(".icon-shopping-bag")
+        .attr("data-icon-label")
+    );
+
+    // search header
+    function openSearchHeader() {
+      $(".header-search-wrap").toggleClass("visibleFlex");
+    }
+
+    function activeSearch() {
+      let searchValue = $(".header-search-form-input input").val();
+      $(".search-field").val(searchValue);
+      $(".header-search-wrap").toggleClass("visibleFlex");
+      $(".ux-search-submit.submit-button").trigger("click");
+    }
+  </script>
+  <!--HẾT JS HEADER ------------------------------------------------------------------------------- -->
+  <script>
+    //----------------------- footer -----------------------
+    function onMenuDropdown() {
+      $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+    }
+    function onProductMenuDropdown() {
+      $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
+    }
+
+    $(document).click(function (e) {
+      if (
+        $(e.target?.parentElement?.parentElement).is(
+          $(".header-dropdown-wrap-item")[0]
         ) ||
         $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
         $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
@@ -1152,18 +1248,16 @@
 
   <script>
     // get data wishlist
-    // let test = $(".wishlist-items-wrapper tr").each(function (i, item) {
-    //   let icon = $(item).find(".product-remove div").attr("src");
-    //   console.log(icon);
-    // });
-      let lengthProduct =  $(".shop_table.cart.wishlist_table li ").length
-    $(".shop_table.cart.wishlist_table li ").each(function (i, item) {
+    listData = $(".shop_table.cart.wishlist_table li");
+
+    let lengthProduct = listData.length;
+    listData.each(function (i, item) {
       //lay icon x
       let deleteLink = $(item).find(".product-remove a").attr("href");
       // laays anh
       let img = $(item).find(".product-thumbnail a img ").attr("data-src");
-      let imgLink = $(item).find(".product-thumbnail a").attr('href');
-      
+      let imgLink = $(item).find(".product-thumbnail a").attr("href");
+
       // teen
       let ten = $(item).find(".product-name strong").html();
       let productLink = $(item).find(".product-name a").attr("href");
@@ -1171,9 +1265,7 @@
 
       // status stock
 
-      let status = $(item)
-        .find(".wishlist-in-stock")
-        .html();
+      let status = $(item).find(".additional-info .value span").html();
 
       //button
       let addToCardText = $(item).find(".product-add-to-cart a").html();
@@ -1181,9 +1273,7 @@
 
       let price1text = $(item).find(".woocommerce-Price-amount").html();
       let textprice = price1text.slice(0, price1text.indexOf("&"));
-      let price2text = $(item)
-        .find(".woocommerce-Price-currencySymbol")
-        .html();
+      let price2text = $(item).find(".woocommerce-Price-currencySymbol").html();
       // console.log(1587, textprice);
 
       // console.log(1580, price2text);
@@ -1206,9 +1296,10 @@
           </div>
           <div class="info_product_card_wishlist">
             <a href='${productLink}'>
-              <div class="title_product_cart_wishlist">
-                ${ten}
-            </div></a>
+                <div class="title_product_cart_wishlist">
+                    ${ten}
+                </div>
+            </a>
 
           
             <div class="stock_product_cart">${status}</div>
@@ -1219,17 +1310,16 @@
               </div>
               <a href="${addToCardLink}">
                 <div class="btn_add_to_cart_wishlist" style="background: #20404f">
-                  ${addToCardText==='Add to cart'? "Add to cart": "View Options"} 
+                  ${addToCardText} 
                 </div>
               </a>
             </div>
           </div>
         </div>
       `);
-     
     });
-  $(".count_product_list").append(`
-     <div class="count_product_list">${lengthProduct} product</div>`)
+    $(".count_product_list").append(`
+     <div class="count_product_list">${lengthProduct} product</div>`);
   </script>
   <script>
     // display img on product
