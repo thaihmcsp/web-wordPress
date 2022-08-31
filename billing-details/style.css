@@ -1,0 +1,83 @@
+.paymentMethod {
+  background: #20404f;
+  border-radius: 5px;
+  width: 348px;
+  height: 38px;
+  text-align: center;
+}
+.paymentMethod > span {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  color: #e9dfd3;
+}
+
+.paypalMethod {
+  background: #dca75e;
+  border-radius: 5px;
+  width: 348px;
+  height: 38px;
+  text-align: center;
+  border: none;
+}
+.paypalMethod > img {
+  width: 82px;
+  height: 26px;
+}
+.powered {
+  text-align: center;
+}
+.powered > img {
+  width: 64px;
+  height: 20px;
+}
+.textFull {
+  padding-left: 10px;
+  width: 348px;
+  height: 35px;
+  background-color: #dfc4bb;
+  border: 1px solid rgba(32, 64, 79, 0.7);
+  border-radius: 5px;
+}
+.textHalf {
+  padding-left: 10px;
+  width: 164px;
+  height: 35px;
+  background-color: #dfc4bb;
+  border: 1px solid rgba(32, 64, 79, 0.7);
+  border-radius: 5px;
+}
+.mr16 {
+  margin-right: 16px;
+}
+.addressCard {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  /* identical to box height, or 100% */
+
+  text-transform: capitalize;
+
+  color: #20404f;
+}
+.payNow {
+  width: 169px;
+  height: 38px;
+  background: #20404f;
+  border-radius: 5px;
+}
+.payNow > span {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  /* or 89% */
+
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+
+  color: #e9dfd3;
+}
