@@ -950,9 +950,8 @@
 
     function activeSearch () {
     let searchValue = $('.header-search-form-input input').val();
-    $('.search-field').val(searchValue);
     $('.header-search-wrap').toggleClass('visibleFlex')
-    $('.ux-search-submit.submit-button').trigger('click');
+    window.location.href = 'https://fmzee.com/mobile-search/?timkiem='+searchValue
     }
 
 </script>

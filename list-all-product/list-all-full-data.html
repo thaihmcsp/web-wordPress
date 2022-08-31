@@ -512,7 +512,7 @@
   
             <div class="header-dropdown-wrap-item" onclick="">
               <div class="header-dropdown-item">
-                <a href="https://fmzee.com/mobile-home/">Home</a>
+                <a href="https://fmzee.com/">Home</a>
               </div>
   
               <div class="header-dropdown-item">
@@ -554,16 +554,22 @@
                       <div>2 Layered Door Sign</div>
                     </div>
                   </a>
+
+                  <a href="https://fmzee.com/mobile-list-all-product/">
+                    <div class="header-dropdown-item">
+                      <div>All</div>
+                    </div>
+                  </a>
                 </div>
               </div>
               <!-- dropdown Product -->
   
               <div class="header-dropdown-item">
-                <a href="https://fmzee.com/mobile-wish-list/">Wishdivst</a>
+                <a href="https://fmzee.com/wishlist/">Wishdivst</a>
               </div>
   
               <div class="header-dropdown-item">
-                <a href="https://fmzee.com/mobile-giftcard-detail/">Gift Card</a>
+                <a href="https://fmzee.com/san-pham/gift-card/">Gift Card</a>
               </div>
   
               <div class="header-dropdown-item">
@@ -573,24 +579,40 @@
               <!-- test -->
             </div>
             <div id="header_brand-icon">
-              <a href="https://fmzee.com/mobile-home/"
-                ><img src="https://fmzee.com/header-logo/" alt="logo_brand"
+              <a href="https://fmzee.com/"
+                ><img src="https://fmzee.com/wp-content/uploads/2022/08/logo-web_5.png" alt="logo_brand"
               /></a>
             </div>
           </div>
   
           <div id="header-wrap-right">
-            <div id="header_search">
+            <div id="header_search" onclick="openSearchHeader()">
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <div id="header_user-info"><i class="fa-regular fa-user"></i></div>
+            <div id="header_user-info">
+              <a href="https://fmzee.com/mobile-sign-in/">
+                  <i class="fa-regular fa-user"></i>
+              </a>
+            </div>
             <div id="header_card">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <div id="header_card-index">1</div>
+              <a href="https://fmzee.com/gio-hang/">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <div id="header_card-index">1</div>
+              </a>
             </div>
           </div>
         </div>
-      </div>
+        <div class="header-search-wrap">
+          <div id="header-search-form">
+              <div class="header-search-form-input">
+                  <input type="text" placeholder="Seach...">
+              </div>
+              <div class="header-search-form-button" onclick="activeSearch()">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+          </div>
+        </div>
+    </div>
     <div class="listAllProduct-container">
       <div class="listAllProduct-title">
         <p class="listAllProduct-title_title">PRODUCT</p>
@@ -644,13 +666,13 @@
             <div class="collapse" id="quick_link">
               <div class="footer_copyright-content-warp-items">
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/mobile-home/">Home</a>
+                  <a href="https://fmzee.com/">Home</a>
                 </div>
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/mobile-about-us/">About Us</a>
+                  <a href="https://fmzee.com/about-us/">About Us</a>
                 </div>
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/mobile-contact-us/">Contact Us</a>
+                  <a href="https://fmzee.com/contact/">Contact Us</a>
                 </div>
                 <div class="footer_copyright-content-items">FAQ</div>
               </div>
@@ -673,22 +695,22 @@
               <div class="collapse" id="Policies">
                 <div class="footer_copyright-content-warp-items">
                   <div class="footer_copyright-content-items">
-                    <a href="https://fmzee.com/mobile-Privacy-Policy/"
+                    <a href="https://fmzee.com/privacy-policy/"
                       >Privacy Policy</a
                     >
                   </div>
                   <div class="footer_copyright-content-items">
-                    <a href="https://fmzee.com/mobile-Shipping-Policy/"
+                    <a href="https://fmzee.com/shipping-policy/"
                       >Shipping Policy</a
                     >
                   </div>
                   <div class="footer_copyright-content-items">
-                    <a href="https://fmzee.com/mobile-Return-refund/"
+                    <a href="https://fmzee.com/refund-policy/"
                       >Refund & Return Policy</a
                     >
                   </div>
                   <div class="footer_copyright-content-items">
-                    <a href="https://fmzee.com/mobile-Terms-Conditions/"
+                    <a href="https://fmzee.com/terms-and-conditions/"
                       >Terms and Conditions</a
                     >
                   </div>
@@ -762,36 +784,36 @@
             </div>
           </div>
         </div>
-      </div>
-      <div id="footer_container">
-        <div id="footer_wrap">
-          <div id="footer_wrap-left">
-            <div class="footer_icon-social">
-              <i class="fa-brands fa-facebook"></i>
-            </div>
-            <div class="footer_icon-social footer_icon-social-center">
-              <i class="fa-brands fa-square-twitter"></i>
-            </div>
-            <div class="footer_icon-social">
-              <i class="fa-brands fa-square-instagram"></i>
-            </div>
-          </div>
-          <div id="footer_wrap-right">
-            <div class="footer_icon-paycard">
-              <img src=" https://fmzee.com/productdetail-pay-visa/" alt="" />
-            </div>
-            <div class="footer_icon-paycard footer_icon-paycard-center">
-              <img src="https://fmzee.com/productdetail-pay-paypal/" alt="" />
-            </div>
-            <div class="footer_icon-paycard">
-              <img
-                src=" https://fmzee.com/productdetail-pay-mastercard/"
-                alt=""
-              />
-            </div>
-          </div>
+    </div>
+    <div id="footer_container">
+    <div id="footer_wrap">
+        <div id="footer_wrap-left">
+        <div class="footer_icon-social">
+            <i class="fa-brands fa-facebook"></i>
         </div>
-      </div>
+        <div class="footer_icon-social footer_icon-social-center">
+            <i class="fa-brands fa-square-twitter"></i>
+        </div>
+        <div class="footer_icon-social">
+            <i class="fa-brands fa-square-instagram"></i>
+        </div>
+        </div>
+        <div id="footer_wrap-right">
+        <div class="footer_icon-paycard">
+            <img src=" https://fmzee.com/productdetail-pay-visa/" alt="" />
+        </div>
+        <div class="footer_icon-paycard footer_icon-paycard-center">
+            <img src="https://fmzee.com/productdetail-pay-paypal/" alt="" />
+        </div>
+        <div class="footer_icon-paycard">
+            <img
+            src=" https://fmzee.com/productdetail-pay-mastercard/"
+            alt=""
+            />
+        </div>
+        </div>
+    </div>
+    </div>
   </body>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -816,35 +838,80 @@
   <script>
     // header footer
     function onMenuDropdown() {
-      $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+    $(".header-dropdown-wrap-item").toggleClass("visibleClass");
     }
     function onProductMenuDropdown() {
-      $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
+    $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
     }
     $(".header-dropdown-item").on("click", function () {
-      console.log($(this));
-      $(this).addClass("select-header-menu");
+    $(this).addClass("select-header-menu");
     });
 
     $(document).click(function (e) {
-      if (
+    if (
         $(e.target?.parentElement?.parentElement).is(
-          $(".header-dropdown-wrap-item")[0]
+        $(".header-dropdown-wrap-item")[0]
         ) ||
         $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
         $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
         $(e.target.parentElement).is($("#header_bar")[0]) ||
         $(e.target).is($("#header_bar")[0])
-      ) {
-      } else {
+    ) {
+    } else {
         if (
-          $(".header-dropdown-wrap-item")[0].classList.contains("visibleClass")
+        $(".header-dropdown-wrap-item")[0].classList.contains("visibleClass")
         ) {
-          $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+        $(".header-dropdown-wrap-item").toggleClass("visibleClass");
         }
-      }
+    }
     });
-  </script>
+
+    // cart header
+    $('#header_card-index').html($('.cart-item.has-icon').find('.icon-shopping-bag').attr('data-icon-label'))
+
+    // search header
+    function openSearchHeader () {
+    $('.header-search-wrap').toggleClass('visibleFlex')
+    }
+
+    function activeSearch () {
+    let searchValue = $('.header-search-form-input input').val();
+    $('.header-search-wrap').toggleClass('visibleFlex')
+    window.location.href = 'https://fmzee.com/mobile-search/?timkiem='+searchValue
+    }
+
+</script>
+<!--HẾT JS HEADER ------------------------------------------------------------------------------- -->
+<script>
+//----------------------- footer -----------------------
+function onMenuDropdown() {
+    $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+}
+function onProductMenuDropdown() {
+    $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
+}
+
+$(document).click(function (e) {
+    if (
+    $(e.target?.parentElement?.parentElement).is(
+        $(".header-dropdown-wrap-item")[0]
+    ) ||
+    $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
+    $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
+    $(e.target.parentElement).is($("#header_bar")[0]) ||
+    $(e.target).is($("#header_bar")[0])
+    ) {
+    } else {
+    if (
+        $(".header-dropdown-wrap-item")[0].classList.contains(
+        "visibleClass"
+        )
+    ) {
+        $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+    }
+    }
+});
+</script>
   <script>
     // ------------------------ get data --------------------------
     const listAll = $('.listAllProduct-content');

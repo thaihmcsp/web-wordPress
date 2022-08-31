@@ -1393,56 +1393,50 @@
     ></script>
 
     <script>
-      // header footer
-      function onMenuDropdown() {
+        // header footer
+        function onMenuDropdown() {
         $(".header-dropdown-wrap-item").toggleClass("visibleClass");
-      }
-      function onProductMenuDropdown() {
+        }
+        function onProductMenuDropdown() {
         $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
-      }
-      $(".header-dropdown-item").on("click", function () {
+        }
+        $(".header-dropdown-item").on("click", function () {
         $(this).addClass("select-header-menu");
-      });
-
-      $(document).click(function (e) {
+        });
+    
+        $(document).click(function (e) {
         if (
-          $(e.target?.parentElement?.parentElement).is(
+            $(e.target?.parentElement?.parentElement).is(
             $(".header-dropdown-wrap-item")[0]
-          ) ||
-          $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
-          $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
-          $(e.target.parentElement).is($("#header_bar")[0]) ||
-          $(e.target).is($("#header_bar")[0])
+            ) ||
+            $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
+            $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
+            $(e.target.parentElement).is($("#header_bar")[0]) ||
+            $(e.target).is($("#header_bar")[0])
         ) {
         } else {
-          if (
-            $(".header-dropdown-wrap-item")[0].classList.contains(
-              "visibleClass"
-            )
-          ) {
+            if (
+            $(".header-dropdown-wrap-item")[0].classList.contains("visibleClass")
+            ) {
             $(".header-dropdown-wrap-item").toggleClass("visibleClass");
-          }
+            }
         }
-      });
-
-      // cart header
-      $("#header_card-index").html(
-        $(".cart-item.has-icon")
-          .find(".icon-shopping-bag")
-          .attr("data-icon-label")
-      );
-
-      // search header
-      function openSearchHeader() {
-        $(".header-search-wrap").toggleClass("visibleFlex");
-      }
-
-      function activeSearch() {
-        let searchValue = $(".header-search-form-input input").val();
-        $(".search-field").val(searchValue);
-        $(".header-search-wrap").toggleClass("visibleFlex");
-        $(".ux-search-submit.submit-button").trigger("click");
-      }
+        });
+    
+        // cart header
+        $('#header_card-index').html($('.cart-item.has-icon').find('.icon-shopping-bag').attr('data-icon-label'))
+    
+        // search header
+        function openSearchHeader () {
+        $('.header-search-wrap').toggleClass('visibleFlex')
+        }
+    
+        function activeSearch () {
+        let searchValue = $('.header-search-form-input input').val();
+        $('.header-search-wrap').toggleClass('visibleFlex')
+        window.location.href = 'https://fmzee.com/mobile-search/?timkiem='+searchValue
+        }
+    
     </script>
     <!--HẾT JS HEADER ------------------------------------------------------------------------------- -->
     <script>

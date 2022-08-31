@@ -863,53 +863,52 @@
   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
   crossorigin="anonymous"
 ></script>
-    <script>
-        // header footer
-        function onMenuDropdown() {
+<script>
+    // header footer
+    function onMenuDropdown() {
+    $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+    }
+    function onProductMenuDropdown() {
+    $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
+    }
+    $(".header-dropdown-item").on("click", function () {
+    $(this).addClass("select-header-menu");
+    });
+
+    $(document).click(function (e) {
+    if (
+        $(e.target?.parentElement?.parentElement).is(
+        $(".header-dropdown-wrap-item")[0]
+        ) ||
+        $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
+        $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
+        $(e.target.parentElement).is($("#header_bar")[0]) ||
+        $(e.target).is($("#header_bar")[0])
+    ) {
+    } else {
+        if (
+        $(".header-dropdown-wrap-item")[0].classList.contains("visibleClass")
+        ) {
         $(".header-dropdown-wrap-item").toggleClass("visibleClass");
         }
-        function onProductMenuDropdown() {
-        $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
-        }
-        $(".header-dropdown-item").on("click", function () {
-        $(this).addClass("select-header-menu");
-        });
+    }
+    });
 
-        $(document).click(function (e) {
-        if (
-            $(e.target?.parentElement?.parentElement).is(
-            $(".header-dropdown-wrap-item")[0]
-            ) ||
-            $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
-            $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
-            $(e.target.parentElement).is($("#header_bar")[0]) ||
-            $(e.target).is($("#header_bar")[0])
-        ) {
-        } else {
-            if (
-            $(".header-dropdown-wrap-item")[0].classList.contains("visibleClass")
-            ) {
-            $(".header-dropdown-wrap-item").toggleClass("visibleClass");
-            }
-        }
-        });
+    // cart header
+    $('#header_card-index').html($('.cart-item.has-icon').find('.icon-shopping-bag').attr('data-icon-label'))
 
-        // cart header
-        $('#header_card-index').html($('.cart-item.has-icon').find('.icon-shopping-bag').attr('data-icon-label'))
+    // search header
+    function openSearchHeader () {
+    $('.header-search-wrap').toggleClass('visibleFlex')
+    }
 
-        // search header
-        function openSearchHeader () {
-        $('.header-search-wrap').toggleClass('visibleFlex')
-        }
+    function activeSearch () {
+    let searchValue = $('.header-search-form-input input').val();
+    $('.header-search-wrap').toggleClass('visibleFlex')
+    window.location.href = 'https://fmzee.com/mobile-search/?timkiem='+searchValue
+    }
 
-        function activeSearch () {
-        let searchValue = $('.header-search-form-input input').val();
-        $('.search-field').val(searchValue);
-        $('.header-search-wrap').toggleClass('visibleFlex')
-        $('.ux-search-submit.submit-button').trigger('click');
-        }
-    
-    </script>
+</script>
     <!--HẾT JS HEADER ------------------------------------------------------------------------------- -->
     <script>
     //----------------------- footer -----------------------
