@@ -281,18 +281,41 @@
           border-radius: 5px;
           width: 100%;
         }
+        .product-detail-production-warp-img-list{
+          max-width: 348px;
+          margin: auto;
+          overflow: hidden;
+          position: relative;
+        }
+        .product-detail-production-warp-img-slide{
+            position: relative;
+        }
+        .product-detail-production-warp-img-slide i.fa-angle-left {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: 8px;
+        }
+        .product-detail-production-warp-img-slide i.fa-angle-right {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            right: 8px;
+        }
         .product-detail-production-warp-img-small {
           display: flex;
           justify-content: space-between;
           align-items: center;
+          position: relative;
           /* padding: 0 21px 0 21px; */
-          max-width: 348px;
-          margin: auto;
+          /* max-width: 348px;
+          margin: auto; */
         }
         .product-detail-production-warp-img-small img {
           max-width: 80px;
           max-height: 80px;
           border-radius: 5px;
+          margin-right: 10px;
         }
         .product-detail-description-product {
           margin: auto;
@@ -2139,8 +2162,15 @@
                 alt="img-main product"
               />
             </div>
-            <div class="product-detail-production-warp-img-small">
+            <div class="product-detail-production-warp-img-slide">
+                <i class="fa-solid fa-angle-left"></i>
+                <div class="product-detail-production-warp-img-list">
+                    <div class="product-detail-production-warp-img-small">
+                    </div>
+                </div>
+                <i class="fa-solid fa-angle-right"></i>
             </div>
+            
             <div class="product-detail-description-product">
               <div class="product-detail-production-description-content">
               </div>
@@ -3052,7 +3082,7 @@ $(document).click(function (e) {
     
         // get image
         $('.product-detail-production-main-img > img').attr('src', $('.wp-post-image').attr('src'))
-        $($('.product-thumbnails.thumbnails').find('img').slice(0, 4)).each(function(index, image){
+        $('.product-thumbnails.thumbnails').find('img').each(function(index, image){
             $('.product-detail-production-warp-img-small').append(`
             <div class="product-detail-production-img-item">
               <img src="${$(image).attr('src')}" alt="ảnh${index}" />
@@ -3063,6 +3093,48 @@ $(document).click(function (e) {
         $('.product-detail-production-img-item').on('click', function(){
             $('.product-detail-production-main-img > img').attr('src', $(this).find('img').attr('src'))
         })
+        let slideContent = $('.product-detail-production-warp-img-small');
+        let sildeWidth = $('.product-detail-production-warp-img-small').css('width').replace('px', '').trim() * 1;
+        let imageSize = 90;
+        let maxImgShow = 4
+        let countImage = $('.product-detail-production-warp-img-small .product-detail-production-img-item').length;
+        let totalWidth = countImage * imageSize;
+        let maxLeft = totalWidth - maxImgShow * 90;
+
+        if( countImage <= 4 ){
+            $('.product-detail-production-warp-img-slide i.fa-angle-right').css({display: 'none'});
+            $('.product-detail-production-warp-img-slide i.fa-angle-left').css({display: 'none'});
+        }
+
+        $('.product-detail-production-warp-img-slide i.fa-angle-right').on('click', slideRight)
+
+        $('.product-detail-production-warp-img-slide i.fa-angle-left').on('click', slideLeft)
+
+        function slideRight (){
+            let left = slideContent.css('left').replace('px', '').trim() * 1;
+            if(left - 90 >= maxLeft * -1){
+                $('.product-detail-production-warp-img-slide i.fa-angle-right').off('click');
+                slideContent.animate({left: "-=90"}, 500, function(){
+                    $('.product-detail-production-warp-img-slide i.fa-angle-right').one('click', slideRight);
+                })
+            }else{
+                slideContent.css({left: maxLeft * -1 + 'px'})
+                $('.product-detail-production-warp-img-slide i.fa-angle-right').one('click', slideRight);
+            }
+        }
+
+        function slideLeft (){
+            let left = slideContent.css('left').replace('px', '').trim() * 1;
+            if(left + 90 <= 0){
+                $('.product-detail-production-warp-img-slide i.fa-angle-left').off('click');
+                slideContent.animate({left: "+=90"}, 500, function() {
+                    $('.product-detail-production-warp-img-slide i.fa-angle-left').one('click', slideLeft);
+                })
+            }else{
+                slideContent.css({left: 0})
+                $('.product-detail-production-warp-img-slide i.fa-angle-left').one('click', slideLeft);
+            }
+        }
     
         // get name
         let productName = $('.product-title.entry-title strong').html();
