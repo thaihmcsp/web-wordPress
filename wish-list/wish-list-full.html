@@ -58,198 +58,198 @@
     </style>
 
     <style>
-      /*------------------- header -------------------*/
-      /*------------------- header -------------------*/
-      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-      * {
+        /*------------------- header -------------------*/
+        /*------------------- header -------------------*/
+        @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+        * {
         font-family: "Nunito", sans-serif;
         padding: 0;
         margin: 0;
         box-sizing: border-box;
         /* border: 1px solid gray; */
-      }
-      @media (max-width: 500px) {
+        }
+        @media (max-width: 500px) {
         #header {
-          display: none;
+            display: none;
         }
         .page-wrapper {
-          padding-top: 0;
+            padding-top: 0;
         }
         .row {
-          margin-left: 0;
-          margin-right: 0;
-          /* flex-flow: nowrap */
+            margin-left: 0;
+            margin-right: 0;
+            /* flex-flow: nowrap */
         }
         .col {
-          padding: 0;
+            padding: 0;
         }
         #header_container {
-          max-width: 500px; /*figma: 390px */
-          background-color: #20404f;
-          color: #e9dfd3;
-          margin: auto;
-          display: flex;
-          flex-direction: column;
+            max-width: 500px; /*figma: 390px */
+            background-color: #20404f;
+            color: #e9dfd3;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
         }
         #header_wrap {
-          height: 69px;
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-end;
-          padding: 0 21px 5px 21px;
-          position: relative;
+            height: 69px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 0 21px 5px 21px;
+            position: relative;
         }
         #header-wrap-left {
-          height: 100%;
-          display: flex;
-          align-items: flex-end;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
         }
         #header_bar {
-          position: relative;
-          font-size: 25px;
-          padding-right: 21px;
+            position: relative;
+            font-size: 25px;
+            padding-right: 21px;
         }
 
         #header_brand-icon {
-          width: 133px;
-          height: 46px;
+            width: 133px;
+            height: 46px;
         }
 
         #header-wrap-right {
-          display: flex;
-          margin-bottom: 6px;
+            display: flex;
+            margin-bottom: 6px;
         }
         #header_search {
-          font-size: 20px;
+            font-size: 20px;
         }
         #header_user-info {
-          font-size: 20px;
-          margin: 0 11px;
+            font-size: 20px;
+            margin: 0 11px;
         }
         #header_card {
-          font-size: 20px;
-          position: relative;
+            font-size: 20px;
+            position: relative;
         }
         #header_card a,
         #header_user-info a {
-          color: #e9dfd3;
+            color: #e9dfd3;
         }
         #header_card-index {
-          position: absolute;
-          top: -5px;
-          right: -5px;
-          width: 15px;
-          height: 15px;
-          border-radius: 50%;
-          background-color: #bf8977;
-          text-align: center;
-          line-height: 15px;
-          font-size: 13px;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #bf8977;
+            text-align: center;
+            line-height: 15px;
+            font-size: 13px;
         }
         .header-dropdown-wrap-item {
-          border-radius: 5px;
-          position: absolute;
-          top: 0px;
-          transform: translate3d(1px, 70px, 0px) !important;
-          border: none;
-          left: 0;
-          width: 189px;
-          padding: 4px 0 32px 0;
-          background: #20404f;
-          z-index: 100000;
-          display: none;
+            border-radius: 5px;
+            position: absolute;
+            top: 0px;
+            transform: translate3d(1px, 70px, 0px) !important;
+            border: none;
+            left: 0;
+            width: 50%;
+            padding: 4px 0 32px 0;
+            background: #20404f;
+            z-index: 100000;
+            display: none;
         }
         .header-dropdown-wrap-item a {
-          width: 100%;
-          display: inline-block;
+            width: 100%;
+            display: inline-block;
         }
         .header-dropdown-item {
-          padding: 5px 0 2px 22px;
-          margin-top: 4px;
-          font-size: 14px;
-          color: #e9dfd3;
-          font-weight: 400;
-          text-decoration: none;
-          border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+            padding: 8px 0 8px 22px;
+            margin-top: 4px;
+            font-size: 18px;
+            color: #e9dfd3;
+            font-weight: 400;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(217, 217, 217, 0.5);
         }
         .header-dropdown-item-dropdown {
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         .header-dropdown-item-dropdown-icon {
-          margin-right: 16px;
+            margin-right: 16px;
         }
         .header-dropdown-item a {
-          font-size: 14px;
-          color: #e9dfd3;
-          font-weight: 400;
-          text-decoration: none;
+            font-size: 18px;
+            color: #e9dfd3;
+            font-weight: 400;
+            text-decoration: none;
         }
         .dropdown-divider {
-          margin: 0;
+            margin: 0;
         }
 
         .header-dropdown-wrap-product-item {
-          border-radius: 5px;
-          position: absolute;
-          top: -73px;
-          transform: translate3d(1px, 70px, 0px) !important;
-          border: none;
-          width: 165px;
-          padding-top: 4px;
-          background: #20404f;
-          left: 100%;
-          z-index: 10000;
-          display: none;
+            border-radius: 5px;
+            position: absolute;
+            top: -73px;
+            transform: translate3d(1px, 70px, 0px) !important;
+            border: none;
+            width: calc(100% - 16px);
+            padding-top: 4px;
+            background: #20404f;
+            left: 100%;
+            z-index: 10000;
+            display: none;
         }
         .visibleClass {
-          display: block;
+            display: block;
         }
         .header-search-wrap {
-          padding: 10px 24px;
-          display: none;
+            padding: 10px 24px;
+            display: none;
         }
         #header-search-form {
-          display: flex;
-          width: 100%;
-          padding: 0 16px;
-          background: #e9dfd3;
-          border-radius: 20px;
-          align-items: center;
+            display: flex;
+            width: 100%;
+            padding: 0 16px;
+            background: #e9dfd3;
+            border-radius: 20px;
+            align-items: center;
         }
         .header-search-form-input {
-          width: 100%;
+            width: 100%;
         }
         .header-search-form-input input {
-          width: 100%;
-          background: #e9dfd3;
-          border: none;
-          outline: none;
-          padding: 8px;
-          font-family: Nunito;
-          font-weight: 600;
-          line-height: 16px;
-          letter-spacing: 0em;
-          color: #20404f;
+            width: 100%;
+            background: #e9dfd3;
+            border: none;
+            outline: none;
+            padding: 8px;
+            font-family: Nunito;
+            font-weight: 600;
+            line-height: 16px;
+            letter-spacing: 0em;
+            color: #20404f;
         }
         .header-search-form-input input:focus {
-          background: #e9dfd3;
-          box-shadow: none;
-          color: #20404f;
+            background: #e9dfd3;
+            box-shadow: none;
+            color: #20404f;
         }
         .header-search-form-button {
-          color: #20404f;
+            color: #20404f;
         }
         .select-header-menu {
-          color: #bf8977;
+            color: #bf8977;
         }
         .visibleFlex {
-          display: flex;
+            display: flex;
         }
-      }
-    </style>
+        }
+    </style>    
 
     <style>
       /*------------------------ wish-list ------------------------ */
@@ -265,7 +265,7 @@
           font-family: "Nunito";
           font-style: normal;
           font-weight: 400;
-          font-size: 10px;
+          font-size: 12px;
           line-height: 19px;
           width: 70px;
           height: 19px;
@@ -299,7 +299,7 @@
           font-family: "ABeeZee";
           font-style: normal;
           font-weight: 400;
-          font-size: 10px;
+          font-size: 12px;
           line-height: 16px;
           /* or 160% */
 
@@ -341,19 +341,19 @@
         }
         #img-cart {
           max-width: 100%;
-          height: auto;
           display: inline-block;
           vertical-align: middle;
           width: 122px;
-          height: 122px;
+          /* height: 122px; */
           border-radius: 5px;
         }
         .img_product_card {
-          width: 40%;
           height: 122px;
           border-radius: 5px;
           background-size: cover;
           display: flex;
+          width: 122px;
+          flex-basis: 122px;
           align-items: center;
         }
         .title_product_cart_wishlist {
@@ -364,7 +364,7 @@
           font-family: "Nunito";
           font-style: normal;
           font-weight: 600;
-          font-size: 15px;
+          font-size: 16px;
           line-height: 16px;
           color: #20404f;
         }
@@ -377,8 +377,13 @@
           height: 122px;
           justify-content: space-between;
         }
+        .info_product_card_wishlist_detail{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
         .info_product_card_wishlist {
-          width: 60%;
+          max-width: 60%;
           margin-left: 21px;
         }
         .rate_product_wishlist {
@@ -388,7 +393,7 @@
           font-family: "Nunito";
           font-style: normal;
           font-weight: 400;
-          font-size: 10px;
+          font-size: 12px;
           line-height: 16px;
           margin: 8px 0;
         }
@@ -396,7 +401,7 @@
           /* font-family: "ABenZee";git */
           font-style: normal;
           font-weight: 400;
-          font-size: 10px;
+          font-size: 12px;
           line-height: 16px;
           /* or 160% */
 
@@ -537,7 +542,7 @@
           list-style: none;
           /* line-height: 45px; */
           text-align: center;
-          font-size: 18px;
+          font-size: 20px;
           font-weight: 500;
           cursor: pointer;
           user-select: none;
@@ -557,7 +562,7 @@
           margin: 0px -5px 0 3px;
         }
         .pagination ul li.dots {
-          font-size: 22px;
+          font-size: 24px;
           cursor: default;
         }
         .pagination ul li.btn {
@@ -574,7 +579,7 @@
           font-family: "Nunito";
           font-style: normal;
           font-weight: 600;
-          font-size: 14px;
+          font-size: 16px;
           line-height: 19px;
           /* identical to box height, or 136% */
           height: 25px;
@@ -634,261 +639,263 @@
       }
     </style>
     <style>
-      /*------------------------------- footer copyright ------------------------*/
-      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-      * {
-        font-family: "Nunito", sans-serif;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        /* border: 1px solid gray; */
-      }
-      #footer-copyright_container {
-        max-width: 500px;
-        background-color: rgba(191, 137, 119, 0.5);
-        color: #20404f;
-        padding: 0 22px;
-        margin: auto;
-      }
-
-      .footer-coppyright-title {
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 19px;
-      }
-      .footer-copyright-subscribe {
-        padding: 11px 0;
-      }
-
-      #footer-copyright-collapse-wrap {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        border-bottom: 1px solid #d9d9d9;
-        padding: 4px 0;
-        height: 38px;
-      }
-      .footer_copyright-content-warp-items {
-        padding-top: 12px;
-      }
-      .footer_copyright-content-warp-items a {
-        text-decoration: none;
-        color: #20404f;
-      }
-      .footer_copyright-content-items {
-        padding: 5px 0;
-      }
-      .footer_copyright-content-items-thin {
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 19px;
-        padding: 5px 0;
-      }
-      .footer-coppyright-content-detail1 {
-        padding: 8px 0 6px;
-        font-size: 14px;
-        font-weight: 400;
-      }
-      .footer-coppyright-content-detail2 {
-        font-size: 14px;
-        font-weight: 600;
-        padding-bottom: 12px;
-      }
-      button {
-        padding: 0;
-      }
-      .footer-coppyright-subcribe-wap {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      #footer-coppyright-subcribe-input {
-        border-radius: 4px;
-        border: 1px solid #20404f;
-        background: rgba(191, 137, 119, 0.01);
-        width: 244px;
-        height: 32px;
-        font-size: 12px;
-        padding-left: 11px;
-      }
-      #footer-coppyright-subcribe-button {
-        width: 89px;
-        border-radius: 4px;
-        height: 32px;
-        background-color: rgba(32, 64, 79, 1);
-        color: rgba(191, 137, 119, 1);
-        border: none;
-      }
-      .footer-coppyright-author {
-        font-size: 14px;
-        padding: 26px 0 12px 0;
-      }
-      .pr-4 {
-        padding-right: 16px;
-      }
+        /*------------------------------- footer copyright ------------------------*/
+        @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+        * {
+          font-family: "Nunito", sans-serif;
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          /* border: 1px solid gray; */
+        }
+        #footer-copyright_container {
+          max-width: 500px;
+          background-color: rgba(191, 137, 119, 0.5);
+          color: #20404f;
+          padding: 0 22px;
+          margin: auto;
+        }
+  
+        .footer-coppyright-title {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 20px;
+        }
+        .footer-copyright-subscribe {
+          padding: 11px 0;
+        }
+  
+        #footer-copyright-collapse-wrap {
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          border-bottom: 1px solid #d9d9d9;
+          padding: 4px 0;
+          height: 38px;
+        }
+        .footer_copyright-content-warp-items {
+          padding-top: 12px;
+        }
+        .footer_copyright-content-warp-items a {
+          text-decoration: none;
+          color: #20404f;
+          font-size: 18px;
+        }
+        .footer_copyright-content-items {
+          padding: 5px 0;
+        }
+        .footer_copyright-content-items-thin {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 19px;
+          padding: 5px 0;
+        }
+        .footer-coppyright-content-detail1 {
+          padding: 8px 0 6px;
+          font-size: 16px;
+          font-weight: 400;
+        }
+        .footer-coppyright-content-detail2 {
+          font-size: 16px;
+          font-weight: 600;
+          padding-bottom: 12px;
+        }
+        button {
+          padding: 0;
+        }
+        .footer-coppyright-subcribe-wap {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        #footer-coppyright-subcribe-input {
+          border-radius: 4px;
+          border: 1px solid #20404f;
+          background: rgba(191, 137, 119, 0.01);
+          width: 244px;
+          height: 40px;
+          font-size: 14px;
+          padding-left: 11px;
+        }
+        #footer-coppyright-subcribe-button {
+          width: 89px;
+          border-radius: 4px;
+          height: 40px;
+          background-color: rgba(32, 64, 79, 1);
+          color: rgba(191, 137, 119, 1);
+          border: none;
+        }
+        .footer-coppyright-author {
+          font-size: 14px;
+          padding: 26px 0 12px 0;
+          font-weight: 400;
+        }
+        .pr-4 {
+          padding-right: 16px;
+        }
     </style>
     <style>
-      /*-------------------- footer -----------------*/
-      #footer_container {
+    /*-------------------- footer -----------------*/
+    #footer_container {
         max-width: 500px;
         margin: auto;
-      }
-      #footer_wrap {
+    }
+    #footer_wrap {
         display: flex;
         justify-content: space-between;
         height: 80px;
         background-color: #20404f;
         color: #bf8977;
         padding: 15px 24px;
-      }
-      #footer_wrap-left {
+    }
+    #footer_wrap-left {
         margin-top: 3px;
         display: flex;
-      }
-      .footer_icon-social {
+    }
+    .footer_icon-social {
         display: flex;
         font-size: 18px;
         overflow: hidden;
-      }
-      .footer_icon-social-center {
+    }
+    .footer_icon-social-center {
         margin: 0 12px;
-      }
+    }
 
-      #footer_wrap-right {
+    #footer_wrap-right {
         display: flex;
-      }
-      .footer_icon-paycard {
+    }
+    .footer_icon-paycard {
         width: 42px;
         border-radius: 2px;
-      }
-      .footer_icon-paycard img {
+    }
+    .footer_icon-paycard img {
         width: 42px;
-      }
-      .footer_icon-paycard-center {
+    }
+    .footer_icon-paycard-center {
         margin: 0 39px;
-      }
-      #footer-coppyright-subcribe-wap {
+    }
+    #footer-coppyright-subcribe-wap {
         align-items: center;
-      }
-      #footer-coppyright-subcribe-wap button {
+    }
+    #footer-coppyright-subcribe-wap button {
         padding: 0;
-      }
+    }
     </style>
   </head>
   <body>
     <div id="header_container">
-      <div id="header_wrap">
-        <div id="header-wrap-left">
-          <div id="header_bar" onclick="onMenuDropdown()">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-
-          <!-- dropdown -->
-
-          <div class="header-dropdown-wrap-item" onclick="">
-            <div class="header-dropdown-item">
-              <a href="https://fmzee.com/">Home</a>
+        <div id="header_wrap">
+          <div id="header-wrap-left">
+            <div id="header_bar" onclick="onMenuDropdown()">
+              <i class="fa-solid fa-bars"></i>
             </div>
-
-            <div class="header-dropdown-item">
-              <a href="https://fmzee.com/mobile-best-seller/">Best Sallers</a>
-            </div>
-
-            <div
-              class="header-dropdown-item header-dropdown-item-dropdown"
-              onclick="onProductMenuDropdown()"
-            >
-              <div>Product</div>
-              <i
-                class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
-              ></i>
-              <div class="header-dropdown-wrap-product-item">
-                <a href="https://fmzee.com/?page_id=3039&preview=true">
-                  <div class="header-dropdown-item"><div>Ornament</div></div>
-                </a>
-                <a href="https://fmzee.com/?page_id=3041&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>Tumbler</div>
-                  </div>
-                </a>
-
-                <a href="https://fmzee.com/?page_id=3043&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>Door mat</div>
-                  </div>
-                </a>
-
-                <a href="https://fmzee.com/?page_id=3045&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>Door sign</div>
-                  </div>
-                </a>
-
-                <a href="https://fmzee.com/?page_id=3047&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>2 Layered Door Sign</div>
-                  </div>
-                </a>
-
-                <a href="https://fmzee.com/mobile-list-all-product/">
-                  <div class="header-dropdown-item">
-                    <div>All</div>
-                  </div>
-                </a>
+  
+            <!-- dropdown -->
+  
+            <div class="header-dropdown-wrap-item" onclick="">
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/">Home</a>
               </div>
-            </div>
-            <!-- dropdown Product -->
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/mobile-best-seller/">Best Sallers</a>
+              </div>
+  
+              <div
+                class="header-dropdown-item header-dropdown-item-dropdown"
+                onclick="onProductMenuDropdown()"
+              >
+                <div>Product</div>
+                <i
+                  class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
+                ></i>
+                <div class="header-dropdown-wrap-product-item">
+                  <a href="https://fmzee.com/?page_id=3039&preview=true">
+                    <div class="header-dropdown-item"><div>Ornament</div></div>
+                  </a>
+                  <a href="https://fmzee.com/?page_id=3041&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>Tumbler</div>
+                    </div>
+                  </a>
+  
+                  <a href="https://fmzee.com/?page_id=3043&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>Door mat</div>
+                    </div>
+                  </a>
+  
+                  <a href="https://fmzee.com/?page_id=3045&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>Door sign</div>
+                    </div>
+                  </a>
+  
+                  <a href="https://fmzee.com/?page_id=3047&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>2 Layered Door Sign</div>
+                    </div>
+                  </a>
 
-            <div class="header-dropdown-item">
-              <a href="https://fmzee.com/wishlist/">Wishdivst</a>
+                  <a href="https://fmzee.com/mobile-list-all-product/">
+                    <div class="header-dropdown-item">
+                      <div>All</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- dropdown Product -->
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/wishlist/">Wishdivst</a>
+              </div>
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/san-pham/gift-card/">Gift Card</a>
+              </div>
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/mobile-sign-in/">Login</a>
+              </div>
+  
+              <!-- test -->
             </div>
-
-            <div class="header-dropdown-item">
-              <a href="https://fmzee.com/san-pham/gift-card/">Gift Card</a>
+            <div id="header_brand-icon">
+              <a href="https://fmzee.com/"
+                ><img
+                  src="https://fmzee.com/wp-content/uploads/2022/08/logo-web_5.png"
+                  alt="logo_brand"
+              /></a>
             </div>
-
-            <div class="header-dropdown-item">
-              <a href="https://fmzee.com/mobile-sign-in/">Login</a>
-            </div>
-
-            <!-- test -->
           </div>
-          <div id="header_brand-icon">
-            <a href="https://fmzee.com/"
-              ><img
-                src="https://fmzee.com/wp-content/uploads/2022/08/logo-web_5.png"
-                alt="logo_brand"
-            /></a>
+  
+          <div id="header-wrap-right">
+            <div id="header_search" onclick="openSearchHeader()">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div id="header_user-info">
+              <a href="https://fmzee.com/mobile-sign-in/">
+                <i class="fa-regular fa-user"></i>
+              </a>
+            </div>
+            <div id="header_card">
+              <a href="https://fmzee.com/gio-hang/">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div id="header_card-index">1</div>
+              </a>
+            </div>
           </div>
         </div>
-
-        <div id="header-wrap-right">
-          <div id="header_search" onclick="openSearchHeader()">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <div id="header_user-info">
-            <a href="https://fmzee.com/mobile-sign-in/">
-              <i class="fa-regular fa-user"></i>
-            </a>
-          </div>
-          <div id="header_card">
-            <a href="https://fmzee.com/gio-hang/">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <div id="header_card-index">1</div>
-            </a>
+        <div class="header-search-wrap">
+          <div id="header-search-form">
+            <div class="header-search-form-input">
+              <input type="text" placeholder="Seach..." />
+            </div>
+            <div class="header-search-form-button" onclick="activeSearch()">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="header-search-wrap">
-        <div id="header-search-form">
-          <div class="header-search-form-input">
-            <input type="text" placeholder="Seach..." />
-          </div>
-          <div class="header-search-form-button" onclick="activeSearch()">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="contained_main_my_wishlist">
@@ -994,168 +1001,168 @@
       <!-- <div class="border1_home_wishlist"></div> -->
     </div>
     <div id="footer-copyright_container">
-      <div id="footer-copyright_wrap">
-        <div class="footer-copyright-collapse">
-          <div
-            data-bs-toggle="collapse"
-            href="#quick_link"
-            aria-expanded="false"
-            aria-controls="quick_link"
-            id="footer-copyright-collapse-wrap"
-          >
-            <div class="footer-coppyright-title">Quick Links</div>
-            <div class="footer-copyright-icon">
-              <i class="fa-solid fa-caret-down"></i>
-            </div>
-          </div>
-          <div class="collapse" id="quick_link">
-            <div class="footer_copyright-content-warp-items">
-              <div class="footer_copyright-content-items">
-                <a href="https://fmzee.com/">Home</a>
-              </div>
-              <div class="footer_copyright-content-items">
-                <a href="https://fmzee.com/about-us/">About Us</a>
-              </div>
-              <div class="footer_copyright-content-items">
-                <a href="https://fmzee.com/contact/">Contact Us</a>
-              </div>
-              <div class="footer_copyright-content-items">FAQ</div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-copyright-collapse">
+        <div id="footer-copyright_wrap">
           <div class="footer-copyright-collapse">
             <div
               data-bs-toggle="collapse"
-              href="#Policies"
+              href="#quick_link"
               aria-expanded="false"
-              aria-controls="Policies"
+              aria-controls="quick_link"
               id="footer-copyright-collapse-wrap"
             >
-              <div class="footer-coppyright-title">Policies</div>
+              <div class="footer-coppyright-title">Quick Links</div>
               <div class="footer-copyright-icon">
                 <i class="fa-solid fa-caret-down"></i>
               </div>
             </div>
-            <div class="collapse" id="Policies">
+            <div class="collapse" id="quick_link">
               <div class="footer_copyright-content-warp-items">
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/privacy-policy/">Privacy Policy</a>
+                  <a href="https://fmzee.com/">Home</a>
                 </div>
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/shipping-policy/"
-                    >Shipping Policy</a
-                  >
+                  <a href="https://fmzee.com/about-us/">About Us</a>
                 </div>
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/refund-policy/"
-                    >Refund & Return Policy</a
-                  >
+                  <a href="https://fmzee.com/contact/">Contact Us</a>
                 </div>
-                <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/terms-and-conditions/"
-                    >Terms and Conditions</a
-                  >
-                </div>
-                <div class="footer_copyright-content-items">
-                  <a href="#">Payment Method</a>
-                </div>
+                <div class="footer_copyright-content-items">FAQ</div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="footer-copyright-collapse">
           <div class="footer-copyright-collapse">
-            <div
-              data-bs-toggle="collapse"
-              href="#getInTouch"
-              aria-expanded="false"
-              aria-controls="getInTouch"
-              id="footer-copyright-collapse-wrap"
-            >
-              <div class="footer-coppyright-title">Get In Touch</div>
-              <div class="footer-copyright-icon">
-                <i class="fa-solid fa-caret-down"></i>
+            <div class="footer-copyright-collapse">
+              <div
+                data-bs-toggle="collapse"
+                href="#Policies"
+                aria-expanded="false"
+                aria-controls="Policies"
+                id="footer-copyright-collapse-wrap"
+              >
+                <div class="footer-coppyright-title">Policies</div>
+                <div class="footer-copyright-icon">
+                  <i class="fa-solid fa-caret-down"></i>
+                </div>
+              </div>
+              <div class="collapse" id="Policies">
+                <div class="footer_copyright-content-warp-items">
+                  <div class="footer_copyright-content-items">
+                    <a href="https://fmzee.com/privacy-policy/">Privacy Policy</a>
+                  </div>
+                  <div class="footer_copyright-content-items">
+                    <a href="https://fmzee.com/shipping-policy/"
+                      >Shipping Policy</a
+                    >
+                  </div>
+                  <div class="footer_copyright-content-items">
+                    <a href="https://fmzee.com/refund-policy/"
+                      >Refund & Return Policy</a
+                    >
+                  </div>
+                  <div class="footer_copyright-content-items">
+                    <a href="https://fmzee.com/terms-and-conditions/"
+                      >Terms and Conditions</a
+                    >
+                  </div>
+                  <div class="footer_copyright-content-items">
+                    <a href="#">Payment Method</a>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="collapse" id="getInTouch">
-              <div class="footer_copyright-content-warp-items">
-                <div class="footer_copyright-content-items-thin">
-                  If you have any questions, please contact us by this email
-                  below
-                </div>
-                <div class="footer_copyright-content-items-thin">
-                  <i class="fa-regular fa-envelope"></i>
-                  Email: suppost.fmzee@gmail.com UK Address: 24-26 Arcadia
-                </div>
-                <div class="footer_copyright-content-items-thin">
-                  Avenue, Dephna House #105, London, Greater London, United
-                  Kingdom, N3 2JU
-                </div>
-
-                <div class="footer_copyright-content-items-thin">
-                  Delivery Delays Due To Covid-19
+          </div>
+          <div class="footer-copyright-collapse">
+            <div class="footer-copyright-collapse">
+              <div
+                data-bs-toggle="collapse"
+                href="#getInTouch"
+                aria-expanded="false"
+                aria-controls="getInTouch"
+                id="footer-copyright-collapse-wrap"
+              >
+                <div class="footer-coppyright-title">Get In Touch</div>
+                <div class="footer-copyright-icon">
+                  <i class="fa-solid fa-caret-down"></i>
                 </div>
               </div>
+              <div class="collapse" id="getInTouch">
+                <div class="footer_copyright-content-warp-items">
+                  <div class="footer_copyright-content-items-thin">
+                    If you have any questions, please contact us by this email
+                    below
+                  </div>
+                  <div class="footer_copyright-content-items-thin">
+                    <i class="fa-regular fa-envelope"></i>
+                    Email: suppost.fmzee@gmail.com 
+                  </div>
+                  <div class="footer_copyright-content-items-thin">
+                  UK Address: 24-26 Arcadia Avenue, Dephna House #105, London, Greater London, United
+                    Kingdom, N3 2JU
+                  </div>
+  
+                  <div class="footer_copyright-content-items-thin">
+                    Delivery Delays Due To Covid-19
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright-subscribe">
+            <div class="footer-coppyright-title">Newsletter</div>
+            <div class="footer-coppyright-content">
+              <div class="footer-coppyright-content-detail1">
+                Subscribe to be notified about product launches,
+                <br />special offers and news.
+              </div>
+              <div class="footer-coppyright-content-detail2">
+                Enter your email and get your first treat,
+                <br />
+                an instant 25% discount off your first order!
+              </div>
+            </div>
+            <div class="footer-coppyright-subcribe-wap">
+              <input
+                id="footer-coppyright-subcribe-input"
+                type="text"
+                placeholder="your email:"
+              />
+              <button id="footer-coppyright-subcribe-button">Subcribe</button>
+            </div>
+            <div class="footer-coppyright-author">
+              © 2022 FMzee - Personalized Door Sign, Ornament, Tumbler & Home
+              Decor
             </div>
           </div>
         </div>
-        <div class="footer-copyright-subscribe">
-          <div class="footer-coppyright-title">Newsletter</div>
-          <div class="footer-coppyright-content">
-            <div class="footer-coppyright-content-detail1">
-              Subscribe to be notified about product launches,
-              <br />special offers and news.
-            </div>
-            <div class="footer-coppyright-content-detail2">
-              Enter your email and get your first treat,
-              <br />
-              an instant 25% discount off your first order!
-            </div>
-          </div>
-          <div class="footer-coppyright-subcribe-wap">
-            <input
-              id="footer-coppyright-subcribe-input"
-              type="text"
-              placeholder="your email:"
-            />
-            <button id="footer-coppyright-subcribe-button">Subcribe</button>
-          </div>
-          <div class="footer-coppyright-author">
-            © 2022 FMzee - Personalized Door Sign, Ornament, Tumbler & Home
-            Decor
-          </div>
-        </div>
-      </div>
     </div>
     <div id="footer_container">
-      <div id="footer_wrap">
+    <div id="footer_wrap">
         <div id="footer_wrap-left">
-          <div class="footer_icon-social">
+        <div class="footer_icon-social">
             <i class="fa-brands fa-facebook"></i>
-          </div>
-          <div class="footer_icon-social footer_icon-social-center">
+        </div>
+        <div class="footer_icon-social footer_icon-social-center">
             <i class="fa-brands fa-square-twitter"></i>
-          </div>
-          <div class="footer_icon-social">
+        </div>
+        <div class="footer_icon-social">
             <i class="fa-brands fa-square-instagram"></i>
-          </div>
+        </div>
         </div>
         <div id="footer_wrap-right">
-          <div class="footer_icon-paycard">
+        <div class="footer_icon-paycard">
             <img src=" https://fmzee.com/productdetail-pay-visa/" alt="" />
-          </div>
-          <div class="footer_icon-paycard footer_icon-paycard-center">
-            <img src="https://fmzee.com/productdetail-pay-paypal/" alt="" />
-          </div>
-          <div class="footer_icon-paycard">
-            <img
-              src=" https://fmzee.com/productdetail-pay-mastercard/"
-              alt=""
-            />
-          </div>
         </div>
-      </div>
+        <div class="footer_icon-paycard footer_icon-paycard-center">
+            <img src="https://fmzee.com/productdetail-pay-paypal/" alt="" />
+        </div>
+        <div class="footer_icon-paycard">
+            <img
+            src=" https://fmzee.com/productdetail-pay-mastercard/"
+            alt=""
+            />
+        </div>
+        </div>
+    </div>
     </div>
   </body>
   <script
@@ -1305,46 +1312,48 @@
       // console.log(1580, price2text);
       $(".all_product_cart").append(`
         <div class="product_wishlist">
-          <div class="img_product_card">
             <div class="flex_center_icon">
               <div class="icon_close_product_wishlist">
                 <a href="${deleteLink}"><i class="fa-solid fa-xmark" style="font-size: 12px"></i></a>
               </div>
             </div>
-            <div>
+            <div class='info_product_card_wishlist_detail'>
+                <div class="img_product_card">
+                
+                    <div>
+                        <a href='${imgLink}'><img id='img-cart'
+                        src=${img}
+                        alt=""
+                        /></a>
+                    </div>
 
-            <a href='${imgLink}'><img id='img-cart'
-              src=${img}
-              alt=""
-            /></a>
-              </div>
-
-          </div>
-          <div class="info_product_card_wishlist">
-            <a href='${productLink}'>
-                <div class="title_product_cart_wishlist">
-                    ${ten}
                 </div>
-            </a>
+                <div class="info_product_card_wishlist">
+                    <a href='${productLink}'>
+                        <div class="title_product_cart_wishlist">
+                            ${ten}
+                        </div>
+                    </a>
 
-          
-            <div class="stock_product_cart">${status}</div>
-            <div class="product_cart_price_btn">
-              <div class="price_product_cart_wishlist">
-                <span class=${
-                  price1text > price2text
-                    ? "text_price_wishlist"
-                    : "text_discount_wishlist"
-                } style='margin-right: 8px'>$${price1text}</span
-                ><span class="text_discount_wishlist">$${price2text}</span>
-              </div>
-              <a href="${addToCardLink}">
-                <div class="btn_add_to_cart_wishlist" style="background: #20404f">
-                  ${addToCardText} 
+            
+                    <div class="stock_product_cart">${status}</div>
+                    <div class="product_cart_price_btn">
+                    <div class="price_product_cart_wishlist">
+                        <span class=${
+                        price1text > price2text
+                            ? "text_price_wishlist"
+                            : "text_discount_wishlist"
+                        } style='margin-right: 8px'>$${price1text}</span
+                        ><span class="text_discount_wishlist">$${price2text}</span>
+                    </div>
+                    <a href="${addToCardLink}">
+                        <div class="btn_add_to_cart_wishlist" style="background: #20404f">
+                        ${addToCardText} 
+                        </div>
+                    </a>
+                    </div>
                 </div>
-              </a>
             </div>
-          </div>
         </div>
       `);
     });

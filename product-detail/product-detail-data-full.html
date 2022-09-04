@@ -51,197 +51,198 @@
 
     <style>
         /*------------------- header -------------------*/
-            /*------------------- header -------------------*/
-            @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-            * {
-            font-family: "Nunito", sans-serif;
+        /*------------------- header -------------------*/
+        @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+        * {
+        font-family: "Nunito", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* border: 1px solid gray; */
+        }
+        @media (max-width: 500px) {
+        #header {
+            display: none;
+        }
+        .page-wrapper {
+            padding-top: 0;
+        }
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+            /* flex-flow: nowrap */
+        }
+        .col {
             padding: 0;
+        }
+        #header_container {
+            max-width: 500px; /*figma: 390px */
+            background-color: #20404f;
+            color: #e9dfd3;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        #header_wrap {
+            height: 69px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 0 21px 5px 21px;
+            position: relative;
+        }
+        #header-wrap-left {
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+        }
+        #header_bar {
+            position: relative;
+            font-size: 25px;
+            padding-right: 21px;
+        }
+
+        #header_brand-icon {
+            width: 133px;
+            height: 46px;
+        }
+
+        #header-wrap-right {
+            display: flex;
+            margin-bottom: 6px;
+        }
+        #header_search {
+            font-size: 20px;
+        }
+        #header_user-info {
+            font-size: 20px;
+            margin: 0 11px;
+        }
+        #header_card {
+            font-size: 20px;
+            position: relative;
+        }
+        #header_card a,
+        #header_user-info a {
+            color: #e9dfd3;
+        }
+        #header_card-index {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #bf8977;
+            text-align: center;
+            line-height: 15px;
+            font-size: 13px;
+        }
+        .header-dropdown-wrap-item {
+            border-radius: 5px;
+            position: absolute;
+            top: 0px;
+            transform: translate3d(1px, 70px, 0px) !important;
+            border: none;
+            left: 0;
+            width: 50%;
+            padding: 4px 0 32px 0;
+            background: #20404f;
+            z-index: 100000;
+            display: none;
+        }
+        .header-dropdown-wrap-item a {
+            width: 100%;
+            display: inline-block;
+        }
+        .header-dropdown-item {
+            padding: 8px 0 8px 22px;
+            margin-top: 4px;
+            font-size: 18px;
+            color: #e9dfd3;
+            font-weight: 400;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+        }
+        .header-dropdown-item-dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header-dropdown-item-dropdown-icon {
+            margin-right: 16px;
+        }
+        .header-dropdown-item a {
+            font-size: 18px;
+            color: #e9dfd3;
+            font-weight: 400;
+            text-decoration: none;
+        }
+        .dropdown-divider {
             margin: 0;
-            box-sizing: border-box;
-            /* border: 1px solid gray; */
-            }
-            @media (max-width: 500px) {
-            #header {
-                display: none;
-            }
-            .page-wrapper {
-                padding-top: 0;
-            }
-            .row {
-                margin-left: 0;
-                margin-right: 0;
-                /* flex-flow: nowrap */
-            }
-            .col {
-                padding: 0;
-            }
-            #header_container {
-                max-width: 500px; /*figma: 390px */
-                background-color: #20404f;
-                color: #e9dfd3;
-                margin: auto;
-                display: flex;
-                flex-direction: column;
-            }
-            #header_wrap {
-                height: 69px;
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
-                padding: 0 21px 5px 21px;
-                position: relative;
-            }
-            #header-wrap-left {
-                height: 100%;
-                display: flex;
-                align-items: flex-end;
-            }
-            #header_bar {
-                position: relative;
-                font-size: 25px;
-                padding-right: 21px;
-            }
-    
-            #header_brand-icon {
-                width: 133px;
-                height: 46px;
-            }
-    
-            #header-wrap-right {
-                display: flex;
-                margin-bottom: 6px;
-            }
-            #header_search {
-                font-size: 20px;
-            }
-            #header_user-info {
-                font-size: 20px;
-                margin: 0 11px;
-            }
-            #header_card {
-                font-size: 20px;
-                position: relative;
-            }
-            #header_card a, #header_user-info a {
-                color: #e9dfd3;
-            }
-            #header_card-index {
-                position: absolute;
-                top: -5px;
-                right: -5px;
-                width: 15px;
-                height: 15px;
-                border-radius: 50%;
-                background-color: #bf8977;
-                text-align: center;
-                line-height: 15px;
-                font-size: 13px;
-            }
-            .header-dropdown-wrap-item {
-                border-radius: 5px;
-                position: absolute;
-                top: 0px;
-                transform: translate3d(1px, 70px, 0px) !important;
-                border: none;
-                left: 0;
-                width: 189px;
-                padding: 4px 0 32px 0;
-                background: #20404f;
-                z-index: 100000;
-                display: none;
-            }
-            .header-dropdown-wrap-item a {
-                width: 100%;
-                display: inline-block;
-            }
-            .header-dropdown-item {
-                padding: 5px 0 2px 22px;
-                margin-top: 4px;
-                font-size: 14px;
-                color: #e9dfd3;
-                font-weight: 400;
-                text-decoration: none;
-                border-bottom: 1px solid rgba(217, 217, 217, 0.5);
-            }
-            .header-dropdown-item-dropdown {
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-            .header-dropdown-item-dropdown-icon {
-                margin-right: 16px;
-            }
-            .header-dropdown-item a {
-                font-size: 14px;
-                color: #e9dfd3;
-                font-weight: 400;
-                text-decoration: none;
-            }
-            .dropdown-divider {
-                margin: 0;
-            }
-    
-            .header-dropdown-wrap-product-item {
-                border-radius: 5px;
-                position: absolute;
-                top: -73px;
-                transform: translate3d(1px, 70px, 0px) !important;
-                border: none;
-                width: 165px;
-                padding-top: 4px;
-                background: #20404f;
-                left: 100%;
-                z-index: 10000;
-                display: none;
-            }
-            .visibleClass {
-                display: block;
-            }
-            .header-search-wrap{
-                padding: 10px 24px;
-                display: none;
-            }
-            #header-search-form {
-                display: flex;
-                width: 100%;
-                padding: 0 16px;
-                background: #e9dfd3;
-                border-radius: 20px;
-                align-items: center;
-            }
-            .header-search-form-input {
-                width: 100%;
-            }
-            .header-search-form-input input {
-                width: 100%;
-                background: #e9dfd3;
-                border: none;
-                outline: none;
-                padding: 8px;
-                font-family: Nunito;
-                font-weight: 600;
-                line-height: 16px;
-                letter-spacing: 0em;
-                color: #20404f;
-            }
-            .header-search-form-input input:focus {
-                background: #e9dfd3;
-                box-shadow: none;
-                color: #20404f;
-            }
-            .header-search-form-button {
-                color: #20404f;
-            }
-            .select-header-menu {
-                color: #bf8977;
-            }
-            .visibleFlex{
-                display: flex;
-            }
-            }
-    
-    </style>
+        }
+
+        .header-dropdown-wrap-product-item {
+            border-radius: 5px;
+            position: absolute;
+            top: -73px;
+            transform: translate3d(1px, 70px, 0px) !important;
+            border: none;
+            width: calc(100% - 16px);
+            padding-top: 4px;
+            background: #20404f;
+            left: 100%;
+            z-index: 10000;
+            display: none;
+        }
+        .visibleClass {
+            display: block;
+        }
+        .header-search-wrap {
+            padding: 10px 24px;
+            display: none;
+        }
+        #header-search-form {
+            display: flex;
+            width: 100%;
+            padding: 0 16px;
+            background: #e9dfd3;
+            border-radius: 20px;
+            align-items: center;
+        }
+        .header-search-form-input {
+            width: 100%;
+        }
+        .header-search-form-input input {
+            width: 100%;
+            background: #e9dfd3;
+            border: none;
+            outline: none;
+            padding: 8px;
+            font-family: Nunito;
+            font-weight: 600;
+            line-height: 16px;
+            letter-spacing: 0em;
+            color: #20404f;
+        }
+        .header-search-form-input input:focus {
+            background: #e9dfd3;
+            box-shadow: none;
+            color: #20404f;
+        }
+        .header-search-form-button {
+            color: #20404f;
+        }
+        .select-header-menu {
+            color: #bf8977;
+        }
+        .visibleFlex {
+            display: flex;
+        }
+        }
+    </style>    
+
     <style>
          /* PRODUCT DETAIL CSS */
     @media (max-width: 500px) {
@@ -259,9 +260,42 @@
           padding: 0 0 5px 0px;
         }
         .custom-product-page .page-header-wrapper, 
-        .custom-product-page .related-products-wrapper, 
-        .custom-product-page > .row{
+        .custom-product-page .related-products-wrapper,
+        .col.medium-7.small-12.large-7,
+        .col.medium-5.small-12.large-5 .product-title,
+        .col.medium-5.small-12.large-5 .is-divider.small,
+        .col.medium-5.small-12.large-5 .price-wrapper,
+        .col.medium-5.small-12.large-5 .cart,
+        .col.medium-5.small-12.large-5 .section.has-block,
+        .col.medium-5.small-12.large-5 .yith-wcwl-add-to-wishlist,
+        .col.medium-5.small-12.large-5 .product_meta,
+        .col.medium-5.small-12.large-5 .social-icons,
+        .col.medium-5.small-12.large-5 .woo-vantheweb,
+        .col.medium-5.small-12.large-5 .woocommerce-product-rating
+        {
             display: none;
+        }
+        .custom-product-page .row{
+            position: absolute;
+        }
+        .col.medium-5.small-12.large-5{
+            width: 100%;
+        }
+        .large-5{
+            max-width: 100%;
+        }
+        .large-5 span{
+            display: none;
+        }
+        .place-holder-for-pay-button{
+            height: 40px;
+            margin-top: 20px;
+        }
+        .ppc-button-wrapper{
+            width: 348px;
+            height: 38px;
+            display: block;
+            margin: auto;
         }
         .awdr-bulk-customizable-table{
             display: none;
@@ -324,7 +358,7 @@
         }
         .product-detail-production-description-content {
           font-weight: 600;
-          font-size: 20px;
+          font-size: 22px;
           line-height: 19px;
           color: #20404f;
         }
@@ -337,6 +371,7 @@
           font-size: 18px;
           line-height: 16px;
           letter-spacing: -0.02em;
+          height: 34px;
           color: rgba(0, 0, 0, 0.55);
         }
         .product-detail-production-price-old {
@@ -773,7 +808,7 @@
           font-size: 12px;
           line-height: 19px;
           /* identical to box height, or 158% */
-
+            display: none;
           color: #20404f;
           margin-top: 4px;
           cursor: pointer;
@@ -796,6 +831,7 @@
         .product-detail-payment-description-header-main {
           font-weight: 700;
           margin-bottom: 20px;
+          text-transform: uppercase;
         }
         .product-detail-payment-description-phase {
           margin-bottom: 20px;
@@ -897,7 +933,7 @@
           margin-top: 5px;
           margin-bottom: 5px;
           width: 100%;
-          font-size: 13px;
+          font-size: 16px;
           display: -webkit-box;
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
@@ -908,10 +944,10 @@
           margin-top: 15px;
         }
         .carousel-home-item .price-item {
-          width: 96px;
+          width: 132px;
           height: 15px;
           justify-content: space-between;
-          font-size: 14px;
+          font-size: 18px;
           letter-spacing: -0.02em;
           margin-bottom: 4px;
         }
@@ -1376,7 +1412,7 @@
           font-family: "Nunito";
           font-style: normal;
           font-weight: 700;
-          font-size: 22px;
+          font-size: 24px;
           line-height: 16px;
           /* identical to box height, or 73% */
 
@@ -1386,13 +1422,13 @@
           color: #bf8977;
           padding-bottom: 8px;
           margin-top: 8px;
-          font-size: 14px;
+          font-size: 16px;
         }
         .text_review {
           font-family: "ABeeZee";
           font-style: normal;
           font-weight: 400;
-          font-size: 14px;
+          font-size: 16px;
           line-height: 16px;
           /* identical to box height, or 114% */
           padding-bottom: 8px;
@@ -1406,7 +1442,7 @@
           font-family: "Nunito";
           font-style: normal;
           font-weight: 400;
-          font-size: 14px;
+          font-size: 16px;
           line-height: 16px;
           /* identical to box height, or 114% */
 
@@ -1480,7 +1516,7 @@
           font-family: "Nunito";
           font-style: normal;
           font-weight: 400;
-          font-size: 12px;
+          font-size: 14px;
           line-height: 16px;
           /* identical to box height, or 133% */
 
@@ -1495,7 +1531,16 @@
         }
         .flex_center {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .flex_center-author-name{
+            padding-left: 4px;
+            font-weight: 400;
+        }
+        .flex_center-rate-info{
+            display: flex;
+            align-items: center;
         }
         .rate_review-text {
           width: 100%;
@@ -1504,7 +1549,7 @@
           resize: none;
           padding: 8px;
           font-weight: 400;
-          font-size: 14px;
+          font-size: 16px;
           line-height: 16px;
           width: 209.8px;
           /* or 114% */
@@ -1614,6 +1659,7 @@
         }
         .footer_copyright-content-warp-items {
           padding-top: 12px;
+          font-weight: 400;
         }
         .footer_copyright-content-items {
           padding: 5px 0;
@@ -1905,9 +1951,9 @@
         }
   
         .footer-coppyright-title {
-          font-size: 16px;
+          font-size: 20px;
           font-weight: 700;
-          line-height: 19px;
+          line-height: 20px;
         }
         .footer-copyright-subscribe {
           padding: 11px 0;
@@ -1927,23 +1973,24 @@
         .footer_copyright-content-warp-items a {
           text-decoration: none;
           color: #20404f;
+          font-size: 18px;
         }
         .footer_copyright-content-items {
           padding: 5px 0;
         }
         .footer_copyright-content-items-thin {
-          font-size: 13px;
+          font-size: 14px;
           font-weight: 500;
           line-height: 19px;
           padding: 5px 0;
         }
         .footer-coppyright-content-detail1 {
           padding: 8px 0 6px;
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 400;
         }
         .footer-coppyright-content-detail2 {
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 600;
           padding-bottom: 12px;
         }
@@ -1960,14 +2007,14 @@
           border: 1px solid #20404f;
           background: rgba(191, 137, 119, 0.01);
           width: 244px;
-          height: 32px;
-          font-size: 12px;
+          height: 40px;
+          font-size: 14px;
           padding-left: 11px;
         }
         #footer-coppyright-subcribe-button {
           width: 89px;
           border-radius: 4px;
-          height: 32px;
+          height: 40px;
           background-color: rgba(32, 64, 79, 1);
           color: rgba(191, 137, 119, 1);
           border: none;
@@ -1975,6 +2022,7 @@
         .footer-coppyright-author {
           font-size: 14px;
           padding: 26px 0 12px 0;
+          font-weight: 400;
         }
         .pr-4 {
           padding-right: 16px;
@@ -2111,7 +2159,9 @@
                 </div>
                 <div id="header_brand-icon">
                   <a href="https://fmzee.com/"
-                    ><img src="https://fmzee.com/wp-content/uploads/2022/08/logo-web_5.png" alt="logo_brand"
+                    ><img
+                      src="https://fmzee.com/wp-content/uploads/2022/08/logo-web_5.png"
+                      alt="logo_brand"
                   /></a>
                 </div>
               </div>
@@ -2122,29 +2172,29 @@
                 </div>
                 <div id="header_user-info">
                   <a href="https://fmzee.com/mobile-sign-in/">
-                      <i class="fa-regular fa-user"></i>
+                    <i class="fa-regular fa-user"></i>
                   </a>
                 </div>
                 <div id="header_card">
                   <a href="https://fmzee.com/gio-hang/">
-                      <i class="fa-solid fa-cart-shopping"></i>
-                      <div id="header_card-index">1</div>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <div id="header_card-index">1</div>
                   </a>
                 </div>
               </div>
             </div>
             <div class="header-search-wrap">
               <div id="header-search-form">
-                  <div class="header-search-form-input">
-                      <input type="text" placeholder="Seach...">
-                  </div>
-                  <div class="header-search-form-button" onclick="activeSearch()">
-                      <i class="fa-solid fa-magnifying-glass"></i>
-                  </div>
+                <div class="header-search-form-input">
+                  <input type="text" placeholder="Seach..." />
+                </div>
+                <div class="header-search-form-button" onclick="activeSearch()">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
               </div>
             </div>
         </div>
-        <!-- --------------------------HẾT HEADER-------------------------------- -->
+            <!-- --------------------------HẾT HEADER-------------------------------- -->
         <!-- BreadCrumb -->
         <div id="product-detail-breadcrumb-container">
           <div class="product-detail-breadcrumb-item">
@@ -2360,9 +2410,10 @@
                     />
                   </div>
                 </div>
-                <button class="product-detail-payment-method-default">
+                <!-- <button class="product-detail-payment-method-default">
                   <img src="https://fmzee.com/productdetail-pay-button/" alt="" />
-                </button>
+                </button> -->
+                <div class="place-holder-for-pay-button"></div>
                 <div class="product-detail-payment-method-more-payment-option">
                   More payment options
                 </div>
@@ -2371,11 +2422,11 @@
             <!-- Description payment -->
             <div class="product-detail-payment-description-container">
               <div class="product-detail-payment-description-wrap">
-                <div class="product-detail-payment-description-header-main">
+                <!-- <div class="product-detail-payment-description-header-main">
                   Description
-                </div>
+                </div> -->
   
-                <div class="product-detail-payment-description-phase">
+                <!-- <div class="product-detail-payment-description-phase">
                   <div class="product-detail-payment-description-header">
                     Product Details
                   </div>
@@ -2431,14 +2482,14 @@
                     Processing Time: 3 – 5 working days average after payment.
                     Shipping Time: 7 – 15 working days average (US)
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
   
           <!-- Best Salers -------------------------------------->
           <div class="wordpress-data">
-              [products limit="6" columns="1" category="best-sallers" cat_operator="IN"]
+              [products limit="30" columns="1" category="best-sallers" cat_operator="IN"]
           </div>
           <div class="product-detail-best-salers-wrap">
             <div class="home-page-carousel">
@@ -2762,9 +2813,7 @@
                   <div class="collapse" id="Policies">
                     <div class="footer_copyright-content-warp-items">
                       <div class="footer_copyright-content-items">
-                        <a href="https://fmzee.com/privacy-policy/"
-                          >Privacy Policy</a
-                        >
+                        <a href="https://fmzee.com/privacy-policy/">Privacy Policy</a>
                       </div>
                       <div class="footer_copyright-content-items">
                         <a href="https://fmzee.com/shipping-policy/"
@@ -2810,10 +2859,10 @@
                       </div>
                       <div class="footer_copyright-content-items-thin">
                         <i class="fa-regular fa-envelope"></i>
-                        Email: suppost.fmzee@gmail.com UK Address: 24-26 Arcadia
+                        Email: suppost.fmzee@gmail.com 
                       </div>
                       <div class="footer_copyright-content-items-thin">
-                        Avenue, Dephna House #105, London, Greater London, United
+                      UK Address: 24-26 Arcadia Avenue, Dephna House #105, London, Greater London, United
                         Kingdom, N3 2JU
                       </div>
       
@@ -3052,8 +3101,9 @@ $(document).click(function (e) {
         let thumbnail= $(product).find('.lazy-load.attachment-woocommerce_thumbnail').attr('data-src');
         let productName= $(product).find('.woocommerce-LoopProduct-link strong').html();
         let link= $(product).find('.woocommerce-LoopProduct-link').attr('href');
-
-        $('.carousel-home-item').eq(index).prepend(`
+        let carouselHomeItem = $('.carousel-home-item').eq(index);
+        if(carouselHomeItem.length){
+            $('.carousel-home-item').eq(index).prepend(`
             <a href='${link}'>
                 <img src="${thumbnail}" alt="" class="img-item-carousel" alt="First slide" />
                 <div class="carousel-item-detail font-text-carousel"> ${productName} </div>
@@ -3062,7 +3112,28 @@ $(document).click(function (e) {
                     <p class="new-price font-text-carousel">$${newPrice}</p>
                 </div>
             </a>
-        `)
+            `)
+        }else{
+            $('.carousel-inner').append(`
+                <div class="carousel-item">
+                    <div class="carousel-home-slide d-flex" alt="Third slide">
+                        <div class="carousel-home-item"> </div>
+                        <div class="carousel-home-item"> </div>
+                    </div>
+                </div>
+            `)
+            $('.carousel-home-item').eq(index).prepend(`
+            <a href='${link}'>
+                <img src="${thumbnail}" alt="" class="img-item-carousel" alt="First slide" />
+                <div class="carousel-item-detail font-text-carousel"> ${productName} </div>
+                <div class="price-item d-flex">
+                    <p class="old-price font-text-carousel">$${oldPrice}</p>
+                    <p class="new-price font-text-carousel">$${newPrice}</p>
+                </div>
+            </a>
+            `)
+        }
+        
         // <div class="rating-item d-flex">
         //     <div class="">
         //         <span class="fa fa-star checked star-icon"></span>
@@ -3082,10 +3153,14 @@ $(document).click(function (e) {
     
         // get image
         $('.product-detail-production-main-img > img').attr('src', $('.wp-post-image').attr('src'))
-        $('.product-thumbnails.thumbnails').find('img').each(function(index, image){
+        let desktopImgList = $('.product-thumbnails.thumbnails');
+        let desktopBigImgList = $('.woocommerce-product-gallery__wrapper.product-gallery-slider.slider .flickity-slider')
+
+        desktopImgList.find('img').each(function(index, image){
+            let linkBigImg = $(image).attr('src').replace('-300x300', '')
             $('.product-detail-production-warp-img-small').append(`
             <div class="product-detail-production-img-item">
-              <img src="${$(image).attr('src')}" alt="ảnh${index}" />
+              <img src="${linkBigImg}" alt="ảnh${index}" />
             </div>
             `)
         });
@@ -3209,9 +3284,11 @@ $(document).click(function (e) {
             getPrice ();
         })
     
-        
-    
-      </script>
+        // get description
+        let description = $('#tab-description').html();
+        description = description.replace(/<br>/g, '<p> </p>')
+        $('.product-detail-payment-description-wrap').append(description)
+</script>
 
 <script>
     // send rating
@@ -3261,18 +3338,24 @@ $(document).click(function (e) {
 <script>
     // display product rating
     
-
-    $('.stfn_rate.rx_rating_graph_wrapper').find('.progress-bar .progress-track').each(function(index, percent){
-        let rate = $(percent).find('.progress-fill').attr('style').split('width: ')[1];
-        $('.ratimg_customer .content_rating').eq(index).find('.text_results').html(rate)
+    $(window).on('load', function(){
+        let ratingCount = $('.rx-temp-total-rating-count p').html()
+        if(ratingCount){
+            list = ratingCount.split(' ');
+            ratingCount = list.find((value) => { return value * 1 })
+        }
+        $('.stfn_rate.rx_rating_graph_wrapper').find('.progress-bar .progress-track').each(function(index, percent){
+            let rate = $(percent).find('.progress-fill').attr('style').split('width: ')[1].replace(';', '');
+            let rateNumber = rate.trim('').replace('%', '') * 1
+            let peopleRate = Math.round(rateNumber * ratingCount / 100);
+            $('.ratimg_customer .content_rating').eq(index).find('.text_results').html(`${rate} (${peopleRate})`);
+            $('.ratimg_customer .box_rating1').eq(index).append(`
+                <div style='background: #BF8977; width: ${rate}; height: 100%; border-radius: 5px'></div>
+            `)
+        })
     })
 
     let scoreRate = $('.temp-rating_avg').html();
-    let ratingCount = $('.rx-temp-total-rating-count p').html()
-    if(ratingCount){
-        list = ratingCount.split(' ');
-        ratingCount = list.find((value) => { return value * 1 })
-    }
 
     if(scoreRate * 1){
         Math.round(scoreRate * 1) 
@@ -3308,19 +3391,23 @@ $(document).click(function (e) {
         <div class="customer">
             <div class="user_customer_main" ${!firstImg ? `style="width: 100%"` : ''}>
                 <div class="user_cus_rate">
-                <div class="user_icon">
-                    <img class='user-avatar' src='${avatar}' alt=''>    
-                </div>
-                <div class="flex_center">
-                    <div class="cus_rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i>
+                    <div class="user_icon">
+                        <img class='user-avatar' src='${avatar}' alt=''>    
                     </div>
-                    <div class="date_rate">${date}</div>
-                </div>
+                    <div class="flex_center">
+                        <div class='flex_center-rate-info'>
+                            <div class="cus_rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="date_rate">${date}</div>
+                        </div>
+                        <div class="flex_center-author-name"> ${authorName} </div>
+                    
+                    </div>
                 </div>
                 <div class="rate_review-text" ${!firstImg ? `style="width: 100%"` : ''}>${commentText}</div>
             </div>
@@ -3357,9 +3444,21 @@ $(document).click(function (e) {
     
 </script>
 <script>
+    $('.custom-product-page .row').css({top: '100%'})
     // pay-pal
     $('.product-detail-payment-method-default').on('click', function() {
         $('.paypal-button-row').trigger('click')
+    })
+    $('.woocommerce-product-gallery__wrapper.product-gallery-slider.slider .flickity-slider').find('img');
+
+    $( window ).on( "load", function() { 
+        let headerHeight = $('#header_container').css('height').trim().replace('px', '') * 1;
+        let breadCrumbHeight = $('#product-detail-breadcrumb-container').css('height').trim().replace('px', '') * 1;
+        let devideCrumbHeight = $('.product-detail-divide-crumb').css('height').trim().replace('px', '') * 1;
+        let productDetailHeight = $('#product-detail-production').css('height').trim().replace('px', '') * 1;
+        let descriptionHeight = $('.product-detail-payment-description-container').css('height').trim().replace('px', '') * 1;
+        let position = productDetailHeight - descriptionHeight + headerHeight + breadCrumbHeight + devideCrumbHeight;
+        $('.custom-product-page .row').css({top: position - 80 +'px'})
     })
 </script>
 

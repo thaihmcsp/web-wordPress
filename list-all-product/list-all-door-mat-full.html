@@ -52,343 +52,344 @@
 
     <style>
         /*------------------- header -------------------*/
-            /*------------------- header -------------------*/
-            @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-            * {
-            font-family: "Nunito", sans-serif;
+        /*------------------- header -------------------*/
+        @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+        * {
+        font-family: "Nunito", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* border: 1px solid gray; */
+        }
+        @media (max-width: 500px) {
+        #header {
+            display: none;
+        }
+        .page-wrapper {
+            padding-top: 0;
+        }
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+            /* flex-flow: nowrap */
+        }
+        .col {
             padding: 0;
+        }
+        #header_container {
+            max-width: 500px; /*figma: 390px */
+            background-color: #20404f;
+            color: #e9dfd3;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        #header_wrap {
+            height: 69px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 0 21px 5px 21px;
+            position: relative;
+        }
+        #header-wrap-left {
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+        }
+        #header_bar {
+            position: relative;
+            font-size: 25px;
+            padding-right: 21px;
+        }
+
+        #header_brand-icon {
+            width: 133px;
+            height: 46px;
+        }
+
+        #header-wrap-right {
+            display: flex;
+            margin-bottom: 6px;
+        }
+        #header_search {
+            font-size: 20px;
+        }
+        #header_user-info {
+            font-size: 20px;
+            margin: 0 11px;
+        }
+        #header_card {
+            font-size: 20px;
+            position: relative;
+        }
+        #header_card a,
+        #header_user-info a {
+            color: #e9dfd3;
+        }
+        #header_card-index {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #bf8977;
+            text-align: center;
+            line-height: 15px;
+            font-size: 13px;
+        }
+        .header-dropdown-wrap-item {
+            border-radius: 5px;
+            position: absolute;
+            top: 0px;
+            transform: translate3d(1px, 70px, 0px) !important;
+            border: none;
+            left: 0;
+            width: 50%;
+            padding: 4px 0 32px 0;
+            background: #20404f;
+            z-index: 100000;
+            display: none;
+        }
+        .header-dropdown-wrap-item a {
+            width: 100%;
+            display: inline-block;
+        }
+        .header-dropdown-item {
+            padding: 8px 0 8px 22px;
+            margin-top: 4px;
+            font-size: 18px;
+            color: #e9dfd3;
+            font-weight: 400;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+        }
+        .header-dropdown-item-dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header-dropdown-item-dropdown-icon {
+            margin-right: 16px;
+        }
+        .header-dropdown-item a {
+            font-size: 18px;
+            color: #e9dfd3;
+            font-weight: 400;
+            text-decoration: none;
+        }
+        .dropdown-divider {
             margin: 0;
-            box-sizing: border-box;
-            /* border: 1px solid gray; */
-            }
-            @media (max-width: 500px) {
-            #header {
-                display: none;
-            }
-            .page-wrapper {
-                padding-top: 0;
-            }
-            .row {
-                margin-left: 0;
-                margin-right: 0;
-                /* flex-flow: nowrap */
-            }
-            .col {
-                padding: 0;
-            }
-            #header_container {
-                max-width: 500px; /*figma: 390px */
-                background-color: #20404f;
-                color: #e9dfd3;
-                margin: auto;
-                display: flex;
-                flex-direction: column;
-            }
-            #header_wrap {
-                height: 69px;
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
-                padding: 0 21px 5px 21px;
-                position: relative;
-            }
-            #header-wrap-left {
-                height: 100%;
-                display: flex;
-                align-items: flex-end;
-            }
-            #header_bar {
-                position: relative;
-                font-size: 25px;
-                padding-right: 21px;
-            }
-    
-            #header_brand-icon {
-                width: 133px;
-                height: 46px;
-            }
-    
-            #header-wrap-right {
-                display: flex;
-                margin-bottom: 6px;
-            }
-            #header_search {
-                font-size: 20px;
-            }
-            #header_user-info {
-                font-size: 20px;
-                margin: 0 11px;
-            }
-            #header_card {
-                font-size: 20px;
-                position: relative;
-            }
-            #header_card a, #header_user-info a {
-                color: #e9dfd3;
-            }
-            #header_card-index {
-                position: absolute;
-                top: -5px;
-                right: -5px;
-                width: 15px;
-                height: 15px;
-                border-radius: 50%;
-                background-color: #bf8977;
-                text-align: center;
-                line-height: 15px;
-                font-size: 13px;
-            }
-            .header-dropdown-wrap-item {
-                border-radius: 5px;
-                position: absolute;
-                top: 0px;
-                transform: translate3d(1px, 70px, 0px) !important;
-                border: none;
-                left: 0;
-                width: 189px;
-                padding: 4px 0 32px 0;
-                background: #20404f;
-                z-index: 100000;
-                display: none;
-            }
-            .header-dropdown-wrap-item a {
-                width: 100%;
-                display: inline-block;
-            }
-            .header-dropdown-item {
-                padding: 5px 0 2px 22px;
-                margin-top: 4px;
-                font-size: 14px;
-                color: #e9dfd3;
-                font-weight: 400;
-                text-decoration: none;
-                border-bottom: 1px solid rgba(217, 217, 217, 0.5);
-            }
-            .header-dropdown-item-dropdown {
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-            .header-dropdown-item-dropdown-icon {
-                margin-right: 16px;
-            }
-            .header-dropdown-item a {
-                font-size: 14px;
-                color: #e9dfd3;
-                font-weight: 400;
-                text-decoration: none;
-            }
-            .dropdown-divider {
-                margin: 0;
-            }
-    
-            .header-dropdown-wrap-product-item {
-                border-radius: 5px;
-                position: absolute;
-                top: -73px;
-                transform: translate3d(1px, 70px, 0px) !important;
-                border: none;
-                width: 165px;
-                padding-top: 4px;
-                background: #20404f;
-                left: 100%;
-                z-index: 10000;
-                display: none;
-            }
-            .visibleClass {
-                display: block;
-            }
-            .header-search-wrap{
-                padding: 10px 24px;
-                display: none;
-            }
-            #header-search-form {
-                display: flex;
-                width: 100%;
-                padding: 0 16px;
-                background: #e9dfd3;
-                border-radius: 20px;
-                align-items: center;
-            }
-            .header-search-form-input {
-                width: 100%;
-            }
-            .header-search-form-input input {
-                width: 100%;
-                background: #e9dfd3;
-                border: none;
-                outline: none;
-                padding: 8px;
-                font-family: Nunito;
-                font-weight: 600;
-                line-height: 16px;
-                letter-spacing: 0em;
-                color: #20404f;
-            }
-            .header-search-form-input input:focus {
-                background: #e9dfd3;
-                box-shadow: none;
-                color: #20404f;
-            }
-            .header-search-form-button {
-                color: #20404f;
-            }
-            .select-header-menu {
-                color: #bf8977;
-            }
-            .visibleFlex{
-                display: flex;
-            }
-            }
-    
-    </style>
+        }
+
+        .header-dropdown-wrap-product-item {
+            border-radius: 5px;
+            position: absolute;
+            top: -73px;
+            transform: translate3d(1px, 70px, 0px) !important;
+            border: none;
+            width: calc(100% - 16px);
+            padding-top: 4px;
+            background: #20404f;
+            left: 100%;
+            z-index: 10000;
+            display: none;
+        }
+        .visibleClass {
+            display: block;
+        }
+        .header-search-wrap {
+            padding: 10px 24px;
+            display: none;
+        }
+        #header-search-form {
+            display: flex;
+            width: 100%;
+            padding: 0 16px;
+            background: #e9dfd3;
+            border-radius: 20px;
+            align-items: center;
+        }
+        .header-search-form-input {
+            width: 100%;
+        }
+        .header-search-form-input input {
+            width: 100%;
+            background: #e9dfd3;
+            border: none;
+            outline: none;
+            padding: 8px;
+            font-family: Nunito;
+            font-weight: 600;
+            line-height: 16px;
+            letter-spacing: 0em;
+            color: #20404f;
+        }
+        .header-search-form-input input:focus {
+            background: #e9dfd3;
+            box-shadow: none;
+            color: #20404f;
+        }
+        .header-search-form-button {
+            color: #20404f;
+        }
+        .select-header-menu {
+            color: #bf8977;
+        }
+        .visibleFlex {
+            display: flex;
+        }
+        }
+    </style>    
     <style>
-      /*-------------------------- listAllProduct ------------------------------*/
-      .col-inner{
-        background: white;
-      }
-      .listAllProduct-container {
-        padding: 2px 0;
-        margin: 0 0 32.8px 0;
-        box-sizing: border-box;
-        max-width: 500px;
-        margin: auto;
-        margin-bottom: 33px;
-        background: white;
-      }
-      .listAllProduct-title {
-        text-align: center;
-        margin-top: 33px;
-      }
-      .listAllProduct-title_title {
-        color: #20404f;
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 16px;
-        margin: 0;
-      }
-      .listAllProduct-title_text {
-        color: rgba(32, 64, 79, 0.8);
-        font-family: "ABeeZee";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 16px;
-        margin: 9px 0 0 0;
-        text-transform: lowercase;
-      }
-      .listAllProduct-title_img {
-        /* text-align: right;
-        margin-right: 20px; */
-        height: 20px;
-      }
-      hr {
-        color: #20404f;
-        border: solid 0.5px #20404f;
-        margin: 0;
-        transform: rotate(-0.08deg);
-      }
-      .listAllProduct-content {
-        padding: 31px 21px 0 21px;
-      }
-      .listAllProduct-product {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: 122px;
-        box-sizing: border-box;
-        margin-bottom: 25px;
-      }
-      .listAllProduct-product img {
-        width: 122px;
-        left: 21px;
-        top: 191px;
-      }
-      .listAllProduct-product-right {
-        margin-left: 22px;
-      }
-      .listAllProduct-product-right p {
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 15px;
-        line-height: 16px;
-        color: #20404f;
-        margin: 0 0 7px 0;
-        text-align: left;
-      }
-      /* .listAllProduct_icon_star i {
-        width: 12px;
-        margin-right: 2px;
-      } */
-      .listAllProduct_footer {
-        margin-top: 8px;
-        position: relative;
-      }
-      .listAllProduct_footer i {
-        position: absolute;
-        right: 15px;
-      }
-      .listAllProduct_footer span {
-        margin-right: 6px;
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 16px;
-        letter-spacing: -0.02em;
-      }
-      .listAllProduct_icon_star {
-        color: #bf8977;
-      }
-      .listALLProduct-pagination {
-        display: flex;
-        padding: 10px 0;
-        position: relative;
-        max-width: 500px;
-        margin: auto;
-        height: 50px;
-        border-bottom: solid 1.5px rgba(32, 64, 79, 0.4);
-        justify-content: center;
-      }
-      .listALLProduct-pagination button {
-        width: 66px;
-        height: 24px;
-        background: #20404f;
-        border-radius: 5px;
-        color: #fff;
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 15px;
-        /* position: absolute;
-        left: 40%;
-        top: 25%; */
-        border: none;
-      }
-      .listALLProduct-pagination ul {
-        position: absolute;
-        top: 32%;
-        right: 11%;
-      }
-      .listALLProduct-pagination ul li {
-        margin: 0 1px;
-        color: rgba(32, 64, 79, 0.5);
-      }
-      .listALLProduct-pagination-i {
-        position: absolute;
-        top: 30%;
-        right: 7%;
-        color: rgba(32, 64, 79, 0.5);
-      }
-      .footer-copyright-collapse {
-        font-weight: normal
-      }
-    </style>
+        /*-------------------------- listAllProduct ------------------------------*/
+        .col-inner{
+          background: white;
+        }
+        .listAllProduct-container {
+          padding: 2px 0;
+          margin: 0 0 32.8px 0;
+          box-sizing: border-box;
+          max-width: 500px;
+          margin: auto;
+          margin-bottom: 33px;
+          background: white;
+        }
+        .listAllProduct-title {
+          text-align: center;
+          margin-top: 33px;
+        }
+        .listAllProduct-title_title {
+          color: #20404f;
+          font-family: "Nunito";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 16px;
+          margin: 0;
+        }
+        .listAllProduct-title_text {
+          color: rgba(32, 64, 79, 0.8);
+          font-family: "ABeeZee";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+          margin: 9px 0 0 0;
+          text-transform: lowercase;
+        }
+        .listAllProduct-title_img {
+          /* text-align: right;
+          margin-right: 20px; */
+          height: 20px;
+        }
+        hr {
+          color: #20404f;
+          border: solid 0.5px #20404f;
+          margin: 0;
+          transform: rotate(-0.08deg);
+        }
+        .listAllProduct-content {
+          padding: 31px 21px 0 21px;
+        }
+        .listAllProduct-product {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          height: 122px;
+          box-sizing: border-box;
+          margin-bottom: 25px;
+        }
+        .listAllProduct-product img {
+          width: 122px;
+          left: 21px;
+          top: 191px;
+        }
+        .listAllProduct-product-right {
+          margin-left: 22px;
+          flex-basis: 100%;
+        }
+        .listAllProduct-product-right p {
+          font-family: "Nunito";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 16px;
+          color: #20404f;
+          margin: 0 0 7px 0;
+          text-align: left;
+        }
+        /* .listAllProduct_icon_star i {
+          width: 12px;
+          margin-right: 2px;
+        } */
+        .listAllProduct_footer {
+          margin-top: 8px;
+          position: relative;
+        }
+        .listAllProduct_footer i {
+          position: absolute;
+          right: 15px;
+        }
+        .listAllProduct_footer span {
+          margin-right: 6px;
+          font-family: "Nunito";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 16px;
+          letter-spacing: -0.02em;
+        }
+        .listAllProduct_icon_star {
+          color: #bf8977;
+        }
+        .listALLProduct-pagination {
+          display: flex;
+          padding: 10px 0;
+          position: relative;
+          max-width: 500px;
+          margin: auto;
+          height: 50px;
+          border-bottom: solid 1.5px rgba(32, 64, 79, 0.4);
+          justify-content: center;
+        }
+        .listALLProduct-pagination button {
+          width: 66px;
+          height: 24px;
+          background: #20404f;
+          border-radius: 5px;
+          color: #fff;
+          font-family: "Nunito";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 15px;
+          /* position: absolute;
+          left: 40%;
+          top: 25%; */
+          border: none;
+        }
+        .listALLProduct-pagination ul {
+          position: absolute;
+          top: 32%;
+          right: 11%;
+        }
+        .listALLProduct-pagination ul li {
+          margin: 0 1px;
+          color: rgba(32, 64, 79, 0.5);
+        }
+        .listALLProduct-pagination-i {
+          position: absolute;
+          top: 30%;
+          right: 7%;
+          color: rgba(32, 64, 79, 0.5);
+        }
+        .footer-copyright-collapse {
+          font-weight: normal
+        }
+    </style>    
     <style>
         /*------------------------------- footer copyright ------------------------*/
         @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -408,9 +409,9 @@
         }
   
         .footer-coppyright-title {
-          font-size: 16px;
+          font-size: 20px;
           font-weight: 700;
-          line-height: 19px;
+          line-height: 20px;
         }
         .footer-copyright-subscribe {
           padding: 11px 0;
@@ -430,23 +431,24 @@
         .footer_copyright-content-warp-items a {
           text-decoration: none;
           color: #20404f;
+          font-size: 18px;
         }
         .footer_copyright-content-items {
           padding: 5px 0;
         }
         .footer_copyright-content-items-thin {
-          font-size: 13px;
+          font-size: 14px;
           font-weight: 500;
           line-height: 19px;
           padding: 5px 0;
         }
         .footer-coppyright-content-detail1 {
           padding: 8px 0 6px;
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 400;
         }
         .footer-coppyright-content-detail2 {
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 600;
           padding-bottom: 12px;
         }
@@ -463,14 +465,14 @@
           border: 1px solid #20404f;
           background: rgba(191, 137, 119, 0.01);
           width: 244px;
-          height: 32px;
-          font-size: 12px;
+          height: 40px;
+          font-size: 14px;
           padding-left: 11px;
         }
         #footer-coppyright-subcribe-button {
           width: 89px;
           border-radius: 4px;
-          height: 32px;
+          height: 40px;
           background-color: rgba(32, 64, 79, 1);
           color: rgba(191, 137, 119, 1);
           border: none;
@@ -569,7 +571,7 @@
             width: 100%;
             font-style: normal;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 16px;
             line-height: 16px;
             color: #20404f;
             margin: 0 0 7px 0;
@@ -583,6 +585,7 @@
             display: none;
         }
     </style>
+
   </head>
   <body>
     <div id="header_container">
@@ -664,7 +667,9 @@
             </div>
             <div id="header_brand-icon">
               <a href="https://fmzee.com/"
-                ><img src="https://fmzee.com/wp-content/uploads/2022/08/logo-web_5.png" alt="logo_brand"
+                ><img
+                  src="https://fmzee.com/wp-content/uploads/2022/08/logo-web_5.png"
+                  alt="logo_brand"
               /></a>
             </div>
           </div>
@@ -675,25 +680,25 @@
             </div>
             <div id="header_user-info">
               <a href="https://fmzee.com/mobile-sign-in/">
-                  <i class="fa-regular fa-user"></i>
+                <i class="fa-regular fa-user"></i>
               </a>
             </div>
             <div id="header_card">
               <a href="https://fmzee.com/gio-hang/">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <div id="header_card-index">1</div>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div id="header_card-index">1</div>
               </a>
             </div>
           </div>
         </div>
         <div class="header-search-wrap">
           <div id="header-search-form">
-              <div class="header-search-form-input">
-                  <input type="text" placeholder="Seach...">
-              </div>
-              <div class="header-search-form-button" onclick="activeSearch()">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
+            <div class="header-search-form-input">
+              <input type="text" placeholder="Seach..." />
+            </div>
+            <div class="header-search-form-button" onclick="activeSearch()">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
           </div>
         </div>
     </div>
@@ -779,9 +784,7 @@
               <div class="collapse" id="Policies">
                 <div class="footer_copyright-content-warp-items">
                   <div class="footer_copyright-content-items">
-                    <a href="https://fmzee.com/privacy-policy/"
-                      >Privacy Policy</a
-                    >
+                    <a href="https://fmzee.com/privacy-policy/">Privacy Policy</a>
                   </div>
                   <div class="footer_copyright-content-items">
                     <a href="https://fmzee.com/shipping-policy/"
@@ -827,10 +830,10 @@
                   </div>
                   <div class="footer_copyright-content-items-thin">
                     <i class="fa-regular fa-envelope"></i>
-                    Email: suppost.fmzee@gmail.com UK Address: 24-26 Arcadia
+                    Email: suppost.fmzee@gmail.com 
                   </div>
                   <div class="footer_copyright-content-items-thin">
-                    Avenue, Dephna House #105, London, Greater London, United
+                  UK Address: 24-26 Arcadia Avenue, Dephna House #105, London, Greater London, United
                     Kingdom, N3 2JU
                   </div>
   

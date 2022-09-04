@@ -59,199 +59,199 @@
     </style>
 
     <style>
-      /*------------------- header -------------------*/
-      /*------------------- header -------------------*/
-      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-      * {
+        /*------------------- header -------------------*/
+        /*------------------- header -------------------*/
+        @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+        * {
         font-family: "Nunito", sans-serif;
         padding: 0;
         margin: 0;
         box-sizing: border-box;
         /* border: 1px solid gray; */
-      }
-      @media (max-width: 500px) {
+        }
+        @media (max-width: 500px) {
         #header {
-          display: none;
+            display: none;
         }
         .page-wrapper {
-          padding-top: 0;
+            padding-top: 0;
         }
         .row {
-          margin-left: 0;
-          margin-right: 0;
-          /* flex-flow: nowrap */
+            margin-left: 0;
+            margin-right: 0;
+            /* flex-flow: nowrap */
         }
         .col {
-          padding: 0;
+            padding: 0;
         }
         #header_container {
-          max-width: 500px; /*figma: 390px */
-          background-color: #20404f;
-          color: #e9dfd3;
-          margin: auto;
-          display: flex;
-          flex-direction: column;
+            max-width: 500px; /*figma: 390px */
+            background-color: #20404f;
+            color: #e9dfd3;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
         }
         #header_wrap {
-          height: 69px;
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-end;
-          padding: 0 21px 5px 21px;
-          position: relative;
+            height: 69px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 0 21px 5px 21px;
+            position: relative;
         }
         #header-wrap-left {
-          height: 100%;
-          display: flex;
-          align-items: flex-end;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
         }
         #header_bar {
-          position: relative;
-          font-size: 25px;
-          padding-right: 21px;
+            position: relative;
+            font-size: 25px;
+            padding-right: 21px;
         }
 
         #header_brand-icon {
-          width: 133px;
-          height: 46px;
+            width: 133px;
+            height: 46px;
         }
 
         #header-wrap-right {
-          display: flex;
-          margin-bottom: 6px;
+            display: flex;
+            margin-bottom: 6px;
         }
         #header_search {
-          font-size: 20px;
+            font-size: 20px;
         }
         #header_user-info {
-          font-size: 20px;
-          margin: 0 11px;
+            font-size: 20px;
+            margin: 0 11px;
         }
         #header_card {
-          font-size: 20px;
-          position: relative;
+            font-size: 20px;
+            position: relative;
         }
         #header_card a,
         #header_user-info a {
-          color: #e9dfd3;
+            color: #e9dfd3;
         }
         #header_card-index {
-          position: absolute;
-          top: -5px;
-          right: -5px;
-          width: 15px;
-          height: 15px;
-          border-radius: 50%;
-          background-color: #bf8977;
-          text-align: center;
-          line-height: 15px;
-          font-size: 13px;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #bf8977;
+            text-align: center;
+            line-height: 15px;
+            font-size: 13px;
         }
         .header-dropdown-wrap-item {
-          border-radius: 5px;
-          position: absolute;
-          top: 0px;
-          transform: translate3d(1px, 70px, 0px) !important;
-          border: none;
-          left: 0;
-          width: 189px;
-          padding: 4px 0 32px 0;
-          background: #20404f;
-          z-index: 100000;
-          display: none;
+            border-radius: 5px;
+            position: absolute;
+            top: 0px;
+            transform: translate3d(1px, 70px, 0px) !important;
+            border: none;
+            left: 0;
+            width: 50%;
+            padding: 4px 0 32px 0;
+            background: #20404f;
+            z-index: 100000;
+            display: none;
         }
         .header-dropdown-wrap-item a {
-          width: 100%;
-          display: inline-block;
+            width: 100%;
+            display: inline-block;
         }
         .header-dropdown-item {
-          padding: 5px 0 2px 22px;
-          margin-top: 4px;
-          font-size: 14px;
-          color: #e9dfd3;
-          font-weight: 400;
-          text-decoration: none;
-          border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+            padding: 8px 0 8px 22px;
+            margin-top: 4px;
+            font-size: 18px;
+            color: #e9dfd3;
+            font-weight: 400;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(217, 217, 217, 0.5);
         }
         .header-dropdown-item-dropdown {
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         .header-dropdown-item-dropdown-icon {
-          margin-right: 16px;
+            margin-right: 16px;
         }
         .header-dropdown-item a {
-          font-size: 14px;
-          color: #e9dfd3;
-          font-weight: 400;
-          text-decoration: none;
+            font-size: 18px;
+            color: #e9dfd3;
+            font-weight: 400;
+            text-decoration: none;
         }
         .dropdown-divider {
-          margin: 0;
+            margin: 0;
         }
 
         .header-dropdown-wrap-product-item {
-          border-radius: 5px;
-          position: absolute;
-          top: -73px;
-          transform: translate3d(1px, 70px, 0px) !important;
-          border: none;
-          width: 165px;
-          padding-top: 4px;
-          background: #20404f;
-          left: 100%;
-          z-index: 10000;
-          display: none;
+            border-radius: 5px;
+            position: absolute;
+            top: -73px;
+            transform: translate3d(1px, 70px, 0px) !important;
+            border: none;
+            width: calc(100% - 16px);
+            padding-top: 4px;
+            background: #20404f;
+            left: 100%;
+            z-index: 10000;
+            display: none;
         }
         .visibleClass {
-          display: block;
+            display: block;
         }
         .header-search-wrap {
-          padding: 10px 24px;
-          display: none;
+            padding: 10px 24px;
+            display: none;
         }
         #header-search-form {
-          display: flex;
-          width: 100%;
-          padding: 0 16px;
-          background: #e9dfd3;
-          border-radius: 20px;
-          align-items: center;
+            display: flex;
+            width: 100%;
+            padding: 0 16px;
+            background: #e9dfd3;
+            border-radius: 20px;
+            align-items: center;
         }
         .header-search-form-input {
-          width: 100%;
+            width: 100%;
         }
         .header-search-form-input input {
-          width: 100%;
-          background: #e9dfd3;
-          border: none;
-          outline: none;
-          padding: 8px;
-          font-family: Nunito;
-          font-weight: 600;
-          line-height: 16px;
-          letter-spacing: 0em;
-          color: #20404f;
+            width: 100%;
+            background: #e9dfd3;
+            border: none;
+            outline: none;
+            padding: 8px;
+            font-family: Nunito;
+            font-weight: 600;
+            line-height: 16px;
+            letter-spacing: 0em;
+            color: #20404f;
         }
         .header-search-form-input input:focus {
-          background: #e9dfd3;
-          box-shadow: none;
-          color: #20404f;
+            background: #e9dfd3;
+            box-shadow: none;
+            color: #20404f;
         }
         .header-search-form-button {
-          color: #20404f;
+            color: #20404f;
         }
         .select-header-menu {
-          color: #bf8977;
+            color: #bf8977;
         }
         .visibleFlex {
-          display: flex;
+            display: flex;
         }
-      }
-    </style>
-    <!-- content -->
+        }
+    </style>    
+<!-- content -->
     <style>
       @media (max-width: 500px) {
         #checkout-detail-breadcrumb-container {
@@ -340,14 +340,22 @@
           justify-content: space-between;
           align-items: center;
           padding: 4px 22px;
+          line-height: 30px;
+          color: #20404f
         }
         .checkout_container-card-Total {
           background: rgba(191, 137, 119, 0.5);
+          color: #20404f;
           margin: 5px 0 10px 0;
           display: flex;
           justify-content: space-between;
           align-items: center;
           padding: 4px 22px;
+          line-height: 30px;
+          font-size: 16px;
+        }
+        .total_price_mobile{
+            font-weight: 700;
         }
         .checkout_container-card-wrap {
           padding: 0 20px;
@@ -460,180 +468,180 @@
         }
       }
     </style>
-        <style>
-            @media (max-width: 500px) {
-                /* CSS BEST SELLER CALOSEL */
-                .carousel-home-item a{
-                    text-decoration: none;
-                }
-                .home-page-container {
-                  width: 100%;
-        
-                  background: #f5f5f5;
-                }
-        
-                .home-page-wrapper {
-                  width: 100%;
-                  max-width: 390px;
-                  margin: auto;
-                }
-                .carousel-wrapper {
-                  /* border-bottom: 1px solid #20404f; */
-                  padding-bottom: 28.44px;
-                }
-                .title-carousel {
-                  margin-top: 25px;
-                  margin-bottom: 24px;
-                  display: flex;
-                  justify-content: center;
-                  font-weight: 700;
-                  font-size: 20px;
-                  line-height: 16px;
-                  /* identical to box height, or 80% */
-                }
-                .title-carousel a {
-                    color: #20404f;
-                    text-decoration: none;
-                }
-                .carousel-control-prev {
-                  width: fit-content;
-                  left: -4px;
-                  color: #000000;
-                  bottom: 35%;
-                }
-                .checked {
-                  color: #bf8977;
-                }
-                .star-icon {
-                  font-size: 12px;
-                }
-                .rating-item .number-person-rating {
-                  padding-left: 5px;
-                  font-size: 10px;
-                  display: flex;
-                  align-items: center;
-                }
-                .carousel-control-next {
-                  width: fit-content;
-                  margin-left: 175px;
-                  color: #000000;
-                  bottom: 30%;
-                  margin-left: 30px;
-                }
-                .carousel-control-next-icon,
-                .carousel-control-prev-icon {
-                  background-image: none;
-                }
-                .home-page-container .home-page-banner {
-                  width: 390px;
-                  height: 530px;
-                }
-        
-                .home-page-carousel .carousel-home-slide {
-                  width: 100%;
-                  max-width: 350px;
-                  margin: auto;
-                  justify-content: space-between;
-                }
-                .carousel-home-item {
-                  width: 100%;
-                  max-width: 170px;
-                }
-                .carousel-home-item .img-item-carousel {
-                  width: 170px;
-                  height: 170px;
-                  border-radius: 5px;
-                }
-                .carousel-home-item .carousel-item-detail {
-                  margin-top: 5px;
-                  margin-bottom: 5px;
-                  width: 100%;
-                  font-size: 13px;
-                  display: -webkit-box;
-                  -webkit-line-clamp: 3;
-                  -webkit-box-orient: vertical;
-                  overflow: hidden;
-                  color: #20404F;
-                }
-                .caroudel-button {
-                  margin-top: 15px;
-                }
-                .carousel-home-item .price-item {
-                  width: 96px;
-                  height: 15px;
-                  justify-content: space-between;
-                  font-size: 14px;
-                  letter-spacing: -0.02em;
-                  margin-bottom: 4px;
-                }
-        
-                .font-text-carousel {
-                  font-weight: 400;
-                  line-height: 18px;
-                }
-        
-                .price-item .old-price {
-                  color: black;
-                  text-decoration: line-through;
-                }
-        
-                .price-item .new-price {
-                  color: #bf8977;
-                }
-                .button-show-more {
-                  width: 92px;
-                  height: 28px;
-                  background: #20404f;
-                  border-radius: 3px;
-                  color: #ffffff;
-                  font-size: 15px;
-                }
-                .three-step-wrapper {
-                  width: 100%;
-                  max-width: 348px;
-                  margin-left: auto;
-                  margin-right: auto;
-                  margin-top: 28px;
-                  padding-bottom: 28px;
-                }
-                .title-three-step {
-                  width: 244px;
-                  height: 31px;
-                  background: #20404f;
-                  color: #ffffff;
-                  font-weight: 700;
-                  font-size: 16px;
-                  line-height: 16px;
-                  border-radius: 6px;
-                }
-                .once-of-three-step .title-step {
-                  margin-top: 11px;
-                  font-weight: 600;
-                  font-size: 16px;
-                  line-height: 16px;
-                }
-        
-                .once-of-three-step .step-content {
-                  width: 348px;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  text-align: center;
-                  border-radius: 10px;
-                  background: #e9dfd3;
-                  color: #20404f;
-                  font-size: 14px;
-                  font-weight: 600;
-                }
-                .block {
-                  width: 281px;
-                }
-                .number-person-rating {
-                    color: #00000099;
-                }
-                /* HẾT CSS BEST SELLER */
+    <style>
+        @media (max-width: 500px) {
+            /* CSS BEST SELLER CALOSEL */
+            .carousel-home-item a{
+                text-decoration: none;
             }
-            </style>
+            .home-page-container {
+                width: 100%;
+    
+                background: #f5f5f5;
+            }
+    
+            .home-page-wrapper {
+                width: 100%;
+                max-width: 390px;
+                margin: auto;
+            }
+            .carousel-wrapper {
+                /* border-bottom: 1px solid #20404f; */
+                padding-bottom: 28.44px;
+            }
+            .title-carousel {
+                margin-top: 25px;
+                margin-bottom: 24px;
+                display: flex;
+                justify-content: center;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 16px;
+                /* identical to box height, or 80% */
+            }
+            .title-carousel a {
+                color: #20404f;
+                text-decoration: none;
+            }
+            .carousel-control-prev {
+                width: fit-content;
+                left: -4px;
+                color: #000000;
+                bottom: 35%;
+            }
+            .checked {
+                color: #bf8977;
+            }
+            .star-icon {
+                font-size: 12px;
+            }
+            .rating-item .number-person-rating {
+                padding-left: 5px;
+                font-size: 10px;
+                display: flex;
+                align-items: center;
+            }
+            .carousel-control-next {
+                width: fit-content;
+                margin-left: 175px;
+                color: #000000;
+                bottom: 30%;
+                margin-left: 30px;
+            }
+            .carousel-control-next-icon,
+            .carousel-control-prev-icon {
+                background-image: none;
+            }
+            .home-page-container .home-page-banner {
+                width: 390px;
+                height: 530px;
+            }
+    
+            .home-page-carousel .carousel-home-slide {
+                width: 100%;
+                max-width: 350px;
+                margin: auto;
+                justify-content: space-between;
+            }
+            .carousel-home-item {
+                width: 100%;
+                max-width: 170px;
+            }
+            .carousel-home-item .img-item-carousel {
+                width: 170px;
+                height: 170px;
+                border-radius: 5px;
+            }
+            .carousel-home-item .carousel-item-detail {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                width: 100%;
+                font-size: 13px;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                color: #20404F;
+            }
+            .caroudel-button {
+                margin-top: 15px;
+            }
+            .carousel-home-item .price-item {
+                width: 96px;
+                height: 15px;
+                justify-content: space-between;
+                font-size: 14px;
+                letter-spacing: -0.02em;
+                margin-bottom: 4px;
+            }
+    
+            .font-text-carousel {
+                font-weight: 400;
+                line-height: 18px;
+            }
+    
+            .price-item .old-price {
+                color: black;
+                text-decoration: line-through;
+            }
+    
+            .price-item .new-price {
+                color: #bf8977;
+            }
+            .button-show-more {
+                width: 92px;
+                height: 28px;
+                background: #20404f;
+                border-radius: 3px;
+                color: #ffffff;
+                font-size: 15px;
+            }
+            .three-step-wrapper {
+                width: 100%;
+                max-width: 348px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 28px;
+                padding-bottom: 28px;
+            }
+            .title-three-step {
+                width: 244px;
+                height: 31px;
+                background: #20404f;
+                color: #ffffff;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 16px;
+                border-radius: 6px;
+            }
+            .once-of-three-step .title-step {
+                margin-top: 11px;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 16px;
+            }
+    
+            .once-of-three-step .step-content {
+                width: 348px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                border-radius: 10px;
+                background: #e9dfd3;
+                color: #20404f;
+                font-size: 14px;
+                font-weight: 600;
+            }
+            .block {
+                width: 281px;
+            }
+            .number-person-rating {
+                color: #00000099;
+            }
+            /* HẾT CSS BEST SELLER */
+        }
+    </style>
     <style>
       /*---------------------- carousel ---------------------*/
       @media (max-width: 500px) {
@@ -700,7 +708,7 @@
         }
         .carousel-home-item .carousel-item-detail {
           width: 100%;
-          font-size: 13px;
+          font-size: 14px;
         }
         .caroudel-button {
           margin-top: 15px;
@@ -710,7 +718,7 @@
           height: 15px;
           display: flex;
           justify-content: space-between;
-          font-size: 14px;
+          font-size: 16px;
           letter-spacing: -0.02em;
         }
 
@@ -721,262 +729,264 @@
       }
     </style>
     <style>
-      /*------------------------------- footer copyright ------------------------*/
-      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-      * {
-        font-family: "Nunito", sans-serif;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        /* border: 1px solid gray; */
-      }
-      #footer-copyright_container {
-        max-width: 500px;
-        background-color: rgba(191, 137, 119, 0.5);
-        color: #20404f;
-        padding: 0 22px;
-        margin: auto;
-      }
-
-      .footer-coppyright-title {
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 19px;
-      }
-      .footer-copyright-subscribe {
-        padding: 11px 0;
-      }
-
-      #footer-copyright-collapse-wrap {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        border-bottom: 1px solid #d9d9d9;
-        padding: 4px 0;
-        height: 38px;
-      }
-      .footer_copyright-content-warp-items {
-        padding-top: 12px;
-      }
-      .footer_copyright-content-warp-items a {
-        text-decoration: none;
-        color: #20404f;
-      }
-      .footer_copyright-content-items {
-        padding: 5px 0;
-      }
-      .footer_copyright-content-items-thin {
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 19px;
-        padding: 5px 0;
-      }
-      .footer-coppyright-content-detail1 {
-        padding: 8px 0 6px;
-        font-size: 14px;
-        font-weight: 400;
-      }
-      .footer-coppyright-content-detail2 {
-        font-size: 14px;
-        font-weight: 600;
-        padding-bottom: 12px;
-      }
-      button {
-        padding: 0;
-      }
-      .footer-coppyright-subcribe-wap {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      #footer-coppyright-subcribe-input {
-        border-radius: 4px;
-        border: 1px solid #20404f;
-        background: rgba(191, 137, 119, 0.01);
-        width: 244px;
-        height: 32px;
-        font-size: 12px;
-        padding-left: 11px;
-      }
-      #footer-coppyright-subcribe-button {
-        width: 89px;
-        border-radius: 4px;
-        height: 32px;
-        background-color: rgba(32, 64, 79, 1);
-        color: rgba(191, 137, 119, 1);
-        border: none;
-      }
-      .footer-coppyright-author {
-        font-size: 14px;
-        padding: 26px 0 12px 0;
-      }
-      .pr-4 {
-        padding-right: 16px;
-      }
+        /*------------------------------- footer copyright ------------------------*/
+        @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+        * {
+          font-family: "Nunito", sans-serif;
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          /* border: 1px solid gray; */
+        }
+        #footer-copyright_container {
+          max-width: 500px;
+          background-color: rgba(191, 137, 119, 0.5);
+          color: #20404f;
+          padding: 0 22px;
+          margin: auto;
+        }
+  
+        .footer-coppyright-title {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 20px;
+        }
+        .footer-copyright-subscribe {
+          padding: 11px 0;
+        }
+  
+        #footer-copyright-collapse-wrap {
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          border-bottom: 1px solid #d9d9d9;
+          padding: 4px 0;
+          height: 38px;
+        }
+        .footer_copyright-content-warp-items {
+          padding-top: 12px;
+        }
+        .footer_copyright-content-warp-items a {
+          text-decoration: none;
+          color: #20404f;
+          font-size: 18px;
+        }
+        .footer_copyright-content-items {
+          padding: 5px 0;
+        }
+        .footer_copyright-content-items-thin {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 19px;
+          padding: 5px 0;
+        }
+        .footer-coppyright-content-detail1 {
+          padding: 8px 0 6px;
+          font-size: 16px;
+          font-weight: 400;
+        }
+        .footer-coppyright-content-detail2 {
+          font-size: 16px;
+          font-weight: 600;
+          padding-bottom: 12px;
+        }
+        button {
+          padding: 0;
+        }
+        .footer-coppyright-subcribe-wap {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        #footer-coppyright-subcribe-input {
+          border-radius: 4px;
+          border: 1px solid #20404f;
+          background: rgba(191, 137, 119, 0.01);
+          width: 244px;
+          height: 40px;
+          font-size: 14px;
+          padding-left: 11px;
+        }
+        #footer-coppyright-subcribe-button {
+          width: 89px;
+          border-radius: 4px;
+          height: 40px;
+          background-color: rgba(32, 64, 79, 1);
+          color: rgba(191, 137, 119, 1);
+          border: none;
+        }
+        .footer-coppyright-author {
+          font-size: 14px;
+          padding: 26px 0 12px 0;
+        }
+        .pr-4 {
+          padding-right: 16px;
+        }
     </style>
     <style>
-      /*-------------------- footer -----------------*/
-      #footer_container {
+    /*-------------------- footer -----------------*/
+    #footer_container {
         max-width: 500px;
         margin: auto;
-      }
-      #footer_wrap {
+    }
+    #footer_wrap {
         display: flex;
         justify-content: space-between;
         height: 80px;
         background-color: #20404f;
         color: #bf8977;
         padding: 15px 24px;
-      }
-      #footer_wrap-left {
+    }
+    #footer_wrap-left {
         margin-top: 3px;
         display: flex;
-      }
-      .footer_icon-social {
+    }
+    .footer_icon-social {
         display: flex;
         font-size: 18px;
         overflow: hidden;
-      }
-      .footer_icon-social-center {
+    }
+    .footer_icon-social-center {
         margin: 0 12px;
-      }
+    }
 
-      #footer_wrap-right {
+    #footer_wrap-right {
         display: flex;
-      }
-      .footer_icon-paycard {
+    }
+    .footer_icon-paycard {
         width: 42px;
         border-radius: 2px;
-      }
-      .footer_icon-paycard img {
+    }
+    .footer_icon-paycard img {
         width: 42px;
-      }
-      .footer_icon-paycard-center {
+    }
+    .footer_icon-paycard-center {
         margin: 0 39px;
-      }
-      #footer-coppyright-subcribe-wap {
+    }
+    #footer-coppyright-subcribe-wap {
         align-items: center;
-      }
-      #footer-coppyright-subcribe-wap button {
+    }
+    #footer-coppyright-subcribe-wap button {
         padding: 0;
-      }
+    }
     </style>
-  </head>
+</head>
   <body>
     <div id="header_container">
-      <div id="header_wrap">
-        <div id="header-wrap-left">
-          <div id="header_bar" onclick="onMenuDropdown()">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-
-          <!-- dropdown -->
-
-          <div class="header-dropdown-wrap-item" onclick="">
-            <div class="header-dropdown-item">
-              <a href="https://fmzee.com/">Home</a>
+        <div id="header_wrap">
+          <div id="header-wrap-left">
+            <div id="header_bar" onclick="onMenuDropdown()">
+              <i class="fa-solid fa-bars"></i>
             </div>
-
-            <div class="header-dropdown-item">
-              <a href="https://fmzee.com/mobile-best-seller/">Best Sallers</a>
-            </div>
-
-            <div
-              class="header-dropdown-item header-dropdown-item-dropdown"
-              onclick="onProductMenuDropdown()"
-            >
-              <div>Product</div>
-              <i
-                class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
-              ></i>
-              <div class="header-dropdown-wrap-product-item">
-                <a href="https://fmzee.com/?page_id=3039&preview=true">
-                  <div class="header-dropdown-item"><div>Ornament</div></div>
-                </a>
-                <a href="https://fmzee.com/?page_id=3041&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>Tumbler</div>
-                  </div>
-                </a>
-
-                <a href="https://fmzee.com/?page_id=3043&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>Door mat</div>
-                  </div>
-                </a>
-
-                <a href="https://fmzee.com/?page_id=3045&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>Door sign</div>
-                  </div>
-                </a>
-
-                <a href="https://fmzee.com/?page_id=3047&preview=true">
-                  <div class="header-dropdown-item">
-                    <div>2 Layered Door Sign</div>
-                  </div>
-                </a>
-
-                <a href="https://fmzee.com/mobile-list-all-product/">
-                  <div class="header-dropdown-item">
-                    <div>All</div>
-                  </div>
-                </a>
+  
+            <!-- dropdown -->
+  
+            <div class="header-dropdown-wrap-item" onclick="">
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/">Home</a>
               </div>
-            </div>
-            <!-- dropdown Product -->
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/mobile-best-seller/">Best Sallers</a>
+              </div>
+  
+              <div
+                class="header-dropdown-item header-dropdown-item-dropdown"
+                onclick="onProductMenuDropdown()"
+              >
+                <div>Product</div>
+                <i
+                  class="fa-solid fa-angle-down header-dropdown-item-dropdown-icon"
+                ></i>
+                <div class="header-dropdown-wrap-product-item">
+                  <a href="https://fmzee.com/?page_id=3039&preview=true">
+                    <div class="header-dropdown-item"><div>Ornament</div></div>
+                  </a>
+                  <a href="https://fmzee.com/?page_id=3041&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>Tumbler</div>
+                    </div>
+                  </a>
+  
+                  <a href="https://fmzee.com/?page_id=3043&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>Door mat</div>
+                    </div>
+                  </a>
+  
+                  <a href="https://fmzee.com/?page_id=3045&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>Door sign</div>
+                    </div>
+                  </a>
+  
+                  <a href="https://fmzee.com/?page_id=3047&preview=true">
+                    <div class="header-dropdown-item">
+                      <div>2 Layered Door Sign</div>
+                    </div>
+                  </a>
 
-            <div class="header-dropdown-item">
-              <a href="https://fmzee.com/wishlist/">Wishdivst</a>
+                  <a href="https://fmzee.com/mobile-list-all-product/">
+                    <div class="header-dropdown-item">
+                      <div>All</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- dropdown Product -->
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/wishlist/">Wishdivst</a>
+              </div>
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/san-pham/gift-card/">Gift Card</a>
+              </div>
+  
+              <div class="header-dropdown-item">
+                <a href="https://fmzee.com/mobile-sign-in/">Login</a>
+              </div>
+  
+              <!-- test -->
             </div>
-
-            <div class="header-dropdown-item">
-              <a href="https://fmzee.com/san-pham/gift-card/">Gift Card</a>
+            <div id="header_brand-icon">
+              <a href="https://fmzee.com/"
+                ><img
+                  src="https://fmzee.com/wp-content/uploads/2022/08/logo-web_5.png"
+                  alt="logo_brand"
+              /></a>
             </div>
-
-            <div class="header-dropdown-item">
-              <a href="https://fmzee.com/mobile-sign-in/">Login</a>
-            </div>
-
-            <!-- test -->
           </div>
-          <div id="header_brand-icon">
-            <a href="https://fmzee.com/"
-              ><img
-                src="https://fmzee.com/wp-content/uploads/2022/08/logo-web_5.png"
-                alt="logo_brand"
-            /></a>
+  
+          <div id="header-wrap-right">
+            <div id="header_search" onclick="openSearchHeader()">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div id="header_user-info">
+              <a href="https://fmzee.com/mobile-sign-in/">
+                <i class="fa-regular fa-user"></i>
+              </a>
+            </div>
+            <div id="header_card">
+              <a href="https://fmzee.com/gio-hang/">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div id="header_card-index">1</div>
+              </a>
+            </div>
           </div>
         </div>
-
-        <div id="header-wrap-right">
-          <div id="header_search" onclick="openSearchHeader()">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <div id="header_user-info">
-            <a href="https://fmzee.com/mobile-sign-in/">
-              <i class="fa-regular fa-user"></i>
-            </a>
-          </div>
-          <div id="header_card">
-            <a href="https://fmzee.com/gio-hang/">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <div id="header_card-index">1</div>
-            </a>
+        <div class="header-search-wrap">
+          <div id="header-search-form">
+            <div class="header-search-form-input">
+              <input type="text" placeholder="Seach..." />
+            </div>
+            <div class="header-search-form-button" onclick="activeSearch()">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="header-search-wrap">
-        <div id="header-search-form">
-          <div class="header-search-form-input">
-            <input type="text" placeholder="Seach..." />
-          </div>
-          <div class="header-search-form-button" onclick="activeSearch()">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-        </div>
-      </div>
     </div>
+
     <!-- content -->
     <div class="checkout_container" style="max-width: 500px">
       <div class="checkout_container-title">
@@ -1001,9 +1011,8 @@
           />
         </div>
         <div class="checkout_container-card-Total">
-          <span style="color: #20404f; font-size: 14px"><b>Total</b> </span>
+          <span ><b>Total</b> </span>
           <span
-            style="color: #20404f; font-weight: 700"
             class="total_price_mobile"
             >$43.36</span
           >
@@ -1212,168 +1221,168 @@
 
     </div>
     <div id="footer-copyright_container">
-      <div id="footer-copyright_wrap">
-        <div class="footer-copyright-collapse">
-          <div
-            data-bs-toggle="collapse"
-            href="#quick_link"
-            aria-expanded="false"
-            aria-controls="quick_link"
-            id="footer-copyright-collapse-wrap"
-          >
-            <div class="footer-coppyright-title">Quick Links</div>
-            <div class="footer-copyright-icon">
-              <i class="fa-solid fa-caret-down"></i>
-            </div>
-          </div>
-          <div class="collapse" id="quick_link">
-            <div class="footer_copyright-content-warp-items">
-              <div class="footer_copyright-content-items">
-                <a href="https://fmzee.com/">Home</a>
-              </div>
-              <div class="footer_copyright-content-items">
-                <a href="https://fmzee.com/about-us/">About Us</a>
-              </div>
-              <div class="footer_copyright-content-items">
-                <a href="https://fmzee.com/contact/">Contact Us</a>
-              </div>
-              <div class="footer_copyright-content-items">FAQ</div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-copyright-collapse">
+        <div id="footer-copyright_wrap">
           <div class="footer-copyright-collapse">
             <div
               data-bs-toggle="collapse"
-              href="#Policies"
+              href="#quick_link"
               aria-expanded="false"
-              aria-controls="Policies"
+              aria-controls="quick_link"
               id="footer-copyright-collapse-wrap"
             >
-              <div class="footer-coppyright-title">Policies</div>
+              <div class="footer-coppyright-title">Quick Links</div>
               <div class="footer-copyright-icon">
                 <i class="fa-solid fa-caret-down"></i>
               </div>
             </div>
-            <div class="collapse" id="Policies">
+            <div class="collapse" id="quick_link">
               <div class="footer_copyright-content-warp-items">
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/privacy-policy/">Privacy Policy</a>
+                  <a href="https://fmzee.com/">Home</a>
                 </div>
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/shipping-policy/"
-                    >Shipping Policy</a
-                  >
+                  <a href="https://fmzee.com/about-us/">About Us</a>
                 </div>
                 <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/refund-policy/"
-                    >Refund & Return Policy</a
-                  >
+                  <a href="https://fmzee.com/contact/">Contact Us</a>
                 </div>
-                <div class="footer_copyright-content-items">
-                  <a href="https://fmzee.com/terms-and-conditions/"
-                    >Terms and Conditions</a
-                  >
-                </div>
-                <div class="footer_copyright-content-items">
-                  <a href="#">Payment Method</a>
-                </div>
+                <div class="footer_copyright-content-items">FAQ</div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="footer-copyright-collapse">
           <div class="footer-copyright-collapse">
-            <div
-              data-bs-toggle="collapse"
-              href="#getInTouch"
-              aria-expanded="false"
-              aria-controls="getInTouch"
-              id="footer-copyright-collapse-wrap"
-            >
-              <div class="footer-coppyright-title">Get In Touch</div>
-              <div class="footer-copyright-icon">
-                <i class="fa-solid fa-caret-down"></i>
+            <div class="footer-copyright-collapse">
+              <div
+                data-bs-toggle="collapse"
+                href="#Policies"
+                aria-expanded="false"
+                aria-controls="Policies"
+                id="footer-copyright-collapse-wrap"
+              >
+                <div class="footer-coppyright-title">Policies</div>
+                <div class="footer-copyright-icon">
+                  <i class="fa-solid fa-caret-down"></i>
+                </div>
+              </div>
+              <div class="collapse" id="Policies">
+                <div class="footer_copyright-content-warp-items">
+                  <div class="footer_copyright-content-items">
+                    <a href="https://fmzee.com/privacy-policy/">Privacy Policy</a>
+                  </div>
+                  <div class="footer_copyright-content-items">
+                    <a href="https://fmzee.com/shipping-policy/"
+                      >Shipping Policy</a
+                    >
+                  </div>
+                  <div class="footer_copyright-content-items">
+                    <a href="https://fmzee.com/refund-policy/"
+                      >Refund & Return Policy</a
+                    >
+                  </div>
+                  <div class="footer_copyright-content-items">
+                    <a href="https://fmzee.com/terms-and-conditions/"
+                      >Terms and Conditions</a
+                    >
+                  </div>
+                  <div class="footer_copyright-content-items">
+                    <a href="#">Payment Method</a>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="collapse" id="getInTouch">
-              <div class="footer_copyright-content-warp-items">
-                <div class="footer_copyright-content-items-thin">
-                  If you have any questions, please contact us by this email
-                  below
-                </div>
-                <div class="footer_copyright-content-items-thin">
-                  <i class="fa-regular fa-envelope"></i>
-                  Email: suppost.fmzee@gmail.com UK Address: 24-26 Arcadia
-                </div>
-                <div class="footer_copyright-content-items-thin">
-                  Avenue, Dephna House #105, London, Greater London, United
-                  Kingdom, N3 2JU
-                </div>
-
-                <div class="footer_copyright-content-items-thin">
-                  Delivery Delays Due To Covid-19
+          </div>
+          <div class="footer-copyright-collapse">
+            <div class="footer-copyright-collapse">
+              <div
+                data-bs-toggle="collapse"
+                href="#getInTouch"
+                aria-expanded="false"
+                aria-controls="getInTouch"
+                id="footer-copyright-collapse-wrap"
+              >
+                <div class="footer-coppyright-title">Get In Touch</div>
+                <div class="footer-copyright-icon">
+                  <i class="fa-solid fa-caret-down"></i>
                 </div>
               </div>
+              <div class="collapse" id="getInTouch">
+                <div class="footer_copyright-content-warp-items">
+                  <div class="footer_copyright-content-items-thin">
+                    If you have any questions, please contact us by this email
+                    below
+                  </div>
+                  <div class="footer_copyright-content-items-thin">
+                    <i class="fa-regular fa-envelope"></i>
+                    Email: suppost.fmzee@gmail.com 
+                  </div>
+                  <div class="footer_copyright-content-items-thin">
+                  UK Address: 24-26 Arcadia Avenue, Dephna House #105, London, Greater London, United
+                    Kingdom, N3 2JU
+                  </div>
+  
+                  <div class="footer_copyright-content-items-thin">
+                    Delivery Delays Due To Covid-19
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright-subscribe">
+            <div class="footer-coppyright-title">Newsletter</div>
+            <div class="footer-coppyright-content">
+              <div class="footer-coppyright-content-detail1">
+                Subscribe to be notified about product launches,
+                <br />special offers and news.
+              </div>
+              <div class="footer-coppyright-content-detail2">
+                Enter your email and get your first treat,
+                <br />
+                an instant 25% discount off your first order!
+              </div>
+            </div>
+            <div class="footer-coppyright-subcribe-wap">
+              <input
+                id="footer-coppyright-subcribe-input"
+                type="text"
+                placeholder="your email:"
+              />
+              <button id="footer-coppyright-subcribe-button">Subcribe</button>
+            </div>
+            <div class="footer-coppyright-author">
+              © 2022 FMzee - Personalized Door Sign, Ornament, Tumbler & Home
+              Decor
             </div>
           </div>
         </div>
-        <div class="footer-copyright-subscribe">
-          <div class="footer-coppyright-title">Newsletter</div>
-          <div class="footer-coppyright-content">
-            <div class="footer-coppyright-content-detail1">
-              Subscribe to be notified about product launches,
-              <br />special offers and news.
-            </div>
-            <div class="footer-coppyright-content-detail2">
-              Enter your email and get your first treat,
-              <br />
-              an instant 25% discount off your first order!
-            </div>
-          </div>
-          <div class="footer-coppyright-subcribe-wap">
-            <input
-              id="footer-coppyright-subcribe-input"
-              type="text"
-              placeholder="your email:"
-            />
-            <button id="footer-coppyright-subcribe-button">Subcribe</button>
-          </div>
-          <div class="footer-coppyright-author">
-            © 2022 FMzee - Personalized Door Sign, Ornament, Tumbler & Home
-            Decor
-          </div>
-        </div>
-      </div>
     </div>
     <div id="footer_container">
-      <div id="footer_wrap">
+    <div id="footer_wrap">
         <div id="footer_wrap-left">
-          <div class="footer_icon-social">
+        <div class="footer_icon-social">
             <i class="fa-brands fa-facebook"></i>
-          </div>
-          <div class="footer_icon-social footer_icon-social-center">
+        </div>
+        <div class="footer_icon-social footer_icon-social-center">
             <i class="fa-brands fa-square-twitter"></i>
-          </div>
-          <div class="footer_icon-social">
+        </div>
+        <div class="footer_icon-social">
             <i class="fa-brands fa-square-instagram"></i>
-          </div>
+        </div>
         </div>
         <div id="footer_wrap-right">
-          <div class="footer_icon-paycard">
+        <div class="footer_icon-paycard">
             <img src=" https://fmzee.com/productdetail-pay-visa/" alt="" />
-          </div>
-          <div class="footer_icon-paycard footer_icon-paycard-center">
-            <img src="https://fmzee.com/productdetail-pay-paypal/" alt="" />
-          </div>
-          <div class="footer_icon-paycard">
-            <img
-              src=" https://fmzee.com/productdetail-pay-mastercard/"
-              alt=""
-            />
-          </div>
         </div>
-      </div>
+        <div class="footer_icon-paycard footer_icon-paycard-center">
+            <img src="https://fmzee.com/productdetail-pay-paypal/" alt="" />
+        </div>
+        <div class="footer_icon-paycard">
+            <img
+            src=" https://fmzee.com/productdetail-pay-mastercard/"
+            alt=""
+            />
+        </div>
+        </div>
+    </div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
@@ -1492,7 +1501,12 @@
       $(".ready-date").html(readyDate);
       $(".delivery-date").html(deliveryDate);
     </script>
+
     <script>
+    renderCart();
+
+    function renderCart () {
+        $(".list_cart_product_mobile").html('');
       $(
         ".shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents"
       )
@@ -1571,14 +1585,30 @@
           </div>
         </div>
           `);
-          $(".up_product_mobile").eq(index).on("click", function () {
-              $(item).find(".plus.button.is-form").trigger("click");
-            //   $('button[name=update_cart]').trigger("click");
-            });
-          $(".down_product_mobile").eq(index).on("click", function () {
-              $(item).find(".minus.button.is-form").trigger("click");
-            //   $('button[name=update_cart]').trigger("click");
-            });
+        $(".up_product_mobile").eq(index).on("click", function () {
+            $(item).find(".plus.button.is-form").trigger("click");
+            $('button[name=update_cart]').trigger("click");
+            let intervalUpdateCart = setInterval(function(){
+                let checkLoad = $('.blockUI.blockOverlay').length;
+                if(!checkLoad){
+                    renderCart();
+                    // $(".checkout_container-card-Total .total_price_mobile").html($('.order-total bdi').text());
+                    clearInterval(intervalUpdateCart);
+                }
+            }, 500)
+        });
+        $(".down_product_mobile").eq(index).on("click", function () {
+            $(item).find(".minus.button.is-form").trigger("click");
+            $('button[name=update_cart]').trigger("click");
+            let intervalUpdateCart = setInterval(function(){
+                let checkLoad = $('.blockUI.blockOverlay').length;
+                if(!checkLoad){
+                    renderCart();
+                    // $(".checkout_container-card-Total .total_price_mobile").html($('.order-total bdi').text());
+                    clearInterval(intervalUpdateCart);
+                }
+            }, 500)
+        });
           $(item).find(".input-text.qty.text").on("change", function () {
               $(".checkout_container-content-modal-buttonGroup-2").eq(index).html($(this).val());
               let dataTotal = $(".order-total bdi").html();
@@ -1586,7 +1616,12 @@
             });
         });
         $(".checkout_container-card-Total .total_price_mobile").html($('.order-total bdi').text());
-        
+
+        $("img.lazy-load").each(function () {
+            $(this).attr("src", $(this).attr("data-src"));
+        });
+    }
+
     </script>
     <script>
       // display img on product
@@ -1608,7 +1643,7 @@
         if(data){
             $(".coupon #coupon_code").val(data);
             $('.is-form.expand[name=apply_coupon]').trigger('click');
-            return
+            return;
         }
         window.location.href = linkCheckout;
       });
