@@ -1001,11 +1001,24 @@ $(document).click(function (e) {
         
   </script>
 
-  <script>
+<script>
     // pagination Product
+    let query = window.location.search.slice(1);
+    let pageQuery = query.split('&').find((value)=> value.includes('product-page='));
+    let page = pageQuery.replace('product-page=', '');
     $('.woocommerce-pagination .page-number').each((i, button) => {
       let href = $(button).attr('href');
       let buttonText = $(button).html();
+      console.log(1090, buttonText);
+      if( page == 1){
+        if( Math.abs(buttonText - page) > 2){
+            return;
+        }
+      }else{
+        if( buttonText * 1 && Math.abs(buttonText - page) > 1){
+            return;
+        }
+      }
       buttonText = buttonText.includes('left')? '<i class="fa-solid fa-angles-left"></i>' : buttonText;
       buttonText = buttonText.includes('right') ? '<i class="fa-solid fa-angles-right"></i>' : buttonText;
       $('.listALLProduct-pagination ul').append(`
@@ -1017,6 +1030,7 @@ $(document).click(function (e) {
       `)
     });
   </script>
+  
       <script>
         // display img on product
         $("img.lazy-load").each(function () {

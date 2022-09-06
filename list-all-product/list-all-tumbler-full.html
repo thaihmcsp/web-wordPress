@@ -572,7 +572,7 @@
             font-style: normal;
             font-weight: 600;
             font-size: 16px;
-            line-height: 16px;
+            line-height: 18px;
             color: #20404f;
             margin: 0 0 7px 0;
             text-align: left;
@@ -1078,9 +1078,21 @@ $(document).click(function (e) {
   </script>
   <script>
     // pagination Product
+    let query = window.location.search.slice(1);
+    let pageQuery = query.split('&').find((value)=> value.includes('product-page='));
+    let page = pageQuery ? pageQuery.replace('product-page=', '') : 1;
     $('.woocommerce-pagination .page-number').each((i, button) => {
       let href = $(button).attr('href');
       let buttonText = $(button).html();
+      if( page == 1){
+        if( Math.abs(buttonText - page) > 2){
+            return;
+        }
+      }else{
+        if( buttonText * 1 && Math.abs(buttonText - page) > 1){
+            return;
+        }
+      }
       buttonText = buttonText.includes('left')? '<i class="fa-solid fa-angles-left"></i>' : buttonText;
       buttonText = buttonText.includes('right') ? '<i class="fa-solid fa-angles-right"></i>' : buttonText;
       $('.listALLProduct-pagination ul').append(`
