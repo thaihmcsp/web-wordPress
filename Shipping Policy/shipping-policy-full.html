@@ -267,7 +267,7 @@
             font-family: "Nunito";
             font-style: normal;
             font-weight: 400;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 19px;
             width: 70px;
             height: 19px;
@@ -1019,6 +1019,15 @@
         window.location.href = 'https://fmzee.com/mobile-search/?timkiem='+searchValue
         }
     
+        // hide login page
+        $(window).on('load', function(){
+            let loginButton = $('.woocommerce-button.button.woocommerce-form-login__submit');
+    
+            if(loginButton.length == 0){
+                $('#header_card').css({'margin-left': '16px'});
+                $('a[href="https://fmzee.com/mobile-sign-in/"]').parent().css({display: 'none'});
+            }
+        })
     </script>
     <!--HẾT JS HEADER ------------------------------------------------------------------------------- -->
     <script>

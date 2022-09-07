@@ -866,7 +866,8 @@ $(document).click(function (e) {
             const pass = $('#pass').val();
             $('#username').val(email);
             $('#password').val(pass);
-            console.log(email, pass);
+            window.localStorage.setItem('click-login', true);
+            $('.woocommerce-error.message-wrapper').remove();
             $('.woocommerce-button.button.woocommerce-form-login__submit').trigger('click');
         }
 
@@ -886,19 +887,43 @@ $(document).click(function (e) {
             return "";
         }
 
-        //  
-        const cart = getCookie('woocommerce_items_in_cart')
-        if(cart){
-            window.location.href = 'https://fmzee.com'
-        }
-
-            // check create success
-        $( document ).ready(function(){
-            let check = $('#reg_email')
-            console.log($('#reg_email'));
-            if(!check.length){
-                window.location.href = 'https://fmzee.com'
+        $(window).on('load', function(){
+            let checkClickLogin = window.localStorage.getItem('click-login');
+            let isError = $('.woocommerce-error.message-wrapper').length;
+            if(checkClickLogin){
+                window.localStorage.removeItem('click-login');
+                if(!isError){
+                    window.location.href = 'https://fmzee.com'
+                }else{
+                    console.log('stay');
+                }
             }
         })
+        
+        // clear cookie
+        function delete_cookie(name) {
+            document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        }
+        // if( checkClickLogin && !isError ){
+        //     console.log(checkClickLogin);
+        //     console.log('redirect');
+        //     // window.location.href = 'https://fmzee.com'
+        // }else{
+        //     console.log('stay');
+        // }
+        //  
+        // const cart = getCookie('woocommerce_items_in_cart')
+        // if(cart){
+        //     window.location.href = 'https://fmzee.com'
+        // }
+
+        //     // check create success
+        // $( document ).ready(function(){
+        //     let check = $('#reg_email')
+        //     console.log($('#reg_email'));
+        //     if(!check.length){
+        //         window.location.href = 'https://fmzee.com'
+        //     }
+        // })
     </script>
 </html>

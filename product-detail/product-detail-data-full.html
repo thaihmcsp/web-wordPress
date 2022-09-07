@@ -304,7 +304,7 @@
         .product-detail-breadcrumb-item {
           color: rgba(32, 64, 79, 0.8);
           font-weight: 400;
-          font-size: 10px;
+          font-size: 14px;
           line-height: 19px;
         }
         .product-detail-production-main-img {
@@ -683,7 +683,7 @@
         }
         .product-detail-payment-description {
           font-weight: 400;
-          font-size: 14px;
+          font-size: 15px;
           line-height: 16px;
           /* or 114% */
           margin-top: 18px;
@@ -692,6 +692,7 @@
         }
         .product-detail-payment-description-bold {
           font-weight: 650;
+          display: inline;
         }
         .product-detail-payment-range {
           margin-top: 33px;
@@ -760,7 +761,7 @@
           flex-direction: column;
         }
         .product-detail-payment-progress-description-detail-center {
-          margin-left: 60px;
+          margin-left: 48px;
           justify-content: center;
           align-items: center;
         }
@@ -771,8 +772,8 @@
         .product-detail-payment-progress-description-detail-order-date,
         .product-detail-payment-progress-description-detail-ready-date,
         .product-detail-payment-progress-description-detail-delivery-date {
-          font-weight: 500;
-          font-size: 14px;
+          font-weight: 700;
+          font-size: 15px;
           line-height: 16px;
           /* identical to box height, or 114% */
 
@@ -781,7 +782,7 @@
         .product-detail-payment-progress-description-detail-status {
           font-weight: 500;
           margin-top: 14px;
-          font-size: 12px;
+          font-size: 15px;
           line-height: 16px;
           /* identical to box height, or 133% */
 
@@ -934,7 +935,7 @@
           margin-top: 5px;
           margin-bottom: 5px;
           width: 100%;
-          font-size: 16px;
+          font-size: 18px;
           text-overflow: ellipsis;
           display: -webkit-box;
           -webkit-line-clamp: 3;
@@ -946,10 +947,10 @@
           margin-top: 15px;
         }
         .carousel-home-item .price-item {
-          width: 132px;
+          width: 140px;
           height: 15px;
           justify-content: space-between;
-          font-size: 18px;
+          font-size: 20px;
           letter-spacing: -0.02em;
           margin-bottom: 4px;
         }
@@ -2325,7 +2326,7 @@
             <!-- Payment ----------------------------------------->
             <div class="product-detail-payment-warp">
               <div class="product-detail-payment-description">
-                Order today, and you'll receive your package between <br />
+                Order today, and you'll receive your package between
                 <div class="product-detail-payment-description-bold">
                   Aug 26 and Sep 02
                 </div>
@@ -3027,7 +3028,16 @@
     window.location.href = 'https://fmzee.com/mobile-search/?timkiem='+searchValue
     }
 
-</script>
+    // hide login page
+    $(window).on('load', function(){
+        let loginButton = $('.woocommerce-button.button.woocommerce-form-login__submit');
+
+        if(loginButton.length == 0){
+            $('#header_card').css({'margin-left': '16px'});
+            $('a[href="https://fmzee.com/mobile-sign-in/"]').parent().css({display: 'none'});
+        }
+    })
+    </script>
 <!--HẾT JS HEADER ------------------------------------------------------------------------------- -->
 <script>
 //----------------------- footer -----------------------
@@ -3256,6 +3266,8 @@ $(document).click(function (e) {
     
         // add to cart click
         $('.product-detail-add-cart-btn').on('click', function(){
+            let note = $('.product-detail-production-note-input').val();
+            $('.wccpf-field ').val(note);
             $('.single_add_to_cart_button.button.alt').trigger('click');
         })
     

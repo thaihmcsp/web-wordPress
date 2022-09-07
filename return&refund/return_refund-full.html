@@ -267,7 +267,7 @@
         }
         .cus_breadcrumb {
             font-weight: 400;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 19px;
             color: rgba(32, 64, 79, 0.8);
         }
@@ -798,7 +798,7 @@
       crossorigin="anonymous"
   ></script>
 
-  <script>
+    <script>
     // header footer
     function onMenuDropdown() {
     $(".header-dropdown-wrap-item").toggleClass("visibleClass");
@@ -843,7 +843,16 @@
     window.location.href = 'https://fmzee.com/mobile-search/?timkiem='+searchValue
     }
 
-</script>
+    // hide login page
+    $(window).on('load', function(){
+        let loginButton = $('.woocommerce-button.button.woocommerce-form-login__submit');
+
+        if(loginButton.length == 0){
+            $('#header_card').css({'margin-left': '16px'});
+            $('a[href="https://fmzee.com/mobile-sign-in/"]').parent().css({display: 'none'});
+        }
+    })
+    </script>
 <!--HẾT JS HEADER ------------------------------------------------------------------------------- -->
 <script>
 //----------------------- footer -----------------------

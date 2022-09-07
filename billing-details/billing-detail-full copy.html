@@ -152,7 +152,7 @@
             transform: translate3d(1px, 70px, 0px) !important;
             border: none;
             left: 0;
-            width: 188px;
+            width: 50%;
             padding: 4px 0 32px 0;
             background: #20404f;
             z-index: 100000;
@@ -163,9 +163,9 @@
             display: inline-block;
         }
         .header-dropdown-item {
-            padding: 5px 0 2px 22px;
+            padding: 8px 0 8px 22px;
             margin-top: 4px;
-            font-size: 16px;
+            font-size: 18px;
             color: #e9dfd3;
             font-weight: 400;
             text-decoration: none;
@@ -181,7 +181,7 @@
             margin-right: 16px;
         }
         .header-dropdown-item a {
-            font-size: 16px;
+            font-size: 18px;
             color: #e9dfd3;
             font-weight: 400;
             text-decoration: none;
@@ -196,7 +196,7 @@
             top: -73px;
             transform: translate3d(1px, 70px, 0px) !important;
             border: none;
-            width: 168px;
+            width: calc(100% - 16px);
             padding-top: 4px;
             background: #20404f;
             left: 100%;
@@ -248,196 +248,196 @@
             display: flex;
         }
         }
-    </style>
+    </style>    
     <style>
-      /*-------------------------------- billing detail -------------------------------- */
-        @media (max-width: 500px) {
-            * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-      hr {
-        height: 0.63px;
-        margin: 0;
-        background: #20404f;
-        transform: rotate(-0.08deg);
-      }
-      .billing_detail_container {
-        width: 95%;
-        max-width: 500px;
-        margin: auto;
-        padding: 0 21px;
-      }
-      .billing_detail_breadcrumb {
-        font-weight: 400;
-        font-size: 10px;
-        line-height: 19px;
-        color: rgba(32, 64, 79, 0.8);
-      }
-      .billing_detail_title {
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 16px;
-        color: #20404f;
-        text-transform: uppercase;
-      }
-      .billing_detail_border_short {
-        border: 1px solid rgba(32, 64, 79, 0.7);
-        border-radius: 5px;
-        width: 246px;
-        height: 26px;
-      }
-      .billing_detail_border_long {
-        border: 1px solid rgba(32, 64, 79, 0.7);
-        border-radius: 5px;
-        width: 349px;
-        height: 26px;
-      }
-      .form-group {
-        margin-bottom: 5px !important;
-      }
-      .form-group > label {
-        font-weight: 600;
-        font-size: 15px;
-        line-height: 16px;
-        text-transform: capitalize;
-        color: #20404f;
-      }
-
-      .order {
-        /* background: rgba(191, 137, 119, 0.5); */
-        max-width: 500px;
-        margin: auto;
-      }
-      .order_container {
-        padding: 8px 21px;
-        border-bottom: 1px #20404F solid;
-      }
-
-      input[type="radio"] {
-        color: #4e70f9;
-      }
-      .order_title {
-        padding: 20px 0;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 19px;
-        color: #20404f;
-      }
-      .upcase {
-        text-transform: uppercase;
-      }
-      .capti {
-        text-transform: capitalize;
-      }
-      .sub_title {
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 19px;
-        color: #20404f;
-        justify-content: space-between;
-      }
-      .sub_total {
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 19px;
-        color: rgba(32, 64, 79, 0.8);
-        width: 282px;
-        /* height: 57px; */
-        text-transform: capitalize;
-      }
-      .desc_paypal {
-        display: flex;
-        align-items: center;
-      }
-
-      .paypal_text {
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 16px;
-      }
-      .desc_paypal > span {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 19px;
-      }
-      .text_paypal {
-        margin-top: 20px;
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 19px;
-      }
-      .text_paypal > span {
-        opacity: 0.7;
-      }
-      .paypal_btn {
-        width: 169px;
-        height: 38px;
-        background: #20404f;
-        border-radius: 5px;
-      }
-      .paypal_btn > span {
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 16px;
-        letter-spacing: 0.05em;
-        text-transform: capitalize;
-        color: #e9dfd3;
-      }
-
-      hr {
-        max-width: 500px;
-        margin: auto;
-      }
-      .btn-drowdown-custom {
-        background: white!important;
-       /* min-width: 349px; */
-       width: 100%;
-       height: 34px;
-
-border: 1px solid #ccc;
-border-radius: 5px;
-padding: 0;
-display: flex!important;
-justify-content: space-between;
-align-items: center;
-padding: 0 12px;
-}
-.dropdown-toggle::after {
-display:none
-}
-.dropdown-menu-list {
-width: 100%;
-max-height: 300px;
-overflow-y: scroll
-
-}
-.dropdown-menu-list-item {
-width: 100%;
-padding: 4px 8px;
-}
-.dropdown-menu-list-item:hover{
-padding: 4px 8px;
-background: #20404f;
-color: #fff;
-}
-.spinner-loading-custome {
-  position : absolute;
-  left : 50%;
-  margin-top: 10px;
-  align-items : center;
-  color: #fff;
- height: 20px;
- width: 20px;
-
-  display: none
-}
+        /*-------------------------------- billing detail -------------------------------- */
+            @media (max-width: 500px) {
+                * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
         }
+        hr {
+            height: 0.63px;
+            margin: 0;
+            background: #20404f;
+            transform: rotate(-0.08deg);
+        }
+        .billing_detail_container {
+            width: 95%;
+            max-width: 500px;
+            margin: auto;
+            padding: 0 21px;
+        }
+        .billing_detail_breadcrumb {
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 19px;
+            color: rgba(32, 64, 79, 0.8);
+        }
+        .billing_detail_title {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 16px;
+            color: #20404f;
+            text-transform: uppercase;
+        }
+        .billing_detail_border_short {
+            border: 1px solid rgba(32, 64, 79, 0.7);
+            border-radius: 5px;
+            width: 246px;
+            height: 26px;
+        }
+        .billing_detail_border_long {
+            border: 1px solid rgba(32, 64, 79, 0.7);
+            border-radius: 5px;
+            width: 349px;
+            height: 26px;
+        }
+        .form-group {
+            margin-bottom: 5px !important;
+        }
+        .form-group > label {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 16px;
+            text-transform: capitalize;
+            color: #20404f;
+        }
+
+        .order {
+            /* background: rgba(191, 137, 119, 0.5); */
+            max-width: 500px;
+            margin: auto;
+        }
+        .order_container {
+            padding: 8px 21px;
+            border-bottom: 1px #20404F solid;
+        }
+
+        input[type="radio"] {
+            color: #4e70f9;
+        }
+        .order_title {
+            padding: 20px 0;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 19px;
+            color: #20404f;
+        }
+        .upcase {
+            text-transform: uppercase;
+        }
+        .capti {
+            text-transform: capitalize;
+        }
+        .sub_title {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 19px;
+            color: #20404f;
+            justify-content: space-between;
+        }
+        .sub_total {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 19px;
+            color: rgba(32, 64, 79, 0.8);
+            width: 282px;
+            /* height: 57px; */
+            text-transform: capitalize;
+        }
+        .desc_paypal {
+            display: flex;
+            align-items: center;
+        }
+
+        .paypal_text {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 16px;
+        }
+        .desc_paypal > span {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+        }
+        .text_paypal {
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 19px;
+        }
+        .text_paypal > span {
+            opacity: 0.7;
+        }
+        .paypal_btn {
+            width: 169px;
+            height: 38px;
+            background: #20404f;
+            border-radius: 5px;
+        }
+        .paypal_btn > span {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 16px;
+            letter-spacing: 0.05em;
+            text-transform: capitalize;
+            color: #e9dfd3;
+        }
+
+        hr {
+            max-width: 500px;
+            margin: auto;
+        }
+        .btn-drowdown-custom {
+            background: white!important;
+        /* min-width: 349px; */
+        width: 100%;
+        height: 34px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0;
+    display: flex!important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    }
+    .dropdown-toggle::after {
+    display:none
+    }
+    .dropdown-menu-list {
+    width: 100%;
+    max-height: 300px;
+    overflow-y: scroll
+
+    }
+    .dropdown-menu-list-item {
+    width: 100%;
+    padding: 4px 8px;
+    }
+    .dropdown-menu-list-item:hover{
+    padding: 4px 8px;
+    background: #20404f;
+    color: #fff;
+    }
+    .spinner-loading-custome {
+    position : absolute;
+    left : 50%;
+    margin-top: 10px;
+    align-items : center;
+    color: #fff;
+    height: 20px;
+    width: 20px;
+
+    display: none
+    }
+            }
     </style>
 
-<style>
+    <style>
     /*-------------------------- order-detail-after-buy-success -------------------------- */
     .orderDetail {
       margin: 0;
@@ -480,6 +480,7 @@ color: #fff;
       font-family: "Nunito";
       font-style: normal;
       font-weight: 600;
+      width: 86%;
       font-size: 16px;
       color: rgba(32, 64, 79, 0.8);
       margin: 0;
@@ -526,99 +527,100 @@ color: #fff;
     .orderDetail-modal ul li {
       margin: 8px 0;
     }
-  </style>
+    </style>
     <style>
         /*------------------------------- footer copyright ------------------------*/
         @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
         * {
-        font-family: "Nunito", sans-serif;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        /* border: 1px solid gray; */
+          font-family: "Nunito", sans-serif;
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          /* border: 1px solid gray; */
         }
         #footer-copyright_container {
-        max-width: 500px;
-        background-color: rgba(191, 137, 119, 0.5);
-        color: #20404f;
-        padding: 0 22px;
-        margin: auto;
+          max-width: 500px;
+          background-color: rgba(191, 137, 119, 0.5);
+          color: #20404f;
+          padding: 0 22px;
+          margin: auto;
         }
-
+  
         .footer-coppyright-title {
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 20px;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 20px;
         }
         .footer-copyright-subscribe {
-        padding: 11px 0;
+          padding: 11px 0;
         }
-
+  
         #footer-copyright-collapse-wrap {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        border-bottom: 1px solid #d9d9d9;
-        padding: 4px 0;
-        height: 38px;
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          border-bottom: 1px solid #d9d9d9;
+          padding: 4px 0;
+          height: 38px;
         }
         .footer_copyright-content-warp-items {
-        padding-top: 12px;
+          padding-top: 12px;
         }
         .footer_copyright-content-warp-items a {
-        text-decoration: none;
-        color: #20404f;
+          text-decoration: none;
+          color: #20404f;
+          font-size: 18px;
         }
         .footer_copyright-content-items {
-        padding: 5px 0;
+          padding: 5px 0;
         }
         .footer_copyright-content-items-thin {
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 19px;
-        padding: 5px 0;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 19px;
+          padding: 5px 0;
         }
         .footer-coppyright-content-detail1 {
-        padding: 8px 0 6px;
-        font-size: 16px;
-        font-weight: 400;
+          padding: 8px 0 6px;
+          font-size: 16px;
+          font-weight: 400;
         }
         .footer-coppyright-content-detail2 {
-        font-size: 16px;
-        font-weight: 600;
-        padding-bottom: 12px;
+          font-size: 16px;
+          font-weight: 600;
+          padding-bottom: 12px;
         }
         button {
-        padding: 0;
+          padding: 0;
         }
         .footer-coppyright-subcribe-wap {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
         }
         #footer-coppyright-subcribe-input {
-        border-radius: 4px;
-        border: 1px solid #20404f;
-        background: rgba(191, 137, 119, 0.01);
-        width: 244px;
-        height: 40px;
-        font-size: 14px;
-        padding-left: 11px;
+          border-radius: 4px;
+          border: 1px solid #20404f;
+          background: rgba(191, 137, 119, 0.01);
+          width: 244px;
+          height: 40px;
+          font-size: 14px;
+          padding-left: 11px;
         }
         #footer-coppyright-subcribe-button {
-        width: 89px;
-        border-radius: 4px;
-        height: 40px;
-        background-color: rgba(32, 64, 79, 1);
-        color: rgba(191, 137, 119, 1);
-        border: none;
+          width: 89px;
+          border-radius: 4px;
+          height: 40px;
+          background-color: rgba(32, 64, 79, 1);
+          color: rgba(191, 137, 119, 1);
+          border: none;
         }
         .footer-coppyright-author {
-        font-size: 14px;
-        padding: 26px 0 12px 0;
+          font-size: 14px;
+          padding: 26px 0 12px 0;
         }
         .pr-4 {
-        padding-right: 16px;
+          padding-right: 16px;
         }
     </style>
     <style>
@@ -670,6 +672,7 @@ color: #fff;
     </style>
 
     <style>
+        /* payment */
         @media (max-width: 500px) {
             .paymentMethod {
             background: #20404f;
@@ -765,8 +768,51 @@ color: #fff;
                 background: #BF897780;
                 margin-top: 28px;
             }
-            .col-inner .woocommerce{
+            .wc_payment_method.payment_method_paypal label[for="payment_method_paypal"] img{
+                margin: 0 30px;
+            }
+            .wc_payment_method.payment_method_paypal label[for="payment_method_paypal"],
+            .wc_payment_method.payment_method_ppcp-gateway label[for="payment_method_ppcp-gateway"]{
+                font-size: 18px;
+            }
+            .col-inner .woocommerce .woocommerce-form-coupon-toggle,
+            .col-inner .woocommerce .large-7.col,
+            .col-inner .woocommerce #order_review_heading,
+            /* .col-inner .woocommerce .wc_payment_method.payment_method_paypal, */
+            .is-well.col-inner.entry-content,
+            .col-inner .woocommerce .shop_table{
                 display: none;
+            }
+            .button#place_order{
+                background: #20404F !important;
+                color: #E9DFD3;
+                border-radius: 5px;
+                text-transform: capitalize;
+            }
+            .col-inner.has-border{
+                border: none;
+                padding: 16px 36px;
+            }
+            .wc_payment_methods.payment_methods.methods{
+                padding: 0;
+            }
+            /* .col-inner .woocommerce .large-5.col, */
+            .order_container.pay-selection,
+            .order_container.pb-4{
+                visibility: hidden;
+            }
+            .payment_box.payment_method_paypal p{
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 19px;
+                font-family: 'Nunito', sans-serif;
+            }
+            .checkout.woocommerce-checkout{
+                position: absolute;
+
+            } 
+            .large-5.col{
+                max-width: 100%;
             }
             .woocommerce-checkout .row-main{
                 padding: 0;
@@ -864,7 +910,9 @@ color: #fff;
             </div>
             <div id="header_brand-icon">
               <a href="https://fmzee.com/"
-                ><img src="https://fmzee.com/wp-content/uploads/2022/08/logo-web_5.png" alt="logo_brand"
+                ><img
+                  src="https://fmzee.com/wp-content/uploads/2022/08/logo-web_5.png"
+                  alt="logo_brand"
               /></a>
             </div>
           </div>
@@ -875,25 +923,25 @@ color: #fff;
             </div>
             <div id="header_user-info">
               <a href="https://fmzee.com/mobile-sign-in/">
-                  <i class="fa-regular fa-user"></i>
+                <i class="fa-regular fa-user"></i>
               </a>
             </div>
             <div id="header_card">
               <a href="https://fmzee.com/gio-hang/">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <div id="header_card-index">1</div>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div id="header_card-index">1</div>
               </a>
             </div>
           </div>
         </div>
         <div class="header-search-wrap">
           <div id="header-search-form">
-              <div class="header-search-form-input">
-                  <input type="text" placeholder="Seach...">
-              </div>
-              <div class="header-search-form-button" onclick="activeSearch()">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
+            <div class="header-search-form-input">
+              <input type="text" placeholder="Seach..." />
+            </div>
+            <div class="header-search-form-button" onclick="activeSearch()">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
           </div>
         </div>
     </div>
@@ -1093,7 +1141,7 @@ color: #fff;
             <div class="order_container pay-selection">
               <div class="desc_paypal">
                 <div class="pr-4">
-                  <input type="radio" name="pay" value="paypal" id="" checked />
+                  <input type="radio" name="pay" value="paypal" id="" checked class="payRadio" />
                   <span class="paypal_text">PayPal</span>
                 </div>
                 <img
@@ -1114,7 +1162,7 @@ color: #fff;
             </div>
             <div class="order_container pb-4">
               <div class="normal-payment-selection">
-                <input type="radio" name="pay" value="normal" id="" />
+                <input type="radio" name="pay" value="normal" id="" class="payRadio"/>
                 <span class="paypal_text"> PayPal </span>
               </div>
               <div class="button-on-normal-selection">
@@ -1182,146 +1230,143 @@ color: #fff;
               </div>
             </div>
             <div class="mt-5"></div>
-      
-            <div id="footer-copyright_container">
-              <div id="footer-copyright_wrap">
-                <div class="footer-copyright-collapse">
-                  <div
-                    data-bs-toggle="collapse"
-                    href="#quick_link"
-                    aria-expanded="false"
-                    aria-controls="quick_link"
-                    id="footer-copyright-collapse-wrap"
-                  >
-                    <div class="footer-coppyright-title">Quick Links</div>
-                    <div class="footer-copyright-icon">
-                      <i class="fa-solid fa-caret-down"></i>
-                    </div>
-                  </div>
-                  <div class="collapse" id="quick_link">
-                    <div class="footer_copyright-content-warp-items">
-                      <div class="footer_copyright-content-items">
-                        <a href="https://fmzee.com/">Home</a>
-                      </div>
-                      <div class="footer_copyright-content-items">
-                        <a href="https://fmzee.com/about-us/">About Us</a>
-                      </div>
-                      <div class="footer_copyright-content-items">
-                        <a href="https://fmzee.com/contact/">Contact Us</a>
-                      </div>
-                      <div class="footer_copyright-content-items">FAQ</div>
-                    </div>
-                  </div>
+    </div>
+
+    <div id="footer-copyright_container">
+        <div id="footer-copyright_wrap">
+          <div class="footer-copyright-collapse">
+            <div
+              data-bs-toggle="collapse"
+              href="#quick_link"
+              aria-expanded="false"
+              aria-controls="quick_link"
+              id="footer-copyright-collapse-wrap"
+            >
+              <div class="footer-coppyright-title">Quick Links</div>
+              <div class="footer-copyright-icon">
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse" id="quick_link">
+              <div class="footer_copyright-content-warp-items">
+                <div class="footer_copyright-content-items">
+                  <a href="https://fmzee.com/">Home</a>
                 </div>
-                <div class="footer-copyright-collapse">
-                  <div class="footer-copyright-collapse">
-                    <div
-                      data-bs-toggle="collapse"
-                      href="#Policies"
-                      aria-expanded="false"
-                      aria-controls="Policies"
-                      id="footer-copyright-collapse-wrap"
+                <div class="footer_copyright-content-items">
+                  <a href="https://fmzee.com/about-us/">About Us</a>
+                </div>
+                <div class="footer_copyright-content-items">
+                  <a href="https://fmzee.com/contact/">Contact Us</a>
+                </div>
+                <div class="footer_copyright-content-items">FAQ</div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright-collapse">
+            <div class="footer-copyright-collapse">
+              <div
+                data-bs-toggle="collapse"
+                href="#Policies"
+                aria-expanded="false"
+                aria-controls="Policies"
+                id="footer-copyright-collapse-wrap"
+              >
+                <div class="footer-coppyright-title">Policies</div>
+                <div class="footer-copyright-icon">
+                  <i class="fa-solid fa-caret-down"></i>
+                </div>
+              </div>
+              <div class="collapse" id="Policies">
+                <div class="footer_copyright-content-warp-items">
+                  <div class="footer_copyright-content-items">
+                    <a href="https://fmzee.com/privacy-policy/">Privacy Policy</a>
+                  </div>
+                  <div class="footer_copyright-content-items">
+                    <a href="https://fmzee.com/shipping-policy/"
+                      >Shipping Policy</a
                     >
-                      <div class="footer-coppyright-title">Policies</div>
-                      <div class="footer-copyright-icon">
-                        <i class="fa-solid fa-caret-down"></i>
-                      </div>
-                    </div>
-                    <div class="collapse" id="Policies">
-                      <div class="footer_copyright-content-warp-items">
-                        <div class="footer_copyright-content-items">
-                          <a href="https://fmzee.com/privacy-policy/"
-                            >Privacy Policy</a
-                          >
-                        </div>
-                        <div class="footer_copyright-content-items">
-                          <a href="https://fmzee.com/shipping-policy/"
-                            >Shipping Policy</a
-                          >
-                        </div>
-                        <div class="footer_copyright-content-items">
-                          <a href="https://fmzee.com/refund-policy/"
-                            >Refund & Return Policy</a
-                          >
-                        </div>
-                        <div class="footer_copyright-content-items">
-                          <a href="https://fmzee.com/terms-and-conditions/"
-                            >Terms and Conditions</a
-                          >
-                        </div>
-                        <div class="footer_copyright-content-items">
-                          <a href="#">Payment Method</a>
-                        </div>
-                      </div>
-                    </div>
                   </div>
-                </div>
-                <div class="footer-copyright-collapse">
-                  <div class="footer-copyright-collapse">
-                    <div
-                      data-bs-toggle="collapse"
-                      href="#getInTouch"
-                      aria-expanded="false"
-                      aria-controls="getInTouch"
-                      id="footer-copyright-collapse-wrap"
+                  <div class="footer_copyright-content-items">
+                    <a href="https://fmzee.com/refund-policy/"
+                      >Refund & Return Policy</a
                     >
-                      <div class="footer-coppyright-title">Get In Touch</div>
-                      <div class="footer-copyright-icon">
-                        <i class="fa-solid fa-caret-down"></i>
-                      </div>
-                    </div>
-                    <div class="collapse" id="getInTouch">
-                      <div class="footer_copyright-content-warp-items">
-                        <div class="footer_copyright-content-items-thin">
-                          If you have any questions, please contact us by this email
-                          below
-                        </div>
-                        <div class="footer_copyright-content-items-thin">
-                          <i class="fa-regular fa-envelope"></i>
-                          Email: suppost.fmzee@gmail.com UK Address: 24-26 Arcadia
-                        </div>
-                        <div class="footer_copyright-content-items-thin">
-                          Avenue, Dephna House #105, London, Greater London, United
-                          Kingdom, N3 2JU
-                        </div>
-        
-                        <div class="footer_copyright-content-items-thin">
-                          Delivery Delays Due To Covid-19
-                        </div>
-                      </div>
-                    </div>
                   </div>
-                </div>
-                <div class="footer-copyright-subscribe">
-                  <div class="footer-coppyright-title">Newsletter</div>
-                  <div class="footer-coppyright-content">
-                    <div class="footer-coppyright-content-detail1">
-                      Subscribe to be notified about product launches,
-                      <br />special offers and news.
-                    </div>
-                    <div class="footer-coppyright-content-detail2">
-                      Enter your email and get your first treat,
-                      <br />
-                      an instant 25% discount off your first order!
-                    </div>
+                  <div class="footer_copyright-content-items">
+                    <a href="https://fmzee.com/terms-and-conditions/"
+                      >Terms and Conditions</a
+                    >
                   </div>
-                  <div class="footer-coppyright-subcribe-wap">
-                    <input
-                      id="footer-coppyright-subcribe-input"
-                      type="text"
-                      placeholder="your email:"
-                    />
-                    <button id="footer-coppyright-subcribe-button">Subcribe</button>
-                  </div>
-                  <div class="footer-coppyright-author">
-                    © 2022 FMzee - Personalized Door Sign, Ornament, Tumbler & Home
-                    Decor
+                  <div class="footer_copyright-content-items">
+                    <a href="#">Payment Method</a>
                   </div>
                 </div>
               </div>
+            </div>
           </div>
+          <div class="footer-copyright-collapse">
+            <div class="footer-copyright-collapse">
+              <div
+                data-bs-toggle="collapse"
+                href="#getInTouch"
+                aria-expanded="false"
+                aria-controls="getInTouch"
+                id="footer-copyright-collapse-wrap"
+              >
+                <div class="footer-coppyright-title">Get In Touch</div>
+                <div class="footer-copyright-icon">
+                  <i class="fa-solid fa-caret-down"></i>
+                </div>
+              </div>
+              <div class="collapse" id="getInTouch">
+                <div class="footer_copyright-content-warp-items">
+                  <div class="footer_copyright-content-items-thin">
+                    If you have any questions, please contact us by this email
+                    below
+                  </div>
+                  <div class="footer_copyright-content-items-thin">
+                    <i class="fa-regular fa-envelope"></i>
+                    Email: suppost.fmzee@gmail.com 
+                  </div>
+                  <div class="footer_copyright-content-items-thin">
+                  UK Address: 24-26 Arcadia Avenue, Dephna House #105, London, Greater London, United
+                    Kingdom, N3 2JU
+                  </div>
+  
+                  <div class="footer_copyright-content-items-thin">
+                    Delivery Delays Due To Covid-19
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright-subscribe">
+            <div class="footer-coppyright-title">Newsletter</div>
+            <div class="footer-coppyright-content">
+              <div class="footer-coppyright-content-detail1">
+                Subscribe to be notified about product launches,
+                <br />special offers and news.
+              </div>
+              <div class="footer-coppyright-content-detail2">
+                Enter your email and get your first treat,
+                <br />
+                an instant 25% discount off your first order!
+              </div>
+            </div>
+            <div class="footer-coppyright-subcribe-wap">
+              <input
+                id="footer-coppyright-subcribe-input"
+                type="text"
+                placeholder="your email:"
+              />
+              <button id="footer-coppyright-subcribe-button">Subcribe</button>
+            </div>
+            <div class="footer-coppyright-author">
+              © 2022 FMzee - Personalized Door Sign, Ornament, Tumbler & Home
+              Decor
+            </div>
+          </div>
+        </div>
     </div>
-
     <div id="footer_container">
     <div id="footer_wrap">
         <div id="footer_wrap-left">
@@ -1388,6 +1433,22 @@ color: #fff;
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    ></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+    ></script>
   <script >
     let all = {
 Albania: [
@@ -9132,7 +9193,7 @@ Bangladesh: [
 };
 
 </script>
-  <script>
+    <script>
     // header footer
     function onMenuDropdown() {
     $(".header-dropdown-wrap-item").toggleClass("visibleClass");
@@ -9177,37 +9238,46 @@ Bangladesh: [
     window.location.href = 'https://fmzee.com/mobile-search/?timkiem='+searchValue
     }
 
-</script>
+    // hide login page
+    $(window).on('load', function(){
+        let loginButton = $('.woocommerce-button.button.woocommerce-form-login__submit');
+
+        if(loginButton.length == 0){
+            $('#header_card').css({'margin-left': '16px'});
+            $('a[href="https://fmzee.com/mobile-sign-in/"]').parent().css({display: 'none'});
+        }
+    })
+    </script>
 <!--HẾT JS HEADER ------------------------------------------------------------------------------- -->
 <script>
-//----------------------- footer -----------------------
-function onMenuDropdown() {
+  //----------------------- footer -----------------------
+  function onMenuDropdown() {
     $(".header-dropdown-wrap-item").toggleClass("visibleClass");
-}
-function onProductMenuDropdown() {
+  }
+  function onProductMenuDropdown() {
     $(".header-dropdown-wrap-product-item").toggleClass("visibleClass");
-}
+  }
 
-$(document).click(function (e) {
+  $(document).click(function (e) {
     if (
-    $(e.target?.parentElement?.parentElement).is(
+      $(e.target?.parentElement?.parentElement).is(
         $(".header-dropdown-wrap-item")[0]
-    ) ||
-    $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
-    $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
-    $(e.target.parentElement).is($("#header_bar")[0]) ||
-    $(e.target).is($("#header_bar")[0])
+      ) ||
+      $(e.target.parentElement).is($(".header-dropdown-wrap-item")[0]) ||
+      $(e.target).is($(".header-dropdown-wrap-item")[0]) ||
+      $(e.target.parentElement).is($("#header_bar")[0]) ||
+      $(e.target).is($("#header_bar")[0])
     ) {
     } else {
-    if (
+      if (
         $(".header-dropdown-wrap-item")[0].classList.contains(
-        "visibleClass"
+          "visibleClass"
         )
-    ) {
+      ) {
         $(".header-dropdown-wrap-item").toggleClass("visibleClass");
+      }
     }
-    }
-});
+  });
 </script>
 
   <script>
@@ -9215,6 +9285,51 @@ $(document).click(function (e) {
     $("img.lazy-load").each(function () {
       $(this).attr("src", $(this).attr("data-src"));
     });
+  </script>
+  <script>
+    // render bill product
+
+    $('.shop_table .cart_item').each(function(index, product){
+        let name = $(product).find('.product-name strong').html().trim();
+        let quantity = $(product).find('.product-quantity').html().trim();
+        let size = $(product).find('.product-name').text().split(name)[1].replace(/-/g,' ').trim();
+        let subTotal = $(product).find('.product-total bdi').text().replace('$', ' ').trim()
+        let price = subTotal.slice(0, subTotal.indexOf('$')) * 1
+
+        $('.list-order-product').append(`
+        <div class="order-item">
+            <div class="order_container order-detail">
+                <p class="sub_total"> ${name} </p>
+                <div class="sub_title d-flex capti">
+                  <div>${size}</div>
+                  <div>$ ${subTotal.replace('$', ' ').trim()}</div>
+                </div>
+            </div>
+        </div>
+        `)
+    })
+
+    let subTotalOrder =  $('.cart-subtotal bdi').text().replace('$', '').trim();
+    let total =  $('.order-total bdi').text().replace('$', '').trim();
+
+    let checkDiscount = $('.cart-discount');
+    let discount = 0;
+    if(checkDiscount.length){
+        discount = checkDiscount.find('.woocommerce-Price-amount').text().replace('$', '').trim();
+    }
+
+    $('.order_container.order-subTotal .order-item-row-value').html('$ ' + subTotalOrder);
+    $('.order_container.order-total .order-item-row-value').html('$ ' + total);
+    $('.order_container.order-coupon .order-item-row-value').html('$ ' + discount);
+
+    // update pay button render
+    if(total * 1 == 0){
+        // $('.order_container.pay-selection').css({display: 'none'});
+        // $('.normal-payment-selection').css({display: 'none'});
+        $('.order_container.pb-4').css({visibility: 'visible'});
+        $('.order_container.pay-selection').css({visibility: 'visible'});
+        $('.checkout.woocommerce-checkout').css({'z-index': -1});
+    }
   </script>
 
   <script>
@@ -9341,71 +9456,53 @@ $('.dropdown-menu-list-item').on('click', function() {
 
     // normal pay
 
-    // select radio normal pay
-
-//     $('input[name=pay][type=radio]').on('change', function(){
-//         let val = $(this).val();
-//         console.log(val);
-//         if(val === 'normal'){
-//             $('label[for=payment_method_ppcp-gateway]').trigger('click');
-//             $('#payment_method_ppcp-gateway').attr('checked', 'checked');
-//             $('#payment_method_paypal').removeAttr('checked')
-//             $('.text_paypal.pb-3').css({display: 'none'});
-//             $('.button-on-normal-selection').css({display: 'block'});
-//         }else{
-//             $('label[for="payment_method_paypal"]').trigger('click');
-//             $('#payment_method_ppcp-gateway').removeAttr('checked')
-//             $('#payment_method_paypal').attr('checked', 'checked');
-//             $('.text_paypal.pb-3').css({display: 'block'});
-//             $('.button-on-normal-selection').css({display: 'none'});
-//         }
-//     })
-//     // $('#ppc-button iframe').eq(0).find(".paypal-button-row.paypal-button-number-0")
-//     // $('#ppc-button iframe .paypal-button-row.paypal-button-number-0')
-// // $('.select2-selection.select2-selection--single[aria-label="Country / Region"]').trigger('click')
-//     function payWithPaypal () {
-//         console.log(1453, $('.paypal-button'));
-//         $('.paypal-button').trigger('click')
-//     }
-
-  </script>
-
-  <script>
-    // render bill product
-
-    $('.shop_table .cart_item').each(function(index, product){
-        let name = $(product).find('.product-name strong').html().trim();
-        let quantity = $(product).find('.product-quantity').html().trim();
-        let size = $(product).find('.product-name').text().split(name)[1].replace(/-/g,' ').trim();
-        let subTotal = $(product).find('.product-total bdi').text().replace('$', ' ').trim()
-        let price = subTotal.slice(0, subTotal.indexOf('$')) * 1
-
-        $('.list-order-product').append(`
-        <div class="order-item">
-            <div class="order_container order-detail">
-                <p class="sub_total"> ${name} </p>
-                <div class="sub_title d-flex capti">
-                  <div>${size}</div>
-                  <div>$ ${subTotal.replace('$', ' ').trim()}</div>
-                </div>
-            </div>
-        </div>
-        `)
+    // $('div.spinner')
+    $(window).on('load', function(){
+        $('#place_order').html('Place Order')
+    })
+    let headerHeight = $('#header_container').css('height').replace('px', '') * 1;
+    let billHeight = $('.billing-detail-page').css('height').replace('px', '') * 1;
+    let formHeight = $('.order-detail-item-info').css('height').replace('px', '') * 1;
+    let selectionHeight = $('.order_container.pay-selection').css('height').replace('px', '') * 1;
+    let buttonHeight = $('.order_container.pb-4').css('height').replace('px', '') * 1;
+    let formDesktopHeight = $('.checkout.woocommerce-checkout ').css('height').replace('px', '') * 1;
+    let position = headerHeight + billHeight + formHeight - selectionHeight - buttonHeight + 50;
+    $('.checkout.woocommerce-checkout ').css({top: position + 'px'})
+    // 
+    $('.paypal-button-text.true').html('12321');
+    console.log(9464, $('#payment_method_paypal'));
+    console.log(9465, $('#payment_method_ppcp-gateway'));
+    $('.wc_payment_methods.payment_methods.methods li input[type="radio"]').on('change', function(){
+        console.log(9465);
     })
 
-    let subTotalOrder =  $('.cart-subtotal bdi').text().replace('$', '').trim();
-    let total =  $('.order-total bdi').text().replace('$', '').trim();
+    const resize_ob = new ResizeObserver(function(entries) {
+        // since we are observing only a single element, so we access the first element in entries array
+        let rect = entries[0].contentRect;
+        // current width & height
+        let width = rect.width;
+        let height = rect.height;
+        let floor = Math.floor(height);
+        if(floor == 623 ){
+            $('.order_container.pb-4').height(450);
+        }
+        if(floor == 561 ){
+            $('.order_container.pb-4').height(390);
+        }
+        if(floor == 330 || floor == 294){
+            $('.order_container.pb-4').height(153);
+        }
+        if(floor == 1036 ){
+            $('.order_container.pb-4').height(920);
+        }
+        // console.log(9471, 'Current Width : ' , width);
+        // console.log(9472, 'Current Height : ' , height);
+    });
 
-    let checkDiscount = $('.cart-discount');
-    let discount = 0;
-    if(checkDiscount.length){
-        discount = checkDiscount.find('.woocommerce-Price-amount').text().replace('$', '').trim();
-    }
-
-    $('.order_container.order-subTotal .order-item-row-value').html('$ ' + subTotalOrder);
-    $('.order_container.order-total .order-item-row-value').html('$ ' + total);
-    $('.order_container.order-coupon .order-item-row-value').html('$ ' + discount);
+    // start observing for resize
+    resize_ob.observe(document.querySelector(".checkout.woocommerce-checkout "));
   </script>
+
 
   <script>
     // run on page order-received
